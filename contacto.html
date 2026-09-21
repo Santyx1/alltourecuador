@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto | All Tour Ecuador</title>
+    <meta name="description" content="Contáctanos y diseña tu viaje soñado por Ecuador. Reservas, cotizaciones y atención personalizada." />
+    <meta name="author" content="All Tour Ecuador" />
+
+    <!-- Fuente Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- ==============================
+         HEADER / NAVEGACIÓN
+    =============================== -->
+    <header>
+        <div class="container nav">
+            <a href="index.html" class="brand" aria-label="All Tour Ecuador - Inicio">
+                <span class="brand-mark">A</span>
+                <span>All Tour Ecuador</span>
+            </a>
+
+            <nav class="nav-links" aria-label="Navegación principal">
+                <a href="index.html">Inicio</a>
+                <a href="destinos.html">Destinos</a>
+                <a href="index.html#experiencias">Experiencias</a>
+                <a href="index.html#nosotros">Nosotros</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="contacto.html" class="btn secondary">Reservar</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ==============================
+             HERO DE PÁGINA
+        =============================== -->
+        <section class="page-hero">
+            <div class="container">
+                <span class="eyebrow">Estamos aquí para ayudarte</span>
+                <h1>Contáctanos</h1>
+                <p>
+                    Cuéntanos sobre tu viaje soñado y nuestro equipo te ayudará a planificarlo.
+                    Respondemos en menos de 24 horas.
+                </p>
+            </div>
+        </section>
+
+        <!-- ==============================
+             FORMULARIO + INFO
+        =============================== -->
+        <section class="section" style="padding-top:60px;">
+            <div class="container">
+                <div class="contact-wrapper">
+
+                    <!-- Panel de información -->
+                    <aside class="contact-info">
+                        <h2>Información de contacto</h2>
+                        <p>Puedes escribirnos, llamarnos o visitarnos. ¡Nos encantará conocerte!</p>
+
+                        <ul class="contact-info-list">
+                            <li>
+                                <span class="contact-info-icon">📍</span>
+                                <div>
+                                    <strong>Dirección</strong><br>
+                                    Av. Amazonas N34-451, Quito, Ecuador
+                                </div>
+                            </li>
+                            <li>
+                                <span class="contact-info-icon">📞</span>
+                                <div>
+                                    <strong>Teléfono</strong><br>
+                                    <a href="tel:+593987654321">+593 98 765 4321</a>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="contact-info-icon">✉️</span>
+                                <div>
+                                    <strong>Email</strong><br>
+                                    <a href="mailto:info@alltourecuador.com">info@alltourecuador.com</a>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="contact-info-icon">🕒</span>
+                                <div>
+                                    <strong>Horario</strong><br>
+                                    Lun - Vie: 8:00 - 18:00<br>
+                                    Sáb: 9:00 - 14:00
+                                </div>
+                            </li>
+                            <li>
+                                <span class="contact-info-icon">🌐</span>
+                                <div>
+                                    <strong>Redes sociales</strong><br>
+                                    @alltourecuador
+                                </div>
+                            </li>
+                        </ul>
+                    </aside>
+
+                    <!-- Formulario -->
+                    <form class="contact-form" id="contactForm" novalidate>
+                        <h2>Envíanos un mensaje</h2>
+                        <p class="form-subtitle">Los campos marcados con * son obligatorios.</p>
+
+                        <div class="form-row">
+                            <input type="text" name="nombre" placeholder="Nombre completo *" required aria-label="Nombre completo" />
+                            <input type="email" name="email" placeholder="Correo electrónico *" required aria-label="Correo electrónico" />
+                        </div>
+
+                        <div class="form-row">
+                            <input type="tel" name="telefono" placeholder="Teléfono" aria-label="Teléfono" />
+                            <select name="destino" aria-label="Destino de interés" required>
+                                <option value="">Destino de interés *</option>
+                                <option value="Galápagos">Galápagos</option>
+                                <option value="Quito">Quito</option>
+                                <option value="Baños">Baños</option>
+                                <option value="Cuenca">Cuenca</option>
+                                <option value="Montañita">Montañita</option>
+                                <option value="Amazonía">Amazonía</option>
+                                <option value="Cotopaxi">Cotopaxi</option>
+                                <option value="Guayaquil">Guayaquil</option>
+                                <option value="Cuyabeno">Cuyabeno</option>
+                                <option value="Personalizado">Paquete personalizado</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row">
+                            <input type="date" name="fecha" aria-label="Fecha aproximada del viaje" />
+                            <input type="number" name="personas" min="1" placeholder="Número de personas" aria-label="Número de personas" />
+                        </div>
+
+                        <textarea name="mensaje" rows="5" placeholder="Cuéntanos sobre tu viaje soñado... *" required aria-label="Mensaje"></textarea>
+
+                        <button type="submit" class="btn" style="width:100%;">Enviar mensaje</button>
+
+                        <p class="form-note">Al enviar aceptas nuestra política de privacidad.</p>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==============================
+             MAPA
+        =============================== -->
+        <section class="section" style="padding-top:0;">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Encuéntranos</h2>
+                    <p class="section-subtitle">Visítanos en nuestra oficina central en Quito.</p>
+                </div>
+
+                <div class="map-wrapper">
+                    <iframe
+                        title="Ubicación All Tour Ecuador"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.8019!2d-78.4867!3d-0.1807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMMKwMTAnNTAuNSJTIDc4wrAyOScxMi4xIlc!5e0!3m2!1ses!2sec!4v1700000000000"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==============================
+             CTA FINAL
+        =============================== -->
+        <section class="cta">
+            <div class="container">
+                <div class="cta-box">
+                    <div>
+                        <h3>¿Prefieres hablar con nosotros?</h3>
+                        <p>Llámanos o escríbenos por WhatsApp y te atendemos al instante.</p>
+                    </div>
+                    <a href="tel:+593987654321" class="btn cta-btn">Llamar ahora</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==============================
+         FOOTER
+    =============================== -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand-col">
+                    <span class="footer-brand">All Tour Ecuador</span>
+                    <p>Experiencias únicas para descubrir los destinos más hermosos y auténticos de Ecuador.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="destinos.html">Destinos</a></li>
+                        <li><a href="index.html#experiencias">Experiencias</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><a href="tel:+593987654321">+593 98 765 4321</a></li>
+                        <li><a href="mailto:info@alltourecuador.com">info@alltourecuador.com</a></li>
+                        <li><a href="#">Quito, Ecuador</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                © 2026 All Tour Ecuador. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

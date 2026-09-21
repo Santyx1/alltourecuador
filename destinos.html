@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destinos | All Tour Ecuador</title>
+    <meta name="description" content="Explora todos los destinos turísticos de Ecuador: Galápagos, Quito, Baños, Cuenca, Montañita, Amazonía y más." />
+    <meta name="author" content="All Tour Ecuador" />
+
+    <!-- Fuente Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- ==============================
+         HEADER / NAVEGACIÓN
+    =============================== -->
+    <header>
+        <div class="container nav">
+            <a href="index.html" class="brand" aria-label="All Tour Ecuador - Inicio">
+                <span class="brand-mark">A</span>
+                <span>All Tour Ecuador</span>
+            </a>
+
+            <nav class="nav-links" aria-label="Navegación principal">
+                <a href="index.html">Inicio</a>
+                <a href="destinos.html">Destinos</a>
+                <a href="index.html#experiencias">Experiencias</a>
+                <a href="index.html#nosotros">Nosotros</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="contacto.html" class="btn secondary">Reservar</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ==============================
+             HERO DE PÁGINA
+        =============================== -->
+        <section class="page-hero">
+            <div class="container">
+                <span class="eyebrow">Nuestros destinos</span>
+                <h1>Descubre todos los rincones de Ecuador</h1>
+                <p>
+                    Desde las islas Galápagos hasta la Amazonía, pasando por los Andes y la costa.
+                    Encuentra el destino perfecto para tu próxima aventura.
+                </p>
+            </div>
+        </section>
+
+        <!-- ==============================
+             FILTROS
+        =============================== -->
+        <section class="section" style="padding-top:50px;">
+            <div class="container">
+                <div class="filters" role="tablist" aria-label="Filtrar destinos">
+                    <button class="filter-btn active" data-filter="all" role="tab">Todos</button>
+                    <button class="filter-btn" data-filter="costa" role="tab">Costa</button>
+                    <button class="filter-btn" data-filter="sierra" role="tab">Sierra</button>
+                    <button class="filter-btn" data-filter="oriente" role="tab">Oriente</button>
+                    <button class="filter-btn" data-filter="galapagos" role="tab">Galápagos</button>
+                </div>
+
+                <!-- ==============================
+                     GRID DE DESTINOS
+                =============================== -->
+                <div class="destinations-grid" id="destinationsGrid">
+
+                    <!-- Galápagos -->
+                    <article class="destination-card" data-category="galapagos">
+                        <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=900&q=80" alt="Islas Galápagos" loading="lazy" />
+                        <div class="destination-info">
+                            <div class="meta">
+                                <span>Archipiélago</span>
+                                <span class="price">desde $399</span>
+                            </div>
+                            <h3>Galápagos</h3>
+                            <p>Observa tortugas, lobos marinos y una biodiversidad increíble en un paraíso natural único en el mundo.</p>
+                            <a href="contacto.html" class="card-link">Reservar →</a>
+                        </div>
+                    </article>
+
+                    <!-- Quito -->
+                    <article class="destination-card" data-category="sierra">
+                        <img src="https://images.unsplash.com/photo-1505761671935-60eb5f0a7f2e?auto=format&fit=crop&w=900&q=80" alt="Quito" loading="lazy" />
+                        <div class="destination-info">
+                            <div class="meta">
+                                <span>Capital</span>
+                                <span class="price">desde $249</span>
+                            </div>
+                            <h3>Quito</h3>
+                            <p>Recorre calles coloniales, plazas históricas y disfruta de una vista panorámica de la ciudad.</p>
+                            <a href="contacto.html" class="card-link">Reservar →</a>
+                        </div>
+                    </article>
+
+                    <!-- Baños -->
+                    <article class="destination-card" data-category="sierra">
+                        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" alt="Baños de Agua Santa" loading="lazy" />
+                        <div class="destination-info">
+                            <div class="meta">
+                                <span>Andes</span>
+                                <span class="price">desde $289</span>
+                            </div>
+                            <h3>Baños</h3>
+                            <p>Aventura, aguas termales y paisajes de montaña con una energía única en cada esquina.</p>
+                            <a href="contacto.html" class="card-link">Reservar →</a>
+                        </div>
+                    </article>
+
+                    <!-- Cuenca -->
+                    <article class="destination-card" data-category="sierra">
+                        <img src="https://images.unsplash.com/photo-1518639192441-8fce0a366e2e?auto=format&fit=crop&w=900&q=80" alt="Cuenca" loading="lazy" />
+                        <div class="destination-info">
+                            <div class="meta">
+                                <span>Patrimonio</span>
+                                <span class="price">desde $279</span>
+                            </div>
+                            <h3>Cuenca</h3>
+                            <p>Una ciudad colonial llena de arte, ríos, arquitectura patrimonial y cultura viva.</p>
+                            <a href="contacto.html" class="card-link">Reservar →</a>
+                        </div>
+                    </article>
+
+                    <!-- Montañita -->
+                    <article class="destination-card" data-category="costa">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80" alt="Montañita" loading="lazy" />
+                        <div class="destination-info">
+                            <div class="meta">
+                                <span>Playa</span>
+                                <span class="price">desde $199</span>
+                            </div>
+                            <h3>Montañita</h3>
+                            <p>Olas perfectas, ambiente bohemio y atardeceres que se quedan en la memoria.</p>
+                            <a href="contacto.html" class="card-link">Reservar →</a>
+                        </div>
+                    </article>
+
+                    <!-- Amazonía -->
+                    <article class="destination-card" data-category="oriente">
+                        <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=900&q=80" alt="Amazonía ecuatoriana" loading="lazy" />
+                        <div class="destination-info">
+                            <div class="meta">
+                                <span>Selva</span>
+                                <span class="price">desde $349</span>
+                            </div>
+                            <h3>Amazonía</h3>
+                            <p>Adéntrate en la selva tropical, navega por el río Napo y descubre comunidades ancestrales.</p>
+                            <a href="contacto.html" class="card-link">Reservar →</a>
+                        </div>
+                    </article>
+
+                    <!-- Cotopaxi -->
+                    <article class="destination-card" data-category="sierra">
+                        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80" alt="Volcán Cotopaxi" loading="lazy" />
+                        <div class="destination-info">
+                            <div class="meta">
+                                <span>Volcán</span>
+                                <span class="price">desde $229</span>
+                            </div>
+                            <h3>Cotopaxi</h3>
+                            <p>Ascenso y caminatas alrededor de uno de los volcanes activos más altos del mundo.</p>
+                            <a href="contacto.html" class="card-link">Reservar →</a>
+                        </div>
+                    </article>
+
+                    <!-- Guayaquil -->
+                    <article class="destination-card" data-category="costa">
+                        <img src="https://images.unsplash.com/photo-1580655653885-65763b2597d0?auto=format&fit=crop&w=900&q=80" alt="Guayaquil" loading="lazy" />
+                        <div class="destination-info">
+                            <div class="meta">
+                                <span>Puerto</span>
+                                <span class="price">desde $219</span>
+                            </div>
+                            <h3>Guayaquil</h3>
+                            <p>Malecón 2000, barrio Las Peñas y gastronomía costeña en la ciudad más grande del país.</p>
+                            <a href="contacto.html" class="card-link">Reservar →</a>
+                        </div>
+                    </article>
+
+                    <!-- Cuyabeno -->
+                    <article class="destination-card" data-category="oriente">
+                        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=80" alt="Reserva Cuyabeno" loading="lazy" />
+                        <div class="destination-info">
+                            <div class="meta">
+                                <span>Reserva</span>
+                                <span class="price">desde $389</span>
+                            </div>
+                            <h3>Cuyabeno</h3>
+                            <p>Lagunas, delfines rosados y una biodiversidad impresionante en la Amazonía ecuatoriana.</p>
+                            <a href="contacto.html" class="card-link">Reservar →</a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==============================
+             CTA FINAL
+        =============================== -->
+        <section class="cta">
+            <div class="container">
+                <div class="cta-box">
+                    <div>
+                        <h3>¿No encuentras tu destino ideal?</h3>
+                        <p>Cuéntanos qué buscas y diseñamos un paquete turístico 100% personalizado para ti.</p>
+                    </div>
+                    <a href="contacto.html" class="btn cta-btn">Cotizar mi viaje</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==============================
+         FOOTER
+    =============================== -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand-col">
+                    <span class="footer-brand">All Tour Ecuador</span>
+                    <p>Experiencias únicas para descubrir los destinos más hermosos y auténticos de Ecuador.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="destinos.html">Destinos</a></li>
+                        <li><a href="index.html#experiencias">Experiencias</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><a href="tel:+593987654321">+593 98 765 4321</a></li>
+                        <li><a href="mailto:info@alltourecuador.com">info@alltourecuador.com</a></li>
+                        <li><a href="#">Quito, Ecuador</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                © 2026 All Tour Ecuador. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

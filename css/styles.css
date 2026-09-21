@@ -162,8 +162,8 @@ header{
 }
 
 .brand-logo{
-    width:32px;        /* 👈 tamaño más pequeño */
-    height:32px;
+    width:40px;        /* 👈 tamaño más pequeño */
+    height:40px;
     object-fit:contain;
     border-radius:8px;
 }

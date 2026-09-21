@@ -23,3 +23,36 @@ if (filterButtons.length > 0) {
         });
     });
 }
+
+
+// ==========================================
+// 5. Formulario de contacto (contacto.html)
+// ==========================================
+const contactForm = document.getElementById('contactForm');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const nombre = contactForm.querySelector('input[name="nombre"]').value.trim();
+        const email = contactForm.querySelector('input[name="email"]').value.trim();
+        const destino = contactForm.querySelector('select[name="destino"]').value;
+        const mensaje = contactForm.querySelector('textarea[name="mensaje"]').value.trim();
+
+        // Validación básica
+        if (!nombre || !email || !destino || !mensaje) {
+            alert('⚠️ Por favor completa todos los campos obligatorios (*)');
+            return;
+        }
+
+        // Validar email
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            alert('⚠️ Por favor ingresa un correo electrónico válido');
+            return;
+        }
+
+        alert(`✅ ¡Gracias ${nombre}!\n\nHemos recibido tu mensaje sobre: ${destino}\nTe responderemos a ${email} en menos de 24 horas.`);
+        contactForm.reset();
+    });
+}

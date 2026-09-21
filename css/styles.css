@@ -161,19 +161,12 @@ header{
     font-size:0.95rem;
 }
 
-.brand-mark{
+.brand-logo{
     width:42px;
     height:42px;
+    object-fit:contain;
     border-radius:12px;
-    background:linear-gradient(135deg, var(--primary), #16a37a);
-    color:var(--white);
-    display:grid;
-    place-items:center;
-    font-size:1.2rem;
-    font-weight:800;
-    box-shadow:0 12px 24px rgba(10,125,92,0.25);
 }
-
 .nav-links{
     display:flex;
     align-items:center;

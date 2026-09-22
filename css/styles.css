@@ -1152,3 +1152,297 @@ footer{
         font-size:0.9rem;
     }
 }
+/* ==========================================
+   19. MAPA INTERACTIVO
+   ========================================== */
+.map-section{
+    background:linear-gradient(180deg, rgba(17,100,81,0.03), rgba(17,100,81,0));
+}
+
+.map-layout{
+    display:grid;
+    grid-template-columns:1.4fr 1fr;
+    gap:28px;
+    margin-top:40px;
+    align-items:stretch;
+}
+
+.tour-map{
+    height:560px;
+    border-radius:var(--radius);
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    z-index:1;
+}
+
+/* Panel lateral de detalles */
+.map-panel{
+    background:var(--white);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+}
+
+.map-panel-empty{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:40px 28px;
+    height:100%;
+    color:var(--muted);
+}
+
+.map-panel-icon{
+    font-size:2.5rem;
+    margin-bottom:14px;
+    opacity:0.6;
+}
+
+.map-panel-empty h3{
+    color:var(--dark);
+    margin:0 0 8px;
+    font-size:1.2rem;
+}
+
+.map-panel-empty p{
+    margin:0;
+    font-size:0.92rem;
+    max-width:260px;
+}
+
+.map-panel-content{
+    display:flex;
+    flex-direction:column;
+    height:100%;
+}
+
+.panel-img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    display:block;
+}
+
+.panel-body{
+    padding:22px 22px 24px;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    flex:1;
+}
+
+.panel-tag{
+    display:inline-block;
+    background:rgba(10,125,92,0.12);
+    color:var(--primary);
+    padding:5px 12px;
+    border-radius:999px;
+    font-size:0.75rem;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+    align-self:flex-start;
+    margin-bottom:4px;
+}
+
+.panel-body h3{
+    margin:0;
+    font-size:1.5rem;
+    color:var(--dark);
+    font-weight:800;
+}
+
+.panel-body > p{
+    margin:0;
+    color:var(--muted);
+    font-size:0.95rem;
+    line-height:1.55;
+}
+
+.panel-info{
+    list-style:none;
+    padding:0;
+    margin:14px 0 18px;
+    display:grid;
+    gap:8px;
+    border-top:1px solid rgba(39,54,61,0.08);
+    padding-top:14px;
+}
+
+.panel-info li{
+    font-size:0.92rem;
+    color:var(--text);
+}
+
+.panel-info strong{
+    color:var(--dark);
+    margin-right:4px;
+}
+
+/* Personalización de los popups de Leaflet */
+.leaflet-popup-content-wrapper{
+    border-radius:14px;
+    box-shadow:0 12px 30px rgba(0,0,0,0.15);
+}
+
+.leaflet-popup-content{
+    margin:14px 16px;
+    font-family:"Montserrat", sans-serif;
+}
+
+.leaflet-popup-content h4{
+    margin:0 0 4px;
+    color:var(--dark);
+    font-size:1rem;
+}
+
+.leaflet-popup-content p{
+    margin:0;
+    color:var(--muted);
+    font-size:0.85rem;
+}
+
+/* ==========================================
+   20. GALERÍA / CARRUSEL
+   ========================================== */
+.gallery-section{
+    background:#0f2c2a;
+    overflow:hidden;
+}
+
+.gallery-section .section-title{
+    color:var(--white);
+}
+
+.gallery-section .section-subtitle{
+    color:rgba(255,255,255,0.75);
+}
+
+.gallery-swiper{
+    width:100%;
+    padding:20px 0 70px;
+}
+
+.gallery-slide{
+    position:relative;
+    border-radius:var(--radius);
+    overflow:hidden;
+    height:440px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.3);
+}
+
+.gallery-slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:transform 0.6s ease;
+}
+
+.gallery-slide:hover img{
+    transform:scale(1.05);
+}
+
+.gallery-caption{
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    padding:30px 24px 22px;
+    background:linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+    color:var(--white);
+}
+
+.gallery-caption h4{
+    margin:0 0 4px;
+    font-size:1.3rem;
+    font-weight:800;
+}
+
+.gallery-caption p{
+    margin:0;
+    font-size:0.9rem;
+    color:rgba(255,255,255,0.85);
+}
+
+/* Botones del carrusel */
+.gallery-swiper .swiper-button-next,
+.gallery-swiper .swiper-button-prev{
+    color:var(--white);
+    background:rgba(255,255,255,0.15);
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    backdrop-filter:blur(8px);
+    transition:var(--transition);
+}
+
+.gallery-swiper .swiper-button-next:hover,
+.gallery-swiper .swiper-button-prev:hover{
+    background:var(--primary);
+}
+
+.gallery-swiper .swiper-button-next::after,
+.gallery-swiper .swiper-button-prev::after{
+    font-size:1.1rem;
+    font-weight:800;
+}
+
+/* Paginación */
+.gallery-swiper .swiper-pagination-bullet{
+    background:rgba(255,255,255,0.5);
+    opacity:1;
+    width:10px;
+    height:10px;
+    transition:var(--transition);
+}
+
+.gallery-swiper .swiper-pagination-bullet-active{
+    background:var(--white);
+    width:28px;
+    border-radius:999px;
+}
+
+/* ==========================================
+   21. RESPONSIVE MAPA Y GALERÍA
+   ========================================== */
+@media (max-width: 980px){
+    .map-layout{
+        grid-template-columns:1fr;
+    }
+
+    .tour-map{
+        height:420px;
+    }
+
+    .map-panel{
+        min-height:auto;
+    }
+
+    .gallery-slide{
+        height:380px;
+    }
+}
+
+@media (max-width: 720px){
+    .tour-map{
+        height:340px;
+    }
+
+    .gallery-slide{
+        height:300px;
+    }
+
+    .panel-img{
+        height:170px;
+    }
+
+    .gallery-swiper .swiper-button-next,
+    .gallery-swiper .swiper-button-prev{
+        width:40px;
+        height:40px;
+    }
+}

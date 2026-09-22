@@ -1,4 +1,67 @@
 // ==========================================
+// ALL TOUR ECUADOR - Script principal
+// ==========================================
+
+// ==========================================
+// 1. Formulario de reserva (hero del index)
+// ==========================================
+const bookingForm = document.querySelector('.booking-form');
+
+if (bookingForm) {
+    bookingForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const nombre = bookingForm.querySelector('input[type="text"]').value.trim();
+        const destino = bookingForm.querySelector('select').value;
+        const fecha = bookingForm.querySelector('input[type="date"]').value;
+        const personas = bookingForm.querySelector('input[type="number"]').value;
+
+        // Validación
+        if (!nombre || destino === '' || !fecha || !personas) {
+            alert('⚠️ Por favor completa todos los campos');
+            return;
+        }
+
+        alert(`✅ ¡Gracias ${nombre}!\n\nDestino: ${destino}\nFecha: ${fecha}\nPersonas: ${personas}\n\nTe contactaremos pronto.`);
+        bookingForm.reset();
+    });
+}
+
+// ==========================================
+// 2. Animación fade-in al hacer scroll
+// ==========================================
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.destination-card, .feature, .testimonial').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
+    observer.observe(el);
+});
+
+// ==========================================
+// 3. Sombra en el header al hacer scroll
+// ==========================================
+const header = document.querySelector('header');
+
+if (header) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.style.boxShadow = '0 8px 24px rgba(0,0,0,0.08)';
+        } else {
+            header.style.boxShadow = 'none';
+        }
+    });
+}
+
+// ==========================================
 // 4. Filtros de destinos (destinos.html)
 // ==========================================
 const filterButtons = document.querySelectorAll('.filter-btn');
@@ -23,7 +86,6 @@ if (filterButtons.length > 0) {
         });
     });
 }
-
 
 // ==========================================
 // 5. Formulario de contacto (contacto.html)
@@ -58,36 +120,37 @@ if (contactForm) {
 }
 
 // ==========================================
-// 6. MAPA INTERACTIVO (Leaflet)
+// 6. MAPA INTERACTIVO (Leaflet + CARTO Voyager)
 // ==========================================
 const mapEl = document.getElementById('tourMap');
 
 if (mapEl) {
     // 1. Crear el mapa centrado en Ecuador
     const map = L.map('tourMap', {
-        scrollWheelZoom: false
+        scrollWheelZoom: false,
+        zoomControl: true,
+        attributionControl: true
     }).setView([-1.8312, -78.1834], 6);
 
-    // 2. Capa de tiles (OpenStreetMap)
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 18,
-        attribution: '&copy; OpenStreetMap contributors'
+    // 2. Capa de tiles CARTO Voyager (moderna y limpia)
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+        subdomains: 'abcd',
+        maxZoom: 20,
+        detectRetina: true
     }).addTo(map);
 
-    // 3. Icono personalizado (verde)
+    // 3. Icono personalizado (pin verde)
     const customIcon = L.divIcon({
         className: 'custom-marker',
-        html: `<div style="
-            width:32px;height:32px;
-            background:#0a7d5c;
-            border:3px solid #fff;
-            border-radius:50% 50% 50% 0;
-            transform:rotate(-45deg);
-            box-shadow:0 6px 16px rgba(0,0,0,0.3);
-        "></div>`,
-        iconSize: [32, 32],
-        iconAnchor: [16, 32],
-        popupAnchor: [0, -32]
+        html: `
+            <div class="marker-pin">
+                <div class="marker-pin-inner"></div>
+            </div>
+        `,
+        iconSize: [36, 44],
+        iconAnchor: [18, 44],
+        popupAnchor: [0, -40]
     });
 
     // 4. Datos de los destinos
@@ -106,7 +169,7 @@ if (mapEl) {
             nombre: 'Quito',
             tag: 'Capital',
             coords: [-0.1807, -78.4678],
-            img: 'https://images.unsplash.com/photo-1505761671935-60eb5f0a7f2e?auto=format&fit=crop&w=900&q=80',
+            img: 'https://images.unsplash.com/photo-1580654712603-eb43273aff33?auto=format&fit=crop&w=900&q=80',
             desc: 'Centro histórico declarado Patrimonio de la Humanidad, con iglesias coloniales y vistas desde el Panecillo.',
             precio: 'Desde $249',
             duracion: '3 días / 2 noches',
@@ -175,15 +238,12 @@ if (mapEl) {
     ];
 
     // 5. Referencias al panel
-    const panelEmpty = document.getElementById('mapPanelEmpty');
-    const panelContent = document.getElementById('mapPanelContent');
     const panelImg = document.getElementById('panelImg');
+    const panelImgOverlay = document.getElementById('panelImgOverlay');
     const panelTag = document.getElementById('panelTag');
     const panelTitle = document.getElementById('panelTitle');
     const panelDesc = document.getElementById('panelDesc');
-    const panelPrice = document.getElementById('panelPrice');
-    const panelDuration = document.getElementById('panelDuration');
-    const panelSeason = document.getElementById('panelSeason');
+    const panelInfo = document.getElementById('panelInfo');
 
     // 6. Agregar marcadores
     destinos.forEach(destino => {
@@ -192,22 +252,31 @@ if (mapEl) {
         // Popup al hacer clic
         marker.bindPopup(`
             <h4>${destino.nombre}</h4>
-            <p>${destino.tag}</p>
+            <p>${destino.tag} · ${destino.precio}</p>
         `);
 
         // Actualizar panel al hacer clic
         marker.on('click', () => {
-            panelEmpty.hidden = true;
-            panelContent.hidden = false;
+            // Ocultar el overlay
+            if (panelImgOverlay) {
+                panelImgOverlay.style.display = 'none';
+            }
 
+            // Actualizar imagen
             panelImg.src = destino.img;
             panelImg.alt = destino.nombre;
+
+            // Actualizar contenido
             panelTag.textContent = destino.tag;
             panelTitle.textContent = destino.nombre;
             panelDesc.textContent = destino.desc;
-            panelPrice.textContent = destino.precio;
-            panelDuration.textContent = destino.duracion;
-            panelSeason.textContent = destino.temporada;
+
+            // Actualizar info
+            panelInfo.innerHTML = `
+                <li><strong>Precio:</strong> <span>${destino.precio}</span></li>
+                <li><strong>Duración:</strong> <span>${destino.duracion}</span></li>
+                <li><strong>Mejor época:</strong> <span>${destino.temporada}</span></li>
+            `;
         });
     });
 }

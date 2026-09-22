@@ -7,10 +7,20 @@
     <meta name="description" content="Descubre los destinos más increíbles de Ecuador con All Tour Ecuador. Galápagos, Quito, Baños, Cuenca y más." />
     <meta name="author" content="All Tour Ecuador" />
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/logo.png">
+
     <!-- Fuente Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Leaflet (mapa) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+    <!-- Swiper (carrusel) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <!-- CSS principal -->
     <link rel="stylesheet" href="css/styles.css">
@@ -23,18 +33,16 @@
     <header>
         <div class="container nav">
             <a href="index.html" class="brand" aria-label="All Tour Ecuador - Inicio">
-                <a href="index.html" class="brand" aria-label="All Tour Ecuador - Inicio">
-                    <img src="img/logo.png" alt="Logo All Tour Ecuador" class="brand-logo" />
-                    <span>All Tour Ecuador</span>
-                </a>
+                <img src="img/logo.png" alt="Logo All Tour Ecuador" class="brand-logo" />
                 <span>All Tour Ecuador</span>
             </a>
 
             <nav class="nav-links" aria-label="Navegación principal">
                 <a href="index.html">Inicio</a>
                 <a href="#destinos">Destinos</a>
-                <a href="#experiencias">Experiencias</a>
-                <a href="#nosotros">Nosotros</a>
+                <a href="#mapa">Mapa</a>
+                <a href="#galeria">Galería</a>
+                <a href="destinos.html">Todos</a>
                 <a href="contacto.html">Contacto</a>
             </nav>
 
@@ -62,7 +70,7 @@
 
                     <div class="hero-actions">
                         <a href="#destinos" class="btn">Ver destinos</a>
-                        <a href="#nosotros" class="btn secondary">Conoce más</a>
+                        <a href="#mapa" class="btn secondary">Explorar mapa</a>
                     </div>
 
                     <div class="stats">
@@ -157,6 +165,125 @@
                 <div class="section-cta">
                     <a href="destinos.html" class="btn secondary">Ver todos los destinos</a>
                 </div>
+            </div>
+        </section>
+
+        <!-- ==============================
+             MAPA INTERACTIVO
+        =============================== -->
+        <section class="section map-section" id="mapa">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Explora el mapa</h2>
+                    <p class="section-subtitle">
+                        Haz clic en cualquier marcador para ver los detalles del destino.
+                    </p>
+                </div>
+
+                <div class="map-layout">
+                    <!-- Mapa -->
+                    <div id="tourMap" class="tour-map" aria-label="Mapa de destinos en Ecuador"></div>
+
+                    <!-- Panel de detalles -->
+                    <aside class="map-panel" id="mapPanel">
+                        <div class="map-panel-empty" id="mapPanelEmpty">
+                            <div class="map-panel-icon">📍</div>
+                            <h3>Selecciona un destino</h3>
+                            <p>Haz clic en un marcador del mapa para ver la información del destino aquí.</p>
+                        </div>
+
+                        <div class="map-panel-content" id="mapPanelContent" hidden>
+                            <img id="panelImg" src="" alt="" class="panel-img" />
+                            <div class="panel-body">
+                                <span class="panel-tag" id="panelTag"></span>
+                                <h3 id="panelTitle"></h3>
+                                <p id="panelDesc"></p>
+
+                                <ul class="panel-info">
+                                    <li><strong>Precio:</strong> <span id="panelPrice"></span></li>
+                                    <li><strong>Duración:</strong> <span id="panelDuration"></span></li>
+                                    <li><strong>Mejor época:</strong> <span id="panelSeason"></span></li>
+                                </ul>
+
+                                <a href="contacto.html" class="btn" style="width:100%;">Reservar este destino</a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==============================
+             GALERÍA / CARRUSEL
+        =============================== -->
+        <section class="section gallery-section" id="galeria">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Galería de viajes</h2>
+                    <p class="section-subtitle">
+                        Un vistazo a los paisajes, culturas y momentos que vivirás con nosotros.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Carrusel Swiper -->
+            <div class="swiper gallery-swiper">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide gallery-slide">
+                        <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1200&q=80" alt="Galápagos" loading="lazy" />
+                        <div class="gallery-caption">
+                            <h4>Galápagos</h4>
+                            <p>Biodiversidad única en el mundo</p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide gallery-slide">
+                        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80" alt="Cotopaxi" loading="lazy" />
+                        <div class="gallery-caption">
+                            <h4>Cotopaxi</h4>
+                            <p>Aventura entre volcanes</p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide gallery-slide">
+                        <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80" alt="Amazonía" loading="lazy" />
+                        <div class="gallery-caption">
+                            <h4>Amazonía</h4>
+                            <p>Selva, ríos y comunidades</p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide gallery-slide">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80" alt="Montañita" loading="lazy" />
+                        <div class="gallery-caption">
+                            <h4>Montañita</h4>
+                            <p>Playas y atardeceres</p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide gallery-slide">
+                        <img src="https://images.unsplash.com/photo-1518639192441-8fce0a366e2e?auto=format&fit=crop&w=1200&q=80" alt="Cuenca" loading="lazy" />
+                        <div class="gallery-caption">
+                            <h4>Cuenca</h4>
+                            <p>Arte y patrimonio colonial</p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide gallery-slide">
+                        <img src="https://images.unsplash.com/photo-1505761671935-60eb5f0a7f2e?auto=format&fit=crop&w=1200&q=80" alt="Quito" loading="lazy" />
+                        <div class="gallery-caption">
+                            <h4>Quito</h4>
+                            <p>Historia y cultura viva</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Controles -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
             </div>
         </section>
 
@@ -325,7 +452,8 @@
                     <ul>
                         <li><a href="index.html">Inicio</a></li>
                         <li><a href="#destinos">Destinos</a></li>
-                        <li><a href="#experiencias">Experiencias</a></li>
+                        <li><a href="#mapa">Mapa</a></li>
+                        <li><a href="#galeria">Galería</a></li>
                         <li><a href="contacto.html">Contacto</a></li>
                     </ul>
                 </div>
@@ -346,6 +474,14 @@
         </div>
     </footer>
 
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- JS principal -->
     <script src="js/script.js"></script>
 </body>
 </html>

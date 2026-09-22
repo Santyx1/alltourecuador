@@ -960,8 +960,10 @@ footer{
     overflow:hidden;
     box-shadow:var(--shadow);
     z-index:1;
+    background:#e8f0ed;
 }
 
+/* Panel lateral */
 .map-panel{
     background:var(--white);
     border-radius:var(--radius);
@@ -972,53 +974,63 @@ footer{
     height:600px;
 }
 
-.map-panel-empty{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:40px 28px;
-    height:100%;
-    color:var(--muted);
-}
-
-.map-panel-icon{
-    font-size:2.5rem;
-    margin-bottom:14px;
-    opacity:0.6;
-}
-
-.map-panel-empty h3{
-    color:var(--dark);
-    margin:0 0 8px;
-    font-size:1.2rem;
-}
-
-.map-panel-empty p{
-    margin:0;
-    font-size:0.92rem;
-    max-width:260px;
-}
-
 .map-panel-content{
     display:flex;
     flex-direction:column;
     height:100%;
 }
 
-.panel-img{
+/* Imagen con overlay */
+.panel-img-wrapper{
+    position:relative;
     width:100%;
-    height:220px;
-    object-fit:cover;
-    display:block;
+    height:230px;
+    overflow:hidden;
+    background:#e8f0ed;
+    flex-shrink:0;
 }
 
-.panel-body{
-    padding:20px 22px 22px;
+.panel-img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:opacity 0.4s ease;
+}
+
+.panel-img-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(135deg, rgba(10,125,92,0.85), rgba(6,92,70,0.92));
     display:flex;
     flex-direction:column;
-    gap:6px;
+    align-items:center;
+    justify-content:center;
+    color:var(--white);
+    text-align:center;
+    padding:20px;
+    gap:10px;
+}
+
+.panel-img-overlay span{
+    font-size:2.4rem;
+    line-height:1;
+}
+
+.panel-img-overlay p{
+    margin:0;
+    font-size:0.95rem;
+    font-weight:600;
+    max-width:220px;
+    line-height:1.4;
+}
+
+/* Contenido del panel */
+.panel-body{
+    padding:22px 22px 24px;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
     flex:1;
     overflow-y:auto;
 }
@@ -1039,7 +1051,7 @@ footer{
 
 .panel-body h3{
     margin:0;
-    font-size:1.4rem;
+    font-size:1.45rem;
     color:var(--dark);
     font-weight:800;
 }
@@ -1054,21 +1066,30 @@ footer{
 .panel-info{
     list-style:none;
     padding:0;
-    margin:12px 0 16px;
+    margin:14px 0 18px;
     display:grid;
-    gap:6px;
+    gap:8px;
     border-top:1px solid rgba(39,54,61,0.08);
-    padding-top:12px;
+    padding-top:14px;
 }
 
 .panel-info li{
     font-size:0.92rem;
     color:var(--text);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
 }
 
 .panel-info strong{
     color:var(--dark);
-    margin-right:4px;
+}
+
+.panel-info span{
+    color:var(--primary);
+    font-weight:700;
+    text-align:right;
 }
 
 /* Personalización de los popups de Leaflet */
@@ -1096,8 +1117,38 @@ footer{
 
 /* Marcador personalizado */
 .custom-marker{
-    background:transparent;
-    border:none;
+    background:transparent !important;
+    border:none !important;
+}
+
+.marker-pin{
+    width:32px;
+    height:32px;
+    border-radius:50% 50% 50% 0;
+    background:linear-gradient(135deg, #0a7d5c, #16a37a);
+    position:absolute;
+    transform:rotate(-45deg);
+    left:50%;
+    top:50%;
+    margin:-16px 0 0 -16px;
+    border:3px solid #ffffff;
+    box-shadow:0 8px 20px rgba(10,125,92,0.4);
+    transition:transform 0.2s ease;
+}
+
+.marker-pin:hover{
+    transform:rotate(-45deg) scale(1.15);
+}
+
+.marker-pin-inner{
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background:#ffffff;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
 }
 
 /* ==========================================
@@ -1285,6 +1336,10 @@ footer{
         min-height:auto;
     }
 
+    .panel-img-wrapper{
+        height:200px;
+    }
+
     .gallery-slide{
         height:380px;
     }
@@ -1395,7 +1450,11 @@ footer{
     }
 
     .map-panel{
-        min-height:340px;
+        min-height:auto;
+    }
+
+    .panel-img-wrapper{
+        height:180px;
     }
 
     .gallery-slide{
@@ -1404,10 +1463,6 @@ footer{
 
     .gallery-swiper{
         padding:20px 0 60px;
-    }
-
-    .panel-img{
-        height:180px;
     }
 
     .gallery-swiper .swiper-button-next,

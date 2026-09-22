@@ -4,8 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contacto | All Tour Ecuador</title>
-    <meta name="description" content="Contáctanos y diseña tu viaje soñado por Ecuador. Reservas, cotizaciones y atención personalizada 24/7." />
+    <meta name="description" content="Contáctanos y diseña tu viaje soñado por Ecuador. Agencia de Viajes y Operador Turístico. Atención personalizada 24/7." />
     <meta name="author" content="All Tour Ecuador" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Contacto | All Tour Ecuador" />
+    <meta property="og:description" content="Contáctanos y diseña tu viaje soñado por Ecuador." />
+    <meta property="og:type" content="website" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="img/logo.png">
@@ -18,27 +23,37 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+    <!-- Leaflet (mapa) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
     <!-- CSS principal -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-    <!-- ==============================
-         HEADER
-    =============================== -->
+    <!-- PRELOADER -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <img src="img/logo.png" alt="All Tour Ecuador" />
+            <div class="preloader-bar"><span></span></div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
     <header class="site-header scrolled" id="siteHeader">
         <div class="container nav-wrapper">
             <a href="index.html" class="brand" aria-label="All Tour Ecuador - Inicio">
-                <img src="img/logo-montanas.png" alt="All Tour Ecuador" class="brand-logo" />
+                <img src="img/logo.png" alt="All Tour Ecuador" class="brand-logo" />
             </a>
 
             <nav class="main-nav" aria-label="Navegación principal">
                 <a href="index.html">Inicio</a>
-                <a href="index.html#about">Nosotros</a>
+                <a href="index.html#nosotros">Nosotros</a>
                 <a href="destinos.html">Destinos</a>
                 <a href="index.html#tours">Tours</a>
-                <a href="index.html#galapagos">Galápagos</a>
-                <a href="index.html#blog">Blog</a>
+                <a href="index.html#servicios">Servicios</a>
+                <a href="index.html#experiencias">Experiencias</a>
                 <a href="contacto.html" class="active">Contacto</a>
             </nav>
 
@@ -47,43 +62,34 @@
                     <span>ES</span>
                     <i class="fa-solid fa-chevron-down"></i>
                 </button>
-                <button class="search-btn" aria-label="Buscar">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-                <a href="contacto.html" class="btn btn-accent btn-sm nav-cta">
-                    Reservar
-                </a>
+                <a href="contacto.html" class="btn btn-accent btn-sm nav-cta">Reservar</a>
                 <button class="menu-toggle" aria-label="Abrir menú" id="menuToggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <span></span><span></span><span></span>
                 </button>
             </div>
         </div>
     </header>
 
-    <!-- Menú móvil -->
+    <!-- MENÚ MÓVIL -->
     <div class="mobile-menu" id="mobileMenu">
         <nav class="mobile-nav">
             <a href="index.html">Inicio</a>
-            <a href="index.html#about">Nosotros</a>
+            <a href="index.html#nosotros">Nosotros</a>
             <a href="destinos.html">Destinos</a>
             <a href="index.html#tours">Tours</a>
-            <a href="index.html#galapagos">Galápagos</a>
-            <a href="index.html#blog">Blog</a>
+            <a href="index.html#servicios">Servicios</a>
+            <a href="index.html#experiencias">Experiencias</a>
             <a href="contacto.html">Contacto</a>
         </nav>
         <div class="mobile-menu-contact">
-            <a href="tel:+593991234567"><i class="fa-solid fa-phone"></i> +593 99 123 4567</a>
+            <a href="tel:+593997898745"><i class="fa-solid fa-phone"></i> +593 99 789 8745</a>
             <a href="mailto:info@alltourecuador.com"><i class="fa-solid fa-envelope"></i> info@alltourecuador.com</a>
         </div>
     </div>
 
     <main>
 
-        <!-- ==============================
-             PAGE HERO
-        =============================== -->
+        <!-- PAGE HERO -->
         <section class="page-hero page-hero-sm">
             <div class="page-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1920&q=80');"></div>
             <div class="page-hero-overlay"></div>
@@ -103,9 +109,7 @@
             </div>
         </section>
 
-        <!-- ==============================
-             CONTACTO PRINCIPAL
-        =============================== -->
+        <!-- CONTACTO PRINCIPAL -->
         <section class="section-contact">
             <div class="container">
                 <div class="contact-wrapper">
@@ -124,8 +128,8 @@
                                     <i class="fa-solid fa-location-dot"></i>
                                 </div>
                                 <div class="contact-info-text">
-                                    <strong>Dirección</strong>
-                                    <span>Av. Amazonas N34-451<br>Otavalo - Imbabura - Ecuador</span>
+                                    <strong>Oficina principal</strong>
+                                    <span>Calle Bolívar, entre Neptalí Ordoñez y Avenida Quito</span>
                                 </div>
                             </li>
                             <li>
@@ -133,8 +137,17 @@
                                     <i class="fa-solid fa-phone"></i>
                                 </div>
                                 <div class="contact-info-text">
-                                    <strong>Teléfono</strong>
-                                    <a href="tel:+593991234567">+593 99 123 4567</a>
+                                    <strong>Teléfono / Celular</strong>
+                                    <a href="tel:+593997898745">+593 99 789 8745</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="contact-info-icon">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </div>
+                                <div class="contact-info-text">
+                                    <strong>WhatsApp</strong>
+                                    <a href="https://wa.me/593997898745" target="_blank" rel="noopener">+593 99 789 8745</a>
                                 </div>
                             </li>
                             <li>
@@ -161,11 +174,9 @@
                         <div class="contact-social">
                             <span>Síguenos</span>
                             <div class="social-icons">
-                                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                                <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-                                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                                <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                                <a href="https://www.facebook.com/Alltourecuador" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="https://www.instagram.com/alltourecuador593/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://www.tiktok.com/@alltourecuador" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
                             </div>
                         </div>
                     </aside>
@@ -190,25 +201,38 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="telefono">Teléfono</label>
-                                <input type="tel" id="telefono" name="telefono" placeholder="+593 99 123 4567" />
+                                <input type="tel" id="telefono" name="telefono" placeholder="+593 99 789 8745" />
                             </div>
                             <div class="form-group">
-                                <label for="destino">Destino de interés *</label>
+                                <label for="destino">Región de interés *</label>
                                 <select id="destino" name="destino" required>
-                                    <option value="">Selecciona un destino</option>
-                                    <option value="Galápagos">Galápagos</option>
-                                    <option value="Quito">Quito</option>
-                                    <option value="Baños">Baños</option>
-                                    <option value="Cuenca">Cuenca</option>
-                                    <option value="Montañita">Montañita</option>
+                                    <option value="">Selecciona una región</option>
+                                    <option value="Costa">Costa</option>
+                                    <option value="Sierra / Andes">Sierra / Andes</option>
                                     <option value="Amazonía">Amazonía</option>
-                                    <option value="Cotopaxi">Cotopaxi</option>
-                                    <option value="Guayaquil">Guayaquil</option>
-                                    <option value="Cuyabeno">Cuyabeno</option>
-                                    <option value="Isla de la Plata">Isla de la Plata</option>
-                                    <option value="Quilotoa">Quilotoa</option>
-                                    <option value="Personalizado">Paquete personalizado</option>
+                                    <option value="Galápagos">Galápagos</option>
+                                    <option value="Varias regiones">Varias regiones</option>
+                                    <option value="Paquete personalizado">Paquete personalizado</option>
                                 </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="tour">Tour de interés</label>
+                                <select id="tour" name="tour">
+                                    <option value="">Selecciona un tour (opcional)</option>
+                                    <option value="Raíces de Otavalo">Raíces de Otavalo</option>
+                                    <option value="Tierra, Sabor y Espíritu Kichwa Cotacachi">Tierra, Sabor y Espíritu Kichwa Cotacachi</option>
+                                    <option value="Patrimonio Ancestral Kichwa">Patrimonio Ancestral Kichwa</option>
+                                    <option value="Sabores y Raíces de Imbabura">Sabores y Raíces de Imbabura</option>
+                                    <option value="Aromas, Sabores y Aventura de Intag">Aromas, Sabores y Aventura de Intag</option>
+                                    <option value="Entre Alpacas y Tejidos Andinos">Entre Alpacas y Tejidos Andinos</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="personas">Número de personas</label>
+                                <input type="number" id="personas" name="personas" min="1" placeholder="Ej: 2" />
                             </div>
                         </div>
 
@@ -218,8 +242,14 @@
                                 <input type="date" id="fecha" name="fecha" />
                             </div>
                             <div class="form-group">
-                                <label for="personas">Número de personas</label>
-                                <input type="number" id="personas" name="personas" min="1" placeholder="Ej: 2" />
+                                <label for="duracion">Duración estimada</label>
+                                <select id="duracion" name="duracion">
+                                    <option value="">Selecciona</option>
+                                    <option value="1 día">1 día</option>
+                                    <option value="2-3 días">2-3 días</option>
+                                    <option value="4-7 días">4-7 días</option>
+                                    <option value="Más de una semana">Más de una semana</option>
+                                </select>
                             </div>
                         </div>
 
@@ -243,32 +273,22 @@
             </div>
         </section>
 
-        <!-- ==============================
-             MAPA
-        =============================== -->
+        <!-- MAPA INTERACTIVO -->
         <section class="section-map">
             <div class="container">
                 <div class="section-header-center">
                     <span class="section-eyebrow">Encuéntranos</span>
                     <h2 class="section-heading">Visítanos en nuestra oficina</h2>
-                    <p class="section-lead">Estamos ubicados en el corazón de Otavalo, Imbabura.</p>
+                    <p class="section-lead">Estamos ubicados en el corazón de la ciudad. ¡Te esperamos!</p>
                 </div>
 
-                <div class="map-wrapper">
-                    <iframe
-                        title="Ubicación All Tour Ecuador"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.8019!2d-78.2640!3d0.2342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMMKwMTQnMDMuMSJOIDc4wrAxNSc1MC40Ilc!5e0!3m2!1ses!2sec!4v1700000000000"
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
-                        allowfullscreen>
-                    </iframe>
+                <div class="map-single-wrapper">
+                    <div id="contactMap" class="tour-map-single" aria-label="Ubicación de All Tour Ecuador"></div>
                 </div>
             </div>
         </section>
 
-        <!-- ==============================
-             CTA FINAL
-        =============================== -->
+        <!-- CTA FINAL -->
         <section class="section-cta-final">
             <div class="cta-bg" style="background-image:url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1920&q=80');"></div>
             <div class="cta-overlay"></div>
@@ -278,11 +298,11 @@
                 <h2 class="cta-title">¿Prefieres hablar con nosotros directamente?</h2>
                 <p class="cta-desc">Llámanos o escríbenos por WhatsApp y te atendemos al instante.</p>
                 <div class="cta-buttons">
-                    <a href="tel:+593991234567" class="btn btn-accent btn-lg">
+                    <a href="tel:+593997898745" class="btn btn-accent btn-lg">
                         <i class="fa-solid fa-phone"></i>
                         Llamar ahora
                     </a>
-                    <a href="https://wa.me/593991234567" target="_blank" rel="noopener" class="btn btn-ghost btn-lg">
+                    <a href="https://wa.me/593997898745" target="_blank" rel="noopener" class="btn btn-ghost btn-lg">
                         <i class="fa-brands fa-whatsapp"></i>
                         WhatsApp
                     </a>
@@ -292,33 +312,22 @@
 
     </main>
 
-    <!-- ==============================
-         FOOTER
-    =============================== -->
+    <!-- FOOTER -->
     <footer class="site-footer">
         <div class="container footer-grid">
-
             <div class="footer-col footer-brand-col">
-                <img src="img/logo-montanas.png" alt="All Tour Ecuador" class="footer-logo" />
+                <img src="img/logo.png" alt="All Tour Ecuador" class="footer-logo" />
                 <p class="footer-tagline">Your Gateway to Authenticity</p>
-                <p class="footer-desc">Operador turístico boutique en Ecuador y Galápagos.</p>
+                <p class="footer-desc">Agencia de Viajes y Operador Turístico. Ecuador, desde el corazón del planeta.</p>
             </div>
 
             <div class="footer-col">
                 <h4>Contacto</h4>
                 <ul class="footer-list">
-                    <li>
-                        <i class="fa-solid fa-phone"></i>
-                        <a href="tel:+593991234567">+593 99 123 4567</a>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-envelope"></i>
-                        <a href="mailto:info@alltourecuador.com">info@alltourecuador.com</a>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-location-dot"></i>
-                        <span>Otavalo - Imbabura - Ecuador</span>
-                    </li>
+                    <li><i class="fa-solid fa-location-dot"></i><span>Calle Bolívar, entre Neptalí Ordoñez y Av. Quito</span></li>
+                    <li><i class="fa-solid fa-phone"></i><a href="tel:+593997898745">+593 99 789 8745</a></li>
+                    <li><i class="fa-brands fa-whatsapp"></i><a href="https://wa.me/593997898745" target="_blank" rel="noopener">WhatsApp</a></li>
+                    <li><i class="fa-solid fa-envelope"></i><a href="mailto:info@alltourecuador.com">info@alltourecuador.com</a></li>
                 </ul>
             </div>
 
@@ -326,24 +335,22 @@
                 <h4>Explora</h4>
                 <ul class="footer-list footer-links">
                     <li><a href="index.html#tours">Tours</a></li>
-                    <li><a href="index.html#galapagos">Galápagos</a></li>
-                    <li><a href="index.html#blog">Blog</a></li>
                     <li><a href="destinos.html">Destinos</a></li>
+                    <li><a href="index.html#servicios">Servicios</a></li>
+                    <li><a href="index.html#experiencias">Experiencias</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
                 </ul>
             </div>
 
             <div class="footer-col">
                 <h4>Síguenos</h4>
                 <div class="social-icons">
-                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/Alltourecuador" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/alltourecuador593/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@alltourecuador" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
                 </div>
                 <p class="social-hashtag">#AllTourEcuador</p>
             </div>
-
         </div>
 
         <div class="footer-bottom">
@@ -360,6 +367,10 @@
     <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
         <i class="fa-solid fa-arrow-up"></i>
     </button>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
     <script src="js/script.js"></script>
 </body>

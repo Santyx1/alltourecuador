@@ -24,12 +24,20 @@ if (siteHeader) {
         if (window.scrollY > 60) {
             siteHeader.classList.add('scrolled');
         } else {
-            siteHeader.classList.remove('scrolled');
+            // No quitamos la clase si ya viene con scrolled (páginas internas)
+            if (!siteHeader.dataset.alwaysScrolled) {
+                siteHeader.classList.remove('scrolled');
+            }
         }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Ejecutar al cargar
+    // Detectar si la página debe tener header siempre sólido
+    if (siteHeader.classList.contains('scrolled')) {
+        siteHeader.dataset.alwaysScrolled = 'true';
+    } else {
+        window.addEventListener('scroll', handleScroll);
+        handleScroll();
+    }
 }
 
 // ==========================================
@@ -78,7 +86,7 @@ if (document.querySelector('.hero-swiper')) {
             crossFade: true
         },
         autoplay: {
-            delay: 6000,
+            delay: 6500,
             disableOnInteraction: false,
         },
         pagination: {
@@ -93,31 +101,7 @@ if (document.querySelector('.hero-swiper')) {
 }
 
 // ==========================================
-// 5. FORMULARIO DE RESERVA (hero)
-// ==========================================
-const bookingForm = document.querySelector('.booking-form');
-
-if (bookingForm) {
-    bookingForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-
-        const nombre = bookingForm.querySelector('input[type="text"]')?.value.trim();
-        const destino = bookingForm.querySelector('select')?.value;
-        const fecha = bookingForm.querySelector('input[type="date"]')?.value;
-        const personas = bookingForm.querySelector('input[type="number"]')?.value;
-
-        if (!nombre || !destino || !fecha || !personas) {
-            alert('⚠️ Por favor completa todos los campos');
-            return;
-        }
-
-        alert(`✅ ¡Gracias ${nombre}!\n\nDestino: ${destino}\nFecha: ${fecha}\nPersonas: ${personas}\n\nTe contactaremos pronto.`);
-        bookingForm.reset();
-    });
-}
-
-// ==========================================
-// 6. BACK TO TOP
+// 5. BACK TO TOP
 // ==========================================
 const backToTop = document.getElementById('backToTop');
 
@@ -139,10 +123,10 @@ if (backToTop) {
 }
 
 // ==========================================
-// 7. SCROLL REVEAL (animaciones al scroll)
+// 6. SCROLL REVEAL (animaciones)
 // ==========================================
 const revealElements = document.querySelectorAll(
-    '.welcome-card, .about-image, .about-content, .style-card, .tour-card, .why-card, .blog-card, .testimonial-card'
+    '.welcome-card, .history-card, .region-card, .tour-card, .service-card, .why-card, .testimonial-card, .quick-nav-item'
 );
 
 if (revealElements.length > 0 && 'IntersectionObserver' in window) {
@@ -170,7 +154,30 @@ if (revealElements.length > 0 && 'IntersectionObserver' in window) {
 }
 
 // ==========================================
-// 8. FORMULARIO DE CONTACTO (contacto.html)
+// 7. SMOOTH SCROLL para enlaces internos
+// ==========================================
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href');
+        if (href === '#' || href.length < 2) return;
+
+        const target = document.querySelector(href);
+        if (target) {
+            e.preventDefault();
+            const headerOffset = 90;
+            const elementPosition = target.getBoundingClientRect().top + window.pageYOffset;
+            const offsetPosition = elementPosition - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+// ==========================================
+// 8. FORMULARIO DE CONTACTO
 // ==========================================
 const contactForm = document.getElementById('contactForm');
 
@@ -181,6 +188,8 @@ if (contactForm) {
         const nombre = contactForm.querySelector('input[name="nombre"]')?.value.trim();
         const email = contactForm.querySelector('input[name="email"]')?.value.trim();
         const destino = contactForm.querySelector('select[name="destino"]')?.value;
+        const tour = contactForm.querySelector('select[name="tour"]')?.value || '';
+        const personas = contactForm.querySelector('input[name="personas"]')?.value || '';
         const mensaje = contactForm.querySelector('textarea[name="mensaje"]')?.value.trim();
 
         if (!nombre || !email || !destino || !mensaje) {
@@ -194,58 +203,194 @@ if (contactForm) {
             return;
         }
 
-        alert(`✅ ¡Gracias ${nombre}!\n\nHemos recibido tu mensaje sobre: ${destino}\nTe responderemos a ${email} en menos de 24 horas.`);
+        let resumen = `✅ ¡Gracias ${nombre}!\n\n`;
+        resumen += `Región de interés: ${destino}\n`;
+        if (tour) resumen += `Tour: ${tour}\n`;
+        if (personas) resumen += `Personas: ${personas}\n`;
+        resumen += `\nTe responderemos a ${email} en menos de 24 horas.\n\nAll Tour Ecuador`;
+
+        alert(resumen);
         contactForm.reset();
     });
 }
 
 // ==========================================
-// 9. FILTROS DE DESTINOS (destinos.html)
+// 9. MAPA INTERACTIVO DE REGIONES (index + destinos)
 // ==========================================
-const filterButtons = document.querySelectorAll('.filter-btn');
-const destinationCards = document.querySelectorAll('#destinationsGrid .destination-card');
+const tourMapEl = document.getElementById('tourMap');
 
-if (filterButtons.length > 0) {
-    filterButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            filterButtons.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
+if (tourMapEl) {
+    // 1. Crear mapa centrado en Ecuador
+    const tourMap = L.map('tourMap', {
+        scrollWheelZoom: false,
+        zoomControl: true,
+        attributionControl: true
+    }).setView([-1.8312, -78.1834], 6);
 
-            const filter = btn.dataset.filter;
+    // 2. Tiles de CARTO Voyager con API key
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png?key=cb1_3syj_1_19da2f09472d3f015f43f8d9', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+        subdomains: 'abcd',
+        maxZoom: 20,
+        detectRetina: true
+    }).addTo(tourMap);
 
-            destinationCards.forEach(card => {
-                if (filter === 'all' || card.dataset.category === filter) {
-                    card.classList.remove('hidden');
-                } else {
-                    card.classList.add('hidden');
-                }
+    // 3. Icono personalizado (pin naranja)
+    const customIcon = L.divIcon({
+        className: 'custom-marker',
+        html: `
+            <div class="marker-pin">
+                <div class="marker-pin-inner"></div>
+            </div>
+        `,
+        iconSize: [36, 44],
+        iconAnchor: [18, 44],
+        popupAnchor: [0, -40]
+    });
+
+    // 4. Datos de las 4 REGIONES
+    const regiones = [
+        {
+            nombre: 'Galápagos',
+            tag: 'Región Insular',
+            coords: [-0.9538, -90.9656],
+            img: 'https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=900&q=80',
+            desc: 'Un mundo único para descubrir y conservar. Fauna endémica, ecosistemas volcánicos y experiencias de conservación.',
+            destinos: 'Santa Cruz · San Cristóbal · Isabela',
+            experiencias: 'Snorkeling · Buceo · Kayak · Cruceros',
+            precio: 'Desde $399'
+        },
+        {
+            nombre: 'Costa',
+            tag: 'Región Litoral',
+            coords: [-1.5, -80.5],
+            img: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80',
+            desc: 'Pacífico, naturaleza y sabores del Ecuador. Playas, manglares, gastronomía y cultura costera.',
+            destinos: 'Guayaquil · Montañita · Puerto López · Manta',
+            experiencias: 'Surf · Ballenas · Gastronomía · Manglares',
+            precio: 'Desde $159'
+        },
+        {
+            nombre: 'Sierra / Andes',
+            tag: 'Región Interandina',
+            coords: [-1.5, -78.5],
+            img: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80',
+            desc: 'Montañas, cultura y tradiciones vivas. Volcanes, lagunas, páramos, ciudades patrimoniales y comunidades indígenas.',
+            destinos: 'Otavalo · Cotacachi · Quito · Quilotoa · Cotopaxi · Cuenca',
+            experiencias: 'Trekking · Comunidades · Gastronomía · Artesanías',
+            precio: 'Desde $85'
+        },
+        {
+            nombre: 'Amazonía',
+            tag: 'Región Oriental',
+            coords: [-0.7, -76.9],
+            img: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=900&q=80',
+            desc: 'Naturaleza, biodiversidad y culturas ancestrales. Inmersión en bosques tropicales, ríos y territorios indígenas.',
+            destinos: 'Tena · Yasuní · Cuyabeno · Papallacta',
+            experiencias: 'Caminatas · Navegación · Aviturismo · Comunidades',
+            precio: 'Desde $349'
+        }
+    ];
+
+    // 5. Referencias al panel
+    const panelImg = document.getElementById('panelImg');
+    const panelImgOverlay = document.getElementById('panelImgOverlay');
+    const panelTag = document.getElementById('panelTag');
+    const panelTitle = document.getElementById('panelTitle');
+    const panelDesc = document.getElementById('panelDesc');
+    const panelInfo = document.getElementById('panelInfo');
+
+    // 6. Agregar marcadores
+    regiones.forEach(region => {
+        const marker = L.marker(region.coords, { icon: customIcon }).addTo(tourMap);
+
+        // Popup al hacer clic
+        marker.bindPopup(`
+            <h4>${region.nombre}</h4>
+            <p>${region.tag}</p>
+        `);
+
+        // Actualizar panel al hacer clic
+        marker.on('click', () => {
+            if (panelImgOverlay) {
+                panelImgOverlay.style.display = 'none';
+            }
+
+            panelImg.src = region.img;
+            panelImg.alt = region.nombre;
+
+            panelTag.textContent = region.tag;
+            panelTitle.textContent = region.nombre;
+            panelDesc.textContent = region.desc;
+
+            panelInfo.innerHTML = `
+                <li><strong>Destinos:</strong> <span>${region.destinos}</span></li>
+                <li><strong>Experiencias:</strong> <span>${region.experiencias}</span></li>
+                <li><strong>Precio:</strong> <span>${region.precio}</span></li>
+            `;
+
+            // Centrar el mapa en la región
+            tourMap.flyTo(region.coords, 7, {
+                duration: 1.2
             });
         });
+    });
+
+    // 7. Ajustar cuando la ventana cambia de tamaño
+    window.addEventListener('resize', () => {
+        tourMap.invalidateSize();
     });
 }
 
 // ==========================================
-// 10. SMOOTH SCROLL para enlaces internos
+// 10. MAPA DE CONTACTO (contacto.html)
 // ==========================================
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', (e) => {
-        const href = link.getAttribute('href');
-        if (href === '#' || href.length < 2) return;
+const contactMapEl = document.getElementById('contactMap');
 
-        const target = document.querySelector(href);
-        if (target) {
-            e.preventDefault();
-            const headerOffset = 80;
-            const elementPosition = target.getBoundingClientRect().top + window.pageYOffset;
-            const offsetPosition = elementPosition - headerOffset;
+if (contactMapEl) {
+    // Coordenadas de la oficina (Bolívar, entre Neptalí Ordoñez y Av. Quito)
+    // Otavalo, Imbabura
+    const officeCoords = [0.2342, -78.2640];
 
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-            });
-        }
+    const contactMap = L.map('contactMap', {
+        scrollWheelZoom: false,
+        zoomControl: true
+    }).setView(officeCoords, 16);
+
+    // Tiles CARTO Voyager con API key
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png?key=cb1_3syj_1_19da2f09472d3f015f43f8d9', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+        subdomains: 'abcd',
+        maxZoom: 20,
+        detectRetina: true
+    }).addTo(contactMap);
+
+    // Icono naranja
+    const contactIcon = L.divIcon({
+        className: 'custom-marker',
+        html: `
+            <div class="marker-pin">
+                <div class="marker-pin-inner"></div>
+            </div>
+        `,
+        iconSize: [36, 44],
+        iconAnchor: [18, 44],
+        popupAnchor: [0, -40]
     });
-});
+
+    // Marcador de la oficina
+    const officeMarker = L.marker(officeCoords, { icon: contactIcon }).addTo(contactMap);
+
+    officeMarker.bindPopup(`
+        <h4>All Tour Ecuador</h4>
+        <p>Calle Bolívar, entre Neptalí Ordoñez y Av. Quito</p>
+    `).openPopup();
+
+    // Ajustar cuando la ventana cambia de tamaño
+    window.addEventListener('resize', () => {
+        contactMap.invalidateSize();
+    });
+}
 
 // ==========================================
 // 11. CARRUSEL DE PAQUETES (si existe)
@@ -274,7 +419,7 @@ if (document.querySelector('.packages-swiper')) {
 }
 
 // ==========================================
-// 12. CARRUSEL GALERÍA (si existe)
+// 12. CARRUSEL DE GALERÍA (si existe)
 // ==========================================
 if (document.querySelector('.gallery-swiper')) {
     new Swiper('.gallery-swiper', {

@@ -348,14 +348,13 @@ if (tourMapEl) {
 const contactMapEl = document.getElementById('contactMap');
 
 if (contactMapEl) {
-    // Coordenadas de la oficina (Bolívar, entre Neptalí Ordoñez y Av. Quito)
-    // Otavalo, Imbabura
-    const officeCoords = [0.2342, -78.2640];
+    // Coordenadas exactas: Calle Bolívar, entre Neptalí Ordoñez y Av. Quito, Otavalo
+    const officeCoords = [0.23072435180832726, -78.25970581792483];
 
     const contactMap = L.map('contactMap', {
         scrollWheelZoom: false,
         zoomControl: true
-    }).setView(officeCoords, 16);
+    }).setView(officeCoords, 18);
 
     // Tiles CARTO Voyager con API key
     L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png?key=cb1_3syj_1_19da2f09472d3f015f43f8d9', {
@@ -384,6 +383,7 @@ if (contactMapEl) {
     officeMarker.bindPopup(`
         <h4>All Tour Ecuador</h4>
         <p>Calle Bolívar, entre Neptalí Ordoñez y Av. Quito</p>
+        <p style="margin-top:6px;font-size:0.8rem;color:#5A7A94;">Otavalo, Imbabura - Ecuador</p>
     `).openPopup();
 
     // Ajustar cuando la ventana cambia de tamaño

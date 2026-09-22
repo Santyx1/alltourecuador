@@ -132,8 +132,8 @@ if (mapEl) {
         attributionControl: true
     }).setView([-1.8312, -78.1834], 6);
 
-    // 2. Capa de tiles CARTO Voyager (moderna y limpia)
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+    // 2. Capa de tiles CARTO Voyager (con API key)
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png?key=cb1_3syj_1_19da2f09472d3f015f43f8d9', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
         subdomains: 'abcd',
         maxZoom: 20,

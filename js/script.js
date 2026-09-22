@@ -157,4 +157,86 @@ if (mapEl) {
             tag: 'Volcán',
             coords: [-0.6806, -78.4378],
             img: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80',
-            desc:
+            desc: 'Uno de los volcanes activos más altos del mundo. Caminatas, refugio y paisajes andinos únicos.',
+            precio: 'Desde $229',
+            duracion: '2 días / 1 noche',
+            temporada: 'Junio a Septiembre'
+        },
+        {
+            nombre: 'Cuyabeno',
+            tag: 'Reserva',
+            coords: [-0.1167, -76.3167],
+            img: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=80',
+            desc: 'Reserva de producción faunística con lagunas, delfines rosados y una biodiversidad impresionante.',
+            precio: 'Desde $389',
+            duracion: '4 días / 3 noches',
+            temporada: 'Todo el año'
+        }
+    ];
+
+    // 5. Referencias al panel
+    const panelEmpty = document.getElementById('mapPanelEmpty');
+    const panelContent = document.getElementById('mapPanelContent');
+    const panelImg = document.getElementById('panelImg');
+    const panelTag = document.getElementById('panelTag');
+    const panelTitle = document.getElementById('panelTitle');
+    const panelDesc = document.getElementById('panelDesc');
+    const panelPrice = document.getElementById('panelPrice');
+    const panelDuration = document.getElementById('panelDuration');
+    const panelSeason = document.getElementById('panelSeason');
+
+    // 6. Agregar marcadores
+    destinos.forEach(destino => {
+        const marker = L.marker(destino.coords, { icon: customIcon }).addTo(map);
+
+        // Popup al hacer clic
+        marker.bindPopup(`
+            <h4>${destino.nombre}</h4>
+            <p>${destino.tag}</p>
+        `);
+
+        // Actualizar panel al hacer clic
+        marker.on('click', () => {
+            panelEmpty.hidden = true;
+            panelContent.hidden = false;
+
+            panelImg.src = destino.img;
+            panelImg.alt = destino.nombre;
+            panelTag.textContent = destino.tag;
+            panelTitle.textContent = destino.nombre;
+            panelDesc.textContent = destino.desc;
+            panelPrice.textContent = destino.precio;
+            panelDuration.textContent = destino.duracion;
+            panelSeason.textContent = destino.temporada;
+        });
+    });
+}
+
+// ==========================================
+// 7. CARRUSEL DE GALERÍA (Swiper)
+// ==========================================
+if (document.querySelector('.gallery-swiper')) {
+    new Swiper('.gallery-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        grabCursor: true,
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.gallery-swiper .swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.gallery-swiper .swiper-button-next',
+            prevEl: '.gallery-swiper .swiper-button-prev',
+        },
+        breakpoints: {
+            640: { slidesPerView: 1.2, spaceBetween: 20 },
+            768: { slidesPerView: 2, spaceBetween: 24 },
+            1024: { slidesPerView: 3, spaceBetween: 28 },
+        }
+    });
+}

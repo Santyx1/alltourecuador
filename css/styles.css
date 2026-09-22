@@ -325,6 +325,7 @@ button{
 }
 
 .brand{
+    background:var(--sky-blue-pale); /* en vez de var(--white) */
     display:flex;
     align-items:center;
     justify-content:center;

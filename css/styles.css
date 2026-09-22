@@ -325,16 +325,9 @@ button{
 }
 
 .brand{
-    background:var(--sky-blue-pale); /* en vez de var(--white) */
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex-shrink:0;
-    background:var(--white);
-    padding:8px 20px;
-    border-radius:999px;
-    box-shadow:0 6px 20px rgba(26,58,79,0.12);
-    transition:var(--transition);
+    background:transparent;
+    padding:0;
+    box-shadow:none;
 }
 
 .brand:hover{

@@ -378,13 +378,19 @@ if (contactMapEl) {
     });
 
     // Marcador de la oficina
-    const officeMarker = L.marker(officeCoords, { icon: contactIcon }).addTo(contactMap);
+const officeMarker = L.marker(officeCoords, { icon: contactIcon }).addTo(contactMap);
 
-    officeMarker.bindPopup(`
-        <h4>All Tour Ecuador</h4>
-        <p>Calle Bolívar, entre Neptalí Ordoñez y Av. Quito</p>
-        <p style="margin-top:6px;font-size:0.8rem;color:#5A7A94;">Otavalo, Imbabura - Ecuador</p>
-    `).openPopup();
+officeMarker.bindPopup(`
+    <h4>All Tour Ecuador</h4>
+    <p>Calle Bolívar, entre Neptalí Ordoñez y Av. Quito</p>
+    <p style="margin-top:6px;font-size:0.8rem;color:#5A7A94;">Otavalo, Imbabura - Ecuador</p>
+    <a href="https://www.google.com/maps/dir/?api=1&destination=0.23072435180832726,-78.25970581792483" 
+       target="_blank" 
+       rel="noopener"
+       style="display:inline-block;margin-top:10px;padding:6px 14px;background:#C9A961;color:#fff;border-radius:999px;font-size:0.8rem;font-weight:600;text-decoration:none;">
+        Cómo llegar →
+    </a>
+`).openPopup();
 
     // Ajustar cuando la ventana cambia de tamaño
     window.addEventListener('resize', () => {

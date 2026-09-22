@@ -179,29 +179,35 @@
                 </div>
 
                 <div class="map-layout">
+                    <!-- Mapa -->
                     <div id="tourMap" class="tour-map" aria-label="Mapa de destinos en Ecuador"></div>
 
+                    <!-- Panel de detalles -->
                     <aside class="map-panel" id="mapPanel">
-                        <div class="map-panel-empty" id="mapPanelEmpty">
-                            <div class="map-panel-icon">📍</div>
-                            <h3>Selecciona un destino</h3>
-                            <p>Haz clic en un marcador del mapa para ver la información del destino aquí.</p>
-                        </div>
+                        <div class="map-panel-content" id="mapPanelContent">
+                            <div class="panel-img-wrapper">
+                                <img id="panelImg"
+                                     src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=80"
+                                     alt="Explora Ecuador"
+                                     class="panel-img" />
+                                <div class="panel-img-overlay" id="panelImgOverlay">
+                                    <span>🗺️</span>
+                                    <p>Selecciona un destino en el mapa</p>
+                                </div>
+                            </div>
 
-                        <div class="map-panel-content" id="mapPanelContent" hidden>
-                            <img id="panelImg" src="" alt="" class="panel-img" />
                             <div class="panel-body">
-                                <span class="panel-tag" id="panelTag"></span>
-                                <h3 id="panelTitle"></h3>
-                                <p id="panelDesc"></p>
+                                <span class="panel-tag" id="panelTag">Ecuador</span>
+                                <h3 id="panelTitle">Bienvenido a Ecuador</h3>
+                                <p id="panelDesc">Haz clic en cualquier marcador para descubrir los detalles del destino que quieras visitar.</p>
 
-                                <ul class="panel-info">
-                                    <li><strong>Precio:</strong> <span id="panelPrice"></span></li>
-                                    <li><strong>Duración:</strong> <span id="panelDuration"></span></li>
-                                    <li><strong>Mejor época:</strong> <span id="panelSeason"></span></li>
+                                <ul class="panel-info" id="panelInfo">
+                                    <li><strong>Destinos:</strong> <span>8 disponibles</span></li>
+                                    <li><strong>Duración:</strong> <span>Personalizable</span></li>
+                                    <li><strong>Precio:</strong> <span>Desde $199</span></li>
                                 </ul>
 
-                                <a href="contacto.html" class="btn" style="width:100%;">Reservar este destino</a>
+                                <a href="contacto.html" class="btn" style="width:100%;">Cotizar mi viaje</a>
                             </div>
                         </div>
                     </aside>

@@ -327,24 +327,29 @@ button{
 .brand{
     display:flex;
     align-items:center;
+    justify-content:center;
     flex-shrink:0;
+    background:var(--white);
+    padding:8px 20px;
+    border-radius:999px;
+    box-shadow:0 6px 20px rgba(26,58,79,0.12);
+    transition:var(--transition);
+}
+
+.brand:hover{
+    transform:scale(1.03);
+    box-shadow:0 10px 28px rgba(26,58,79,0.18);
 }
 
 .brand-logo{
-    height:60px;
+    height:40px;
     width:auto;
     object-fit:contain;
     transition:var(--transition);
 }
 
-/* En el header transparente (sobre el hero), forzamos logo blanco */
-/*
-.site-header:not(.scrolled) .brand-logo{
-    filter:brightness(0) invert(1) drop-shadow(0 2px 8px rgba(0,0,0,0.3));
-}
-*/
 .site-header.scrolled .brand-logo{
-    height:48px;
+    height:36px;
 }
 
 /* Navegación */

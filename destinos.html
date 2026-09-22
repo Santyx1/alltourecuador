@@ -1,389 +1,485 @@
-/* ==========================================
-   20. PAGE HERO (páginas internas)
-   ========================================== */
-.page-hero{
-    position:relative;
-    min-height:520px;
-    padding:180px 0 100px;
-    display:flex;
-    align-items:center;
-    overflow:hidden;
-    color:var(--white);
-    text-align:center;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destinos | All Tour Ecuador</title>
+    <meta name="description" content="Explora los destinos de Ecuador con All Tour Ecuador: Costa, Sierra, Amazonía y Galápagos. Cuatro regiones, infinitas experiencias." />
+    <meta name="author" content="All Tour Ecuador" />
 
-.page-hero-bg{
-    position:absolute;
-    inset:0;
-    background-size:cover;
-    background-position:center;
-    z-index:0;
-    transform:scale(1.05);
-}
+    <!-- Open Graph -->
+    <meta property="og:title" content="Destinos | All Tour Ecuador" />
+    <meta property="og:description" content="Cuatro regiones, un solo Ecuador, infinitas experiencias." />
+    <meta property="og:type" content="website" />
 
-.page-hero-overlay{
-    position:absolute;
-    inset:0;
-    background:linear-gradient(135deg, rgba(15,40,64,0.85), rgba(15,40,64,0.65));
-    z-index:1;
-}
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/logo.png">
 
-.page-hero-content{
-    position:relative;
-    z-index:2;
-    max-width:820px;
-    margin:0 auto;
-}
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
 
-.page-hero-content .section-eyebrow{
-    display:inline-block;
-    padding-left:0;
-    margin-bottom:20px;
-}
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-.page-hero-content .section-eyebrow::before{
-    display:none;
-}
+    <!-- Leaflet (mapa) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 
-.page-hero-title{
-    font-family:var(--font-serif);
-    font-size:clamp(2.2rem, 4.5vw, 3.8rem);
-    font-weight:700;
-    line-height:1.15;
-    margin-bottom:20px;
-    color:var(--white);
-}
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
 
-.page-hero-desc{
-    font-size:1.05rem;
-    color:rgba(255,255,255,0.88);
-    line-height:1.7;
-    max-width:640px;
-    margin:0 auto;
-}
+    <!-- PRELOADER -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <img src="img/logo.png" alt="All Tour Ecuador" />
+            <div class="preloader-bar"><span></span></div>
+        </div>
+    </div>
 
-/* Breadcrumb */
-.breadcrumb{
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
-    font-size:0.82rem;
-    color:rgba(255,255,255,0.7);
-    margin-bottom:24px;
-    padding:8px 16px;
-    background:rgba(255,255,255,0.08);
-    border-radius:999px;
-    backdrop-filter:blur(8px);
-}
+    <!-- HEADER -->
+    <header class="site-header scrolled" id="siteHeader">
+        <div class="container nav-wrapper">
+            <a href="index.html" class="brand" aria-label="All Tour Ecuador - Inicio">
+                <img src="img/logo.png" alt="All Tour Ecuador" class="brand-logo" />
+            </a>
 
-.breadcrumb a{
-    color:rgba(255,255,255,0.85);
-}
+            <nav class="main-nav" aria-label="Navegación principal">
+                <a href="index.html">Inicio</a>
+                <a href="index.html#nosotros">Nosotros</a>
+                <a href="destinos.html" class="active">Destinos</a>
+                <a href="index.html#tours">Tours</a>
+                <a href="index.html#servicios">Servicios</a>
+                <a href="index.html#experiencias">Experiencias</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
 
-.breadcrumb a:hover{
-    color:var(--accent);
-}
+            <div class="nav-actions">
+                <button class="lang-btn" aria-label="Cambiar idioma">
+                    <span>ES</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <a href="contacto.html" class="btn btn-accent btn-sm nav-cta">Reservar</a>
+                <button class="menu-toggle" aria-label="Abrir menú" id="menuToggle">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
 
-.breadcrumb i{
-    font-size:0.6rem;
-    opacity:0.5;
-}
+    <!-- MENÚ MÓVIL -->
+    <div class="mobile-menu" id="mobileMenu">
+        <nav class="mobile-nav">
+            <a href="index.html">Inicio</a>
+            <a href="index.html#nosotros">Nosotros</a>
+            <a href="destinos.html">Destinos</a>
+            <a href="index.html#tours">Tours</a>
+            <a href="index.html#servicios">Servicios</a>
+            <a href="index.html#experiencias">Experiencias</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+        <div class="mobile-menu-contact">
+            <a href="tel:+593997898745"><i class="fa-solid fa-phone"></i> +593 99 789 8745</a>
+            <a href="mailto:info@alltourecuador.com"><i class="fa-solid fa-envelope"></i> info@alltourecuador.com</a>
+        </div>
+    </div>
 
-.breadcrumb span{
-    color:var(--accent);
-    font-weight:600;
-}
+    <main>
 
-/* ==========================================
-   21. DESTINOS - GRID Y TARJETAS
-   ========================================== */
-.section-destinations{
-    padding:80px 0 100px;
-    background:var(--off-white);
-}
+        <!-- PAGE HERO -->
+        <section class="page-hero">
+            <div class="page-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1920&q=80');"></div>
+            <div class="page-hero-overlay"></div>
 
-.filters-wrapper{
-    display:flex;
-    justify-content:center;
-    margin-bottom:60px;
-}
+            <div class="container page-hero-content">
+                <nav class="breadcrumb" aria-label="Ruta de navegación">
+                    <a href="index.html">Inicio</a>
+                    <i class="fa-solid fa-chevron-right"></i>
+                    <span>Destinos</span>
+                </nav>
+                <span class="section-eyebrow light">Destinos Ecuador</span>
+                <h1 class="page-hero-title">Cuatro regiones, infinitas experiencias</h1>
+                <p class="page-hero-desc">
+                    Ecuador reúne en un territorio compacto una extraordinaria diversidad de paisajes, 
+                    culturas, ecosistemas y formas de vida. Desde las montañas y comunidades de los Andes 
+                    hasta la biodiversidad de la Amazonía, las playas de la Costa y los ecosistemas únicos 
+                    de Galápagos.
+                </p>
+            </div>
+        </section>
 
-.filters{
-    display:inline-flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:8px;
-    background:var(--white);
-    padding:8px;
-    border-radius:999px;
-    box-shadow:var(--shadow-sm);
-    border:1px solid var(--gray-100);
-}
+        <!-- INTRO -->
+        <section class="section-dest-intro">
+            <div class="container">
+                <div class="section-header-center">
+                    <span class="section-eyebrow">Un país, cuatro mundos</span>
+                    <h2 class="section-heading">Ecuador, un país. Cuatro mundos.</h2>
+                    <p class="section-lead">
+                        Explora diferentes paisajes, culturas y experiencias en un mismo viaje.
+                    </p>
+                </div>
 
-.filter-btn{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    padding:12px 22px;
-    border-radius:999px;
-    background:transparent;
-    color:var(--text);
-    font-family:inherit;
-    font-weight:600;
-    font-size:0.86rem;
-    cursor:pointer;
-    transition:var(--transition);
-    border:none;
-    white-space:nowrap;
-}
+                <div class="dest-quick-nav">
+                    <a href="#costa" class="quick-nav-item">
+                        <i class="fa-solid fa-umbrella-beach"></i>
+                        <span>Costa</span>
+                    </a>
+                    <a href="#sierra" class="quick-nav-item">
+                        <i class="fa-solid fa-mountain"></i>
+                        <span>Andes</span>
+                    </a>
+                    <a href="#amazonia" class="quick-nav-item">
+                        <i class="fa-solid fa-tree"></i>
+                        <span>Amazonía</span>
+                    </a>
+                    <a href="#galapagos" class="quick-nav-item">
+                        <i class="fa-solid fa-fish"></i>
+                        <span>Galápagos</span>
+                    </a>
+                </div>
+            </div>
+        </section>
 
-.filter-btn i{
-    font-size:0.85rem;
-    color:var(--text-light);
-    transition:var(--transition);
-}
+        <!-- MAPA INTERACTIVO DE REGIONES -->
+        <section class="section-map-interactive" id="mapa">
+            <div class="container">
+                <div class="section-header-center">
+                    <span class="section-eyebrow">Mapa interactivo</span>
+                    <h2 class="section-heading">Explora cada región</h2>
+                    <p class="section-lead">Haz clic en cualquier región del mapa para descubrir sus destinos y experiencias.</p>
+                </div>
 
-.filter-btn:hover{
-    background:var(--gray-100);
-    color:var(--navy);
-}
+                <div class="map-layout">
+                    <div id="tourMap" class="tour-map" aria-label="Mapa de Ecuador con sus 4 regiones"></div>
 
-.filter-btn:hover i{
-    color:var(--navy);
-}
+                    <aside class="map-panel" id="mapPanel">
+                        <div class="map-panel-content">
+                            <div class="panel-img-wrapper">
+                                <img id="panelImg"
+                                     src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=80"
+                                     alt="Explora Ecuador"
+                                     class="panel-img" />
+                                <div class="panel-img-overlay" id="panelImgOverlay">
+                                    <span>🗺️</span>
+                                    <p>Selecciona una región en el mapa</p>
+                                </div>
+                            </div>
 
-.filter-btn.active{
-    background:var(--navy);
-    color:var(--white);
-    box-shadow:0 8px 20px rgba(26,58,92,0.25);
-}
+                            <div class="panel-body">
+                                <span class="panel-tag" id="panelTag">Ecuador</span>
+                                <h3 id="panelTitle">Bienvenido a Ecuador</h3>
+                                <p id="panelDesc">Haz clic en cualquier región del mapa para descubrir sus destinos y experiencias.</p>
 
-.filter-btn.active i{
-    color:var(--accent);
-}
+                                <ul class="panel-info" id="panelInfo">
+                                    <li><strong>Regiones:</strong> <span>4 regiones</span></li>
+                                    <li><strong>Destinos:</strong> <span>+20 lugares</span></li>
+                                    <li><strong>Experiencias:</strong> <span>Personalizadas</span></li>
+                                </ul>
 
-/* Grid */
-.destinations-grid{
-    display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    gap:32px;
-}
+                                <a href="contacto.html" class="btn btn-accent" style="width:100%;justify-content:center;">
+                                    Cotizar mi viaje
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
 
-/* Tarjeta de destino */
-.dest-card{
-    background:var(--white);
-    border-radius:var(--radius-lg);
-    overflow:hidden;
-    box-shadow:var(--shadow-sm);
-    transition:var(--transition);
-    display:flex;
-    flex-direction:column;
-    height:100%;
-}
+        <!-- REGIÓN: COSTA -->
+        <section class="section-region-detail region-costa-detail" id="costa">
+            <div class="container">
+                <div class="region-detail-grid">
+                    <div class="region-detail-image">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80" alt="Costa ecuatoriana" loading="lazy" />
+                        <div class="region-detail-badge">
+                            <i class="fa-solid fa-umbrella-beach"></i>
+                            <span>Costa</span>
+                        </div>
+                    </div>
 
-.dest-card:hover{
-    transform:translateY(-8px);
-    box-shadow:var(--shadow-lg);
-}
+                    <div class="region-detail-content">
+                        <span class="section-eyebrow">Región Costa</span>
+                        <h2 class="section-heading">Pacífico, naturaleza y sabores del Ecuador</h2>
+                        <p class="region-detail-desc">
+                            La Costa ecuatoriana combina playas, manglares, bosques, gastronomía, 
+                            comunidades pesqueras y experiencias vinculadas al océano Pacífico.
+                        </p>
 
-.dest-card.hidden{
-    display:none;
-}
+                        <h3 class="region-detail-subtitle">Experiencias</h3>
+                        <ul class="region-experiences">
+                            <li><i class="fa-solid fa-sun"></i> Sol y playa</li>
+                            <li><i class="fa-solid fa-water"></i> Surf</li>
+                            <li><i class="fa-solid fa-binoculars"></i> Avistamiento de ballenas</li>
+                            <li><i class="fa-solid fa-utensils"></i> Turismo gastronómico</li>
+                            <li><i class="fa-solid fa-leaf"></i> Turismo de naturaleza</li>
+                            <li><i class="fa-solid fa-tree"></i> Manglares</li>
+                            <li><i class="fa-solid fa-fish"></i> Pesca vivencial</li>
+                            <li><i class="fa-solid fa-music"></i> Cultura costera</li>
+                            <li><i class="fa-solid fa-compass"></i> Aventura</li>
+                            <li><i class="fa-solid fa-seedling"></i> Ecoturismo</li>
+                        </ul>
 
-.dest-image{
-    position:relative;
-    height:240px;
-    overflow:hidden;
-}
+                        <h3 class="region-detail-subtitle">Destinos destacados</h3>
+                        <div class="region-destinations">
+                            <span class="dest-chip">Guayaquil</span>
+                            <span class="dest-chip">Montañita</span>
+                            <span class="dest-chip">Puerto López</span>
+                            <span class="dest-chip">Manta</span>
+                            <span class="dest-chip">Bahía de Caráquez</span>
+                            <span class="dest-chip">Los Frailes</span>
+                        </div>
 
-.dest-image img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    transition:transform 0.6s ease;
-}
+                        <a href="contacto.html" class="btn btn-primary">
+                            Explorar tours de Costa
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-.dest-card:hover .dest-image img{
-    transform:scale(1.08);
-}
+        <!-- REGIÓN: SIERRA / ANDES -->
+        <section class="section-region-detail region-sierra-detail" id="sierra">
+            <div class="container">
+                <div class="region-detail-grid reverse">
+                    <div class="region-detail-image">
+                        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80" alt="Sierra ecuatoriana" loading="lazy" />
+                        <div class="region-detail-badge">
+                            <i class="fa-solid fa-mountain"></i>
+                            <span>Andes</span>
+                        </div>
+                    </div>
 
-.dest-tag{
-    position:absolute;
-    top:16px;
-    left:16px;
-    background:rgba(255,255,255,0.95);
-    backdrop-filter:blur(8px);
-    color:var(--navy);
-    font-size:0.7rem;
-    font-weight:700;
-    letter-spacing:0.08em;
-    text-transform:uppercase;
-    padding:6px 12px;
-    border-radius:999px;
-}
+                    <div class="region-detail-content">
+                        <span class="section-eyebrow">Región Sierra</span>
+                        <h2 class="section-heading">Montañas, cultura y tradiciones vivas</h2>
+                        <p class="region-detail-desc">
+                            Los Andes ecuatorianos combinan volcanes, lagunas, páramos, ciudades 
+                            patrimoniales y comunidades indígenas que mantienen vivas sus tradiciones.
+                        </p>
 
-.dest-price{
-    position:absolute;
-    bottom:16px;
-    right:16px;
-    background:var(--accent);
-    color:var(--navy-dark);
-    font-size:0.82rem;
-    font-weight:800;
-    padding:8px 14px;
-    border-radius:999px;
-    box-shadow:0 8px 20px rgba(245,166,35,0.4);
-}
+                        <h3 class="region-detail-subtitle">Experiencias</h3>
+                        <ul class="region-experiences">
+                            <li><i class="fa-solid fa-landmark"></i> Turismo cultural</li>
+                            <li><i class="fa-solid fa-people-group"></i> Turismo comunitario</li>
+                            <li><i class="fa-solid fa-tractor"></i> Turismo rural</li>
+                            <li><i class="fa-solid fa-person-hiking"></i> Trekking</li>
+                            <li><i class="fa-solid fa-mountain"></i> Montañismo</li>
+                            <li><i class="fa-solid fa-bicycle"></i> Cicloturismo</li>
+                            <li><i class="fa-solid fa-utensils"></i> Gastronomía tradicional</li>
+                            <li><i class="fa-solid fa-gem"></i> Artesanías</li>
+                            <li><i class="fa-solid fa-seedling"></i> Experiencias agroecológicas</li>
+                            <li><i class="fa-solid fa-house-chimney"></i> Convivencia con comunidades</li>
+                            <li><i class="fa-solid fa-music"></i> Fiestas y manifestaciones culturales</li>
+                        </ul>
 
-.dest-info{
-    padding:26px 24px 24px;
-    display:flex;
-    flex-direction:column;
-    flex:1;
-}
+                        <h3 class="region-detail-subtitle">Destinos destacados</h3>
+                        <div class="region-destinations">
+                            <span class="dest-chip">Otavalo</span>
+                            <span class="dest-chip">Cotacachi</span>
+                            <span class="dest-chip">Imbabura</span>
+                            <span class="dest-chip">Quito</span>
+                            <span class="dest-chip">Quilotoa</span>
+                            <span class="dest-chip">Cotopaxi</span>
+                            <span class="dest-chip">Cuenca</span>
+                            <span class="dest-chip">Chimborazo</span>
+                        </div>
 
-.dest-info h3{
-    font-family:var(--font-serif);
-    font-size:1.45rem;
-    font-weight:700;
-    color:var(--navy);
-    margin-bottom:6px;
-}
+                        <a href="contacto.html" class="btn btn-primary">
+                            Explorar tours de Andes
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-.dest-location{
-    font-size:0.84rem;
-    color:var(--text-light);
-    margin-bottom:12px;
-    display:flex;
-    align-items:center;
-    gap:6px;
-}
+        <!-- REGIÓN: AMAZONÍA -->
+        <section class="section-region-detail region-amazonia-detail" id="amazonia">
+            <div class="container">
+                <div class="region-detail-grid">
+                    <div class="region-detail-image">
+                        <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80" alt="Amazonía ecuatoriana" loading="lazy" />
+                        <div class="region-detail-badge">
+                            <i class="fa-solid fa-tree"></i>
+                            <span>Amazonía</span>
+                        </div>
+                    </div>
 
-.dest-location i{
-    color:var(--accent);
-    font-size:0.8rem;
-}
+                    <div class="region-detail-content">
+                        <span class="section-eyebrow">Región Amazonía</span>
+                        <h2 class="section-heading">Naturaleza, biodiversidad y culturas ancestrales</h2>
+                        <p class="region-detail-desc">
+                            La Amazonía ecuatoriana ofrece una experiencia de inmersión en bosques 
+                            tropicales, ríos, biodiversidad y territorios de pueblos y nacionalidades indígenas.
+                        </p>
 
-.dest-desc{
-    font-size:0.92rem;
-    color:var(--text-light);
-    line-height:1.65;
-    margin-bottom:16px;
-    flex:1;
-}
+                        <h3 class="region-detail-subtitle">Experiencias</h3>
+                        <ul class="region-experiences">
+                            <li><i class="fa-solid fa-leaf"></i> Turismo de naturaleza</li>
+                            <li><i class="fa-solid fa-binoculars"></i> Observación de flora y fauna</li>
+                            <li><i class="fa-solid fa-person-hiking"></i> Caminatas por la selva</li>
+                            <li><i class="fa-solid fa-ship"></i> Navegación en ríos</li>
+                            <li><i class="fa-solid fa-people-group"></i> Turismo comunitario</li>
+                            <li><i class="fa-solid fa-feather"></i> Cultura ancestral</li>
+                            <li><i class="fa-solid fa-utensils"></i> Gastronomía amazónica</li>
+                            <li><i class="fa-solid fa-dove"></i> Aviturismo</li>
+                            <li><i class="fa-solid fa-compass"></i> Aventura</li>
+                            <li><i class="fa-solid fa-book-open"></i> Interpretación ambiental</li>
+                        </ul>
 
-.dest-meta{
-    display:flex;
-    flex-wrap:wrap;
-    gap:14px;
-    padding:14px 0;
-    border-top:1px solid var(--gray-100);
-    border-bottom:1px solid var(--gray-100);
-    margin-bottom:16px;
-}
+                        <h3 class="region-detail-subtitle">Destinos destacados</h3>
+                        <div class="region-destinations">
+                            <span class="dest-chip">Tena</span>
+                            <span class="dest-chip">Yasuní</span>
+                            <span class="dest-chip">Cuyabeno</span>
+                            <span class="dest-chip">Papallacta</span>
+                        </div>
 
-.dest-meta li{
-    font-size:0.78rem;
-    color:var(--text-light);
-    display:flex;
-    align-items:center;
-    gap:6px;
-}
+                        <a href="contacto.html" class="btn btn-primary">
+                            Explorar tours de Amazonía
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-.dest-meta i{
-    color:var(--navy);
-    font-size:0.72rem;
-}
+        <!-- REGIÓN: GALÁPAGOS -->
+        <section class="section-region-detail region-galapagos-detail" id="galapagos">
+            <div class="container">
+                <div class="region-detail-grid reverse">
+                    <div class="region-detail-image">
+                        <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1200&q=80" alt="Islas Galápagos" loading="lazy" />
+                        <div class="region-detail-badge">
+                            <i class="fa-solid fa-fish"></i>
+                            <span>Galápagos</span>
+                        </div>
+                    </div>
 
-.dest-btn{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    font-size:0.82rem;
-    font-weight:700;
-    letter-spacing:0.1em;
-    text-transform:uppercase;
-    color:var(--navy);
-    padding-bottom:4px;
-    border-bottom:1px solid transparent;
-    align-self:flex-start;
-    transition:var(--transition);
-}
+                    <div class="region-detail-content">
+                        <span class="section-eyebrow">Región Galápagos</span>
+                        <h2 class="section-heading">Naturaleza que no existe en ningún otro lugar</h2>
+                        <p class="region-detail-desc">
+                            Las Islas Galápagos representan uno de los grandes destinos naturales del Ecuador, 
+                            con ecosistemas volcánicos, fauna endémica y experiencias de conservación y 
+                            contacto con la naturaleza.
+                        </p>
 
-.dest-btn:hover{
-    color:var(--accent-dark);
-    border-bottom-color:var(--accent);
-}
+                        <h3 class="region-detail-subtitle">Experiencias</h3>
+                        <ul class="region-experiences">
+                            <li><i class="fa-solid fa-mask"></i> Snorkeling</li>
+                            <li><i class="fa-solid fa-water"></i> Buceo</li>
+                            <li><i class="fa-solid fa-person-swimming"></i> Kayak</li>
+                            <li><i class="fa-solid fa-person-hiking"></i> Trekking</li>
+                            <li><i class="fa-solid fa-bicycle"></i> Ciclismo</li>
+                            <li><i class="fa-solid fa-binoculars"></i> Avistamiento de fauna</li>
+                            <li><i class="fa-solid fa-camera"></i> Fotografía de naturaleza</li>
+                            <li><i class="fa-solid fa-ship"></i> Navegación</li>
+                            <li><i class="fa-solid fa-seedling"></i> Turismo de conservación</li>
+                            <li><i class="fa-solid fa-sun"></i> Tours diarios</li>
+                            <li><i class="fa-solid fa-anchor"></i> Cruceros</li>
+                        </ul>
 
-.dest-btn i{
-    transition:var(--transition);
-}
+                        <h3 class="region-detail-subtitle">Islas destacadas</h3>
+                        <div class="region-destinations">
+                            <span class="dest-chip">Santa Cruz</span>
+                            <span class="dest-chip">San Cristóbal</span>
+                            <span class="dest-chip">Isabela</span>
+                        </div>
 
-.dest-btn:hover i{
-    transform:translateX(4px);
-}
+                        <a href="contacto.html" class="btn btn-primary">
+                            Explorar tours de Galápagos
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-/* Sin resultados */
-.no-results{
-    text-align:center;
-    padding:80px 20px;
-    color:var(--text-light);
-}
+        <!-- CTA FINAL -->
+        <section class="section-cta-final">
+            <div class="cta-bg" style="background-image:url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1920&q=80');"></div>
+            <div class="cta-overlay"></div>
 
-.no-results i{
-    font-size:3rem;
-    color:var(--gray-300);
-    margin-bottom:20px;
-}
+            <div class="container cta-content">
+                <span class="section-eyebrow light">Encuentra tu destino ideal</span>
+                <h2 class="cta-title">¿No sabes por dónde empezar?</h2>
+                <p class="cta-desc">Cuéntanos qué buscas y diseñamos un paquete 100% personalizado para ti.</p>
+                <div class="cta-buttons">
+                    <a href="contacto.html" class="btn btn-accent btn-lg">Cotizar mi viaje <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="index.html#tours" class="btn btn-ghost btn-lg">Ver tours</a>
+                </div>
+            </div>
+        </section>
 
-.no-results h3{
-    font-family:var(--font-serif);
-    font-size:1.5rem;
-    color:var(--navy);
-    margin-bottom:10px;
-}
+    </main>
 
-/* ==========================================
-   22. RESPONSIVE DESTINOS
-   ========================================== */
-@media (max-width: 992px){
-    .destinations-grid{
-        grid-template-columns:repeat(2, 1fr);
-        gap:24px;
-    }
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-col footer-brand-col">
+                <img src="img/logo.png" alt="All Tour Ecuador" class="footer-logo" />
+                <p class="footer-tagline">Your Gateway to Authenticity</p>
+                <p class="footer-desc">Agencia de Viajes y Operador Turístico. Ecuador, desde el corazón del planeta.</p>
+            </div>
 
-    .page-hero{
-        min-height:440px;
-        padding:140px 0 80px;
-    }
-}
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <ul class="footer-list">
+                    <li><i class="fa-solid fa-location-dot"></i><span>Calle Bolívar, entre Neptalí Ordoñez y Av. Quito</span></li>
+                    <li><i class="fa-solid fa-phone"></i><a href="tel:+593997898745">+593 99 789 8745</a></li>
+                    <li><i class="fa-brands fa-whatsapp"></i><a href="https://wa.me/593997898745" target="_blank" rel="noopener">WhatsApp</a></li>
+                    <li><i class="fa-solid fa-envelope"></i><a href="mailto:info@alltourecuador.com">info@alltourecuador.com</a></li>
+                </ul>
+            </div>
 
-@media (max-width: 720px){
-    .destinations-grid{
-        grid-template-columns:1fr;
-    }
+            <div class="footer-col">
+                <h4>Explora</h4>
+                <ul class="footer-list footer-links">
+                    <li><a href="index.html#tours">Tours</a></li>
+                    <li><a href="destinos.html">Destinos</a></li>
+                    <li><a href="index.html#servicios">Servicios</a></li>
+                    <li><a href="index.html#experiencias">Experiencias</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
 
-    .filters{
-        border-radius:var(--radius);
-        padding:12px;
-    }
+            <div class="footer-col">
+                <h4>Síguenos</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/Alltourecuador" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/alltourecuador593/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@alltourecuador" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+                <p class="social-hashtag">#AllTourEcuador</p>
+            </div>
+        </div>
 
-    .filter-btn{
-        flex:1;
-        justify-content:center;
-        padding:10px 16px;
-        font-size:0.8rem;
-    }
+        <div class="footer-bottom">
+            <div class="container footer-bottom-content">
+                <span>© 2026 All Tour Ecuador. Todos los derechos reservados.</span>
+                <div class="footer-bottom-links">
+                    <a href="#">Política de privacidad</a>
+                    <a href="#">Términos y condiciones</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-    .page-hero{
-        padding:120px 0 70px;
-    }
+    <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
-    .page-hero-title{
-        font-size:1.9rem;
-    }
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
-    .dest-image{
-        height:220px;
-    }
-}
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -7,6 +7,9 @@
     <meta name="description" content="Explora todos los destinos turísticos de Ecuador: Galápagos, Quito, Baños, Cuenca, Montañita, Amazonía y más." />
     <meta name="author" content="All Tour Ecuador" />
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/logo.png">
+
     <!-- Fuente Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,18 +26,15 @@
     <header>
         <div class="container nav">
             <a href="index.html" class="brand" aria-label="All Tour Ecuador - Inicio">
-                <a href="index.html" class="brand" aria-label="All Tour Ecuador - Inicio">
-                    <img src="img/logo.png" alt="Logo All Tour Ecuador" class="brand-logo" />
-                    <span>All Tour Ecuador</span>
-                </a>
+                <img src="img/logo.png" alt="Logo All Tour Ecuador" class="brand-logo" />
                 <span>All Tour Ecuador</span>
             </a>
 
             <nav class="nav-links" aria-label="Navegación principal">
                 <a href="index.html">Inicio</a>
                 <a href="destinos.html">Destinos</a>
-                <a href="index.html#experiencias">Experiencias</a>
-                <a href="index.html#nosotros">Nosotros</a>
+                <a href="index.html#mapa">Mapa</a>
+                <a href="index.html#galeria">Galería</a>
                 <a href="contacto.html">Contacto</a>
             </nav>
 
@@ -61,10 +61,11 @@
         </section>
 
         <!-- ==============================
-             FILTROS
+             FILTROS + GRID DE DESTINOS
         =============================== -->
-        <section class="section" style="padding-top:50px;">
+        <section class="section" style="padding-top:60px;">
             <div class="container">
+
                 <div class="filters" role="tablist" aria-label="Filtrar destinos">
                     <button class="filter-btn active" data-filter="all" role="tab">Todos</button>
                     <button class="filter-btn" data-filter="costa" role="tab">Costa</button>
@@ -73,9 +74,6 @@
                     <button class="filter-btn" data-filter="galapagos" role="tab">Galápagos</button>
                 </div>
 
-                <!-- ==============================
-                     GRID DE DESTINOS
-                =============================== -->
                 <div class="destinations-grid" id="destinationsGrid">
 
                     <!-- Galápagos -->
@@ -94,7 +92,7 @@
 
                     <!-- Quito -->
                     <article class="destination-card" data-category="sierra">
-                        <img src="https://images.unsplash.com/photo-1505761671935-60eb5f0a7f2e?auto=format&fit=crop&w=900&q=80" alt="Quito" loading="lazy" />
+                        <img src="https://images.unsplash.com/photo-1580654712603-eb43273aff33?auto=format&fit=crop&w=900&q=80" alt="Quito" loading="lazy" />
                         <div class="destination-info">
                             <div class="meta">
                                 <span>Capital</span>
@@ -241,7 +239,8 @@
                     <ul>
                         <li><a href="index.html">Inicio</a></li>
                         <li><a href="destinos.html">Destinos</a></li>
-                        <li><a href="index.html#experiencias">Experiencias</a></li>
+                        <li><a href="index.html#mapa">Mapa</a></li>
+                        <li><a href="index.html#galeria">Galería</a></li>
                         <li><a href="contacto.html">Contacto</a></li>
                     </ul>
                 </div>
@@ -262,6 +261,7 @@
         </div>
     </footer>
 
+    <!-- JS principal -->
     <script src="js/script.js"></script>
 </body>
 </html>

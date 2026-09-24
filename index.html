@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>All Tour Ecuador | Ecuador, desde el corazón del planeta</title>
-    <meta name="description" content="All Tour Ecuador - Agencia de viajes y operador turístico. Naturaleza, cultura y experiencias que nacen desde la tierra. Tours en Costa, Sierra, Amazonía y Galápagos." />
+    <meta name="description" content="All Tour Ecuador - Agencia de Viajes y Operador Turístico. Naturaleza, cultura y experiencias que nacen desde la tierra. Tours en Costa, Sierra, Amazonía y Galápagos." />
     <meta name="author" content="All Tour Ecuador" />
 
     <!-- Open Graph -->
@@ -35,7 +35,9 @@
 </head>
 <body>
 
-    <!-- PRELOADER -->
+    <!-- ==============================
+         PRELOADER
+    =============================== -->
     <div class="preloader" id="preloader">
         <div class="preloader-inner">
             <img src="img/logo.png" alt="All Tour Ecuador" />
@@ -43,7 +45,9 @@
         </div>
     </div>
 
-    <!-- HEADER -->
+    <!-- ==============================
+         HEADER
+    =============================== -->
     <header class="site-header" id="siteHeader">
         <div class="container nav-wrapper">
             <a href="index.html" class="brand" aria-label="All Tour Ecuador - Inicio">
@@ -52,19 +56,33 @@
 
             <nav class="main-nav" aria-label="Navegación principal">
                 <a href="index.html" class="active">Inicio</a>
-                <a href="#nosotros">Nosotros</a>
-                <a href="#destinos">Destinos</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="destinos.html">Destinos</a>
                 <a href="#tours">Tours</a>
-                <a href="#servicios">Servicios</a>
+                <a href="servicios.html">Servicios</a>
                 <a href="#experiencias">Experiencias</a>
                 <a href="contacto.html">Contacto</a>
             </nav>
 
             <div class="nav-actions">
-                <button class="lang-btn" aria-label="Cambiar idioma">
-                    <span>ES</span>
-                    <i class="fa-solid fa-chevron-down"></i>
-                </button>
+                <div class="lang-switcher">
+                    <button class="lang-btn" aria-label="Cambiar idioma" id="langBtn">
+                        <span id="langCurrent">ES</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="lang-dropdown" id="langDropdown">
+                        <button data-lang="es" class="lang-option active">
+                            <span class="lang-flag">🇪🇸</span> Español
+                        </button>
+                        <button data-lang="en" class="lang-option">
+                            <span class="lang-flag">🇬🇧</span> English
+                        </button>
+                        <button data-lang="fr" class="lang-option">
+                            <span class="lang-flag">🇫🇷</span> Français
+                        </button>
+                    </div>
+                </div>
+
                 <a href="contacto.html" class="btn btn-accent btn-sm nav-cta">Reservar</a>
                 <button class="menu-toggle" aria-label="Abrir menú" id="menuToggle">
                     <span></span><span></span><span></span>
@@ -77,97 +95,96 @@
     <div class="mobile-menu" id="mobileMenu">
         <nav class="mobile-nav">
             <a href="index.html">Inicio</a>
-            <a href="#nosotros">Nosotros</a>
-            <a href="#destinos">Destinos</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="destinos.html">Destinos</a>
             <a href="#tours">Tours</a>
-            <a href="#servicios">Servicios</a>
+            <a href="servicios.html">Servicios</a>
             <a href="#experiencias">Experiencias</a>
             <a href="contacto.html">Contacto</a>
         </nav>
         <div class="mobile-menu-contact">
             <a href="tel:+593997898745"><i class="fa-solid fa-phone"></i> +593 99 789 8745</a>
-            <a href="mailto:info@alltourecuador.com"><i class="fa-solid fa-envelope"></i> info@alltourecuador.com</a>
+            <a href="mailto:alltourecuador@gmail.com"><i class="fa-solid fa-envelope"></i> alltourecuador@gmail.com</a>
         </div>
     </div>
 
     <main>
 
-        <!-- 01. HERO CON CARRUSEL -->
+        <!-- ==============================
+             BLOQUE 1: HERO CON CARRUSEL
+        =============================== -->
         <section class="hero-slider" id="inicio">
             <div class="swiper hero-swiper">
                 <div class="swiper-wrapper">
 
-                    <!-- Slide 1 - Otavalo -->
+                    <!-- Slide 1: Cuicocha -->
                     <div class="swiper-slide hero-slide">
-                        <div class="hero-slide-bg" style="background-image:url('https://images.unsplash.com/photo-1518639192441-8fce0a366e2e?auto=format&fit=crop&w=1920&q=80');"></div>
+                        <div class="hero-slide-bg" style="background-image:url('img/hero/cuicocha.webp');"></div>
                         <div class="hero-slide-overlay"></div>
                         <div class="container hero-slide-content">
-                            <span class="hero-eyebrow">Agencia de Viajes y Operador Turístico</span>
-                            <h1 class="hero-title">Ecuador, desde el corazón del planeta</h1>
-                            <p class="hero-subtitle">Naturaleza, cultura y experiencias que nacen desde la tierra</p>
+                            <span class="hero-eyebrow" data-i18n="hero.eyebrow">Agencia de Viajes y Operador Turístico</span>
+                            <h1 class="hero-title" data-i18n="hero.title">Ecuador, desde el corazón del planeta</h1>
+                            <p class="hero-subtitle" data-i18n="hero.subtitle">Naturaleza, cultura y experiencias que nacen desde la tierra</p>
                             <div class="hero-buttons">
-                                <a href="#tours" class="btn btn-accent">Explorar tours <i class="fa-solid fa-arrow-right"></i></a>
-                                <a href="#nosotros" class="btn btn-ghost">Conócenos</a>
+                                <a href="#tours" class="btn btn-accent">
+                                    <span data-i18n="hero.btn1">Explorar tours</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                                <a href="nosotros.html" class="btn btn-ghost" data-i18n="hero.btn2">Conócenos</a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Slide 2 - Costa -->
+                    <!-- Slide 2: Alpacas -->
                     <div class="swiper-slide hero-slide">
-                        <div class="hero-slide-bg" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80');"></div>
+                        <div class="hero-slide-bg" style="background-image:url('img/hero/alpacas.webp');"></div>
                         <div class="hero-slide-overlay"></div>
                         <div class="container hero-slide-content">
-                            <span class="hero-eyebrow">Costa Ecuatoriana</span>
-                            <h1 class="hero-title">Sabores y cultura frente al Pacífico</h1>
-                            <p class="hero-subtitle">Playas, gastronomía y calidez costeña</p>
+                            <span class="hero-eyebrow" data-i18n="hero2.eyebrow">Alpacas & Tejidos Andinos</span>
+                            <h1 class="hero-title" data-i18n="hero2.title">Tradiciones que se tejen con el tiempo</h1>
+                            <p class="hero-subtitle" data-i18n="hero2.subtitle">Páramo, comunidad y cultura Kichwa</p>
                             <div class="hero-buttons">
-                                <a href="#destinos" class="btn btn-accent">Ver Costa <i class="fa-solid fa-arrow-right"></i></a>
-                                <a href="#tours" class="btn btn-ghost">Ver tours</a>
+                                <a href="#tours" class="btn btn-accent">
+                                    <span data-i18n="hero.btn1">Explorar tours</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                                <a href="nosotros.html" class="btn btn-ghost" data-i18n="hero.btn2">Conócenos</a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Slide 3 - Andes -->
+                    <!-- Slide 3: Cascada Peguche -->
                     <div class="swiper-slide hero-slide">
-                        <div class="hero-slide-bg" style="background-image:url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1920&q=80');"></div>
+                        <div class="hero-slide-bg" style="background-image:url('img/hero/cascada-peguche.webp');"></div>
                         <div class="hero-slide-overlay"></div>
                         <div class="container hero-slide-content">
-                            <span class="hero-eyebrow">Sierra Andina</span>
-                            <h1 class="hero-title">Andes, culturas y tradiciones vivas</h1>
-                            <p class="hero-subtitle">Montañas, comunidades y experiencias que nacen de la tierra</p>
+                            <span class="hero-eyebrow" data-i18n="hero3.eyebrow">Naturaleza Viva</span>
+                            <h1 class="hero-title" data-i18n="hero3.title">Cascadas, páramos y paisajes únicos</h1>
+                            <p class="hero-subtitle" data-i18n="hero3.subtitle">Experiencias que nacen desde la tierra</p>
                             <div class="hero-buttons">
-                                <a href="#destinos" class="btn btn-accent">Ver Andes <i class="fa-solid fa-arrow-right"></i></a>
-                                <a href="#tours" class="btn btn-ghost">Ver tours</a>
+                                <a href="#tours" class="btn btn-accent">
+                                    <span data-i18n="hero.btn1">Explorar tours</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                                <a href="nosotros.html" class="btn btn-ghost" data-i18n="hero.btn2">Conócenos</a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Slide 4 - Amazonía -->
+                    <!-- Slide 4: Ritual de Purificación -->
                     <div class="swiper-slide hero-slide">
-                        <div class="hero-slide-bg" style="background-image:url('https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1920&q=80');"></div>
+                        <div class="hero-slide-bg" style="background-image:url('img/hero/ritual-purificacion.webp');"></div>
                         <div class="hero-slide-overlay"></div>
                         <div class="container hero-slide-content">
-                            <span class="hero-eyebrow">Amazonía</span>
-                            <h1 class="hero-title">Naturaleza viva y sabiduría ancestral</h1>
-                            <p class="hero-subtitle">Selva, ríos y culturas que laten con el planeta</p>
+                            <span class="hero-eyebrow" data-i18n="hero4.eyebrow">Sabiduría Ancestral</span>
+                            <h1 class="hero-title" data-i18n="hero4.title">Rituales que conectan con la esencia</h1>
+                            <p class="hero-subtitle" data-i18n="hero4.subtitle">Culturas vivas que trascienden el turismo</p>
                             <div class="hero-buttons">
-                                <a href="#destinos" class="btn btn-accent">Ver Amazonía <i class="fa-solid fa-arrow-right"></i></a>
-                                <a href="#tours" class="btn btn-ghost">Ver tours</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 5 - Galápagos -->
-                    <div class="swiper-slide hero-slide">
-                        <div class="hero-slide-bg" style="background-image:url('https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1920&q=80');"></div>
-                        <div class="hero-slide-overlay"></div>
-                        <div class="container hero-slide-content">
-                            <span class="hero-eyebrow">Galápagos</span>
-                            <h1 class="hero-title">Un mundo único para descubrir</h1>
-                            <p class="hero-subtitle">Fauna, océano y paisajes que no existen en otro lugar</p>
-                            <div class="hero-buttons">
-                                <a href="#destinos" class="btn btn-accent">Ver Galápagos <i class="fa-solid fa-arrow-right"></i></a>
-                                <a href="#tours" class="btn btn-ghost">Ver tours</a>
+                                <a href="#tours" class="btn btn-accent">
+                                    <span data-i18n="hero.btn1">Explorar tours</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                                <a href="nosotros.html" class="btn btn-ghost" data-i18n="hero.btn2">Conócenos</a>
                             </div>
                         </div>
                     </div>
@@ -180,50 +197,55 @@
             </div>
         </section>
 
-        <!-- 02. FILOSOFÍA / CADENA DE VALOR -->
+        <!-- ==============================
+             BLOQUE 2: FILOSOFÍA / CADENA DE VALOR
+        =============================== -->
         <section class="section-philosophy">
             <div class="container">
                 <div class="philosophy-chain">
                     <div class="chain-item">
                         <span class="chain-icon"><i class="fa-solid fa-eye"></i></span>
-                        <strong>CONOCER</strong>
+                        <strong data-i18n="chain.1">CONOCER</strong>
                     </div>
                     <span class="chain-arrow"><i class="fa-solid fa-arrow-right"></i></span>
                     <div class="chain-item">
                         <span class="chain-icon"><i class="fa-solid fa-share-nodes"></i></span>
-                        <strong>COMPARTIR</strong>
+                        <strong data-i18n="chain.2">COMPARTIR</strong>
                     </div>
                     <span class="chain-arrow"><i class="fa-solid fa-arrow-right"></i></span>
                     <div class="chain-item">
                         <span class="chain-icon"><i class="fa-solid fa-basket-shopping"></i></span>
-                        <strong>CONSUMIR LOCAL</strong>
+                        <strong data-i18n="chain.3">CONSUMIR LOCAL</strong>
                     </div>
                     <span class="chain-arrow"><i class="fa-solid fa-arrow-right"></i></span>
                     <div class="chain-item">
                         <span class="chain-icon"><i class="fa-solid fa-coins"></i></span>
-                        <strong>GENERAR INGRESOS</strong>
+                        <strong data-i18n="chain.4">GENERAR INGRESOS</strong>
                     </div>
                     <span class="chain-arrow"><i class="fa-solid fa-arrow-right"></i></span>
                     <div class="chain-item">
                         <span class="chain-icon"><i class="fa-solid fa-people-group"></i></span>
-                        <strong>FORTALECER FAMILIAS</strong>
+                        <strong data-i18n="chain.5">FORTALECER FAMILIAS</strong>
                     </div>
                     <span class="chain-arrow"><i class="fa-solid fa-arrow-right"></i></span>
                     <div class="chain-item">
                         <span class="chain-icon"><i class="fa-solid fa-leaf"></i></span>
-                        <strong>CONSERVAR PATRIMONIO</strong>
+                        <strong data-i18n="chain.6">CONSERVAR PATRIMONIO</strong>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 03. BIENVENIDA -->
+        <!-- ==============================
+             BLOQUE 3: BIENVENIDA
+        =============================== -->
         <section class="section-welcome" id="nosotros">
             <div class="container">
                 <div class="section-header-center">
-                    <span class="section-eyebrow">Bienvenidos a All Tour Ecuador</span>
-                    <h2 class="section-heading">Tu puerta de entrada a un Ecuador auténtico</h2>
-                    <p class="section-lead">
+                    <span class="section-eyebrow" data-i18n="welcome.eyebrow">Bienvenidos a</span>
+                    <h2 class="section-heading" data-i18n="welcome.title">ALL TOUR ECUADOR</h2>
+                    <p class="section-lead" data-i18n="welcome.text">
+                        Tu puerta de entrada a un Ecuador auténtico, diverso y lleno de experiencias. 
                         Diseñamos y operamos viajes que conectan a nuestros viajeros con la naturaleza, 
                         las culturas, las comunidades y la esencia de cada territorio, ofreciendo 
                         experiencias personalizadas con calidad, seguridad y atención profesional.
@@ -233,146 +255,152 @@
                 <div class="welcome-features">
                     <article class="welcome-card">
                         <div class="welcome-icon"><i class="fa-solid fa-mountain-sun"></i></div>
-                        <h3>Experiencias auténticas</h3>
-                        <p>Conectamos al viajero con el Ecuador real: sus gentes, sus paisajes y su cultura viva.</p>
+                        <h3 data-i18n="welcome.card1.title">Experiencias auténticas</h3>
+                        <p data-i18n="welcome.card1.text">Conectamos al viajero con el Ecuador real: sus gentes, sus paisajes y su cultura viva.</p>
                     </article>
                     <article class="welcome-card">
                         <div class="welcome-icon"><i class="fa-solid fa-people-group"></i></div>
-                        <h3>Comunidades locales</h3>
-                        <p>Trabajamos de la mano con familias, emprendimientos y prestadores de servicios locales.</p>
+                        <h3 data-i18n="welcome.card2.title">Comunidades locales</h3>
+                        <p data-i18n="welcome.card2.text">Trabajamos de la mano con familias, emprendimientos y prestadores de servicios locales.</p>
                     </article>
                     <article class="welcome-card">
                         <div class="welcome-icon"><i class="fa-solid fa-shield-heart"></i></div>
-                        <h3>Operación profesional</h3>
-                        <p>Calidad, seguridad y atención personalizada en cada experiencia que diseñamos.</p>
+                        <h3 data-i18n="welcome.card3.title">Operación profesional</h3>
+                        <p data-i18n="welcome.card3.text">Calidad, seguridad y atención personalizada en cada experiencia que diseñamos.</p>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- 04. NUESTRA HISTORIA -->
+        <!-- ==============================
+             BLOQUE 4: NUESTRA HISTORIA
+        =============================== -->
         <section class="section-history">
             <div class="container">
                 <div class="section-header-center">
-                    <span class="section-eyebrow">Nuestra historia</span>
-                    <h2 class="section-heading">Raíces que inspiran</h2>
+                    <span class="section-eyebrow" data-i18n="history.eyebrow">Nuestra Historia</span>
+                    <h2 class="section-heading" data-i18n="history.title">Raíces que inspiran</h2>
                 </div>
 
                 <div class="history-grid">
                     <article class="history-card">
                         <div class="history-number">01</div>
                         <div class="history-icon"><i class="fa-solid fa-seedling"></i></div>
-                        <h3>Nuestros inicios</h3>
-                        <p>Nacimos con el propósito de mostrar un Ecuador que va más allá de los destinos. Un Ecuador de pueblos, culturas, naturaleza, sabores, historias y personas que hacen de cada territorio una experiencia única.</p>
+                        <h3 data-i18n="history.1.title">NUESTROS INICIOS</h3>
+                        <p data-i18n="history.1.text">Nacimos con el propósito de mostrar un Ecuador que va más allá de los destinos. Un Ecuador de pueblos, culturas, naturaleza, sabores, historias y personas que hacen de cada territorio una experiencia única.</p>
                     </article>
 
                     <article class="history-card">
                         <div class="history-number">02</div>
                         <div class="history-icon"><i class="fa-solid fa-compass"></i></div>
-                        <h3>Nuestro propósito</h3>
-                        <p>Conectar al viajero con el Ecuador auténtico. Creamos experiencias que acercan a nuestros visitantes a las comunidades, sus tradiciones, su naturaleza y su forma de vivir.</p>
+                        <h3 data-i18n="history.2.title">NUESTRO PROPÓSITO</h3>
+                        <p data-i18n="history.2.text">Conectar al viajero con el Ecuador auténtico. Creamos experiencias que acercan a nuestros visitantes a las comunidades, sus tradiciones, su naturaleza y su forma de vivir, generando encuentros que trascienden el turismo.</p>
                     </article>
 
                     <article class="history-card">
                         <div class="history-number">03</div>
                         <div class="history-icon"><i class="fa-solid fa-mountain"></i></div>
-                        <h3>Hoy</h3>
-                        <p>Transformamos esa visión en experiencias reales. Diseñamos y operamos viajes personalizados combinando autenticidad, calidad, seguridad y profesionalismo.</p>
+                        <h3 data-i18n="history.3.title">HOY</h3>
+                        <p data-i18n="history.3.text">Hoy transformamos esa visión en experiencias reales. Diseñamos y operamos viajes personalizados, combinando autenticidad, calidad, seguridad y profesionalismo para turistas, agencias y operadores que buscan descubrir un Ecuador diferente.</p>
                     </article>
 
                     <article class="history-card">
                         <div class="history-number">04</div>
                         <div class="history-icon"><i class="fa-solid fa-heart"></i></div>
-                        <h3>Nuestra esencia</h3>
-                        <p>No solo mostramos Ecuador, lo hacemos vivir. Creemos en un turismo que conecta personas, culturas y territorios; que genera recuerdos y crea vínculos.</p>
+                        <h3 data-i18n="history.4.title">NUESTRA ESENCIA</h3>
+                        <p data-i18n="history.4.text">No solo mostramos Ecuador, lo hacemos vivir. Creemos en un turismo que conecta personas, culturas y territorios; que genera recuerdos, crea vínculos y permite descubrir el país desde el corazón del planeta.</p>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- 05. QUIÉNES SOMOS -->
+        <!-- ==============================
+             BLOQUE 5: QUIÉNES SOMOS
+        =============================== -->
         <section class="section-about-parallax">
-            <div class="parallax-bg" style="background-image:url('https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=1920&q=80');"></div>
+            <div class="parallax-bg" style="background-image:url('img/nosotros/chakra-abejas.webp');"></div>
             <div class="parallax-overlay"></div>
 
             <div class="container about-parallax-content">
-                <span class="section-eyebrow light">Quiénes somos</span>
-                <h2 class="section-heading light">Más que un viaje,<br>una experiencia de vida</h2>
-                <p class="about-parallax-text">
+                <span class="section-eyebrow light" data-i18n="about.eyebrow">Quiénes somos</span>
+                <h2 class="section-heading light" data-i18n="about.title">Más que un viaje,<br>una experiencia de vida</h2>
+                <p class="about-parallax-text" data-i18n="about.text">
                     En All Tour Ecuador creemos en el turismo como una herramienta de conexión, 
                     aprendizaje y desarrollo. Somos un equipo de profesionales locales, guías 
                     nativos y amantes de nuestra tierra, que te acompañarán a vivir experiencias 
                     auténticas, seguras y memorables.
                 </p>
-                <a href="contacto.html" class="btn btn-accent">
-                    Conoce nuestro equipo
+                <a href="nosotros.html" class="btn btn-accent">
+                    <span data-i18n="about.btn">Conoce nuestro equipo</span>
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
             </div>
         </section>
 
-        <!-- 06. DESTINOS ECUADOR - 4 REGIONES -->
+        <!-- ==============================
+             BLOQUE 6: DESTINOS ECUADOR
+        =============================== -->
         <section class="section-regions" id="destinos">
             <div class="container">
                 <div class="section-header-center">
-                    <span class="section-eyebrow">Destinos Ecuador</span>
-                    <h2 class="section-heading">Cuatro regiones, un solo Ecuador,<br>infinitas experiencias</h2>
-                    <p class="section-lead">
+                    <span class="section-eyebrow" data-i18n="regions.eyebrow">Destinos Ecuador</span>
+                    <h2 class="section-heading" data-i18n="regions.title">Cuatro regiones, un solo Ecuador,<br>infinitas experiencias.</h2>
+                    <p class="section-lead" data-i18n="regions.lead">
                         Descubre, conecta y vive la diversidad de un país que tiene una historia en cada territorio.
                     </p>
                 </div>
 
                 <div class="regions-grid">
 
-                    <article class="region-card region-costa">
+                    <article class="region-card">
                         <div class="region-image">
                             <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Costa ecuatoriana" loading="lazy" />
                             <div class="region-overlay"></div>
-                            <div class="region-badge"><i class="fa-solid fa-umbrella-beach"></i> Costa</div>
+                            <div class="region-badge"><i class="fa-solid fa-umbrella-beach"></i> <span data-i18n="region.costa.badge">Costa</span></div>
                         </div>
                         <div class="region-info">
-                            <h3>COSTA</h3>
-                            <p class="region-tagline">Sabores, playas y cultura frente al Pacífico.</p>
-                            <p class="region-desc">Vive la gastronomía, naturaleza y calidez de la Costa ecuatoriana.</p>
+                            <h3 data-i18n="region.costa.title">COSTA</h3>
+                            <p class="region-tagline" data-i18n="region.costa.tagline">Sabores, playas y cultura frente al Pacífico.</p>
+                            <p class="region-desc" data-i18n="region.costa.desc">Vive la gastronomía, naturaleza y calidez de la Costa ecuatoriana.</p>
                         </div>
                     </article>
 
-                    <article class="region-card region-sierra">
+                    <article class="region-card">
                         <div class="region-image">
-                            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" alt="Sierra ecuatoriana" loading="lazy" />
+                            <img src="img/hero/cuicocha.webp" alt="Sierra ecuatoriana" loading="lazy" />
                             <div class="region-overlay"></div>
-                            <div class="region-badge"><i class="fa-solid fa-mountain"></i> Sierra</div>
+                            <div class="region-badge"><i class="fa-solid fa-mountain"></i> <span data-i18n="region.sierra.badge">Sierra</span></div>
                         </div>
                         <div class="region-info">
-                            <h3>SIERRA</h3>
-                            <p class="region-tagline">Andes, culturas y experiencias que nacen de la tierra.</p>
-                            <p class="region-desc">Conecta con comunidades, tradiciones, montañas y paisajes andinos.</p>
+                            <h3 data-i18n="region.sierra.title">SIERRA</h3>
+                            <p class="region-tagline" data-i18n="region.sierra.tagline">Andes, culturas y experiencias que nacen de la tierra.</p>
+                            <p class="region-desc" data-i18n="region.sierra.desc">Conecta con comunidades, tradiciones, montañas y paisajes andinos.</p>
                         </div>
                     </article>
 
-                    <article class="region-card region-amazonia">
+                    <article class="region-card">
                         <div class="region-image">
                             <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80" alt="Amazonía ecuatoriana" loading="lazy" />
                             <div class="region-overlay"></div>
-                            <div class="region-badge"><i class="fa-solid fa-tree"></i> Amazonía</div>
+                            <div class="region-badge"><i class="fa-solid fa-tree"></i> <span data-i18n="region.amazonia.badge">Amazonía</span></div>
                         </div>
                         <div class="region-info">
-                            <h3>AMAZONÍA</h3>
-                            <p class="region-tagline">Naturaleza viva, selva y sabiduría ancestral.</p>
-                            <p class="region-desc">Explora la biodiversidad y descubre la conexión entre sus pueblos y la Amazonía.</p>
+                            <h3 data-i18n="region.amazonia.title">AMAZONÍA</h3>
+                            <p class="region-tagline" data-i18n="region.amazonia.tagline">Naturaleza viva, selva y sabiduría ancestral.</p>
+                            <p class="region-desc" data-i18n="region.amazonia.desc">Explora la biodiversidad y descubre la conexión entre sus pueblos y la Amazonía.</p>
                         </div>
                     </article>
 
-                    <article class="region-card region-galapagos">
+                    <article class="region-card">
                         <div class="region-image">
                             <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=800&q=80" alt="Galápagos" loading="lazy" />
                             <div class="region-overlay"></div>
-                            <div class="region-badge"><i class="fa-solid fa-fish"></i> Galápagos</div>
+                            <div class="region-badge"><i class="fa-solid fa-fish"></i> <span data-i18n="region.galapagos.badge">Galápagos</span></div>
                         </div>
                         <div class="region-info">
-                            <h3>GALÁPAGOS</h3>
-                            <p class="region-tagline">Un mundo único para descubrir y conservar.</p>
-                            <p class="region-desc">Vive una experiencia extraordinaria entre fauna, océano y paisajes únicos.</p>
+                            <h3 data-i18n="region.galapagos.title">GALÁPAGOS</h3>
+                            <p class="region-tagline" data-i18n="region.galapagos.tagline">Un mundo único para descubrir y conservar.</p>
+                            <p class="region-desc" data-i18n="region.galapagos.desc">Vive una experiencia extraordinaria entre fauna, océano y paisajes únicos.</p>
                         </div>
                     </article>
 
@@ -380,93 +408,119 @@
 
                 <div class="regions-cta">
                     <a href="destinos.html" class="btn btn-primary">
-                        Explorar todos los destinos
+                        <span data-i18n="regions.btn">Explorar todos los destinos</span>
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- 07. TOURS DESTACADOS -->
+        <!-- ==============================
+             BLOQUE 7: TOURS DESTACADOS
+        =============================== -->
         <section class="section-tours" id="tours">
             <div class="container">
                 <div class="section-header-center">
-                    <span class="section-eyebrow">Tours destacados</span>
-                    <h2 class="section-heading">Experiencias que nacen de la tierra</h2>
-                    <p class="section-lead">Vive lo mejor de Ecuador con nuestros paquetes personalizados. Naturaleza, cultura, aventura y más.</p>
+                    <span class="section-eyebrow" data-i18n="tours.eyebrow">Tours destacados</span>
+                    <h2 class="section-heading" data-i18n="tours.title">Experiencias que nacen de la tierra</h2>
+                    <p class="section-lead" data-i18n="tours.lead">Vive lo mejor de Ecuador con nuestros paquetes personalizados. Naturaleza, cultura, aventura y más.</p>
                 </div>
 
                 <div class="tours-grid">
 
+                    <!-- Tour 1 -->
                     <article class="tour-card">
                         <div class="tour-image">
-                            <img src="https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=800&q=80" alt="Raíces de Otavalo" loading="lazy" />
-                            <span class="tour-tag">Cultura Kichwa</span>
+                            <img src="img/tours/raices-otavalo.webp" alt="Raíces de Otavalo" loading="lazy" />
+                            <span class="tour-tag" data-i18n="tour1.tag">Cultura Kichwa</span>
                         </div>
                         <div class="tour-info">
-                            <h3>Raíces de Otavalo</h3>
-                            <p class="tour-desc">Totora, textiles, sabores y melodías de la cultura Kichwa.</p>
-                            <a href="contacto.html" class="tour-btn">Más información <i class="fa-solid fa-arrow-right"></i></a>
+                            <h3 data-i18n="tour1.title">RAÍCES DE OTAVALO</h3>
+                            <p class="tour-desc" data-i18n="tour1.desc">Totora, textiles, sabores y melodías de la cultura Kichwa.</p>
+                            <a href="contacto.html" class="tour-btn">
+                                <span data-i18n="tour.btn">Más información</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
                         </div>
                     </article>
 
+                    <!-- Tour 2 -->
                     <article class="tour-card">
                         <div class="tour-image">
-                            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="Tierra, Sabor y Espíritu Kichwa" loading="lazy" />
-                            <span class="tour-tag">Gastronomía</span>
+                            <img src="img/tours/cotacachi.webp" alt="Tierra, Sabor y Espíritu Kichwa Cotacachi" loading="lazy" />
+                            <span class="tour-tag" data-i18n="tour2.tag">Gastronomía</span>
                         </div>
                         <div class="tour-info">
-                            <h3>Tierra, Sabor y Espíritu Kichwa Cotacachi</h3>
-                            <p class="tour-desc">Una experiencia Kichwa en La Calera.</p>
-                            <a href="contacto.html" class="tour-btn">Más información <i class="fa-solid fa-arrow-right"></i></a>
+                            <h3 data-i18n="tour2.title">TIERRA, SABOR Y ESPÍRITU KICHWA COTACACHI</h3>
+                            <p class="tour-desc" data-i18n="tour2.desc">Una experiencia Kichwa en La Calera.</p>
+                            <a href="contacto.html" class="tour-btn">
+                                <span data-i18n="tour.btn">Más información</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
                         </div>
                     </article>
 
+                    <!-- Tour 3 -->
                     <article class="tour-card">
                         <div class="tour-image">
-                            <img src="https://images.unsplash.com/photo-1518639192441-8fce0a366e2e?auto=format&fit=crop&w=800&q=80" alt="Patrimonio Ancestral Kichwa" loading="lazy" />
-                            <span class="tour-tag">Comunidad</span>
+                            <img src="img/tours/patrimonio-kichwa.webp" alt="Patrimonio Ancestral Kichwa" loading="lazy" />
+                            <span class="tour-tag" data-i18n="tour3.tag">Comunidad</span>
                         </div>
                         <div class="tour-info">
-                            <h3>Patrimonio Ancestral Kichwa</h3>
-                            <p class="tour-desc">Mujeres, territorio y saberes vivos de Cotacachi.</p>
-                            <a href="contacto.html" class="tour-btn">Más información <i class="fa-solid fa-arrow-right"></i></a>
+                            <h3 data-i18n="tour3.title">PATRIMONIO ANCESTRAL KICHWA</h3>
+                            <p class="tour-desc" data-i18n="tour3.desc">Mujeres, territorio y saberes vivos de Cotacachi.</p>
+                            <a href="contacto.html" class="tour-btn">
+                                <span data-i18n="tour.btn">Más información</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
                         </div>
                     </article>
 
+                    <!-- Tour 4 -->
                     <article class="tour-card">
                         <div class="tour-image">
-                            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" alt="Sabores y Raíces de Imbabura" loading="lazy" />
-                            <span class="tour-tag">Agroecología</span>
+                            <img src="img/tours/sabores-imbabura.webp" alt="Sabores y Raíces de Imbabura" loading="lazy" />
+                            <span class="tour-tag" data-i18n="tour4.tag">Agroecología</span>
                         </div>
                         <div class="tour-info">
-                            <h3>Sabores y Raíces de Imbabura</h3>
-                            <p class="tour-desc">De la chakra a la mesa y del territorio al paisaje.</p>
-                            <a href="contacto.html" class="tour-btn">Más información <i class="fa-solid fa-arrow-right"></i></a>
+                            <h3 data-i18n="tour4.title">SABORES Y RAÍCES DE IMBABURA</h3>
+                            <p class="tour-desc" data-i18n="tour4.desc">De la chakra a la mesa y del territorio al paisaje.</p>
+                            <a href="contacto.html" class="tour-btn">
+                                <span data-i18n="tour.btn">Más información</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
                         </div>
                     </article>
 
+                    <!-- Tour 5 -->
                     <article class="tour-card">
                         <div class="tour-image">
-                            <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=800&q=80" alt="Aromas, Sabores y Aventura de Intag" loading="lazy" />
-                            <span class="tour-tag">Café & Aventura</span>
+                            <img src="img/tours/intag.webp" alt="Aromas, Sabores y Aventura de Intag" loading="lazy" />
+                            <span class="tour-tag" data-i18n="tour5.tag">Café & Aventura</span>
                         </div>
                         <div class="tour-info">
-                            <h3>Aromas, Sabores y Aventura de Intag</h3>
-                            <p class="tour-desc">Una experiencia entre café, caña, naturaleza y aventura.</p>
-                            <a href="contacto.html" class="tour-btn">Más información <i class="fa-solid fa-arrow-right"></i></a>
+                            <h3 data-i18n="tour5.title">AROMAS, SABORES Y AVENTURA DE INTAG</h3>
+                            <p class="tour-desc" data-i18n="tour5.desc">Una experiencia entre café, caña, naturaleza y aventura.</p>
+                            <a href="contacto.html" class="tour-btn">
+                                <span data-i18n="tour.btn">Más información</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
                         </div>
                     </article>
 
+                    <!-- Tour 6 -->
                     <article class="tour-card">
                         <div class="tour-image">
-                            <img src="https://images.unsplash.com/photo-1533130061792-64b345e4a833?auto=format&fit=crop&w=800&q=80" alt="Entre Alpacas y Tejidos Andinos" loading="lazy" />
-                            <span class="tour-tag">Páramo & Comunidad</span>
+                            <img src="img/tours/alpacas-tejidos.webp" alt="Entre Alpacas y Tejidos Andinos" loading="lazy" />
+                            <span class="tour-tag" data-i18n="tour6.tag">Páramo & Comunidad</span>
                         </div>
                         <div class="tour-info">
-                            <h3>Entre Alpacas y Tejidos Andinos</h3>
-                            <p class="tour-desc">Una experiencia de páramo, comunidad y tradición Kichwa.</p>
-                            <a href="contacto.html" class="tour-btn">Más información <i class="fa-solid fa-arrow-right"></i></a>
+                            <h3 data-i18n="tour6.title">ENTRE ALPACAS Y TEJIDOS ANDINOS</h3>
+                            <p class="tour-desc" data-i18n="tour6.desc">Una experiencia de páramo, comunidad y tradición Kichwa.</p>
+                            <a href="contacto.html" class="tour-btn">
+                                <span data-i18n="tour.btn">Más información</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
                         </div>
                     </article>
 
@@ -474,59 +528,22 @@
 
                 <div class="tours-cta">
                     <a href="destinos.html" class="btn btn-outline-dark">
-                        Ver todos los tours
+                        <span data-i18n="tours.btn">Ver todos los tours</span>
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- 08. SERVICIOS -->
-        <section class="section-services" id="servicios">
-            <div class="container">
-                <div class="section-header-center">
-                    <span class="section-eyebrow">Nuestros servicios</span>
-                    <h2 class="section-heading">Todo lo que necesitas en un solo lugar</h2>
-                    <p class="section-lead">Te acompañamos en cada paso de tu viaje, con servicios confiables, cómodos y personalizados.</p>
-                </div>
-
-                <div class="services-grid">
-
-                    <article class="service-card">
-                        <div class="service-icon service-icon-blue">
-                            <i class="fa-solid fa-plane"></i>
-                        </div>
-                        <h3>Vuelos</h3>
-                        <p>Los mejores precios y conexiones para que llegues a tu destino sin complicaciones.</p>
-                    </article>
-
-                    <article class="service-card">
-                        <div class="service-icon service-icon-green">
-                            <i class="fa-solid fa-route"></i>
-                        </div>
-                        <h3>Tours Nacionales</h3>
-                        <p>Explora los rincones más increíbles del Ecuador, con experiencias únicas y personalizadas.</p>
-                    </article>
-
-                    <article class="service-card">
-                        <div class="service-icon service-icon-purple">
-                            <i class="fa-solid fa-passport"></i>
-                        </div>
-                        <h3>Visas</h3>
-                        <p>Te asesoramos y te acompañamos en todo el proceso para que viajes sin preocupaciones.</p>
-                    </article>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- 09. MAPA INTERACTIVO -->
+        <!-- ==============================
+             MAPA INTERACTIVO
+        =============================== -->
         <section class="section-map-interactive" id="experiencias">
             <div class="container">
                 <div class="section-header-center">
-                    <span class="section-eyebrow">Explora el mapa</span>
-                    <h2 class="section-heading">Ecuador, un país. Cuatro mundos.</h2>
-                    <p class="section-lead">Costa | Andes | Amazonía | Galápagos. Haz clic en cada región para descubrir sus destinos.</p>
+                    <span class="section-eyebrow" data-i18n="map.eyebrow">Explora el mapa</span>
+                    <h2 class="section-heading" data-i18n="map.title">Ecuador, un país. Cuatro mundos.</h2>
+                    <p class="section-lead" data-i18n="map.lead">Costa | Andes | Amazonía | Galápagos. Haz clic en cada región para descubrir sus destinos.</p>
                 </div>
 
                 <div class="map-layout">
@@ -536,28 +553,28 @@
                         <div class="map-panel-content">
                             <div class="panel-img-wrapper">
                                 <img id="panelImg"
-                                     src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=80"
+                                     src="img/hero/cuicocha.webp"
                                      alt="Explora Ecuador"
                                      class="panel-img" />
                                 <div class="panel-img-overlay" id="panelImgOverlay">
                                     <span>🗺️</span>
-                                    <p>Selecciona una región en el mapa</p>
+                                    <p data-i18n="map.select">Selecciona una región en el mapa</p>
                                 </div>
                             </div>
 
                             <div class="panel-body">
-                                <span class="panel-tag" id="panelTag">Ecuador</span>
-                                <h3 id="panelTitle">Bienvenido a Ecuador</h3>
-                                <p id="panelDesc">Haz clic en cualquier región del mapa para descubrir sus destinos y experiencias.</p>
+                                <span class="panel-tag" id="panelTag" data-i18n="map.tag">Ecuador</span>
+                                <h3 id="panelTitle" data-i18n="map.welcome">Bienvenido a Ecuador</h3>
+                                <p id="panelDesc" data-i18n="map.desc">Haz clic en cualquier región del mapa para descubrir sus destinos y experiencias.</p>
 
                                 <ul class="panel-info" id="panelInfo">
-                                    <li><strong>Regiones:</strong> <span>4 regiones</span></li>
-                                    <li><strong>Destinos:</strong> <span>+20 lugares</span></li>
-                                    <li><strong>Experiencias:</strong> <span>Personalizadas</span></li>
+                                    <li><strong data-i18n="map.info.regions">Regiones:</strong> <span>4</span></li>
+                                    <li><strong data-i18n="map.info.destinations">Destinos:</strong> <span>+20</span></li>
+                                    <li><strong data-i18n="map.info.experiences">Experiencias:</strong> <span data-i18n="map.info.custom">Personalizadas</span></li>
                                 </ul>
 
                                 <a href="contacto.html" class="btn btn-accent" style="width:100%;justify-content:center;">
-                                    Cotizar mi viaje
+                                    <span data-i18n="map.btn">Cotizar mi viaje</span>
                                     <i class="fa-solid fa-arrow-right"></i>
                                 </a>
                             </div>
@@ -567,123 +584,44 @@
             </div>
         </section>
 
-        <!-- 10. WHY US -->
-        <section class="section-why">
-            <div class="container">
-                <div class="section-header-center">
-                    <span class="section-eyebrow">¿Por qué elegirnos?</span>
-                    <h2 class="section-heading">Viajar con All Tour Ecuador</h2>
-                    <p class="section-lead">
-                        Viajar con nosotros es elegir una manera diferente de conocer Ecuador: no solo visitamos 
-                        destinos, sino que conectamos al viajero con la esencia de cada territorio.
-                    </p>
-                </div>
-
-                <div class="why-grid">
-                    <div class="why-card">
-                        <div class="why-icon"><i class="fa-solid fa-handshake"></i></div>
-                        <h3>Turismo con propósito</h3>
-                        <p>Generamos oportunidades para quienes hacen del turismo una forma de vida.</p>
-                    </div>
-                    <div class="why-card">
-                        <div class="why-icon"><i class="fa-solid fa-leaf"></i></div>
-                        <h3>Sostenibilidad real</h3>
-                        <p>Trabajamos con comunidades locales, fortalecemos familias y conservamos el patrimonio.</p>
-                    </div>
-                    <div class="why-card">
-                        <div class="why-icon"><i class="fa-solid fa-user-tie"></i></div>
-                        <h3>Equipo profesional</h3>
-                        <p>Guías especializados, logística preparada y prestadores de servicios de calidad.</p>
-                    </div>
-                    <div class="why-card">
-                        <div class="why-icon"><i class="fa-solid fa-heart"></i></div>
-                        <h3>Experiencias memorables</h3>
-                        <p>Queremos que cada viajero se lleve historias, emociones y vínculos, no solo fotografías.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 11. TESTIMONIOS -->
-        <section class="section-testimonials">
-            <div class="container">
-                <div class="section-header-center">
-                    <span class="section-eyebrow">Lo que dicen nuestros viajeros</span>
-                    <h2 class="section-heading">Historias que inspiran</h2>
-                    <p class="section-lead">La satisfacción de nuestros huéspedes es nuestro mayor logro.</p>
-                </div>
-
-                <div class="testimonials-grid">
-                    <article class="testimonial-card">
-                        <div class="testimonial-quote"><i class="fa-solid fa-quote-left"></i></div>
-                        <div class="testimonial-stars">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="testimonial-text">"Una experiencia increíble. Todo estuvo perfectamente organizado, los guías fueron muy atentos y los paisajes fueron espectaculares. ¡Volveremos!"</p>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="María López" />
-                            <div><strong>María López</strong><span>Quito, Ecuador</span></div>
-                        </div>
-                    </article>
-
-                    <article class="testimonial-card">
-                        <div class="testimonial-quote"><i class="fa-solid fa-quote-left"></i></div>
-                        <div class="testimonial-stars">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="testimonial-text">"Nos encantó recorrer Otavalo y Cotacachi con All Tour Ecuador. La atención fue excelente y nos cuidaron en cada paso. 100% recomendados."</p>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt="Andrés García" />
-                            <div><strong>Andrés García</strong><span>Guayaquil, Ecuador</span></div>
-                        </div>
-                    </article>
-
-                    <article class="testimonial-card">
-                        <div class="testimonial-quote"><i class="fa-solid fa-quote-left"></i></div>
-                        <div class="testimonial-stars">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="testimonial-text">"La experiencia en Galápagos fue única. Todo salió perfecto y tuvimos una aventura inolvidable con la familia. ¡Gracias All Tour Ecuador!"</p>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=100&q=80" alt="Sofía Torres" />
-                            <div><strong>Sofía Torres</strong><span>Cuenca, Ecuador</span></div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- 12. CTA FINAL -->
+        <!-- ==============================
+             CTA FINAL
+        =============================== -->
         <section class="section-cta-final">
-            <div class="cta-bg" style="background-image:url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1920&q=80');"></div>
+            <div class="cta-bg" style="background-image:url('img/hero/ritual-purificacion.webp');"></div>
             <div class="cta-overlay"></div>
 
             <div class="container cta-content">
-                <span class="section-eyebrow light">Encuentra la aventura perfecta</span>
-                <h2 class="cta-title">Ecuador no solo se conoce:<br>se siente, se comparte y se vive.</h2>
-                <p class="cta-desc">Te ayudamos a construir tu próxima experiencia.</p>
+                <span class="section-eyebrow light" data-i18n="cta.eyebrow">Encuentra la aventura perfecta</span>
+                <h2 class="cta-title" data-i18n="cta.title">Ecuador no solo se conoce:<br>se siente, se comparte y se vive.</h2>
+                <p class="cta-desc" data-i18n="cta.desc">Te ayudamos a construir tu próxima experiencia.</p>
                 <div class="cta-buttons">
-                    <a href="contacto.html" class="btn btn-accent btn-lg">Comienza tu viaje <i class="fa-solid fa-arrow-right"></i></a>
-                    <a href="destinos.html" class="btn btn-ghost btn-lg">Ver destinos</a>
+                    <a href="contacto.html" class="btn btn-accent btn-lg">
+                        <span data-i18n="cta.btn1">Comienza tu viaje</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="destinos.html" class="btn btn-ghost btn-lg" data-i18n="cta.btn2">Ver destinos</a>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <!-- FOOTER -->
+    <!-- ==============================
+         FOOTER
+    =============================== -->
     <footer class="site-footer">
         <div class="container footer-grid">
             <div class="footer-col footer-brand-col">
                 <img src="img/logo.png" alt="All Tour Ecuador" class="footer-logo" />
                 <p class="footer-tagline">Your Gateway to Authenticity</p>
-                <p class="footer-desc">Agencia de Viajes y Operador Turístico. Ecuador, desde el corazón del planeta.</p>
+                <p class="footer-desc" data-i18n="footer.desc">Agencia de Viajes y Operador Turístico. Ecuador, desde el corazón del planeta.</p>
             </div>
 
             <div class="footer-col">
-                <h4>Contacto</h4>
+                <h4 data-i18n="footer.contact">Contacto</h4>
                 <ul class="footer-list">
-                    <li><i class="fa-solid fa-location-dot"></i><span>Calle Bolívar, entre Neptalí Ordoñez y Av. Quito</span></li>
+                    <li><i class="fa-solid fa-location-dot"></i><span data-i18n="footer.address">Calle Bolívar, entre Neptalí Ordoñez y Av. Quito</span></li>
                     <li><i class="fa-solid fa-phone"></i><a href="tel:+593997898745">+593 99 789 8745</a></li>
                     <li><i class="fa-brands fa-whatsapp"></i><a href="https://wa.me/593997898745" target="_blank" rel="noopener">WhatsApp</a></li>
                     <li><i class="fa-solid fa-envelope"></i><a href="mailto:alltourecuador@gmail.com">alltourecuador@gmail.com</a></li>
@@ -691,18 +629,18 @@
             </div>
 
             <div class="footer-col">
-                <h4>Explora</h4>
+                <h4 data-i18n="footer.explore">Explora</h4>
                 <ul class="footer-list footer-links">
-                    <li><a href="#tours">Tours</a></li>
-                    <li><a href="#destinos">Destinos</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#experiencias">Experiencias</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="#tours" data-i18n="nav.tours">Tours</a></li>
+                    <li><a href="destinos.html" data-i18n="nav.destinos">Destinos</a></li>
+                    <li><a href="servicios.html" data-i18n="nav.servicios">Servicios</a></li>
+                    <li><a href="#experiencias" data-i18n="nav.experiencias">Experiencias</a></li>
+                    <li><a href="contacto.html" data-i18n="nav.contacto">Contacto</a></li>
                 </ul>
             </div>
 
             <div class="footer-col">
-                <h4>Síguenos</h4>
+                <h4 data-i18n="footer.follow">Síguenos</h4>
                 <div class="social-icons">
                     <a href="https://www.facebook.com/Alltourecuador" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="https://www.instagram.com/alltourecuador593/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
@@ -714,25 +652,28 @@
 
         <div class="footer-bottom">
             <div class="container footer-bottom-content">
-                <span>© 2026 All Tour Ecuador. Todos los derechos reservados.</span>
+                <span data-i18n="footer.copy">© 2026 All Tour Ecuador. Todos los derechos reservados.</span>
                 <div class="footer-bottom-links">
-                    <a href="#">Política de privacidad</a>
-                    <a href="#">Términos y condiciones</a>
+                    <a href="#" data-i18n="footer.privacy">Política de privacidad</a>
+                    <a href="#" data-i18n="footer.terms">Términos y condiciones</a>
                 </div>
             </div>
         </div>
     </footer>
 
     <!-- WhatsApp Flotante -->
-<a href="https://wa.me/593997898745?text=..." target="_blank" rel="noopener" class="whatsapp-float" aria-label="Contactar por WhatsApp">
-    <i class="fa-brands fa-whatsapp"></i>
-    <span class="whatsapp-tooltip">¿Necesitas ayuda?</span>
-</a>
+    <a href="https://wa.me/593997898745?text=Hola%20All%20Tour%20Ecuador,%20quiero%20informaci%C3%B3n%20sobre%20sus%20tours" 
+       target="_blank" 
+       rel="noopener" 
+       class="whatsapp-float" 
+       aria-label="Contactar por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="whatsapp-tooltip" data-i18n="whatsapp.tooltip">¿Necesitas ayuda?</span>
+    </a>
 
-<!-- Botón volver arriba -->
-<button class="back-to-top" id="backToTop" aria-label="Volver arriba">
-    <i class="fa-solid fa-arrow-up"></i>
-</button>
+    <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"

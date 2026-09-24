@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Servicios | All Tour Ecuador</title>
+    <meta name="description" content="Vuelos, tours nacionales y visas. Todos los servicios que necesitas para tu viaje por Ecuador en un solo lugar." />
+    <meta name="author" content="All Tour Ecuador" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Servicios | All Tour Ecuador" />
+    <meta property="og:description" content="Vuelos, tours nacionales y visas. Todo lo que necesitas en un solo lugar." />
+    <meta property="og:type" content="website" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/logo.png">
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- PRELOADER -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <img src="img/logo.png" alt="All Tour Ecuador" />
+            <div class="preloader-bar"><span></span></div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="site-header scrolled" id="siteHeader">
+        <div class="container nav-wrapper">
+            <a href="index.html" class="brand" aria-label="All Tour Ecuador - Inicio">
+                <img src="img/logo.png" alt="All Tour Ecuador" class="brand-logo" />
+            </a>
+
+            <nav class="main-nav" aria-label="Navegación principal">
+                <a href="index.html" data-i18n="nav.inicio">Inicio</a>
+                <a href="nosotros.html" data-i18n="nav.nosotros">Nosotros</a>
+                <a href="destinos.html" data-i18n="nav.destinos">Destinos</a>
+                <a href="index.html#tours" data-i18n="nav.tours">Tours</a>
+                <a href="servicios.html" class="active" data-i18n="nav.servicios">Servicios</a>
+                <a href="index.html#experiencias" data-i18n="nav.experiencias">Experiencias</a>
+                <a href="contacto.html" data-i18n="nav.contacto">Contacto</a>
+            </nav>
+
+            <div class="nav-actions">
+                <div class="lang-switcher">
+                    <button class="lang-btn" aria-label="Cambiar idioma" id="langBtn">
+                        <span id="langCurrent">ES</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="lang-dropdown" id="langDropdown">
+                        <button data-lang="es" class="lang-option active">
+                            <span class="lang-flag">🇪🇸</span> Español
+                        </button>
+                        <button data-lang="en" class="lang-option">
+                            <span class="lang-flag">🇬🇧</span> English
+                        </button>
+                        <button data-lang="fr" class="lang-option">
+                            <span class="lang-flag">🇫🇷</span> Français
+                        </button>
+                    </div>
+                </div>
+
+                <a href="contacto.html" class="btn btn-accent btn-sm nav-cta" data-i18n="nav.cta">Reservar</a>
+                <button class="menu-toggle" aria-label="Abrir menú" id="menuToggle">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MENÚ MÓVIL -->
+    <div class="mobile-menu" id="mobileMenu">
+        <nav class="mobile-nav">
+            <a href="index.html" data-i18n="nav.inicio">Inicio</a>
+            <a href="nosotros.html" data-i18n="nav.nosotros">Nosotros</a>
+            <a href="destinos.html" data-i18n="nav.destinos">Destinos</a>
+            <a href="index.html#tours" data-i18n="nav.tours">Tours</a>
+            <a href="servicios.html" data-i18n="nav.servicios">Servicios</a>
+            <a href="index.html#experiencias" data-i18n="nav.experiencias">Experiencias</a>
+            <a href="contacto.html" data-i18n="nav.contacto">Contacto</a>
+        </nav>
+        <div class="mobile-menu-contact">
+            <a href="tel:+593997898745"><i class="fa-solid fa-phone"></i> +593 99 789 8745</a>
+            <a href="mailto:alltourecuador@gmail.com"><i class="fa-solid fa-envelope"></i> alltourecuador@gmail.com</a>
+        </div>
+    </div>
+
+    <main>
+
+        <!-- ==============================
+             PAGE HERO
+        =============================== -->
+        <section class="page-hero">
+            <div class="page-hero-bg" style="background-image:url('img/hero/alpacas.webp');"></div>
+            <div class="page-hero-overlay"></div>
+
+            <div class="container page-hero-content">
+                <nav class="breadcrumb" aria-label="Ruta de navegación">
+                    <a href="index.html" data-i18n="nav.inicio">Inicio</a>
+                    <i class="fa-solid fa-chevron-right"></i>
+                    <span data-i18n="nav.servicios">Servicios</span>
+                </nav>
+                <span class="section-eyebrow light" data-i18n="services.eyebrow">Nuestros Servicios</span>
+                <h1 class="page-hero-title" data-i18n="services.hero.title">Todo lo que necesitas<br>en un solo lugar</h1>
+                <p class="page-hero-desc" data-i18n="services.hero.desc">
+                    Te acompañamos en cada paso de tu viaje, con servicios confiables, cómodos 
+                    y personalizados para que solo te preocupes por disfrutar.
+                </p>
+            </div>
+        </section>
+
+        <!-- ==============================
+             INTRO
+        =============================== -->
+        <section class="section-services-intro">
+            <div class="container">
+                <div class="section-header-center">
+                    <span class="section-eyebrow" data-i18n="services.intro.eyebrow">Nuestros Servicios</span>
+                    <h2 class="section-heading" data-i18n="services.intro.title">Te acompañamos en cada paso</h2>
+                    <p class="section-lead" data-i18n="services.intro.lead">
+                        Diseñamos, coordinamos y operamos cada detalle de tu viaje con calidad, 
+                        seguridad y atención personalizada.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==============================
+             SERVICIO 1: VUELOS
+        =============================== -->
+        <section class="section-service-detail" id="vuelos">
+            <div class="container">
+                <div class="service-detail-grid">
+                    <div class="service-detail-image">
+                        <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1200&q=80" alt="Vuelos" loading="lazy" />
+                        <div class="service-detail-badge">
+                            <i class="fa-solid fa-plane"></i>
+                            <span data-i18n="service1.badge">Vuelos</span>
+                        </div>
+                    </div>
+
+                    <div class="service-detail-content">
+                        <span class="section-eyebrow" data-i18n="service1.eyebrow">Vuelos</span>
+                        <h2 class="section-heading" data-i18n="service1.title">Los mejores precios y conexiones</h2>
+                        <p class="service-detail-desc" data-i18n="service1.desc">
+                            Encuentra los mejores precios y conexiones para que llegues a tu destino 
+                            sin complicaciones. Gestionamos tus vuelos nacionales e internacionales 
+                            con las aerolíneas más confiables.
+                        </p>
+
+                        <ul class="service-features">
+                            <li>
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span data-i18n="service1.f1">Vuelos nacionales e internacionales</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span data-i18n="service1.f2">Comparación de precios y rutas</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span data-i18n="service1.f3">Asesoría en equipaje y conexiones</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span data-i18n="service1.f4">Check-in y asistencia 24/7</span>
+                            </li>
+                        </ul>
+
+                        <a href="contacto.html" class="btn btn-primary">
+                            <span data-i18n="service.btn">Cotizar mi vuelo</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==============================
+             SERVICIO 2: TOURS NACIONALES
+        =============================== -->
+        <section class="section-service-detail alt" id="tours-nacionales">
+            <div class="container">
+                <div class="service-detail-grid reverse">
+                    <div class="service-detail-image">
+                        <img src="img/hero/cuicocha.webp" alt="Tours Nacionales" loading="lazy" />
+                        <div class="service-detail-badge">
+                            <i class="fa-solid fa-route"></i>
+                            <span data-i18n="service2.badge">Tours Nacionales</span>
+                        </div>
+                    </div>
+
+                    <div class="service-detail-content">
+                        <span class="section-eyebrow" data-i18n="service2.eyebrow">Tours Nacionales</span>
+                        <h2 class="section-heading" data-i18n="service2.title">Explora los rincones más increíbles</h2>
+                        <p class="service-detail-desc" data-i18n="service2.desc">
+                            Explora los rincones más increíbles del Ecuador, con experiencias únicas 
+                            diseñadas para conectar con la naturaleza, las culturas y las comunidades 
+                            locales.
+                        </p>
+
+                        <ul class="service-features">
+                            <li>
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span data-i18n="service2.f1">Tours por las 4 regiones del Ecuador</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span data-i18n="service2.f2">Experiencias culturales y comunitarias</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span data-i18n="service2.f3">Guías locales certificados</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span data-i18n="service2.f4">Itinerarios personalizados</span>
+                            </li>
+                        </ul>
+
+                        <a href="destinos.html" class="btn btn-primary">
+                            <span data-i18n="service2.btn">Ver destinos</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==============================
+             SERVICIO 3: VISAS
+        =============================== -->
+        <section class="section-service-detail" id="visas">
+            <div class="container">
+                <div class="service-detail-grid">
+                    <div class="service-detail-image">
+                        <img src="https://images.unsplash.com/photo-1544098485-2a2e7b0df3e0?auto=format&fit=crop&w=1200&q=80" alt="Visas" loading="lazy" />
+                        <div class="service-detail-badge">
+                            <i class="fa-solid fa-passport"></i>
+                            <span data-i18n="service3.badge">Visas</span>
+                        </div>
+                    </div>
+
+                    <div class="service-detail-content">
+                        <span class="section-eyebrow" data-i18n="service3.eyebrow">Visas</span>
+                        <h2 class="section-heading" data-i18n="service3.title">Viaja sin preocupaciones</h2>
+                        <p class="service-detail-desc" data-i18n="service3.desc">
+                            Te asesoramos y te acompañamos en todo el proceso de obtención de visas 
+                            para que viajes sin preocupaciones. Conocemos los requisitos de cada país 
+                            y te guiamos paso a paso.
+                        </p>
+
+                        <ul class="service-features">
+                            <li>
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span data-i18n="service3.f1">Asesoría según tu nacionalidad</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span data-i18n="service3.f2">Revisión de documentación</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span data-i18n="service3.f3">Acompañamiento en el proceso</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span data-i18n="service3.f4">Seguimiento hasta la aprobación</span>
+                            </li>
+                        </ul>
+
+                        <a href="contacto.html" class="btn btn-primary">
+                            <span data-i18n="service3.btn">Solicitar asesoría</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==============================
+             SERVICIOS ADICIONALES
+        =============================== -->
+        <section class="section-extra-services">
+            <div class="container">
+                <div class="section-header-center">
+                    <span class="section-eyebrow" data-i18n="extra.eyebrow">También ofrecemos</span>
+                    <h2 class="section-heading" data-i18n="extra.title">Servicios adicionales</h2>
+                    <p class="section-lead" data-i18n="extra.lead">
+                        Complementa tu experiencia con servicios pensados para tu comodidad.
+                    </p>
+                </div>
+
+                <div class="extra-services-grid">
+
+                    <article class="extra-service-card">
+                        <div class="extra-service-icon">
+                            <i class="fa-solid fa-hotel"></i>
+                        </div>
+                        <h3 data-i18n="extra1.title">Hospedaje</h3>
+                        <p data-i18n="extra1.desc">Hoteles, hosterías y alojamientos comunitarios seleccionados por su calidad y ubicación.</p>
+                    </article>
+
+                    <article class="extra-service-card">
+                        <div class="extra-service-icon">
+                            <i class="fa-solid fa-car"></i>
+                        </div>
+                        <h3 data-i18n="extra2.title">Transporte</h3>
+                        <p data-i18n="extra2.desc">Traslados privados, vehículos 4x4 y transporte cómodo en cada ruta del Ecuador.</p>
+                    </article>
+
+                    <article class="extra-service-card">
+                        <div class="extra-service-icon">
+                            <i class="fa-solid fa-utensils"></i>
+                        </div>
+                        <h3 data-i18n="extra3.title">Gastronomía</h3>
+                        <p data-i18n="extra3.desc">Experiencias gastronómicas con chefs locales y productos de la zona.</p>
+                    </article>
+
+                    <article class="extra-service-card">
+                        <div class="extra-service-icon">
+                            <i class="fa-solid fa-shield-heart"></i>
+                        </div>
+                        <h3 data-i18n="extra4.title">Seguros de viaje</h3>
+                        <p data-i18n="extra4.desc">Asistencia médica, cobertura de equipaje y protección durante todo el viaje.</p>
+                    </article>
+
+                    <article class="extra-service-card">
+                        <div class="extra-service-icon">
+                            <i class="fa-solid fa-camera"></i>
+                        </div>
+                        <h3 data-i18n="extra5.title">Fotografía</h3>
+                        <p data-i18n="extra5.desc">Sesiones fotográficas profesionales para capturar los mejores momentos de tu viaje.</p>
+                    </article>
+
+                    <article class="extra-service-card">
+                        <div class="extra-service-icon">
+                            <i class="fa-solid fa-people-group"></i>
+                        </div>
+                        <h3 data-i18n="extra6.title">Grupos y eventos</h3>
+                        <p data-i18n="extra6.desc">Organización de viajes para grupos, empresas, familias y eventos especiales.</p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==============================
+             CTA FINAL
+        =============================== -->
+        <section class="section-cta-final">
+            <div class="cta-bg" style="background-image:url('img/hero/cascada-peguche.webp');"></div>
+            <div class="cta-overlay"></div>
+
+            <div class="container cta-content">
+                <span class="section-eyebrow light" data-i18n="cta.eyebrow">Encuentra la aventura perfecta</span>
+                <h2 class="cta-title" data-i18n="cta.title">Ecuador no solo se conoce:<br>se siente, se comparte y se vive.</h2>
+                <p class="cta-desc" data-i18n="cta.desc">Te ayudamos a construir tu próxima experiencia.</p>
+                <div class="cta-buttons">
+                    <a href="contacto.html" class="btn btn-accent btn-lg">
+                        <span data-i18n="cta.btn1">Comienza tu viaje</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="destinos.html" class="btn btn-ghost btn-lg" data-i18n="cta.btn2">Ver destinos</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-col footer-brand-col">
+                <img src="img/logo.png" alt="All Tour Ecuador" class="footer-logo" />
+                <p class="footer-tagline">Your Gateway to Authenticity</p>
+                <p class="footer-desc" data-i18n="footer.desc">Agencia de Viajes y Operador Turístico. Ecuador, desde el corazón del planeta.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4 data-i18n="footer.contact">Contacto</h4>
+                <ul class="footer-list">
+                    <li><i class="fa-solid fa-location-dot"></i><span data-i18n="footer.address">Calle Bolívar, entre Neptalí Ordoñez y Av. Quito</span></li>
+                    <li><i class="fa-solid fa-phone"></i><a href="tel:+593997898745">+593 99 789 8745</a></li>
+                    <li><i class="fa-brands fa-whatsapp"></i><a href="https://wa.me/593997898745" target="_blank" rel="noopener">WhatsApp</a></li>
+                    <li><i class="fa-solid fa-envelope"></i><a href="mailto:alltourecuador@gmail.com">alltourecuador@gmail.com</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 data-i18n="footer.explore">Explora</h4>
+                <ul class="footer-list footer-links">
+                    <li><a href="index.html#tours" data-i18n="nav.tours">Tours</a></li>
+                    <li><a href="destinos.html" data-i18n="nav.destinos">Destinos</a></li>
+                    <li><a href="servicios.html" data-i18n="nav.servicios">Servicios</a></li>
+                    <li><a href="index.html#experiencias" data-i18n="nav.experiencias">Experiencias</a></li>
+                    <li><a href="contacto.html" data-i18n="nav.contacto">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 data-i18n="footer.follow">Síguenos</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/Alltourecuador" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/alltourecuador593/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@alltourecuador" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+                <p class="social-hashtag">#AllTourEcuador</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-content">
+                <span data-i18n="footer.copy">© 2026 All Tour Ecuador. Todos los derechos reservados.</span>
+                <div class="footer-bottom-links">
+                    <a href="#" data-i18n="footer.privacy">Política de privacidad</a>
+                    <a href="#" data-i18n="footer.terms">Términos y condiciones</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Flotante -->
+    <a href="https://wa.me/593997898745?text=Hola%20All%20Tour%20Ecuador,%20quiero%20informaci%C3%B3n%20sobre%20sus%20servicios" 
+       target="_blank" 
+       rel="noopener" 
+       class="whatsapp-float" 
+       aria-label="Contactar por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="whatsapp-tooltip" data-i18n="whatsapp.tooltip">¿Necesitas ayuda?</span>
+    </a>
+
+    <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

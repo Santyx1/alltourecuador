@@ -662,21 +662,28 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 });
 
 // ==========================================
-// 10. FORMULARIO DE CONTACTO
+// 10. FORMULARIO DE CONTACTO (Google Apps Script)
 // ==========================================
 const contactForm = document.getElementById('contactForm');
 
 if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    // URL del Web App de Google Apps Script
+    const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwCq-nSsrFZLgNe_2afJaz9Y6kVy7d9lvUHk1fTbm8_27MA3l9lBpzj1NMD4W4QrCUD/exec";
+
+    contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
 
         const nombre = contactForm.querySelector('input[name="nombre"]')?.value.trim();
         const email = contactForm.querySelector('input[name="email"]')?.value.trim();
-        const destino = contactForm.querySelector('select[name="destino"]')?.value;
-        const tour = contactForm.querySelector('select[name="tour"]')?.value || '';
-        const personas = contactForm.querySelector('input[name="personas"]')?.value || '';
+        const telefono = contactForm.querySelector('input[name="telefono"]')?.value.trim() || "";
+        const destino = contactForm.querySelector('select[name="destino"]')?.value || "";
+        const tour = contactForm.querySelector('select[name="tour"]')?.value || "";
+        const personas = contactForm.querySelector('input[name="personas"]')?.value || "";
+        const fecha = contactForm.querySelector('input[name="fecha"]')?.value || "";
+        const duracion = contactForm.querySelector('select[name="duracion"]')?.value || "";
         const mensaje = contactForm.querySelector('textarea[name="mensaje"]')?.value.trim();
 
+        // Validaciones
         if (!nombre || !email || !destino || !mensaje) {
             alert('⚠️ Por favor completa todos los campos obligatorios (*)');
             return;
@@ -688,14 +695,44 @@ if (contactForm) {
             return;
         }
 
-        let resumen = `✅ ¡Gracias ${nombre}!\n\n`;
-        resumen += `Región de interés: ${destino}\n`;
-        if (tour) resumen += `Tour: ${tour}\n`;
-        if (personas) resumen += `Personas: ${personas}\n`;
-        resumen += `\nTe responderemos a ${email} en menos de 24 horas.\n\nAll Tour Ecuador`;
+        // Bloquear el botón mientras envía
+        const submitBtn = contactForm.querySelector('.form-submit');
+        const originalText = submitBtn.innerHTML;
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Enviando...';
 
-        alert(resumen);
-        contactForm.reset();
+        try {
+            await fetch(APPS_SCRIPT_URL, {
+                method: 'POST',
+                mode: 'no-cors', // Necesario para Google Apps Script
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    nombre,
+                    email,
+                    telefono,
+                    destino,
+                    tour,
+                    personas,
+                    fecha,
+                    duracion,
+                    mensaje
+                })
+            });
+
+            // Con mode: 'no-cors' no podemos leer la respuesta,
+            // así que asumimos éxito si no hay error de red.
+            alert(`✅ ¡Gracias ${nombre}!\n\nTu mensaje fue enviado correctamente.\nTe responderemos a ${email} en menos de 24 horas.\n\nAll Tour Ecuador`);
+            contactForm.reset();
+
+        } catch (error) {
+            console.error("Error al enviar el formulario:", error);
+            alert('⚠️ Hubo un problema al enviar el mensaje.\n\nPor favor intenta de nuevo o escríbenos directamente por WhatsApp.');
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalText;
+        }
     });
 }
 

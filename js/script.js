@@ -668,7 +668,7 @@ const contactForm = document.getElementById('contactForm');
 
 if (contactForm) {
     // URL del Web App de Google Apps Script
-    const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwCq-nSsrFZLgNe_2afJaz9Y6kVy7d9lvUHk1fTbm8_27MA3l9lBpzj1NMD4W4QrCUD/exec";
+    const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbww3oxqPuW8S9Mlk91rYfDM7ss_DmGniipeKY03J6v2Bq0v30wNrwgj447z8hEtsiLK/exec";
 
     contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();

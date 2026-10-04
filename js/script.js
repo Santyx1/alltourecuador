@@ -702,27 +702,27 @@ if (contactForm) {
         submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Enviando...';
 
         try {
+            // Construir FormData (funciona perfecto con Apps Script sin problemas de CORS)
+            const formData = new FormData();
+            formData.append('nombre', nombre);
+            formData.append('email', email);
+            formData.append('telefono', telefono);
+            formData.append('destino', destino);
+            formData.append('tour', tour);
+            formData.append('personas', personas);
+            formData.append('fecha', fecha);
+            formData.append('duracion', duracion);
+            formData.append('mensaje', mensaje);
+
             await fetch(APPS_SCRIPT_URL, {
                 method: 'POST',
-                mode: 'no-cors', // Necesario para Google Apps Script
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    nombre,
-                    email,
-                    telefono,
-                    destino,
-                    tour,
-                    personas,
-                    fecha,
-                    duracion,
-                    mensaje
-                })
+                mode: 'no-cors', // Necesario para Apps Script
+                body: formData
+                // ⚠️ NO agregues headers 'Content-Type': el navegador los pone solos con FormData
             });
 
             // Con mode: 'no-cors' no podemos leer la respuesta,
-            // así que asumimos éxito si no hay error de red.
+            // así que asumimos éxito si no hubo error de red.
             alert(`✅ ¡Gracias ${nombre}!\n\nTu mensaje fue enviado correctamente.\nTe responderemos a ${email} en menos de 24 horas.\n\nAll Tour Ecuador`);
             contactForm.reset();
 

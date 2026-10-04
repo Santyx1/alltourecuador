@@ -446,7 +446,7 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; }
 .mobile-menu-contact i{ color:var(--orange); width:20px; }
 
 /* ==========================================
-   6. HERO SLIDER
+   6. HERO SLIDER (con efecto zoom cinematográfico)
    ========================================== */
 .hero-slider{
     position:relative;
@@ -458,16 +458,31 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; }
 }
 .hero-swiper{ width:100%; height:100%; }
 .hero-slide{ position:relative; overflow:hidden; height:100%; }
+
 .hero-slide-bg{
     position:absolute;
     inset:0;
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
-    transform:scale(1.08);
-    transition:transform 9s ease;
+    /* Zoom inicial grande */
+    transform:scale(1.15);
+    transform-origin:center center;
+    /* Transición larga y suave para el efecto cinematográfico */
+    transition:transform 9s ease-out;
+    will-change:transform;
+    /* Optimizaciones de render */
+    backface-visibility:hidden;
+    -webkit-backface-visibility:hidden;
 }
+
+/* Cuando el slide está activo, la imagen hace zoom-in hacia su tamaño normal */
 .swiper-slide-active .hero-slide-bg{ transform:scale(1); }
+
+/* Cuando el slide se va, resetea el zoom para el próximo */
+.swiper-slide-prev .hero-slide-bg,
+.swiper-slide-next .hero-slide-bg{ transform:scale(1.15); }
+
 .hero-slide-overlay{
     position:absolute;
     inset:0;
@@ -925,10 +940,11 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; }
     letter-spacing:0.1em;
     text-transform:uppercase;
     color:var(--sky-blue-dark);
-    padding-bottom:4px;
+    padding:0 0 4px;
     border-bottom:1px solid transparent;
     align-self:flex-start;
     transition:var(--transition);
+    background:none;
 }
 .tour-btn:hover{
     color:var(--orange-dark);
@@ -2329,7 +2345,304 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; }
 }
 
 /* ==========================================
-   31. RESPONSIVE
+   31. MODAL DE TOURS (NUEVO)
+   ========================================== */
+.tour-modal{
+    position:fixed;
+    inset:0;
+    z-index:999;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:24px;
+    opacity:0;
+    visibility:hidden;
+    transition:opacity 0.3s ease, visibility 0.3s ease;
+}
+.tour-modal.open{
+    opacity:1;
+    visibility:visible;
+}
+.tour-modal-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(26,58,79,0.75);
+    backdrop-filter:blur(6px);
+    -webkit-backdrop-filter:blur(6px);
+    cursor:pointer;
+}
+.tour-modal-content{
+    position:relative;
+    z-index:2;
+    width:min(1100px, 100%);
+    max-height:90vh;
+    background:var(--white);
+    border-radius:var(--radius-lg);
+    overflow:hidden;
+    box-shadow:var(--shadow-xl);
+    display:flex;
+    flex-direction:column;
+    transform:translateY(30px) scale(0.98);
+    transition:transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.tour-modal.open .tour-modal-content{ transform:translateY(0) scale(1); }
+
+.tour-modal-close{
+    position:absolute;
+    top:16px;
+    right:16px;
+    z-index:5;
+    width:44px;
+    height:44px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.95);
+    color:var(--text);
+    display:grid;
+    place-items:center;
+    font-size:1.1rem;
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+    cursor:pointer;
+    transition:var(--transition);
+}
+.tour-modal-close:hover{
+    background:var(--orange);
+    color:var(--white);
+    transform:rotate(90deg);
+}
+
+/* Hero del modal */
+.tour-modal-hero{
+    position:relative;
+    height:260px;
+    flex-shrink:0;
+    overflow:hidden;
+}
+.tour-modal-hero img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+.tour-modal-hero-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to top, rgba(26,58,79,0.95) 0%, rgba(26,58,79,0.4) 60%, rgba(26,58,79,0.1) 100%);
+}
+.tour-modal-hero-text{
+    position:absolute;
+    left:36px;
+    right:36px;
+    bottom:28px;
+    color:var(--white);
+}
+.tour-modal-eyebrow{
+    display:inline-block;
+    font-size:0.72rem;
+    font-weight:700;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--orange-light);
+    background:rgba(43,168,160,0.25);
+    padding:6px 14px;
+    border-radius:999px;
+    margin-bottom:14px;
+    backdrop-filter:blur(6px);
+}
+.tour-modal-hero-text h2{
+    font-family:var(--font-serif);
+    font-size:clamp(1.5rem, 2.6vw, 2.1rem);
+    font-weight:700;
+    line-height:1.2;
+    margin-bottom:8px;
+    color:var(--white);
+}
+.tour-modal-hero-text p{
+    font-family:var(--font-serif);
+    font-style:italic;
+    font-size:1rem;
+    color:var(--orange-light);
+    line-height:1.4;
+}
+
+/* Body del modal */
+.tour-modal-body{
+    overflow-y:auto;
+    flex:1;
+    padding:36px 40px 40px;
+}
+.tour-modal-cols{
+    display:grid;
+    grid-template-columns:1.4fr 1fr;
+    gap:36px;
+    align-items:start;
+}
+
+.tour-modal-subtitle{
+    font-family:var(--font-sans);
+    font-size:0.8rem;
+    font-weight:700;
+    letter-spacing:0.15em;
+    text-transform:uppercase;
+    color:var(--sky-blue-dark);
+    margin-bottom:14px;
+    margin-top:24px;
+    padding-bottom:8px;
+    border-bottom:2px solid var(--sky-blue-pale);
+}
+.tour-modal-subtitle:first-child{ margin-top:0; }
+
+/* Callout */
+.tour-modal-callout{
+    background:linear-gradient(135deg, var(--orange-pale), var(--sky-blue-pale));
+    border-left:4px solid var(--orange);
+    border-radius:var(--radius);
+    padding:20px 24px;
+    font-family:var(--font-serif);
+    font-style:italic;
+    font-size:1rem;
+    color:var(--text);
+    line-height:1.65;
+    margin-bottom:24px;
+}
+
+.tour-modal-main p{
+    font-size:0.95rem;
+    color:var(--text-light);
+    line-height:1.8;
+}
+
+/* Itinerario */
+.tour-modal-itinerary{
+    display:grid;
+    gap:14px;
+}
+.tour-modal-itinerary li{
+    display:grid;
+    grid-template-columns:130px 1fr;
+    gap:16px;
+    padding:14px 16px;
+    background:var(--off-white);
+    border-radius:var(--radius-sm);
+    border-left:3px solid var(--sky-blue);
+    transition:var(--transition);
+}
+.tour-modal-itinerary li:hover{
+    background:var(--sky-blue-pale);
+    border-left-color:var(--orange);
+}
+.itinerary-time{
+    font-size:0.82rem;
+    font-weight:700;
+    color:var(--orange-dark);
+    letter-spacing:0.02em;
+    align-self:start;
+}
+.itinerary-text{
+    font-size:0.9rem;
+    color:var(--text);
+    line-height:1.6;
+}
+
+/* Sidebar del modal */
+.tour-modal-side{
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+    position:sticky;
+    top:0;
+}
+.tour-modal-facts,
+.tour-modal-includes,
+.tour-modal-not-includes{
+    background:var(--off-white);
+    border-radius:var(--radius);
+    padding:22px 22px 20px;
+    border:1px solid var(--gray-100);
+}
+.tour-modal-facts ul{
+    display:grid;
+    gap:12px;
+}
+.tour-modal-facts li{
+    display:flex;
+    flex-direction:column;
+    gap:2px;
+    padding-bottom:10px;
+    border-bottom:1px solid var(--gray-200);
+}
+.tour-modal-facts li:last-child{
+    border-bottom:none;
+    padding-bottom:0;
+}
+.tour-modal-facts strong{
+    font-size:0.72rem;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.1em;
+    color:var(--sky-blue-dark);
+}
+.tour-modal-facts span{
+    font-size:0.9rem;
+    color:var(--text);
+    line-height:1.5;
+}
+
+.tour-modal-includes h4,
+.tour-modal-not-includes h4{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-family:var(--font-sans);
+    font-size:0.82rem;
+    font-weight:700;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    margin-bottom:14px;
+}
+.tour-modal-includes h4{ color:var(--orange-dark); }
+.tour-modal-not-includes h4{ color:var(--red); }
+.tour-modal-includes h4 i{ color:var(--orange); font-size:1rem; }
+.tour-modal-not-includes h4 i{ color:var(--red); font-size:1rem; }
+
+.tour-modal-includes ul,
+.tour-modal-not-includes ul{
+    display:grid;
+    gap:8px;
+}
+.tour-modal-includes li,
+.tour-modal-not-includes li{
+    font-size:0.88rem;
+    color:var(--text);
+    line-height:1.5;
+    padding-left:18px;
+    position:relative;
+}
+.tour-modal-includes li::before{
+    content:"✓";
+    position:absolute;
+    left:0;
+    color:var(--orange);
+    font-weight:700;
+}
+.tour-modal-not-includes li::before{
+    content:"✕";
+    position:absolute;
+    left:0;
+    color:var(--red);
+    font-weight:700;
+    font-size:0.8rem;
+}
+
+/* Scroll del modal */
+.tour-modal-body::-webkit-scrollbar{ width:8px; }
+.tour-modal-body::-webkit-scrollbar-track{ background:var(--gray-100); }
+.tour-modal-body::-webkit-scrollbar-thumb{
+    background:var(--gray-300);
+    border-radius:999px;
+}
+.tour-modal-body::-webkit-scrollbar-thumb:hover{ background:var(--sky-blue); }
+
+/* ==========================================
+   32. RESPONSIVE
    ========================================== */
 
 @media (max-width: 1200px){
@@ -2396,6 +2709,15 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; }
     .footer-grid{ grid-template-columns:1fr 1fr; gap:40px; }
 
     .dest-quick-nav{ grid-template-columns:repeat(2, 1fr); }
+
+    /* Modal */
+    .tour-modal{ padding:16px; }
+    .tour-modal-content{ max-height:94vh; }
+    .tour-modal-hero{ height:220px; }
+    .tour-modal-body{ padding:28px 26px 32px; }
+    .tour-modal-cols{ grid-template-columns:1fr; gap:28px; }
+    .tour-modal-side{ position:static; }
+    .tour-modal-hero-text{ left:24px; right:24px; bottom:22px; }
 }
 
 @media (max-width: 720px){
@@ -2468,6 +2790,16 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; }
     .dest-quick-nav{ grid-template-columns:repeat(2, 1fr); }
 
     .philosophy-chain{ justify-content:flex-start; padding:0 20px; }
+
+    /* Modal */
+    .tour-modal-hero{ height:190px; }
+    .tour-modal-body{ padding:22px 20px 28px; }
+    .tour-modal-hero-text h2{ font-size:1.3rem; }
+    .tour-modal-hero-text p{ font-size:0.88rem; }
+    .tour-modal-eyebrow{ font-size:0.65rem; padding:5px 12px; }
+    .tour-modal-close{ width:38px; height:38px; top:12px; right:12px; }
+    .tour-modal-itinerary li{ grid-template-columns:1fr; gap:4px; }
+    .itinerary-time{ font-size:0.78rem; }
 }
 
 @media (max-width: 560px){

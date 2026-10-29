@@ -1730,7 +1730,7 @@ main{ padding-top:var(--header-h); }
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
-    opacity:0.25; /* ajustar según la imagen */
+    opacity:0.50; /* ajustar según la imagen */
     z-index:-2;
 }
 

@@ -752,8 +752,8 @@ main{ padding-top:var(--header-h); }
     background:var(--white);
 }
 .welcome-icon{
-    width:88px;
-    height:88px;
+    width:120px;         /* ← más ancho para acomodar tu icono */
+    height:120px;        /* ← más alto */
     border-radius:50%;
     background:linear-gradient(135deg, var(--brand), var(--brand-dark));
     color:var(--white);

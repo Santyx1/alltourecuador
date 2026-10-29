@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experiencias | All Tour Ecuador</title>
+    <meta name="description" content="Descubre las experiencias reales de nuestros viajeros y el impacto transformador de All Tour Ecuador en las comunidades locales." />
+    <meta name="author" content="All Tour Ecuador" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Experiencias | All Tour Ecuador" />
+    <meta property="og:description" content="Experiencias reales de viajeros y testimonios de nuestra cadena de valor." />
+    <meta property="og:type" content="website" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/logo.png">
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Lottie (iconos animados) -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+<body>
+
+    <!-- PRELOADER -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <!-- REEMPLAZAR IMAGEN: logo oficial -->
+            <img src="img/logo.png" alt="All Tour Ecuador" />
+            <div class="preloader-bar"><span></span></div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="site-header scrolled" id="siteHeader">
+        <div class="container nav-wrapper">
+            <a href="index.html" class="brand" aria-label="All Tour Ecuador - Inicio">
+                <!-- REEMPLAZAR IMAGEN: logo oficial (más grande) -->
+                <img src="img/logo.png" alt="All Tour Ecuador" class="brand-logo" />
+            </a>
+
+            <nav class="main-nav" aria-label="Navegación principal">
+                <a href="index.html" data-i18n="nav.inicio">Inicio</a>
+                <a href="nosotros.html" data-i18n="nav.nosotros">Nosotros</a>
+                <a href="tours.html" data-i18n="nav.tours">Tours</a>
+                <a href="servicios.html" data-i18n="nav.servicios">Servicios</a>
+                <a href="experiencias.html" class="active" data-i18n="nav.experiencias">Experiencias</a>
+                <a href="contacto.html" data-i18n="nav.contacto">Contacto</a>
+            </nav>
+
+            <div class="nav-actions">
+                <div class="lang-switcher">
+                    <button class="lang-btn" aria-label="Cambiar idioma" id="langBtn">
+                        <span id="langCurrent">ES</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="lang-dropdown" id="langDropdown">
+                        <button data-lang="es" class="lang-option active">
+                            <span class="lang-flag">🇪🇸</span> Español
+                        </button>
+                        <button data-lang="en" class="lang-option">
+                            <span class="lang-flag">🇬🇧</span> English
+                        </button>
+                        <button data-lang="fr" class="lang-option">
+                            <span class="lang-flag">🇫🇷</span> Français
+                        </button>
+                    </div>
+                </div>
+
+                <a href="contacto.html" class="btn btn-accent btn-sm nav-cta" data-i18n="nav.cta">Reservar</a>
+                <button class="menu-toggle" aria-label="Abrir menú" id="menuToggle">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MENÚ MÓVIL -->
+    <div class="mobile-menu" id="mobileMenu">
+        <nav class="mobile-nav">
+            <a href="index.html" data-i18n="nav.inicio">Inicio</a>
+            <a href="nosotros.html" data-i18n="nav.nosotros">Nosotros</a>
+            <a href="tours.html" data-i18n="nav.tours">Tours</a>
+            <a href="servicios.html" data-i18n="nav.servicios">Servicios</a>
+            <a href="experiencias.html" data-i18n="nav.experiencias">Experiencias</a>
+            <a href="contacto.html" data-i18n="nav.contacto">Contacto</a>
+        </nav>
+        <div class="mobile-menu-contact">
+            <a href="tel:+593997898745"><i class="fa-solid fa-phone"></i> +593 99 789 8745</a>
+            <a href="mailto:alltourecuador@gmail.com"><i class="fa-solid fa-envelope"></i> alltourecuador@gmail.com</a>
+        </div>
+    </div>
+
+    <main>
+
+        <!-- ==============================
+             PAGE HERO
+        =============================== -->
+        <section class="page-hero page-hero-sm">
+            <!-- REEMPLAZAR IMAGEN: viajero viviendo experiencia (carpeta Drive usuario) -->
+            <div class="page-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1533130061792-64b345e4a833?auto=format&fit=crop&w=1920&q=80');"></div>
+            <div class="page-hero-overlay"></div>
+
+            <div class="container page-hero-content">
+                <span class="section-eyebrow light">Experiencias All Tour Ecuador</span>
+                <h1 class="page-hero-title">Historias que transforman vidas</h1>
+                <p class="page-hero-desc">
+                    Cada viaje deja una huella: en los viajeros y en las comunidades que hacen
+                    posible vivir un Ecuador auténtico. Descubre sus voces.
+                </p>
+            </div>
+        </section>
+
+        <!-- ==============================
+             CARRUSEL DE RESEÑAS DE VIAJEROS
+        =============================== -->
+        <section class="section-experience-reviews">
+            <div class="container">
+                <div class="section-header-center">
+                    <span class="section-eyebrow">Lo que dicen nuestros viajeros</span>
+                    <h2 class="section-heading">Experiencias que se llevan en el corazón</h2>
+                    <p class="section-lead">
+                        Reseñas reales de quienes han vivido los Andes, la Amazonía, la Costa
+                        y Galápagos con nosotros.
+                    </p>
+                </div>
+
+                <div class="reviews-swiper swiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <article class="review-card">
+                                <div class="review-stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="review-text">"Raíces de Otavalo fue mucho más de lo que esperaba. Ver a los tejedores trabajar, compartir con las familias y aprender de su cosmovisión cambió mi forma de viajar. All Tour Ecuador sabe abrir puertas que uno solo no encontraría."</p>
+                                <div class="review-author">
+                                    <!-- REEMPLAZAR IMAGEN: foto viajero (carpeta Drive usuario) -->
+                                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80" alt="María Fernández" loading="lazy" />
+                                    <div>
+                                        <strong>María Fernández</strong>
+                                        <span>Madrid, España · Tour Raíces de Otavalo</span>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <article class="review-card">
+                                <div class="review-stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="review-text">"La Pachamanka en Cotacachi fue una experiencia sensorial y espiritual. La organización fue impecable, siempre atentos, siempre respetuosos con las comunidades. Regresamos con el corazón lleno."</p>
+                                <div class="review-author">
+                                    <!-- REEMPLAZAR IMAGEN: foto viajero (carpeta Drive usuario) -->
+                                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" alt="Lucas Ramírez" loading="lazy" />
+                                    <div>
+                                        <strong>Lucas Ramírez</strong>
+                                        <span>Buenos Aires, Argentina · Tierra, Sabor y Espíritu Kichwa</span>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <article class="review-card">
+                                <div class="review-stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="review-text">"Cuicocha Nature Trek: 14 km de vistas que te dejan sin palabras. El guía nativo conocía cada planta, cada ave, cada historia. No es solo un tour, es una conversación con la montaña."</p>
+                                <div class="review-author">
+                                    <!-- REEMPLAZAR IMAGEN: foto viajero (carpeta Drive usuario) -->
+                                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=200&q=80" alt="Sophie Dubois" loading="lazy" />
+                                    <div>
+                                        <strong>Sophie Dubois</strong>
+                                        <span>Lyon, Francia · Cuicocha Nature Trek</span>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <article class="review-card">
+                                <div class="review-stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="review-text">"Aromas, Sabores y Aventura de Intag fue perfecto: el café orgánico más increíble que he probado, un trapiche artesanal y un canopy sobre el bosque nublado. Cada momento, cuidado al detalle."</p>
+                                <div class="review-author">
+                                    <!-- REEMPLAZAR IMAGEN: foto viajero (carpeta Drive usuario) -->
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Carlos Méndez" loading="lazy" />
+                                    <div>
+                                        <strong>Carlos Méndez</strong>
+                                        <span>Bogotá, Colombia · Aromas, Sabores y Aventura de Intag</span>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <article class="review-card">
+                                <div class="review-stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="review-text">"Con las alpacas entendí la historia completa de la fibra andina. La demostración de trasquilado, el taller textil en Agato y el almuerzo comunitario fueron un regalo. Volvería sin dudarlo."</p>
+                                <div class="review-author">
+                                    <!-- REEMPLAZAR IMAGEN: foto viajero (carpeta Drive usuario) -->
+                                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80" alt="Anna Müller" loading="lazy" />
+                                    <div>
+                                        <strong>Anna Müller</strong>
+                                        <span>Berlín, Alemania · Entre Alpacas y Tejidos Andinos</span>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <article class="review-card">
+                                <div class="review-stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="review-text">"Patrimonio Ancestral Kichwa me mostró un Ecuador que no aparece en las guías. La chicha SARA MAMA, las guardianas de semillas, la chakra SIPAM… una experiencia de turismo con sentido y respeto."</p>
+                                <div class="review-author">
+                                    <!-- REEMPLAZAR IMAGEN: foto viajero (carpeta Drive usuario) -->
+                                    <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=200&q=80" alt="Valeria Ortiz" loading="lazy" />
+                                    <div>
+                                        <strong>Valeria Ortiz</strong>
+                                        <span>Lima, Perú · Patrimonio Ancestral Kichwa</span>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                    </div>
+
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==============================
+             TESTIMONIOS CADENA DE VALOR
+        =============================== -->
+        <section class="section-value-testimonials">
+            <div class="container">
+                <div class="section-header-center">
+                    <span class="section-eyebrow">Voces de nuestra cadena de valor</span>
+                    <h2 class="section-heading">El cambio de vida detrás de cada viaje</h2>
+                    <p class="section-lead">
+                        El turismo que practicamos genera impacto real en las familias y
+                        organizaciones que son parte de cada experiencia. Estas son sus historias.
+                    </p>
+                </div>
+
+                <div class="value-testimonials-grid">
+
+                    <!-- 1. Guías locales nativos -->
+                    <article class="value-testimonial-card">
+                        <h3>Guías locales nativos</h3>
+                        <span class="value-testimonial-role">Rol: Acompañamiento, guianza e interpretación cultural y ambiental</span>
+                        <p class="value-testimonial-text">"Nacer y crecer en estas tierras nos da el conocimiento profundo del territorio, sus senderos y sus leyendas. Antes, el trabajo de guianza local no siempre era valorado o formalizado. A través de la alianza con All Tour Ecuador, hemos logrado capacitar de forma continua nuestras habilidades técnico-operativas y certificar nuestra labor. Trabajar junto a la agencia nos brinda la tranquilidad de contar con grupos constantes durante todo el año, lo que se traduce en un ingreso justo y digno para nuestros hogares. Esta estabilidad económica nos ha permitido mejorar la calidad de vida de nuestras familias, invertir en la educación de nuestros hijos y, sobre todo, sentirnos orgullosos de compartir la historia viva y la naturaleza de nuestra tierra con viajeros de todo el mundo."</p>
+                    </article>
+
+                    <!-- 2. Organizaciones y asociaciones de mujeres -->
+                    <article class="value-testimonial-card">
+                        <h3>Organizaciones y asociaciones de mujeres</h3>
+                        <span class="value-testimonial-role">Nuestra voz desde la tierra y el trabajo asociativo</span>
+                        <p class="value-testimonial-text">"Durante generaciones, las mujeres Kichwas del campo hemos sido las encargadas invisibles de guardar la vida en nuestras chakras. Antes, mantener vivas las variedades nativas de maíz, porotos, quinua y plantas medicinales era una labor solitaria y sin reconocimiento económico. A través del trabajo en comité y de alianzas estratégicas con All Tour Ecuador, transformamos ese saber cotidiano en emprendimientos organizados y sostenibles. Hoy no solo recibimos a los viajeros para mostrarles la belleza de la Chakra Andina —reconocida mundialmente como patrimonio agrícola (SIPAM)—, sino que les compartimos el alma de nuestro trabajo: el intercambio de semillas (Muyu Raymi), la elaboración artesanal de la chicha ancestral SARA MAMA y el diseño de artesanías en semillas nativas. El turismo consciente nos ha dado autonomía económica, voz activa dentro de nuestras comunidades y los recursos necesarios para garantizar que ninguna variedad de semilla ancestral se extinga. Cada visita apoya de forma directa la educación de nuestras hijas y asegura la soberanía alimentaria de nuestros hogares."</p>
+                    </article>
+
+                    <!-- 3. Agricultores y familias de la chakra -->
+                    <article class="value-testimonial-card">
+                        <h3>Agricultores y familias de la chakra</h3>
+                        <span class="value-testimonial-role">Nuestra experiencia desde la tierra</span>
+                        <p class="value-testimonial-text">"Nuestra vida siempre ha girado en torno al cuidado de la chakra orgánica, el café y la caña de azúcar en las montañas. Durante años dependíamos únicamente de intermediarios para vender nuestros productos a precios impredecibles. Gracias a la alianza con All Tour Ecuador, la agricultura y el turismo se unieron en un modelo justo: los visitantes llegan a nuestra finca a conocer el origen de los alimentos, valorar el trabajo del campo y consumir directamente de nuestras cosechas. Esta diversificación de ingresos ha dinamizado nuestra economía familiar, permitiéndonos mejorar nuestras viviendas, reinvertir en insumos orgánicos para el campo y conservar las técnicas agrícolas ancestrales que sostienen a nuestra comunidad."</p>
+                    </article>
+
+                    <!-- 4. Chefs y cocinas tradicionales -->
+                    <article class="value-testimonial-card">
+                        <h3>Chefs y cocinas tradicionales</h3>
+                        <span class="value-testimonial-role">Nuestra experiencia en los sabores del territorio</span>
+                        <p class="value-testimonial-text">"En nuestras cocinas rurales, cada plato cuenta una historia sobre la biodiversidad y la identidad de nuestro territorio. La relación de trabajo con All Tour Ecuador nos ha brindado una plataforma profesional para ofrecer menús de origen elaborados con productos frescos de los agricultores locales. Esto ha cerrado un círculo económico perfecto donde el dinero se queda y circula dentro del territorio. El constante flujo de visitantes nos ha permitido profesionalizar nuestras instalaciones gastronómicas, generar empleo local para más jóvenes y mejorar significativamente la calidad de vida de quienes conformamos la cadena alimentaria rural."</p>
+                    </article>
+
+                    <!-- 5. Artesanos y maestros de oficios ancestrales -->
+                    <article class="value-testimonial-card">
+                        <h3>Artesanos y maestros de oficios ancestrales</h3>
+                        <span class="value-testimonial-role">Nuestra experiencia con las manos y el arte</span>
+                        <p class="value-testimonial-text">"Mantener vivos los telares de mano y el trabajo artesanal en totora es un compromiso con nuestros antepasados. Sin embargo, la falta de mercados directos solía obligarnos a depender de revendedores que no pagaban el valor real de nuestro esfuerzo. Con All Tour Ecuador, nuestros talleres se convirtieron en paradas vivas dentro de los paquetes turísticos. Los viajeros ven el proceso artesanal paso a paso y compran directamente sin intermediarios. Esta relación comercial transparente ha incrementado los ingresos de nuestros hogares, permitiéndonos mejorar nuestras herramientas de trabajo y garantizar que los jóvenes de la comunidad vean en la artesanía una profesión rentable, digna y llena de orgullo."</p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==============================
+             CTA FINAL
+        =============================== -->
+        <section class="section-cta-final">
+            <!-- REEMPLAZAR IMAGEN: CTA final (carpeta Drive usuario) -->
+            <div class="cta-bg" style="background-image:url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1920&q=80');"></div>
+            <div class="cta-overlay"></div>
+
+            <div class="container cta-content">
+                <span class="section-eyebrow light">Encuentra la aventura perfecta</span>
+                <h2 class="cta-title">Ecuador no solo se conoce:<br>se siente, se comparte y se vive.</h2>
+                <p class="cta-desc">Te ayudamos a construir tu próxima experiencia.</p>
+                <div class="cta-buttons">
+                    <a href="contacto.html" class="btn btn-accent btn-lg">
+                        Comienza tu viaje
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="tours.html" class="btn btn-ghost btn-lg">Ver tours</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-col footer-brand-col">
+                <!-- REEMPLAZAR IMAGEN: logo oficial (footer) -->
+                <img src="img/logo.png" alt="All Tour Ecuador" class="footer-logo" />
+                <p class="footer-tagline">Your Gateway to Authenticity</p>
+                <p class="footer-desc" data-i18n="footer.desc">Agencia de Viajes y Operador Turístico. Ecuador, desde el corazón del planeta.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4 data-i18n="footer.contact">Contacto</h4>
+                <ul class="footer-list">
+                    <li><i class="fa-solid fa-location-dot"></i><span data-i18n="footer.address">Calle Bolívar, entre Neptalí Ordoñez y Av. Quito</span></li>
+                    <li><i class="fa-solid fa-phone"></i><a href="tel:+593997898745">+593 99 789 8745</a></li>
+                    <li><i class="fa-brands fa-whatsapp"></i><a href="https://wa.me/593997898745" target="_blank" rel="noopener">WhatsApp</a></li>
+                    <li><i class="fa-solid fa-envelope"></i><a href="mailto:alltourecuador@gmail.com">alltourecuador@gmail.com</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 data-i18n="footer.explore">Explora</h4>
+                <ul class="footer-list footer-links">
+                    <li><a href="tours.html" data-i18n="nav.tours">Tours</a></li>
+                    <li><a href="servicios.html" data-i18n="nav.servicios">Servicios</a></li>
+                    <li><a href="experiencias.html" data-i18n="nav.experiencias">Experiencias</a></li>
+                    <li><a href="nosotros.html" data-i18n="nav.nosotros">Nosotros</a></li>
+                    <li><a href="contacto.html" data-i18n="nav.contacto">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 data-i18n="footer.follow">Síguenos</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/Alltourecuador" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/alltourecuador593/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@alltourecuador" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+                <p class="social-hashtag">#AllTourEcuador</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-content">
+                <span data-i18n="footer.copy">© 2026 All Tour Ecuador. Todos los derechos reservados.</span>
+                <div class="footer-bottom-links">
+                    <a href="#" data-i18n="footer.privacy">Política de privacidad</a>
+                    <a href="#" data-i18n="footer.terms">Términos y condiciones</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Flotante -->
+    <a href="https://wa.me/593997898745?text=Hola%20All%20Tour%20Ecuador,%20quiero%20informaci%C3%B3n%20sobre%20sus%20experiencias"
+       target="_blank"
+       rel="noopener"
+       class="whatsapp-float"
+       aria-label="Contactar por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="whatsapp-tooltip" data-i18n="whatsapp.tooltip">¿Necesitas ayuda?</span>
+    </a>
+
+    <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="js/script.js"></script>
+
+    <!-- Init carrusel de reseñas -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (document.querySelector('.reviews-swiper')) {
+                new Swiper('.reviews-swiper', {
+                    slidesPerView: 1,
+                    spaceBetween: 24,
+                    loop: true,
+                    speed: 800,
+                    autoplay: {
+                        delay: 6000,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: '.reviews-swiper .swiper-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: '.reviews-swiper .swiper-button-next',
+                        prevEl: '.reviews-swiper .swiper-button-prev',
+                    },
+                    breakpoints: {
+                        720: { slidesPerView: 2, spaceBetween: 24 },
+                        1024: { slidesPerView: 3, spaceBetween: 28 }
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

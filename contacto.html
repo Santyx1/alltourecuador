@@ -29,12 +29,16 @@
 
     <!-- CSS principal -->
     <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Lottie (iconos animados) -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body>
 
     <!-- PRELOADER -->
     <div class="preloader" id="preloader">
         <div class="preloader-inner">
+            <!-- REEMPLAZAR IMAGEN: logo oficial -->
             <img src="img/logo.png" alt="All Tour Ecuador" />
             <div class="preloader-bar"><span></span></div>
         </div>
@@ -44,17 +48,17 @@
     <header class="site-header scrolled" id="siteHeader">
         <div class="container nav-wrapper">
             <a href="index.html" class="brand" aria-label="All Tour Ecuador - Inicio">
+                <!-- REEMPLAZAR IMAGEN: logo oficial (más grande) -->
                 <img src="img/logo.png" alt="All Tour Ecuador" class="brand-logo" />
             </a>
 
             <nav class="main-nav" aria-label="Navegación principal">
-                <a href="index.html">Inicio</a>
-                <a href="nosotros.html">Nosotros</a>
-                <a href="destinos.html">Destinos</a>
-                <a href="index.html#tours">Tours</a>
-                <a href="servicios.html">Servicios</a>
-                <a href="index.html#experiencias">Experiencias</a>
-                <a href="contacto.html" class="active">Contacto</a>
+                <a href="index.html" data-i18n="nav.inicio">Inicio</a>
+                <a href="nosotros.html" data-i18n="nav.nosotros">Nosotros</a>
+                <a href="tours.html" data-i18n="nav.tours">Tours</a>
+                <a href="servicios.html" data-i18n="nav.servicios">Servicios</a>
+                <a href="experiencias.html" data-i18n="nav.experiencias">Experiencias</a>
+                <a href="contacto.html" class="active" data-i18n="nav.contacto">Contacto</a>
             </nav>
 
             <div class="nav-actions">
@@ -76,7 +80,7 @@
                     </div>
                 </div>
 
-                <a href="contacto.html" class="btn btn-accent btn-sm nav-cta">Reservar</a>
+                <a href="contacto.html" class="btn btn-accent btn-sm nav-cta" data-i18n="nav.cta">Reservar</a>
                 <button class="menu-toggle" aria-label="Abrir menú" id="menuToggle">
                     <span></span><span></span><span></span>
                 </button>
@@ -87,13 +91,12 @@
     <!-- MENÚ MÓVIL -->
     <div class="mobile-menu" id="mobileMenu">
         <nav class="mobile-nav">
-            <a href="index.html">Inicio</a>
-            <a href="nosotros.html">Nosotros</a>
-            <a href="destinos.html">Destinos</a>
-            <a href="index.html#tours">Tours</a>
-            <a href="servicios.html">Servicios</a>
-            <a href="index.html#experiencias">Experiencias</a>
-            <a href="contacto.html">Contacto</a>
+            <a href="index.html" data-i18n="nav.inicio">Inicio</a>
+            <a href="nosotros.html" data-i18n="nav.nosotros">Nosotros</a>
+            <a href="tours.html" data-i18n="nav.tours">Tours</a>
+            <a href="servicios.html" data-i18n="nav.servicios">Servicios</a>
+            <a href="experiencias.html" data-i18n="nav.experiencias">Experiencias</a>
+            <a href="contacto.html" data-i18n="nav.contacto">Contacto</a>
         </nav>
         <div class="mobile-menu-contact">
             <a href="tel:+593997898745"><i class="fa-solid fa-phone"></i> +593 99 789 8745</a>
@@ -107,15 +110,11 @@
              PAGE HERO
         =============================== -->
         <section class="page-hero page-hero-sm">
+            <!-- REEMPLAZAR IMAGEN: turista con paisaje (carpeta Drive usuario) -->
             <div class="page-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=1920&q=80');"></div>
             <div class="page-hero-overlay"></div>
 
             <div class="container page-hero-content">
-                <nav class="breadcrumb" aria-label="Ruta de navegación">
-                    <a href="index.html">Inicio</a>
-                    <i class="fa-solid fa-chevron-right"></i>
-                    <span>Contacto</span>
-                </nav>
                 <span class="section-eyebrow light">Estamos aquí para ayudarte</span>
                 <h1 class="page-hero-title">Contáctanos</h1>
                 <p class="page-hero-desc">
@@ -243,14 +242,15 @@
                                     <option value="Raíces de Otavalo">Raíces de Otavalo</option>
                                     <option value="Tierra, Sabor y Espíritu Kichwa Cotacachi">Tierra, Sabor y Espíritu Kichwa Cotacachi</option>
                                     <option value="Patrimonio Ancestral Kichwa">Patrimonio Ancestral Kichwa</option>
-                                    <option value="Sabores y Raíces de Imbabura">Sabores y Raíces de Imbabura</option>
+                                    <option value="Cuicocha Nature Trek">Cuicocha Nature Trek</option>
+                                    <option value="Saberes Ancestrales de la Tierra y la Mujer">Saberes Ancestrales de la Tierra y la Mujer</option>
                                     <option value="Aromas, Sabores y Aventura de Intag">Aromas, Sabores y Aventura de Intag</option>
                                     <option value="Entre Alpacas y Tejidos Andinos">Entre Alpacas y Tejidos Andinos</option>
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label for="personas">Número de personas</label>
-                                <input type="number" id="personas" name="personas" min="1" placeholder="Ej: 2" />
+                                <input type="number" id="personas" name="personas" min="1" placeholder="Ej: 4" />
                             </div>
                         </div>
 
@@ -291,7 +291,7 @@
             </div>
         </section>
 
-        <!-- ==============================
+        <!-- ============================== 
              MAPA INTERACTIVO
         =============================== -->
         <section class="section-map">
@@ -306,11 +306,10 @@
                     <div id="contactMap" class="tour-map-single" aria-label="Ubicación de All Tour Ecuador"></div>
                 </div>
 
-                <!-- Botón de cómo llegar -->
                 <div class="map-directions">
-                    <a href="https://www.google.com/maps/dir/?api=1&destination=0.23072435180832726,-78.25970581792483" 
-                       target="_blank" 
-                       rel="noopener" 
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=0.23072435180832726,-78.25970581792483"
+                       target="_blank"
+                       rel="noopener"
                        class="btn btn-primary">
                         <i class="fa-solid fa-diamond-turn-right"></i>
                         Cómo llegar
@@ -323,6 +322,7 @@
              CTA FINAL
         =============================== -->
         <section class="section-cta-final">
+            <!-- REEMPLAZAR IMAGEN: CTA final (carpeta Drive usuario) -->
             <div class="cta-bg" style="background-image:url('https://images.unsplash.com/photo-1533130061792-64b345e4a833?auto=format&fit=crop&w=1920&q=80');"></div>
             <div class="cta-overlay"></div>
 
@@ -349,15 +349,16 @@
     <footer class="site-footer">
         <div class="container footer-grid">
             <div class="footer-col footer-brand-col">
+                <!-- REEMPLAZAR IMAGEN: logo oficial (footer) -->
                 <img src="img/logo.png" alt="All Tour Ecuador" class="footer-logo" />
                 <p class="footer-tagline">Your Gateway to Authenticity</p>
-                <p class="footer-desc">Agencia de Viajes y Operador Turístico. Ecuador, desde el corazón del planeta.</p>
+                <p class="footer-desc" data-i18n="footer.desc">Agencia de Viajes y Operador Turístico. Ecuador, desde el corazón del planeta.</p>
             </div>
 
             <div class="footer-col">
-                <h4>Contacto</h4>
+                <h4 data-i18n="footer.contact">Contacto</h4>
                 <ul class="footer-list">
-                    <li><i class="fa-solid fa-location-dot"></i><span>Calle Bolívar, entre Neptalí Ordoñez y Av. Quito</span></li>
+                    <li><i class="fa-solid fa-location-dot"></i><span data-i18n="footer.address">Calle Bolívar, entre Neptalí Ordoñez y Av. Quito</span></li>
                     <li><i class="fa-solid fa-phone"></i><a href="tel:+593997898745">+593 99 789 8745</a></li>
                     <li><i class="fa-brands fa-whatsapp"></i><a href="https://wa.me/593997898745" target="_blank" rel="noopener">WhatsApp</a></li>
                     <li><i class="fa-solid fa-envelope"></i><a href="mailto:alltourecuador@gmail.com">alltourecuador@gmail.com</a></li>
@@ -365,18 +366,18 @@
             </div>
 
             <div class="footer-col">
-                <h4>Explora</h4>
+                <h4 data-i18n="footer.explore">Explora</h4>
                 <ul class="footer-list footer-links">
-                    <li><a href="index.html#tours">Tours</a></li>
-                    <li><a href="destinos.html">Destinos</a></li>
-                    <li><a href="servicios.html">Servicios</a></li>
-                    <li><a href="index.html#experiencias">Experiencias</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="tours.html" data-i18n="nav.tours">Tours</a></li>
+                    <li><a href="servicios.html" data-i18n="nav.servicios">Servicios</a></li>
+                    <li><a href="experiencias.html" data-i18n="nav.experiencias">Experiencias</a></li>
+                    <li><a href="nosotros.html" data-i18n="nav.nosotros">Nosotros</a></li>
+                    <li><a href="contacto.html" data-i18n="nav.contacto">Contacto</a></li>
                 </ul>
             </div>
 
             <div class="footer-col">
-                <h4>Síguenos</h4>
+                <h4 data-i18n="footer.follow">Síguenos</h4>
                 <div class="social-icons">
                     <a href="https://www.facebook.com/Alltourecuador" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="https://www.instagram.com/alltourecuador593/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
@@ -388,23 +389,23 @@
 
         <div class="footer-bottom">
             <div class="container footer-bottom-content">
-                <span>© 2026 All Tour Ecuador. Todos los derechos reservados.</span>
+                <span data-i18n="footer.copy">© 2026 All Tour Ecuador. Todos los derechos reservados.</span>
                 <div class="footer-bottom-links">
-                    <a href="#">Política de privacidad</a>
-                    <a href="#">Términos y condiciones</a>
+                    <a href="#" data-i18n="footer.privacy">Política de privacidad</a>
+                    <a href="#" data-i18n="footer.terms">Términos y condiciones</a>
                 </div>
             </div>
         </div>
     </footer>
 
     <!-- WhatsApp Flotante -->
-    <a href="https://wa.me/593997898745?text=Hola%20All%20Tour%20Ecuador,%20quiero%20informaci%C3%B3n%20sobre%20sus%20tours" 
-       target="_blank" 
-       rel="noopener" 
-       class="whatsapp-float" 
+    <a href="https://wa.me/593997898745?text=Hola%20All%20Tour%20Ecuador,%20quiero%20informaci%C3%B3n%20sobre%20sus%20tours"
+       target="_blank"
+       rel="noopener"
+       class="whatsapp-float"
        aria-label="Contactar por WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
-        <span class="whatsapp-tooltip">¿Necesitas ayuda?</span>
+        <span class="whatsapp-tooltip" data-i18n="whatsapp.tooltip">¿Necesitas ayuda?</span>
     </a>
 
     <button class="back-to-top" id="backToTop" aria-label="Volver arriba">

@@ -754,15 +754,9 @@ main{ padding-top:var(--header-h); }
 .welcome-icon{
     width:120px;
     height:120px;
-    border-radius:50%;
-    background:linear-gradient(135deg, var(--brand), var(--brand-dark));
-    color:var(--white);
-    display:grid;
-    place-items:center;
-    font-size:1.8rem;
-    margin:0 auto 24px;
-    transition:var(--transition);
-    overflow:hidden;              /* evita que la imagen se salga */
+    border-radius:50%;              /* ← esto SÍ hace el círculo */
+    background:linear-gradient(...); /* ← este es el fondo azul/turquesa */
+    overflow:hidden;
 }
 
 .welcome-icon img{

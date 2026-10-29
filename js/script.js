@@ -728,7 +728,7 @@ if (tourMapEl && typeof L !== 'undefined') {
             tag: 'Región Insular',
             coords: [-0.9538, -90.9656],
             /* REEMPLAZAR IMAGEN: Galápagos (carpeta Drive usuario) */
-            img: 'https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=900&q=80',
+            img: 'img/galapagos.jpg',   /* ← reemplazado */
             desc: 'Un mundo único para descubrir y conservar. Fauna endémica, ecosistemas volcánicos y experiencias de conservación.',
             destinos: 'Santa Cruz · San Cristóbal · Isabela',
             experiencias: 'Snorkeling · Buceo · Kayak · Cruceros',
@@ -739,7 +739,7 @@ if (tourMapEl && typeof L !== 'undefined') {
             tag: 'Región Litoral',
             coords: [-1.5, -80.5],
             /* REEMPLAZAR IMAGEN: Costa (carpeta Drive usuario) */
-            img: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80',
+            img: 'img/costa.jpg',       /* ← reemplazado */
             desc: 'Pacífico, naturaleza y sabores del Ecuador. Playas, manglares, gastronomía y cultura costera.',
             destinos: 'Guayaquil · Montañita · Puerto López · Manta',
             experiencias: 'Surf · Ballenas · Gastronomía · Manglares',
@@ -750,7 +750,7 @@ if (tourMapEl && typeof L !== 'undefined') {
             tag: 'Región Interandina',
             coords: [-1.5, -78.5],
             /* REEMPLAZAR IMAGEN: Andes (carpeta Drive usuario) */
-            img: 'https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=900&q=80',
+            img: 'img/sierra.jpg',      /* ← reemplazado */
             desc: 'Montañas, cultura y tradiciones vivas. Volcanes, lagunas, páramos, ciudades patrimoniales y comunidades indígenas.',
             destinos: 'Otavalo · Cotacachi · Quito · Quilotoa · Cotopaxi · Cuenca',
             experiencias: 'Trekking · Comunidades · Gastronomía · Artesanías',
@@ -761,7 +761,7 @@ if (tourMapEl && typeof L !== 'undefined') {
             tag: 'Región Oriental',
             coords: [-0.7, -76.9],
             /* REEMPLAZAR IMAGEN: Amazonía (carpeta Drive usuario) */
-            img: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=900&q=80',
+            img: 'img/amazonia.jpg',    /* ← reemplazado */
             desc: 'Naturaleza, biodiversidad y culturas ancestrales. Inmersión en bosques tropicales, ríos y territorios indígenas.',
             destinos: 'Tena · Yasuní · Cuyabeno · Papallacta',
             experiencias: 'Caminatas · Navegación · Aviturismo · Comunidades',

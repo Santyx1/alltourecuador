@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>All Tour Ecuador | Ecuador, desde el corazón del planeta</title>
-    <meta name="description" content="All Tour Ecuador - Agencia de Viajes y Operador Turístico. Naturaleza, cultura y experiencias que nacen desde la tierra. Tours en Costa, Sierra, Amazonía y Galápagos." />
+    <meta name="description" content="All Tour Ecuador - Agencia de Viajes y Operador Turístico. Naturaleza, cultura y experiencias que nacen desde la tierra." />
     <meta name="author" content="All Tour Ecuador" />
 
     <!-- Open Graph -->
@@ -15,12 +15,12 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="img/logo.png">
 
-<!-- Preload de imágenes del hero (asegura el efecto zoom cinematográfico) -->
-<link rel="preload" as="image" href="https://drive.google.com/thumbnail?id=10dsUJzfqkE5xYlwS8-C4oJXW2MI3dMPY&sz=w1920">
-<link rel="preload" as="image" href="https://drive.google.com/thumbnail?id=1HFqdp-WTYfgw5ezK9GHdwhSJiX0j91XN&sz=w1920">
-<link rel="preload" as="image" href="https://drive.google.com/thumbnail?id=1yvg_1p78a4PIFO5lk3grrjkhl9Q5tTog&sz=w1920">
-<link rel="preload" as="image" href="https://drive.google.com/thumbnail?id=1U02Mgr6v7uleNDhU7D4_S0jFqSDD2sCJ&sz=w1920">
-    
+    <!-- REEMPLAZAR IMAGEN: preloads del hero (carpeta Drive usuario) -->
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=1920&q=80">
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1533130061792-64b345e4a833?auto=format&fit=crop&w=1920&q=80">
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=1920&q=80">
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1920&q=80">
+
     <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,35 +38,35 @@
 
     <!-- CSS principal -->
     <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Lottie (iconos animados) -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body>
 
-    <!-- ==============================
-         PRELOADER
-    =============================== -->
+    <!-- PRELOADER -->
     <div class="preloader" id="preloader">
         <div class="preloader-inner">
+            <!-- REEMPLAZAR IMAGEN: logo oficial -->
             <img src="img/logo.png" alt="All Tour Ecuador" />
             <div class="preloader-bar"><span></span></div>
         </div>
     </div>
 
-    <!-- ==============================
-         HEADER
-    =============================== -->
+    <!-- HEADER -->
     <header class="site-header" id="siteHeader">
         <div class="container nav-wrapper">
             <a href="index.html" class="brand" aria-label="All Tour Ecuador - Inicio">
+                <!-- REEMPLAZAR IMAGEN: logo oficial (más grande) -->
                 <img src="img/logo.png" alt="All Tour Ecuador" class="brand-logo" />
             </a>
 
             <nav class="main-nav" aria-label="Navegación principal">
                 <a href="index.html" class="active" data-i18n="nav.inicio">Inicio</a>
                 <a href="nosotros.html" data-i18n="nav.nosotros">Nosotros</a>
-                <a href="destinos.html" data-i18n="nav.destinos">Destinos</a>
-                <a href="#tours" data-i18n="nav.tours">Tours</a>
+                <a href="tours.html" data-i18n="nav.tours">Tours</a>
                 <a href="servicios.html" data-i18n="nav.servicios">Servicios</a>
-                <a href="#experiencias" data-i18n="nav.experiencias">Experiencias</a>
+                <a href="experiencias.html" data-i18n="nav.experiencias">Experiencias</a>
                 <a href="contacto.html" data-i18n="nav.contacto">Contacto</a>
             </nav>
 
@@ -102,10 +102,9 @@
         <nav class="mobile-nav">
             <a href="index.html" data-i18n="nav.inicio">Inicio</a>
             <a href="nosotros.html" data-i18n="nav.nosotros">Nosotros</a>
-            <a href="destinos.html" data-i18n="nav.destinos">Destinos</a>
-            <a href="#tours" data-i18n="nav.tours">Tours</a>
+            <a href="tours.html" data-i18n="nav.tours">Tours</a>
             <a href="servicios.html" data-i18n="nav.servicios">Servicios</a>
-            <a href="#experiencias" data-i18n="nav.experiencias">Experiencias</a>
+            <a href="experiencias.html" data-i18n="nav.experiencias">Experiencias</a>
             <a href="contacto.html" data-i18n="nav.contacto">Contacto</a>
         </nav>
         <div class="mobile-menu-contact">
@@ -123,16 +122,17 @@
     <div class="swiper hero-swiper">
         <div class="swiper-wrapper">
 
-            <!-- Slide 1: Alpacas -->
+            <!-- Slide 1 -->
             <div class="swiper-slide hero-slide">
-                <div class="hero-slide-bg" style="background-image:url('https://drive.google.com/thumbnail?id=10dsUJzfqkE5xYlwS8-C4oJXW2MI3dMPY&sz=w1920');"></div>
+                <!-- REEMPLAZAR IMAGEN: turista compartiendo paisaje (carpeta Drive usuario) -->
+                <div class="hero-slide-bg" style="background-image:url('https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=1920&q=80');"></div>
                 <div class="hero-slide-overlay"></div>
                 <div class="container hero-slide-content">
                     <span class="hero-eyebrow" data-i18n="hero.eyebrow">Agencia de Viajes y Operador Turístico</span>
                     <h1 class="hero-title" data-i18n="hero.title">Ecuador, desde el corazón del planeta</h1>
                     <p class="hero-subtitle" data-i18n="hero.subtitle">Naturaleza, cultura y experiencias que nacen desde la tierra</p>
                     <div class="hero-buttons">
-                        <a href="#tours" class="btn btn-accent">
+                        <a href="tours.html" class="btn btn-accent">
                             <span data-i18n="hero.btn1">Explorar tours</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>
@@ -141,16 +141,17 @@
                 </div>
             </div>
 
-            <!-- Slide 2: Alpacas en el páramo -->
+            <!-- Slide 2 -->
             <div class="swiper-slide hero-slide">
-                <div class="hero-slide-bg" style="background-image:url('https://drive.google.com/thumbnail?id=1HFqdp-WTYfgw5ezK9GHdwhSJiX0j91XN&sz=w1920');"></div>
+                <!-- REEMPLAZAR IMAGEN: turista compartiendo paisaje (carpeta Drive usuario) -->
+                <div class="hero-slide-bg" style="background-image:url('https://images.unsplash.com/photo-1533130061792-64b345e4a833?auto=format&fit=crop&w=1920&q=80');"></div>
                 <div class="hero-slide-overlay"></div>
                 <div class="container hero-slide-content">
                     <span class="hero-eyebrow">Alpacas & Tejidos Andinos</span>
                     <h1 class="hero-title">Tradiciones que se tejen con el tiempo</h1>
                     <p class="hero-subtitle">Páramo, comunidad y cultura Kichwa</p>
                     <div class="hero-buttons">
-                        <a href="#tours" class="btn btn-accent">
+                        <a href="tours.html" class="btn btn-accent">
                             <span data-i18n="hero.btn1">Explorar tours</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>
@@ -159,16 +160,17 @@
                 </div>
             </div>
 
-            <!-- Slide 3: Totora Wasi -->
+            <!-- Slide 3 -->
             <div class="swiper-slide hero-slide">
-                <div class="hero-slide-bg" style="background-image:url('https://drive.google.com/thumbnail?id=1yvg_1p78a4PIFO5lk3grrjkhl9Q5tTog&sz=w1920');"></div>
+                <!-- REEMPLAZAR IMAGEN: turista compartiendo paisaje (carpeta Drive usuario) -->
+                <div class="hero-slide-bg" style="background-image:url('https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=1920&q=80');"></div>
                 <div class="hero-slide-overlay"></div>
                 <div class="container hero-slide-content">
                     <span class="hero-eyebrow">Naturaleza Viva</span>
                     <h1 class="hero-title">Cascadas, páramos y paisajes únicos</h1>
                     <p class="hero-subtitle">Experiencias que nacen desde la tierra</p>
                     <div class="hero-buttons">
-                        <a href="#tours" class="btn btn-accent">
+                        <a href="tours.html" class="btn btn-accent">
                             <span data-i18n="hero.btn1">Explorar tours</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>
@@ -177,16 +179,17 @@
                 </div>
             </div>
 
-            <!-- Slide 4: Ritual de purificación -->
+            <!-- Slide 4 -->
             <div class="swiper-slide hero-slide">
-                <div class="hero-slide-bg" style="background-image:url('https://drive.google.com/thumbnail?id=1U02Mgr6v7uleNDhU7D4_S0jFqSDD2sCJ&sz=w1920');"></div>
+                <!-- REEMPLAZAR IMAGEN: turista compartiendo paisaje (carpeta Drive usuario) -->
+                <div class="hero-slide-bg" style="background-image:url('https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1920&q=80');"></div>
                 <div class="hero-slide-overlay"></div>
                 <div class="container hero-slide-content">
                     <span class="hero-eyebrow">Sabiduría Ancestral</span>
                     <h1 class="hero-title">Rituales que conectan con la esencia</h1>
                     <p class="hero-subtitle">Culturas vivas que trascienden el turismo</p>
                     <div class="hero-buttons">
-                        <a href="#tours" class="btn btn-accent">
+                        <a href="tours.html" class="btn btn-accent">
                             <span data-i18n="hero.btn1">Explorar tours</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>
@@ -202,41 +205,26 @@
         <div class="hero-swiper-pagination"></div>
     </div>
 </section>
-        
+
         <!-- ==============================
-             BLOQUE 2: FILOSOFÍA / CADENA DE VALOR
+             BLOQUE 2: CADENA DE VALOR (solo texto + título)
         =============================== -->
         <section class="section-philosophy">
             <div class="container">
-                <div class="philosophy-chain">
-                    <div class="chain-item">
-                        <span class="chain-icon"><i class="fa-solid fa-eye"></i></span>
-                        <strong data-i18n="chain.1">CONOCER</strong>
-                    </div>
-                    <span class="chain-arrow"><i class="fa-solid fa-arrow-right"></i></span>
-                    <div class="chain-item">
-                        <span class="chain-icon"><i class="fa-solid fa-share-nodes"></i></span>
-                        <strong data-i18n="chain.2">COMPARTIR</strong>
-                    </div>
-                    <span class="chain-arrow"><i class="fa-solid fa-arrow-right"></i></span>
-                    <div class="chain-item">
-                        <span class="chain-icon"><i class="fa-solid fa-basket-shopping"></i></span>
-                        <strong data-i18n="chain.3">CONSUMIR LOCAL</strong>
-                    </div>
-                    <span class="chain-arrow"><i class="fa-solid fa-arrow-right"></i></span>
-                    <div class="chain-item">
-                        <span class="chain-icon"><i class="fa-solid fa-coins"></i></span>
-                        <strong data-i18n="chain.4">GENERAR INGRESOS</strong>
-                    </div>
-                    <span class="chain-arrow"><i class="fa-solid fa-arrow-right"></i></span>
-                    <div class="chain-item">
-                        <span class="chain-icon"><i class="fa-solid fa-people-group"></i></span>
-                        <strong data-i18n="chain.5">FORTALECER FAMILIAS</strong>
-                    </div>
-                    <span class="chain-arrow"><i class="fa-solid fa-arrow-right"></i></span>
-                    <div class="chain-item">
-                        <span class="chain-icon"><i class="fa-solid fa-leaf"></i></span>
-                        <strong data-i18n="chain.6">CONSERVAR PATRIMONIO</strong>
+                <div class="value-chain">
+                    <h2 class="value-chain-title">El efecto transformador de tu viaje</h2>
+                    <div class="value-chain-steps">
+                        <span class="chain-step">CONOCER</span>
+                        <span class="chain-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                        <span class="chain-step">COMPARTIR</span>
+                        <span class="chain-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                        <span class="chain-step">CONSUMIR LOCAL</span>
+                        <span class="chain-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                        <span class="chain-step">GENERAR INGRESOS</span>
+                        <span class="chain-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                        <span class="chain-step">FORTALECER A LAS FAMILIAS</span>
+                        <span class="chain-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                        <span class="chain-step">CONSERVAR EL PATRIMONIO</span>
                     </div>
                 </div>
             </div>
@@ -245,7 +233,7 @@
         <!-- ==============================
              BLOQUE 3: BIENVENIDA
         =============================== -->
-        <section class="section-welcome" id="nosotros">
+        <section class="section-welcome">
             <div class="container">
                 <div class="section-header-center">
                     <span class="section-eyebrow" data-i18n="welcome.eyebrow">Bienvenidos a</span>
@@ -260,17 +248,44 @@
 
                 <div class="welcome-features">
                     <article class="welcome-card">
-                        <div class="welcome-icon"><i class="fa-solid fa-mountain-sun"></i></div>
+                        <!-- REEMPLAZAR LOTTIE: icono animado propio -->
+                        <div class="lottie-icon">
+                            <lottie-player
+                                src="https://assets10.lottiefiles.com/packages/lf20_kyu7xb1v.json"
+                                background="transparent"
+                                speed="1"
+                                loop
+                                autoplay>
+                            </lottie-player>
+                        </div>
                         <h3 data-i18n="welcome.card1.title">Experiencias auténticas</h3>
                         <p data-i18n="welcome.card1.text">Conectamos al viajero con el Ecuador real: sus gentes, sus paisajes y su cultura viva.</p>
                     </article>
                     <article class="welcome-card">
-                        <div class="welcome-icon"><i class="fa-solid fa-people-group"></i></div>
+                        <!-- REEMPLAZAR LOTTIE: icono animado propio -->
+                        <div class="lottie-icon">
+                            <lottie-player
+                                src="https://assets10.lottiefiles.com/packages/lf20_kyu7xb1v.json"
+                                background="transparent"
+                                speed="1"
+                                loop
+                                autoplay>
+                            </lottie-player>
+                        </div>
                         <h3 data-i18n="welcome.card2.title">Comunidades locales</h3>
                         <p data-i18n="welcome.card2.text">Trabajamos de la mano con familias, emprendimientos y prestadores de servicios locales.</p>
                     </article>
                     <article class="welcome-card">
-                        <div class="welcome-icon"><i class="fa-solid fa-shield-heart"></i></div>
+                        <!-- REEMPLAZAR LOTTIE: icono animado propio -->
+                        <div class="lottie-icon">
+                            <lottie-player
+                                src="https://assets10.lottiefiles.com/packages/lf20_kyu7xb1v.json"
+                                background="transparent"
+                                speed="1"
+                                loop
+                                autoplay>
+                            </lottie-player>
+                        </div>
                         <h3 data-i18n="welcome.card3.title">Operación profesional</h3>
                         <p data-i18n="welcome.card3.text">Calidad, seguridad y atención personalizada en cada experiencia que diseñamos.</p>
                     </article>
@@ -324,7 +339,8 @@
              BLOQUE 5: QUIÉNES SOMOS
         =============================== -->
         <section class="section-about-parallax">
-            <div class="parallax-bg" style="background-image:url('https://drive.google.com/thumbnail?id=18P4o06paxx3YZdO_dNQCSY1rWVKXTiQz&sz=w1920');"></div>
+            <!-- REEMPLAZAR IMAGEN: paisaje/turista (carpeta Drive usuario) -->
+            <div class="parallax-bg" style="background-image:url('https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=1920&q=80');"></div>
             <div class="parallax-overlay"></div>
 
             <div class="container about-parallax-content">
@@ -344,7 +360,7 @@
         </section>
 
         <!-- ==============================
-             BLOQUE 6: DESTINOS ECUADOR
+             BLOQUE 6: REGIONES (Costa, Andes, Amazonía, Galápagos)
         =============================== -->
         <section class="section-regions" id="destinos">
             <div class="container">
@@ -360,6 +376,7 @@
 
                     <article class="region-card">
                         <div class="region-image">
+                            <!-- REEMPLAZAR IMAGEN: Costa (carpeta Drive usuario) -->
                             <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Costa ecuatoriana" loading="lazy" />
                             <div class="region-overlay"></div>
                             <div class="region-badge"><i class="fa-solid fa-umbrella-beach"></i> <span data-i18n="region.costa.badge">Costa</span></div>
@@ -373,19 +390,25 @@
 
                     <article class="region-card">
                         <div class="region-image">
+                            <!-- REEMPLAZAR IMAGEN: Andes (carpeta Drive usuario) -->
                             <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=800&q=80" alt="Andes ecuatorianos" loading="lazy" />
                             <div class="region-overlay"></div>
                             <div class="region-badge"><i class="fa-solid fa-mountain"></i> <span data-i18n="region.sierra.badge">Andes</span></div>
                         </div>
                         <div class="region-info">
-                            <h3>ANDES</h3>
+                            <h3>SIERRA</h3>
                             <p class="region-tagline" data-i18n="region.sierra.tagline">Andes, culturas y experiencias que nacen de la tierra.</p>
                             <p class="region-desc" data-i18n="region.sierra.desc">Conecta con comunidades, tradiciones, montañas y paisajes andinos.</p>
+                            <a href="tours.html#paquetes" class="btn btn-accent btn-sm" style="margin-top:16px;align-self:flex-start;">
+                                Ver paquetes
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
                         </div>
                     </article>
 
                     <article class="region-card">
                         <div class="region-image">
+                            <!-- REEMPLAZAR IMAGEN: Amazonía (carpeta Drive usuario) -->
                             <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80" alt="Amazonía ecuatoriana" loading="lazy" />
                             <div class="region-overlay"></div>
                             <div class="region-badge"><i class="fa-solid fa-tree"></i> <span data-i18n="region.amazonia.badge">Amazonía</span></div>
@@ -399,6 +422,7 @@
 
                     <article class="region-card">
                         <div class="region-image">
+                            <!-- REEMPLAZAR IMAGEN: Galápagos (carpeta Drive usuario) -->
                             <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=800&q=80" alt="Galápagos" loading="lazy" />
                             <div class="region-overlay"></div>
                             <div class="region-badge"><i class="fa-solid fa-fish"></i> <span data-i18n="region.galapagos.badge">Galápagos</span></div>
@@ -413,8 +437,8 @@
                 </div>
 
                 <div class="regions-cta">
-                    <a href="destinos.html" class="btn btn-primary">
-                        <span data-i18n="regions.btn">Explorar todos los destinos</span>
+                    <a href="tours.html" class="btn btn-primary">
+                        <span data-i18n="regions.btn">Explorar todos los tours</span>
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
@@ -422,7 +446,7 @@
         </section>
 
         <!-- ==============================
-             BLOQUE 7: TOURS DESTACADOS (7 PAQUETES)
+             BLOQUE 7: TOURS DESTACADOS — CARRUSEL
         =============================== -->
         <section class="section-tours" id="tours">
             <div class="container">
@@ -432,124 +456,181 @@
                     <p class="section-lead" data-i18n="tours.lead">Vive lo mejor de Ecuador con nuestros paquetes personalizados. Naturaleza, cultura, aventura y más.</p>
                 </div>
 
-                <div class="tours-grid">
+                <div class="tours-carousel">
+                    <div class="swiper tours-swiper">
+                        <div class="swiper-wrapper">
 
-                    <!-- Tour 1: RAÍCES DE OTAVALO -->
-                    <article class="tour-card">
-                        <div class="tour-image">
-                            <img src="https://drive.google.com/thumbnail?id=1yvg_1p78a4PIFO5lk3grrjkhl9Q5tTog&sz=w800" alt="Raíces de Otavalo" loading="lazy" />
-                            <span class="tour-tag">Cultura Kichwa</span>
-                        </div>
-                        <div class="tour-info">
-                            <h3 data-i18n="tour1.title">RAÍCES DE OTAVALO</h3>
-                            <p class="tour-desc" data-i18n="tour1.desc">Totora, textiles, sabores y melodías de la cultura Kichwa.</p>
-                            <button class="tour-btn" data-tour="1">
-                                <span data-i18n="tour.btn">Más información</span>
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </button>
-                        </div>
-                    </article>
+                            <!-- Tour 1: RAÍCES DE OTAVALO -->
+                            <div class="swiper-slide">
+                                <article class="tour-card">
+                                    <div class="tour-image">
+                                        <!-- REEMPLAZAR IMAGEN: Raíces de Otavalo (carpeta Drive usuario) -->
+                                        <img src="https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=800&q=80" alt="Raíces de Otavalo" loading="lazy" />
+                                        <span class="tour-tag">Cultura Kichwa</span>
+                                    </div>
+                                    <div class="tour-info">
+                                        <h3 data-i18n="tour1.title">RAÍCES DE OTAVALO</h3>
+                                        <p class="tour-desc" data-i18n="tour1.desc">Totora, textiles, sabores y melodías de la cultura Kichwa.</p>
+                                        <div class="tour-price-box">
+                                            <div class="tour-price"><strong>$76,00</strong> <span>por persona</span></div>
+                                            <span class="tour-min-pax">Mínimo 4 pax</span>
+                                        </div>
+                                        <a href="tours.html#paquete-1" class="tour-btn">
+                                            <span data-i18n="tour.btn">Más información</span>
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
 
-                    <!-- Tour 2: TIERRA, SABOR Y ESPÍRITU KICHWA COTACACHI -->
-                    <article class="tour-card">
-                        <div class="tour-image">
-                            <img src="https://drive.google.com/thumbnail?id=1kyYL8ZdF6W9jeqBQ3e6fRYKoXCllZiIk&sz=w800" alt="Tierra, Sabor y Espíritu Kichwa Cotacachi" loading="lazy" />
-                            <span class="tour-tag">Gastronomía Ancestral</span>
-                        </div>
-                        <div class="tour-info">
-                            <h3 data-i18n="tour2.title">TIERRA, SABOR Y ESPÍRITU KICHWA COTACACHI</h3>
-                            <p class="tour-desc" data-i18n="tour2.desc">Una experiencia Kichwa en La Calera.</p>
-                            <button class="tour-btn" data-tour="2">
-                                <span data-i18n="tour.btn">Más información</span>
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </button>
-                        </div>
-                    </article>
+                            <!-- Tour 2: TIERRA, SABOR Y ESPÍRITU KICHWA COTACACHI -->
+                            <div class="swiper-slide">
+                                <article class="tour-card">
+                                    <div class="tour-image">
+                                        <!-- REEMPLAZAR IMAGEN: Cotacachi (carpeta Drive usuario) -->
+                                        <img src="https://images.unsplash.com/photo-1533130061792-64b345e4a833?auto=format&fit=crop&w=800&q=80" alt="Tierra, Sabor y Espíritu Kichwa Cotacachi" loading="lazy" />
+                                        <span class="tour-tag">Gastronomía Ancestral</span>
+                                    </div>
+                                    <div class="tour-info">
+                                        <h3 data-i18n="tour2.title">TIERRA, SABOR Y ESPÍRITU KICHWA COTACACHI</h3>
+                                        <p class="tour-desc" data-i18n="tour2.desc">Una experiencia Kichwa en La Calera.</p>
+                                        <div class="tour-price-box">
+                                            <div class="tour-price"><strong>$143,00</strong> <span>por persona</span></div>
+                                            <span class="tour-min-pax">Mínimo 4 pax</span>
+                                        </div>
+                                        <a href="tours.html#paquete-2" class="tour-btn">
+                                            <span data-i18n="tour.btn">Más información</span>
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
 
-                    <!-- Tour 3: PATRIMONIO ANCESTRAL KICHWA -->
-                    <article class="tour-card">
-                        <div class="tour-image">
-                            <img src="https://drive.google.com/thumbnail?id=1ljDeHh-RJhvQwxdjcjaztHTjs1WqKfvC&sz=w800" alt="Patrimonio Ancestral Kichwa" loading="lazy" />
-                            <span class="tour-tag">Patrimonio Vivo</span>
-                        </div>
-                        <div class="tour-info">
-                            <h3 data-i18n="tour3.title">PATRIMONIO ANCESTRAL KICHWA</h3>
-                            <p class="tour-desc" data-i18n="tour3.desc">Mujeres, territorio y saberes vivos de Cotacachi.</p>
-                            <button class="tour-btn" data-tour="3">
-                                <span data-i18n="tour.btn">Más información</span>
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </button>
-                        </div>
-                    </article>
+                            <!-- Tour 3: PATRIMONIO ANCESTRAL KICHWA -->
+                            <div class="swiper-slide">
+                                <article class="tour-card">
+                                    <div class="tour-image">
+                                        <!-- REEMPLAZAR IMAGEN: Patrimonio Ancestral (carpeta Drive usuario) -->
+                                        <img src="https://images.unsplash.com/photo-1595855759920-86582396756a?auto=format&fit=crop&w=800&q=80" alt="Patrimonio Ancestral Kichwa" loading="lazy" />
+                                        <span class="tour-tag">Patrimonio Vivo</span>
+                                    </div>
+                                    <div class="tour-info">
+                                        <h3 data-i18n="tour3.title">PATRIMONIO ANCESTRAL KICHWA</h3>
+                                        <p class="tour-desc" data-i18n="tour3.desc">Mujeres, territorio y saberes vivos de Cotacachi.</p>
+                                        <div class="tour-price-box">
+                                            <div class="tour-price"><strong>$139,00</strong> <span>por persona</span></div>
+                                            <span class="tour-min-pax">Mínimo 4 pax</span>
+                                        </div>
+                                        <a href="tours.html#paquete-3" class="tour-btn">
+                                            <span data-i18n="tour.btn">Más información</span>
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
 
-                    <!-- Tour 4: CUICOCHA NATURE TREK -->
-                    <article class="tour-card">
-                        <div class="tour-image">
-                            <img src="https://drive.google.com/thumbnail?id=1HFqdp-WTYfgw5ezK9GHdwhSJiX0j91XN&sz=w800" alt="Cuicocha Nature Trek" loading="lazy" />
-                            <span class="tour-tag">Trekking & Volcán</span>
-                        </div>
-                        <div class="tour-info">
-                            <h3 data-i18n="tour4.title">CUICOCHA NATURE TREK</h3>
-                            <p class="tour-desc" data-i18n="tour4.desc">Naturaleza, trekking y cultura viva de Cotacachi.</p>
-                            <button class="tour-btn" data-tour="4">
-                                <span data-i18n="tour.btn">Más información</span>
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </button>
-                        </div>
-                    </article>
+                            <!-- Tour 4: CUICOCHA NATURE TREK -->
+                            <div class="swiper-slide">
+                                <article class="tour-card">
+                                    <div class="tour-image">
+                                        <!-- REEMPLAZAR IMAGEN: Cuicocha (carpeta Drive usuario) -->
+                                        <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=800&q=80" alt="Cuicocha Nature Trek" loading="lazy" />
+                                        <span class="tour-tag">Trekking & Volcán</span>
+                                    </div>
+                                    <div class="tour-info">
+                                        <h3 data-i18n="tour4.title">CUICOCHA NATURE TREK</h3>
+                                        <p class="tour-desc" data-i18n="tour4.desc">Naturaleza, trekking y cultura viva de Cotacachi.</p>
+                                        <div class="tour-price-box">
+                                            <div class="tour-price"><strong>$95,00</strong> <span>por persona</span></div>
+                                            <span class="tour-min-pax">Mínimo 4 pax</span>
+                                        </div>
+                                        <a href="tours.html#paquete-4" class="tour-btn">
+                                            <span data-i18n="tour.btn">Más información</span>
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
 
-                    <!-- Tour 5: SABERES ANCESTRALES DE LA TIERRA Y LA MUJER -->
-                    <article class="tour-card">
-                        <div class="tour-image">
-                            <img src="https://drive.google.com/thumbnail?id=1I78cxkdodB7znNe1ZpbKOUkYA4jOfjod&sz=w800" alt="Saberes Ancestrales de la Tierra y la Mujer" loading="lazy" />
-                            <span class="tour-tag">Vivencial & Etnobotánico</span>
-                        </div>
-                        <div class="tour-info">
-                            <h3 data-i18n="tour5.title">SABERES ANCESTRALES DE LA TIERRA Y LA MUJER</h3>
-                            <p class="tour-desc" data-i18n="tour5.desc">Yunta, tejido, plantas medicinales y conocimientos de partería.</p>
-                            <button class="tour-btn" data-tour="5">
-                                <span data-i18n="tour.btn">Más información</span>
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </button>
-                        </div>
-                    </article>
+                            <!-- Tour 5: SABERES ANCESTRALES DE LA TIERRA Y LA MUJER -->
+                            <div class="swiper-slide">
+                                <article class="tour-card">
+                                    <div class="tour-image">
+                                        <!-- REEMPLAZAR IMAGEN: Saberes Ancestrales (carpeta Drive usuario) -->
+                                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=80" alt="Saberes Ancestrales de la Tierra y la Mujer" loading="lazy" />
+                                        <span class="tour-tag">Vivencial & Etnobotánico</span>
+                                    </div>
+                                    <div class="tour-info">
+                                        <h3 data-i18n="tour5.title">SABERES ANCESTRALES DE LA TIERRA Y LA MUJER</h3>
+                                        <p class="tour-desc" data-i18n="tour5.desc">Yunta, tejido, plantas medicinales y conocimientos de partería.</p>
+                                        <div class="tour-price-box">
+                                            <div class="tour-price"><strong>$63,00</strong> <span>por persona</span></div>
+                                            <span class="tour-min-pax">Mínimo 4 pax</span>
+                                        </div>
+                                        <a href="tours.html#paquete-5" class="tour-btn">
+                                            <span data-i18n="tour.btn">Más información</span>
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
 
-                    <!-- Tour 6: AROMAS, SABORES Y AVENTURA DE INTAG -->
-                    <article class="tour-card">
-                        <div class="tour-image">
-                            <img src="https://drive.google.com/thumbnail?id=10dsUJzfqkE5xYlwS8-C4oJXW2MI3dMPY&sz=w800" alt="Aromas, Sabores y Aventura de Intag" loading="lazy" />
-                            <span class="tour-tag">Café & Aventura</span>
-                        </div>
-                        <div class="tour-info">
-                            <h3 data-i18n="tour6.title">AROMAS, SABORES Y AVENTURA DE INTAG</h3>
-                            <p class="tour-desc" data-i18n="tour6.desc">Una experiencia entre café, caña, naturaleza y aventura.</p>
-                            <button class="tour-btn" data-tour="6">
-                                <span data-i18n="tour.btn">Más información</span>
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </button>
-                        </div>
-                    </article>
+                            <!-- Tour 6: AROMAS, SABORES Y AVENTURA DE INTAG -->
+                            <div class="swiper-slide">
+                                <article class="tour-card">
+                                    <div class="tour-image">
+                                        <!-- REEMPLAZAR IMAGEN: Intag (carpeta Drive usuario) -->
+                                        <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80" alt="Aromas, Sabores y Aventura de Intag" loading="lazy" />
+                                        <span class="tour-tag">Café & Aventura</span>
+                                    </div>
+                                    <div class="tour-info">
+                                        <h3 data-i18n="tour6.title">AROMAS, SABORES Y AVENTURA DE INTAG</h3>
+                                        <p class="tour-desc" data-i18n="tour6.desc">Una experiencia entre café, caña, naturaleza y aventura.</p>
+                                        <div class="tour-price-box">
+                                            <div class="tour-price"><strong>$103,00</strong> <span>por persona</span></div>
+                                            <span class="tour-min-pax">Mínimo 4 pax</span>
+                                        </div>
+                                        <a href="tours.html#paquete-6" class="tour-btn">
+                                            <span data-i18n="tour.btn">Más información</span>
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
 
-                    <!-- Tour 7: ENTRE ALPACAS Y TEJIDOS ANDINOS -->
-                    <article class="tour-card">
-                        <div class="tour-image">
-                            <img src="https://drive.google.com/thumbnail?id=1ekoBbE4lsGbx3w0ygbTZ1GodfPBfbncF&sz=w800" alt="Entre Alpacas y Tejidos Andinos" loading="lazy" />
-                            <span class="tour-tag">Páramo & Comunidad</span>
-                        </div>
-                        <div class="tour-info">
-                            <h3 data-i18n="tour7.title">ENTRE ALPACAS Y TEJIDOS ANDINOS</h3>
-                            <p class="tour-desc" data-i18n="tour7.desc">Una experiencia de páramo, comunidad y tradición Kichwa.</p>
-                            <button class="tour-btn" data-tour="7">
-                                <span data-i18n="tour.btn">Más información</span>
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </button>
-                        </div>
-                    </article>
+                            <!-- Tour 7: ENTRE ALPACAS Y TEJIDOS ANDINOS -->
+                            <div class="swiper-slide">
+                                <article class="tour-card">
+                                    <div class="tour-image">
+                                        <!-- REEMPLAZAR IMAGEN: Alpacas (carpeta Drive usuario) -->
+                                        <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=800&q=80" alt="Entre Alpacas y Tejidos Andinos" loading="lazy" />
+                                        <span class="tour-tag">Páramo & Comunidad</span>
+                                    </div>
+                                    <div class="tour-info">
+                                        <h3 data-i18n="tour7.title">ENTRE ALPACAS Y TEJIDOS ANDINOS</h3>
+                                        <p class="tour-desc" data-i18n="tour7.desc">Una experiencia de páramo, comunidad y tradición Kichwa.</p>
+                                        <div class="tour-price-box">
+                                            <div class="tour-price"><strong>$102,00</strong> <span>por persona</span></div>
+                                            <span class="tour-min-pax">Mínimo 4 pax</span>
+                                        </div>
+                                        <a href="tours.html#paquete-7" class="tour-btn">
+                                            <span data-i18n="tour.btn">Más información</span>
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
 
+                        </div>
+
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
                 </div>
 
                 <div class="tours-cta">
-                    <a href="destinos.html" class="btn btn-outline-dark">
+                    <a href="tours.html" class="btn btn-outline-dark">
                         <span data-i18n="tours.btn">Ver todos los tours</span>
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
@@ -574,6 +655,7 @@
                     <aside class="map-panel" id="mapPanel">
                         <div class="map-panel-content">
                             <div class="panel-img-wrapper">
+                                <!-- REEMPLAZAR IMAGEN: placeholder panel mapa -->
                                 <img id="panelImg"
                                      src="https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=900&q=80"
                                      alt="Explora Ecuador"
@@ -610,6 +692,7 @@
              CTA FINAL
         =============================== -->
         <section class="section-cta-final">
+            <!-- REEMPLAZAR IMAGEN: CTA final (carpeta Drive usuario) -->
             <div class="cta-bg" style="background-image:url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1920&q=80');"></div>
             <div class="cta-overlay"></div>
 
@@ -622,19 +705,18 @@
                         <span data-i18n="cta.btn1">Comienza tu viaje</span>
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
-                    <a href="destinos.html" class="btn btn-ghost btn-lg" data-i18n="cta.btn2">Ver destinos</a>
+                    <a href="tours.html" class="btn btn-ghost btn-lg" data-i18n="cta.btn2">Ver tours</a>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <!-- ==============================
-         FOOTER
-    =============================== -->
+    <!-- FOOTER -->
     <footer class="site-footer">
         <div class="container footer-grid">
             <div class="footer-col footer-brand-col">
+                <!-- REEMPLAZAR IMAGEN: logo oficial (footer) -->
                 <img src="img/logo.png" alt="All Tour Ecuador" class="footer-logo" />
                 <p class="footer-tagline">Your Gateway to Authenticity</p>
                 <p class="footer-desc" data-i18n="footer.desc">Agencia de Viajes y Operador Turístico. Ecuador, desde el corazón del planeta.</p>
@@ -653,10 +735,10 @@
             <div class="footer-col">
                 <h4 data-i18n="footer.explore">Explora</h4>
                 <ul class="footer-list footer-links">
-                    <li><a href="#tours" data-i18n="nav.tours">Tours</a></li>
-                    <li><a href="destinos.html" data-i18n="nav.destinos">Destinos</a></li>
+                    <li><a href="tours.html" data-i18n="nav.tours">Tours</a></li>
                     <li><a href="servicios.html" data-i18n="nav.servicios">Servicios</a></li>
-                    <li><a href="#experiencias" data-i18n="nav.experiencias">Experiencias</a></li>
+                    <li><a href="experiencias.html" data-i18n="nav.experiencias">Experiencias</a></li>
+                    <li><a href="nosotros.html" data-i18n="nav.nosotros">Nosotros</a></li>
                     <li><a href="contacto.html" data-i18n="nav.contacto">Contacto</a></li>
                 </ul>
             </div>
@@ -697,66 +779,6 @@
         <i class="fa-solid fa-arrow-up"></i>
     </button>
 
-    <!-- ==============================
-         MODAL DE TOURS
-    =============================== -->
-    <div class="tour-modal" id="tourModal" aria-hidden="true">
-        <div class="tour-modal-overlay" data-close-modal></div>
-        <div class="tour-modal-content" role="dialog" aria-modal="true">
-            <button class="tour-modal-close" data-close-modal aria-label="Cerrar">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-
-            <div class="tour-modal-hero">
-                <img id="modalHeroImg" src="" alt="" />
-                <div class="tour-modal-hero-overlay"></div>
-                <div class="tour-modal-hero-text">
-                    <span class="tour-modal-eyebrow" id="modalEyebrow"></span>
-                    <h2 id="modalTitle"></h2>
-                    <p id="modalSlogan"></p>
-                </div>
-            </div>
-
-            <div class="tour-modal-body">
-                <div class="tour-modal-cols">
-
-                    <div class="tour-modal-main">
-                        <div class="tour-modal-callout" id="modalCallout"></div>
-
-                        <h3 class="tour-modal-subtitle" data-i18n="modal.description">Descripción de la Experiencia</h3>
-                        <p id="modalDescription"></p>
-
-                        <h3 class="tour-modal-subtitle" data-i18n="modal.itinerary">Itinerario Resumido</h3>
-                        <ul class="tour-modal-itinerary" id="modalItinerary"></ul>
-                    </div>
-
-                    <aside class="tour-modal-side">
-                        <div class="tour-modal-facts">
-                            <h3 class="tour-modal-subtitle" data-i18n="modal.facts">Ficha Técnica</h3>
-                            <ul id="modalFacts"></ul>
-                        </div>
-
-                        <div class="tour-modal-includes">
-                            <h4><i class="fa-solid fa-circle-check"></i> <span data-i18n="modal.includes">Incluye</span></h4>
-                            <ul id="modalIncludes"></ul>
-                        </div>
-
-                        <div class="tour-modal-not-includes">
-                            <h4><i class="fa-solid fa-circle-xmark"></i> <span data-i18n="modal.notIncludes">No incluye</span></h4>
-                            <ul id="modalNotIncludes"></ul>
-                        </div>
-
-                        <a href="contacto.html" class="btn btn-accent" style="width:100%;justify-content:center;">
-                            <span data-i18n="modal.cta">Cotizar este tour</span>
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </aside>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
             integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
@@ -765,5 +787,35 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script src="js/script.js"></script>
+
+    <!-- Init carrusel de tours (INICIO) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (document.querySelector('.tours-swiper')) {
+                new Swiper('.tours-swiper', {
+                    slidesPerView: 1,
+                    spaceBetween: 24,
+                    loop: true,
+                    speed: 800,
+                    autoplay: {
+                        delay: 5500,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: '.tours-swiper .swiper-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: '.tours-swiper .swiper-button-next',
+                        prevEl: '.tours-swiper .swiper-button-prev',
+                    },
+                    breakpoints: {
+                        720: { slidesPerView: 2, spaceBetween: 24 },
+                        1024: { slidesPerView: 3, spaceBetween: 28 }
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>

@@ -10,7 +10,6 @@ const translations = {
         // NAV
         "nav.inicio": "Inicio",
         "nav.nosotros": "Nosotros",
-        "nav.destinos": "Destinos",
         "nav.tours": "Tours",
         "nav.servicios": "Servicios",
         "nav.experiencias": "Experiencias",
@@ -23,14 +22,6 @@ const translations = {
         "hero.subtitle": "Naturaleza, cultura y experiencias que nacen desde la tierra",
         "hero.btn1": "Explorar tours",
         "hero.btn2": "Conócenos",
-
-        // CHAIN
-        "chain.1": "CONOCER",
-        "chain.2": "COMPARTIR",
-        "chain.3": "CONSUMIR LOCAL",
-        "chain.4": "GENERAR INGRESOS",
-        "chain.5": "FORTALECER FAMILIAS",
-        "chain.6": "CONSERVAR PATRIMONIO",
 
         // WELCOME
         "welcome.eyebrow": "Bienvenidos a",
@@ -67,7 +58,7 @@ const translations = {
         "regions.eyebrow": "Destinos Ecuador",
         "regions.title": "Cuatro regiones, un solo Ecuador,<br>infinitas experiencias.",
         "regions.lead": "Descubre, conecta y vive la diversidad de un país que tiene una historia en cada territorio.",
-        "regions.btn": "Explorar todos los destinos",
+        "regions.btn": "Explorar todos los tours",
         "region.costa.badge": "Costa",
         "region.costa.tagline": "Sabores, playas y cultura frente al Pacífico.",
         "region.costa.desc": "Vive la gastronomía, naturaleza y calidez de la Costa ecuatoriana.",
@@ -121,7 +112,7 @@ const translations = {
         "cta.title": "Ecuador no solo se conoce:<br>se siente, se comparte y se vive.",
         "cta.desc": "Te ayudamos a construir tu próxima experiencia.",
         "cta.btn1": "Comienza tu viaje",
-        "cta.btn2": "Ver destinos",
+        "cta.btn2": "Ver tours",
 
         // FOOTER
         "footer.desc": "Agencia de Viajes y Operador Turístico. Ecuador, desde el corazón del planeta.",
@@ -149,7 +140,6 @@ const translations = {
         // NAV
         "nav.inicio": "Home",
         "nav.nosotros": "About Us",
-        "nav.destinos": "Destinations",
         "nav.tours": "Tours",
         "nav.servicios": "Services",
         "nav.experiencias": "Experiences",
@@ -162,14 +152,6 @@ const translations = {
         "hero.subtitle": "Nature, culture and experiences born from the land",
         "hero.btn1": "Explore tours",
         "hero.btn2": "About us",
-
-        // CHAIN
-        "chain.1": "KNOW",
-        "chain.2": "SHARE",
-        "chain.3": "BUY LOCAL",
-        "chain.4": "GENERATE INCOME",
-        "chain.5": "STRENGTHEN FAMILIES",
-        "chain.6": "PRESERVE HERITAGE",
 
         // WELCOME
         "welcome.eyebrow": "Welcome to",
@@ -206,7 +188,7 @@ const translations = {
         "regions.eyebrow": "Ecuador Destinations",
         "regions.title": "Four regions, one Ecuador,<br>infinite experiences.",
         "regions.lead": "Discover, connect and live the diversity of a country that has a story in every territory.",
-        "regions.btn": "Explore all destinations",
+        "regions.btn": "Explore all tours",
         "region.costa.badge": "Coast",
         "region.costa.tagline": "Flavors, beaches and culture facing the Pacific.",
         "region.costa.desc": "Experience the gastronomy, nature and warmth of the Ecuadorian Coast.",
@@ -260,7 +242,7 @@ const translations = {
         "cta.title": "Ecuador is not just known:<br>it is felt, shared and lived.",
         "cta.desc": "We help you build your next experience.",
         "cta.btn1": "Start your trip",
-        "cta.btn2": "See destinations",
+        "cta.btn2": "See tours",
 
         // FOOTER
         "footer.desc": "Travel Agency & Tour Operator. Ecuador, from the heart of the planet.",
@@ -288,7 +270,6 @@ const translations = {
         // NAV
         "nav.inicio": "Accueil",
         "nav.nosotros": "À propos",
-        "nav.destinos": "Destinations",
         "nav.tours": "Circuits",
         "nav.servicios": "Services",
         "nav.experiencias": "Expériences",
@@ -301,14 +282,6 @@ const translations = {
         "hero.subtitle": "Nature, culture et expériences nées de la terre",
         "hero.btn1": "Explorer les circuits",
         "hero.btn2": "À propos",
-
-        // CHAIN
-        "chain.1": "CONNAÎTRE",
-        "chain.2": "PARTAGER",
-        "chain.3": "CONSOMMER LOCAL",
-        "chain.4": "GÉNÉRER DES REVENUS",
-        "chain.5": "RENFORCER LES FAMILLES",
-        "chain.6": "PRÉSERVER LE PATRIMOINE",
 
         // WELCOME
         "welcome.eyebrow": "Bienvenue à",
@@ -345,7 +318,7 @@ const translations = {
         "regions.eyebrow": "Destinations Équateur",
         "regions.title": "Quatre régions, un seul Équateur,<br>des expériences infinies.",
         "regions.lead": "Découvrez, connectez et vivez la diversité d'un pays qui a une histoire dans chaque territoire.",
-        "regions.btn": "Explorer toutes les destinations",
+        "regions.btn": "Explorer tous les circuits",
         "region.costa.badge": "Côte",
         "region.costa.tagline": "Saveurs, plages et culture face au Pacifique.",
         "region.costa.desc": "Vivez la gastronomie, la nature et la chaleur de la côte équatorienne.",
@@ -399,7 +372,7 @@ const translations = {
         "cta.title": "L'Équateur ne se connaît pas seulement :<br>il se ressent, se partage et se vit.",
         "cta.desc": "Nous vous aidons à construire votre prochaine expérience.",
         "cta.btn1": "Commencez votre voyage",
-        "cta.btn2": "Voir les destinations",
+        "cta.btn2": "Voir les circuits",
 
         // FOOTER
         "footer.desc": "Agence de Voyage & Tour Opérateur. L'Équateur, au cœur de la planète.",
@@ -431,7 +404,6 @@ function applyLanguage(lang) {
     const dict = translations[lang];
     if (!dict) return;
 
-    // Reemplazar textos
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         if (dict[key]) {
@@ -443,7 +415,6 @@ function applyLanguage(lang) {
         }
     });
 
-    // Actualizar selector
     document.querySelectorAll('.lang-option').forEach(btn => {
         btn.classList.toggle('active', btn.dataset.lang === lang);
     });
@@ -451,13 +422,9 @@ function applyLanguage(lang) {
     const langCurrent = document.getElementById('langCurrent');
     if (langCurrent) langCurrent.textContent = lang.toUpperCase();
 
-    // Guardar preferencia
     localStorage.setItem('alltour_lang', lang);
-
-    // Actualizar atributo lang del HTML
     document.documentElement.lang = lang;
 
-    // Si hay un modal abierto, refrescar su contenido
     const modal = document.getElementById('tourModal');
     if (modal && modal.classList.contains('open')) {
         const currentTour = modal.dataset.currentTour;
@@ -517,7 +484,6 @@ const siteHeader = document.getElementById('siteHeader');
 
 if (siteHeader) {
     if (siteHeader.classList.contains('scrolled')) {
-        // Página interna: header siempre sólido
         siteHeader.dataset.alwaysScrolled = 'true';
     } else {
         const handleScroll = () => {
@@ -611,7 +577,7 @@ if (backToTop) {
 // 8. SCROLL REVEAL
 // ==========================================
 const revealElements = document.querySelectorAll(
-    '.welcome-card, .history-card, .region-card, .tour-card, .service-card, .why-card, .testimonial-card, .quick-nav-item, .team-card, .extra-service-card, .service-detail-content, .region-detail-content, .story-content, .team-intro-content'
+    '.welcome-card, .history-card, .region-card, .tour-card, .service-card, .why-card, .testimonial-card, .quick-nav-item, .team-card, .extra-service-card, .service-detail-content, .story-content, .team-intro-content, .review-card, .value-testimonial-card, .tour-detail-block'
 );
 
 if (revealElements.length > 0 && 'IntersectionObserver' in window) {
@@ -649,7 +615,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
         const target = document.querySelector(href);
         if (target) {
             e.preventDefault();
-            const headerOffset = 90;
+            const headerOffset = 110;
             const elementPosition = target.getBoundingClientRect().top + window.pageYOffset;
             const offsetPosition = elementPosition - headerOffset;
 
@@ -667,7 +633,6 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 const contactForm = document.getElementById('contactForm');
 
 if (contactForm) {
-    // URL del Web App de Google Apps Script
     const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbww3oxqPuW8S9Mlk91rYfDM7ss_DmGniipeKY03J6v2Bq0v30wNrwgj447z8hEtsiLK/exec";
 
     contactForm.addEventListener('submit', async (e) => {
@@ -683,7 +648,6 @@ if (contactForm) {
         const duracion = contactForm.querySelector('select[name="duracion"]')?.value || "";
         const mensaje = contactForm.querySelector('textarea[name="mensaje"]')?.value.trim();
 
-        // Validaciones
         if (!nombre || !email || !destino || !mensaje) {
             alert('⚠️ Por favor completa todos los campos obligatorios (*)');
             return;
@@ -695,14 +659,12 @@ if (contactForm) {
             return;
         }
 
-        // Bloquear el botón mientras envía
         const submitBtn = contactForm.querySelector('.form-submit');
         const originalText = submitBtn.innerHTML;
         submitBtn.disabled = true;
         submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Enviando...';
 
         try {
-            // Construir FormData (funciona perfecto con Apps Script sin problemas de CORS)
             const formData = new FormData();
             formData.append('nombre', nombre);
             formData.append('email', email);
@@ -716,13 +678,10 @@ if (contactForm) {
 
             await fetch(APPS_SCRIPT_URL, {
                 method: 'POST',
-                mode: 'no-cors', // Necesario para Apps Script
+                mode: 'no-cors',
                 body: formData
-                // ⚠️ NO agregues headers 'Content-Type': el navegador los pone solos con FormData
             });
 
-            // Con mode: 'no-cors' no podemos leer la respuesta,
-            // así que asumimos éxito si no hubo error de red.
             alert(`✅ ¡Gracias ${nombre}!\n\nTu mensaje fue enviado correctamente.\nTe responderemos a ${email} en menos de 24 horas.\n\nAll Tour Ecuador`);
             contactForm.reset();
 
@@ -737,7 +696,7 @@ if (contactForm) {
 }
 
 // ==========================================
-// 11. MAPA DE REGIONES
+// 11. MAPA DE REGIONES (index.html)
 // ==========================================
 const tourMapEl = document.getElementById('tourMap');
 
@@ -748,7 +707,6 @@ if (tourMapEl && typeof L !== 'undefined') {
         attributionControl: true
     }).setView([-1.8312, -78.1834], 6);
 
-    // Tiles CARTO Voyager con API key
     L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png?key=cb1_3syj_1_19da2f09472d3f015f43f8d9', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
         subdomains: 'abcd',
@@ -756,7 +714,6 @@ if (tourMapEl && typeof L !== 'undefined') {
         detectRetina: true
     }).addTo(tourMap);
 
-    // Icono personalizado
     const customIcon = L.divIcon({
         className: 'custom-marker',
         html: '<div class="marker-pin"><div class="marker-pin-inner"></div></div>',
@@ -765,12 +722,12 @@ if (tourMapEl && typeof L !== 'undefined') {
         popupAnchor: [0, -40]
     });
 
-    // Datos de las 4 regiones
     const regiones = [
         {
             nombre: 'Galápagos',
             tag: 'Región Insular',
             coords: [-0.9538, -90.9656],
+            /* REEMPLAZAR IMAGEN: Galápagos (carpeta Drive usuario) */
             img: 'https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=900&q=80',
             desc: 'Un mundo único para descubrir y conservar. Fauna endémica, ecosistemas volcánicos y experiencias de conservación.',
             destinos: 'Santa Cruz · San Cristóbal · Isabela',
@@ -781,6 +738,7 @@ if (tourMapEl && typeof L !== 'undefined') {
             nombre: 'Costa',
             tag: 'Región Litoral',
             coords: [-1.5, -80.5],
+            /* REEMPLAZAR IMAGEN: Costa (carpeta Drive usuario) */
             img: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80',
             desc: 'Pacífico, naturaleza y sabores del Ecuador. Playas, manglares, gastronomía y cultura costera.',
             destinos: 'Guayaquil · Montañita · Puerto López · Manta',
@@ -791,6 +749,7 @@ if (tourMapEl && typeof L !== 'undefined') {
             nombre: 'Andes',
             tag: 'Región Interandina',
             coords: [-1.5, -78.5],
+            /* REEMPLAZAR IMAGEN: Andes (carpeta Drive usuario) */
             img: 'https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=900&q=80',
             desc: 'Montañas, cultura y tradiciones vivas. Volcanes, lagunas, páramos, ciudades patrimoniales y comunidades indígenas.',
             destinos: 'Otavalo · Cotacachi · Quito · Quilotoa · Cotopaxi · Cuenca',
@@ -801,6 +760,7 @@ if (tourMapEl && typeof L !== 'undefined') {
             nombre: 'Amazonía',
             tag: 'Región Oriental',
             coords: [-0.7, -76.9],
+            /* REEMPLAZAR IMAGEN: Amazonía (carpeta Drive usuario) */
             img: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=900&q=80',
             desc: 'Naturaleza, biodiversidad y culturas ancestrales. Inmersión en bosques tropicales, ríos y territorios indígenas.',
             destinos: 'Tena · Yasuní · Cuyabeno · Papallacta',
@@ -809,7 +769,6 @@ if (tourMapEl && typeof L !== 'undefined') {
         }
     ];
 
-    // Referencias al panel
     const panelImg = document.getElementById('panelImg');
     const panelImgOverlay = document.getElementById('panelImgOverlay');
     const panelTag = document.getElementById('panelTag');
@@ -817,7 +776,6 @@ if (tourMapEl && typeof L !== 'undefined') {
     const panelDesc = document.getElementById('panelDesc');
     const panelInfo = document.getElementById('panelInfo');
 
-    // Agregar marcadores
     regiones.forEach(region => {
         const marker = L.marker(region.coords, { icon: customIcon }).addTo(tourMap);
 
@@ -849,12 +807,11 @@ if (tourMapEl && typeof L !== 'undefined') {
 }
 
 // ==========================================
-// 12. MAPA DE CONTACTO
+// 12. MAPA DE CONTACTO (contacto.html)
 // ==========================================
 const contactMapEl = document.getElementById('contactMap');
 
 if (contactMapEl && typeof L !== 'undefined') {
-    // Coordenadas exactas: Calle Bolívar, entre Neptalí Ordoñez y Av. Quito, Otavalo
     const officeCoords = [0.23072435180832726, -78.25970581792483];
 
     const contactMap = L.map('contactMap', {
@@ -897,7 +854,7 @@ if (contactMapEl && typeof L !== 'undefined') {
 }
 
 // ==========================================
-// 13. MODAL DE TOURS (NUEVO)
+// 13. MODAL DE TOURS (index.html + tours.html)
 // ==========================================
 const toursData = {
     1: {
@@ -1660,7 +1617,8 @@ const toursData = {
     }
 };
 
-// --- Referencias al modal ---const tourModal = document.getElementById('tourModal');
+// --- Referencias al modal ---
+const tourModal = document.getElementById('tourModal');
 const modalHeroImg = document.getElementById('modalHeroImg');
 const modalEyebrow = document.getElementById('modalEyebrow');
 const modalTitle = document.getElementById('modalTitle');
@@ -1680,13 +1638,11 @@ function renderTourModal(tourId) {
     const lang = localStorage.getItem('alltour_lang') || 'es';
     const data = tour[lang] || tour.es;
 
-    // Buscar la tarjeta para heredar imagen y título
     const card = document.querySelector(`.tour-btn[data-tour="${tourId}"]`)?.closest('.tour-card');
     const imgSrc = card?.querySelector('.tour-image img')?.src || '';
     const imgAlt = card?.querySelector('.tour-image img')?.alt || '';
     const cardTitle = card?.querySelector('h3')?.textContent || '';
 
-    // Hero
     if (modalHeroImg) {
         modalHeroImg.src = imgSrc;
         modalHeroImg.alt = imgAlt;
@@ -1695,11 +1651,9 @@ function renderTourModal(tourId) {
     if (modalTitle) modalTitle.textContent = cardTitle;
     if (modalSlogan) modalSlogan.textContent = data.slogan;
 
-    // Callout + descripción
     if (modalCallout) modalCallout.textContent = data.callout;
     if (modalDescription) modalDescription.textContent = data.description;
 
-    // Itinerario
     if (modalItinerary) {
         modalItinerary.innerHTML = data.itinerary.map(([time, text]) => `
             <li>
@@ -1709,7 +1663,6 @@ function renderTourModal(tourId) {
         `).join('');
     }
 
-    // Ficha técnica
     if (modalFacts) {
         modalFacts.innerHTML = data.facts.map(([k, v]) => `
             <li>
@@ -1719,12 +1672,10 @@ function renderTourModal(tourId) {
         `).join('');
     }
 
-    // Incluye
     if (modalIncludes) {
         modalIncludes.innerHTML = data.includes.map(item => `<li>${item}</li>`).join('');
     }
 
-    // No incluye
     if (modalNotIncludes) {
         modalNotIncludes.innerHTML = data.notIncludes.map(item => `<li>${item}</li>`).join('');
     }
@@ -1757,14 +1708,38 @@ document.querySelectorAll('.tour-btn').forEach(btn => {
     });
 });
 
-// Cerrar al hacer clic en overlay o botón cerrar
 document.querySelectorAll('[data-close-modal]').forEach(el => {
     el.addEventListener('click', closeTourModal);
 });
 
-// Cerrar con tecla ESC
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && tourModal?.classList.contains('open')) {
         closeTourModal();
     }
 });
+
+// ==========================================
+// 14. FILTRO DE CATEGORÍAS (tours.html)
+// ==========================================
+const toursCatItems = document.querySelectorAll('.tours-cat-item');
+const tourDetailBlocks = document.querySelectorAll('.tour-detail-block');
+
+if (toursCatItems.length > 0 && tourDetailBlocks.length > 0) {
+    toursCatItems.forEach(btn => {
+        btn.addEventListener('click', () => {
+            toursCatItems.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const cat = btn.dataset.cat;
+            // Por ahora todas las categorías muestran todos los paquetes
+            // Estructura preparada para filtrar cuando se añadan más categorías
+            tourDetailBlocks.forEach(block => {
+                if (cat === 'all' || cat === 'vivencial') {
+                    block.style.display = '';
+                } else {
+                    block.style.display = 'none';
+                }
+            });
+        });
+    });
+}

@@ -87,17 +87,13 @@ body{
     position:relative;
 }
 body::before{
-    content:"";
-    position:fixed;
-    inset:0;
-    z-index:-1;
-    pointer-events:none;
-    /* Silueta sutil de montañas andinas como marca de agua */
-    background:
-        radial-gradient(circle at 90% 5%, rgba(77,184,232,0.10), transparent 45%),
-        radial-gradient(circle at 5% 90%, rgba(43,168,160,0.08), transparent 45%),
-        linear-gradient(180deg, var(--off-white) 0%, var(--white) 100%);
+    background-image:url('../img/fondo-silueta.jpg');
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    opacity:0.35; /* ajustar según la imagen */
 }
+
 body.no-scroll{ overflow:hidden; }
 img{ max-width:100%; display:block; }
 a{ text-decoration:none; color:inherit; transition:var(--transition); }

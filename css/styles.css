@@ -1,7 +1,7 @@
 /* ==========================================
    ALL TOUR ECUADOR — Hoja de estilos principal
    Paleta: Azul cielo (logo) + Turquesa (acento)
-   FASE 1 — Globales (header, fondo, CTA, nuevos componentes)
+   Fondo general con silueta (imagen '../img/fondo-silueta.jpg')
    ========================================== */
 
 /* ==========================================
@@ -9,7 +9,7 @@
    ========================================== */
 :root{
     /* === Marca (basado en logotipo) === */
-    --brand:#4DB8E8;            /* azul cielo logo */
+    --brand:#4DB8E8;
     --brand-dark:#1E88C7;
     --brand-light:#A5DCF2;
     --brand-pale:#E6F4FB;
@@ -20,7 +20,7 @@
     --accent-light:#5FC8C1;
     --accent-pale:#E0F5F3;
 
-    /* Alias compatibles con nombres anteriores (por si algún HTML antiguo los usa) */
+    /* Alias compatibles con nombres anteriores */
     --sky-blue:var(--brand);
     --sky-blue-dark:var(--brand-dark);
     --sky-blue-light:var(--brand-light);
@@ -69,13 +69,19 @@
     /* === Header === */
     --header-h:88px;
     --header-h-scrolled:76px;
+
+    /* === Fondo semitransparente para secciones (deja ver la silueta) === */
+    --bg-veil-light:rgba(255,255,255,0.78);
+    --bg-veil-soft:rgba(245,250,253,0.72);
+    --bg-veil-strong:rgba(255,255,255,0.90);
 }
 
 *{ box-sizing:border-box; margin:0; padding:0; }
 html{ scroll-behavior:smooth; scroll-padding-top:110px; }
 
-/* Fondo general con silueta suave para reducir el blanco plano
-   <!-- REEMPLAZAR IMAGEN: silueta/fondo general (carpeta Drive usuario) --> */
+/* ==========================================
+   FONDO GENERAL CON SILUETA
+   ========================================== */
 body{
     font-family:var(--font-sans);
     color:var(--text);
@@ -86,12 +92,30 @@ body{
     -webkit-font-smoothing:antialiased;
     position:relative;
 }
+
+/* REEMPLAZAR IMAGEN: fondo de silueta general */
 body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    pointer-events:none;
     background-image:url('../img/fondo-silueta.jpg');
     background-size:cover;
     background-position:center;
     background-attachment:fixed;
+    background-repeat:no-repeat;
     opacity:0.35; /* ajustar según la imagen */
+}
+
+/* Fallback si la imagen no carga o es muy clara: capa de color suave */
+body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    pointer-events:none;
+    background:linear-gradient(180deg, rgba(245,250,253,0.35) 0%, rgba(255,255,255,0.25) 100%);
 }
 
 body.no-scroll{ overflow:hidden; }
@@ -173,7 +197,6 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; }
     height:100%;
     display:block;
 }
-/* Fallback si Lottie no carga (iconos FA también válidos) */
 .lottie-fallback{
     width:88px;
     height:88px;
@@ -262,7 +285,7 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; }
 .preloader.hidden{ opacity:0; visibility:hidden; }
 .preloader-inner{ text-align:center; }
 .preloader-inner img{
-    height:110px; /* logo más grande */
+    height:110px;
     margin:0 auto 24px;
     animation:pulseLogo 1.6s ease-in-out infinite;
 }
@@ -292,10 +315,10 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; }
 }
 
 /* ==========================================
-   5. HEADER (rediseñado, bloque separado, más visible)
+   5. HEADER
    ========================================== */
 .site-header{
-    position:fixed;          /* ahora SIEMPRE fijo y visible */
+    position:fixed;
     top:0;
     left:0;
     right:0;
@@ -303,7 +326,6 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; }
     height:var(--header-h);
     display:flex;
     align-items:center;
-    /* Bloque separado con color/filtro visible */
     background:linear-gradient(180deg, rgba(26,58,79,0.92) 0%, rgba(26,58,79,0.78) 100%);
     backdrop-filter:blur(14px);
     -webkit-backdrop-filter:blur(14px);
@@ -325,7 +347,6 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; }
     width:100%;
 }
 
-/* Marca — logo más grande y siempre visible */
 .brand{
     display:flex;
     align-items:center;
@@ -335,14 +356,13 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; }
 }
 .brand:hover{ transform:scale(1.03); }
 .brand-logo{
-    height:68px;               /* antes 60 -> 68 */
+    height:68px;
     width:auto;
     object-fit:contain;
     transition:var(--transition);
 }
 .site-header.scrolled .brand-logo{ height:56px; }
 
-/* Navegación */
 .main-nav{
     display:flex;
     align-items:center;
@@ -377,7 +397,6 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; }
 .site-header.scrolled .main-nav a:hover,
 .site-header.scrolled .main-nav a.active{ color:var(--accent-dark); }
 
-/* Acciones */
 .nav-actions{
     display:flex;
     align-items:center;
@@ -442,7 +461,6 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; }
 .lang-option.active{ background:var(--accent-pale); color:var(--accent-dark); font-weight:700; }
 .lang-flag{ font-size:1.1rem; }
 
-/* Menú hamburguesa */
 .menu-toggle{
     display:none;
     width:40px;
@@ -465,7 +483,6 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; }
 .menu-toggle.active span:nth-child(2){ opacity:0; }
 .menu-toggle.active span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
 
-/* Menú móvil */
 .mobile-menu{
     position:fixed;
     top:0;
@@ -508,14 +525,10 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; }
 .mobile-menu-contact a:hover{ color:var(--accent); }
 .mobile-menu-contact i{ color:var(--accent); width:20px; }
 
-/* Compensar el header fijo en páginas internas */
 main{ padding-top:var(--header-h); }
-@media (max-width: 992px){
-    main{ padding-top:var(--header-h); }
-}
 
 /* ==========================================
-   6. HERO SLIDER (con efecto zoom cinematográfico)
+   6. HERO SLIDER
    ========================================== */
 .hero-slider{
     position:relative;
@@ -650,7 +663,7 @@ main{ padding-top:var(--header-h); }
 }
 
 /* ==========================================
-   7. CADENA DE VALOR — NUEVO (solo texto + título)
+   7. CADENA DE VALOR (solo texto + título)
    ========================================== */
 .section-philosophy{
     background:var(--text);
@@ -709,21 +722,27 @@ main{ padding-top:var(--header-h); }
 }
 
 /* ==========================================
-   8. WELCOME
+   8. WELCOME (fondo semitransparente sobre silueta)
    ========================================== */
-.section-welcome{ padding:100px 0; background:var(--white); }
+.section-welcome{
+    padding:100px 0;
+    background:var(--bg-veil-light); /* deja ver la silueta */
+    backdrop-filter:blur(2px);
+    -webkit-backdrop-filter:blur(2px);
+}
 .welcome-features{
     display:grid;
     grid-template-columns:repeat(3, 1fr);
     gap:32px;
 }
 .welcome-card{
-    background:var(--off-white);
+    background:var(--white);
     border-radius:var(--radius-lg);
     padding:44px 32px;
     text-align:center;
     transition:var(--transition);
     border:1px solid var(--gray-100);
+    box-shadow:var(--shadow-sm);
 }
 .welcome-card:hover{
     transform:translateY(-8px);
@@ -757,9 +776,14 @@ main{ padding-top:var(--header-h); }
 .welcome-card p{ font-size:0.94rem; color:var(--text-light); line-height:1.7; }
 
 /* ==========================================
-   9. HISTORY
+   9. HISTORY (fondo semitransparente)
    ========================================== */
-.section-history{ padding:100px 0; background:var(--off-white); }
+.section-history{
+    padding:100px 0;
+    background:var(--bg-veil-soft);
+    backdrop-filter:blur(2px);
+    -webkit-backdrop-filter:blur(2px);
+}
 .history-grid{
     display:grid;
     grid-template-columns:repeat(4, 1fr);
@@ -852,9 +876,14 @@ main{ padding-top:var(--header-h); }
 }
 
 /* ==========================================
-   11. REGIONS
+   11. REGIONS (fondo semitransparente)
    ========================================== */
-.section-regions{ padding:100px 0; background:var(--white); }
+.section-regions{
+    padding:100px 0;
+    background:var(--bg-veil-light);
+    backdrop-filter:blur(2px);
+    -webkit-backdrop-filter:blur(2px);
+}
 .regions-grid{
     display:grid;
     grid-template-columns:repeat(4, 1fr);
@@ -934,11 +963,15 @@ main{ padding-top:var(--header-h); }
 .regions-cta{ text-align:center; margin-top:50px; }
 
 /* ==========================================
-   12. TOURS — CARRUSEL (INICIO) + GRID BASE
+   12. TOURS — CARRUSEL (INICIO)
    ========================================== */
-.section-tours{ padding:100px 0; background:var(--off-white); }
+.section-tours{
+    padding:100px 0;
+    background:var(--bg-veil-soft);
+    backdrop-filter:blur(2px);
+    -webkit-backdrop-filter:blur(2px);
+}
 
-/* Carrusel de paquetes (INICIO) */
 .tours-carousel{
     position:relative;
     overflow:visible;
@@ -1006,7 +1039,6 @@ main{ padding-top:var(--header-h); }
     flex:1;
 }
 
-/* Bloque precio + mínimo pax (NUEVO) */
 .tour-price-box{
     display:flex;
     flex-direction:column;
@@ -1067,7 +1099,6 @@ main{ padding-top:var(--header-h); }
 .tour-btn:hover i{ transform:translateX(4px); }
 .tours-cta{ text-align:center; margin-top:50px; }
 
-/* Flechas y paginación del carrusel de tours (INICIO) */
 .tours-swiper .swiper-button-next,
 .tours-swiper .swiper-button-prev{
     width:48px;
@@ -1106,14 +1137,19 @@ main{ padding-top:var(--header-h); }
 /* ==========================================
    13. SERVICES (index)
    ========================================== */
-.section-services{ padding:100px 0; background:var(--white); }
+.section-services{
+    padding:100px 0;
+    background:var(--bg-veil-light);
+    backdrop-filter:blur(2px);
+    -webkit-backdrop-filter:blur(2px);
+}
 .services-grid{
     display:grid;
     grid-template-columns:repeat(3, 1fr);
     gap:32px;
 }
 .service-card{
-    background:var(--off-white);
+    background:var(--white);
     border-radius:var(--radius-lg);
     padding:44px 32px 36px;
     text-align:center;
@@ -1122,6 +1158,7 @@ main{ padding-top:var(--header-h); }
     display:flex;
     flex-direction:column;
     align-items:center;
+    box-shadow:var(--shadow-sm);
 }
 .service-card:hover{
     transform:translateY(-8px);
@@ -1165,7 +1202,12 @@ main{ padding-top:var(--header-h); }
 /* ==========================================
    14. MAP INTERACTIVE
    ========================================== */
-.section-map-interactive{ padding:100px 0; background:var(--off-white); }
+.section-map-interactive{
+    padding:100px 0;
+    background:var(--bg-veil-soft);
+    backdrop-filter:blur(2px);
+    -webkit-backdrop-filter:blur(2px);
+}
 .map-layout{
     display:grid;
     grid-template-columns:1.5fr 1fr;
@@ -1326,7 +1368,12 @@ main{ padding-top:var(--header-h); }
 /* ==========================================
    15. WHY US (index)
    ========================================== */
-.section-why{ padding:100px 0; background:var(--white); }
+.section-why{
+    padding:100px 0;
+    background:var(--bg-veil-light);
+    backdrop-filter:blur(2px);
+    -webkit-backdrop-filter:blur(2px);
+}
 .why-grid{
     display:grid;
     grid-template-columns:repeat(4, 1fr);
@@ -1336,9 +1383,10 @@ main{ padding-top:var(--header-h); }
     text-align:center;
     padding:40px 24px;
     border-radius:var(--radius-lg);
-    background:var(--off-white);
+    background:var(--white);
     border:1px solid var(--gray-100);
     transition:var(--transition);
+    box-shadow:var(--shadow-sm);
 }
 .why-card:hover{
     background:var(--white);
@@ -1369,9 +1417,14 @@ main{ padding-top:var(--header-h); }
 .why-card p{ font-size:0.9rem; color:var(--text-light); line-height:1.65; }
 
 /* ==========================================
-   16. TESTIMONIALS (base)
+   16. TESTIMONIALS
    ========================================== */
-.section-testimonials{ padding:100px 0; background:var(--off-white); }
+.section-testimonials{
+    padding:100px 0;
+    background:var(--bg-veil-soft);
+    backdrop-filter:blur(2px);
+    -webkit-backdrop-filter:blur(2px);
+}
 .testimonials-grid{
     display:grid;
     grid-template-columns:repeat(3, 1fr);
@@ -1384,6 +1437,7 @@ main{ padding-top:var(--header-h); }
     border:1px solid var(--gray-100);
     position:relative;
     transition:var(--transition);
+    box-shadow:var(--shadow-sm);
 }
 .testimonial-card:hover{
     transform:translateY(-6px);
@@ -1437,11 +1491,13 @@ main{ padding-top:var(--header-h); }
 .testimonial-author span{ font-size:0.82rem; color:var(--text-light); }
 
 /* ==========================================
-   16.b EXPERIENCIAS (nueva página) — carrusel reseñas
+   16.b EXPERIENCIAS — carrusel reseñas
    ========================================== */
 .section-experience-reviews{
     padding:100px 0;
-    background:var(--white);
+    background:var(--bg-veil-light);
+    backdrop-filter:blur(2px);
+    -webkit-backdrop-filter:blur(2px);
 }
 .reviews-swiper{
     padding-bottom:64px;
@@ -1456,6 +1512,7 @@ main{ padding-top:var(--header-h); }
     height:100%;
     display:flex;
     flex-direction:column;
+    box-shadow:var(--shadow-sm);
 }
 .review-card:hover{
     transform:translateY(-6px);
@@ -1532,7 +1589,9 @@ main{ padding-top:var(--header-h); }
 /* 16.c Testimonios cadena de valor (experiencias.html) */
 .section-value-testimonials{
     padding:100px 0;
-    background:var(--off-white);
+    background:var(--bg-veil-soft);
+    backdrop-filter:blur(2px);
+    -webkit-backdrop-filter:blur(2px);
 }
 .value-testimonials-grid{
     display:grid;
@@ -1591,7 +1650,7 @@ main{ padding-top:var(--header-h); }
 }
 
 /* ==========================================
-   17. CTA FINAL — rediseñado (imagen + filtro + letras grandes)
+   17. CTA FINAL
    ========================================== */
 .section-cta-final{
     position:relative;
@@ -1674,7 +1733,7 @@ main{ padding-top:var(--header-h); }
 }
 .footer-brand-col{ display:flex; flex-direction:column; gap:16px; }
 .footer-logo{
-    height:96px; /* logo más grande en footer */
+    height:96px;
     width:auto;
     object-fit:contain;
     align-self:flex-start;
@@ -1937,7 +1996,12 @@ main{ padding-top:var(--header-h); }
 /* ==========================================
    22. STORY (nosotros.html)
    ========================================== */
-.section-story{ padding:100px 0; background:var(--white); }
+.section-story{
+    padding:100px 0;
+    background:var(--bg-veil-light);
+    backdrop-filter:blur(2px);
+    -webkit-backdrop-filter:blur(2px);
+}
 .story-grid{
     display:grid;
     grid-template-columns:1fr 1.1fr;
@@ -1994,7 +2058,12 @@ main{ padding-top:var(--header-h); }
 /* ==========================================
    23. TEAM INTRO (nosotros.html)
    ========================================== */
-.section-team-intro{ padding:100px 0; background:var(--off-white); }
+.section-team-intro{
+    padding:100px 0;
+    background:var(--bg-veil-soft);
+    backdrop-filter:blur(2px);
+    -webkit-backdrop-filter:blur(2px);
+}
 .team-intro-grid{
     display:grid;
     grid-template-columns:1.1fr 1fr;
@@ -2081,7 +2150,12 @@ main{ padding-top:var(--header-h); }
 /* ==========================================
    25. MEET TEAM (nosotros.html)
    ========================================== */
-.section-meet-team{ padding:100px 0; background:var(--white); }
+.section-meet-team{
+    padding:100px 0;
+    background:var(--bg-veil-light);
+    backdrop-filter:blur(2px);
+    -webkit-backdrop-filter:blur(2px);
+}
 .team-grid{
     display:grid;
     grid-template-columns:repeat(3, 1fr);
@@ -2152,10 +2226,24 @@ main{ padding-top:var(--header-h); }
 /* ==========================================
    26. SERVICE DETAILS (servicios.html)
    ========================================== */
-.section-services-intro{ padding:90px 0 40px; background:var(--white); }
+.section-services-intro{
+    padding:90px 0 40px;
+    background:var(--bg-veil-light);
+    backdrop-filter:blur(2px);
+    -webkit-backdrop-filter:blur(2px);
+}
 
-.section-service-detail{ padding:100px 0; background:var(--white); }
-.section-service-detail.alt{ background:var(--off-white); }
+.section-service-detail{
+    padding:100px 0;
+    background:var(--bg-veil-light);
+    backdrop-filter:blur(2px);
+    -webkit-backdrop-filter:blur(2px);
+}
+.section-service-detail.alt{
+    background:var(--bg-veil-soft);
+    backdrop-filter:blur(2px);
+    -webkit-backdrop-filter:blur(2px);
+}
 
 .service-detail-grid{
     display:grid;
@@ -2228,7 +2316,12 @@ main{ padding-top:var(--header-h); }
 }
 
 /* Extra services */
-.section-extra-services{ padding:100px 0; background:var(--off-white); }
+.section-extra-services{
+    padding:100px 0;
+    background:var(--bg-veil-soft);
+    backdrop-filter:blur(2px);
+    -webkit-backdrop-filter:blur(2px);
+}
 .extra-services-grid{
     display:grid;
     grid-template-columns:repeat(3, 1fr);
@@ -2241,6 +2334,7 @@ main{ padding-top:var(--header-h); }
     border:1px solid var(--gray-100);
     transition:var(--transition);
     text-align:center;
+    box-shadow:var(--shadow-sm);
 }
 .extra-service-card:hover{
     transform:translateY(-8px);
@@ -2274,11 +2368,13 @@ main{ padding-top:var(--header-h); }
 .extra-service-card p{ font-size:0.9rem; color:var(--text-light); line-height:1.65; }
 
 /* ==========================================
-   27. TOURS PAGE (nueva página tours.html)
+   27. TOURS PAGE (tours.html)
    ========================================== */
 .tours-page{
     padding:80px 0 100px;
-    background:var(--off-white);
+    background:var(--bg-veil-soft);
+    backdrop-filter:blur(2px);
+    -webkit-backdrop-filter:blur(2px);
 }
 .tours-page-layout{
     display:grid;
@@ -2287,7 +2383,6 @@ main{ padding-top:var(--header-h); }
     align-items:start;
 }
 
-/* Sidebar */
 .tours-sidebar{
     position:sticky;
     top:calc(var(--header-h-scrolled) + 20px);
@@ -2362,7 +2457,6 @@ main{ padding-top:var(--header-h); }
     line-height:1.5;
 }
 
-/* Contenido principal */
 .tours-main-header{
     margin-bottom:36px;
 }
@@ -2380,14 +2474,12 @@ main{ padding-top:var(--header-h); }
     max-width:640px;
 }
 
-/* Grid de tours en página tours.html */
 .tours-page-grid{
     display:grid;
     grid-template-columns:repeat(2, 1fr);
     gap:28px;
 }
 
-/* Bloque de paquete expandido (tipo Adventure Journeys) */
 .tour-detail-block{
     background:var(--white);
     border-radius:var(--radius-lg);
@@ -2461,7 +2553,6 @@ main{ padding-top:var(--header-h); }
     backdrop-filter:blur(6px);
 }
 
-/* Body del bloque expandido */
 .tour-detail-body{
     padding:40px;
 }
@@ -2503,7 +2594,6 @@ main{ padding-top:var(--header-h); }
 }
 .tour-detail-subtitle:first-child{ margin-top:0; }
 
-/* Itinerario */
 .tour-itinerary{
     display:grid;
     gap:14px;
@@ -2535,7 +2625,6 @@ main{ padding-top:var(--header-h); }
     line-height:1.6;
 }
 
-/* Sidebar de ficha técnica dentro del bloque */
 .tour-detail-side{
     display:flex;
     flex-direction:column;
@@ -2620,9 +2709,14 @@ main{ padding-top:var(--header-h); }
 }
 
 /* ==========================================
-   28. CONTACTO (contacto.html)
+   28. CONTACTO
    ========================================== */
-.section-contact{ padding:100px 0; background:var(--off-white); }
+.section-contact{
+    padding:100px 0;
+    background:var(--bg-veil-soft);
+    backdrop-filter:blur(2px);
+    -webkit-backdrop-filter:blur(2px);
+}
 .contact-wrapper{
     display:grid;
     grid-template-columns:1fr 1.3fr;
@@ -2720,7 +2814,6 @@ main{ padding-top:var(--header-h); }
     color:var(--white);
 }
 
-/* Formulario */
 .contact-form{
     background:var(--white);
     padding:50px 44px;
@@ -2825,7 +2918,12 @@ main{ padding-top:var(--header-h); }
 /* ==========================================
    29. MAPA SINGLE (contacto.html)
    ========================================== */
-.section-map{ padding:100px 0; background:var(--white); }
+.section-map{
+    padding:100px 0;
+    background:var(--bg-veil-light);
+    backdrop-filter:blur(2px);
+    -webkit-backdrop-filter:blur(2px);
+}
 .map-single-wrapper{
     border-radius:var(--radius-lg);
     overflow:hidden;
@@ -2845,7 +2943,7 @@ main{ padding-top:var(--header-h); }
 }
 
 /* ==========================================
-   30. MODAL DE TOURS (index + tours)
+   30. MODAL DE TOURS
    ========================================== */
 .tour-modal{
     position:fixed;

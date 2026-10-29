@@ -286,7 +286,7 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; }
 .preloader.hidden{ opacity:0; visibility:hidden; }
 .preloader-inner{ text-align:center; }
 .preloader-inner img{
-    height:150px;
+    height:250px;
     margin:0 auto 24px;
     animation:pulseLogo 1.6s ease-in-out infinite;
 }

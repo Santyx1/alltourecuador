@@ -3663,9 +3663,41 @@ main{ padding-top:var(--header-h); }
 @media (max-width:1200px){
     .tours-cards-grid{ grid-template-columns:repeat(2, 1fr); }
 }
+/* Responsive de la grilla (continuación) */
 @media (max-width:720px){
     .tours-cards-grid{ grid-template-columns:1fr; gap:20px; }
     .tour-card-img-link{ height:190px; }
     .tour-data-row{ grid-template-columns:45% 55%; }
     .tour-card-pricebar{ grid-template-columns:45% 55%; }
-    .tour-days-label{ letter-spacing:2px; font
+    .tour-days-label{ letter-spacing:2px; font-size:12px; }
+    .tour-price-label{ letter-spacing:1.5px; font-size:12px; }
+    .tour-data-label{ font-size:12px; padding-left:14px; }
+    .tour-data-value{ font-size:11px; }
+    .tour-data-icon{ width:34px; height:34px; max-width:34px; }
+    .tour-card-days{ padding-left:14px; }
+    .tour-card-cta .btn{ font-size:11px; padding:9px 10px; letter-spacing:1.5px; }
+}
+
+@media (max-width:560px){
+    .tour-card-title-bar{ min-height:60px; padding:12px 16px; }
+    .tour-card-title-bar a{ font-size:12px; letter-spacing:1px; }
+    .tour-data-row{ grid-template-columns:48% 52%; }
+    .tour-card-pricebar{ grid-template-columns:48% 52%; }
+    .tour-card-cta .btn{ width:95%; }
+}
+
+/* Anclas: offset para que el header fijo no tape el detalle */
+#detalle-paquete-1,
+#detalle-paquete-2,
+#detalle-paquete-3,
+#detalle-paquete-4,
+#detalle-paquete-5,
+#detalle-paquete-6,
+#detalle-paquete-7{
+    scroll-margin-top:calc(var(--header-h-scrolled) + 20px);
+}
+
+/* Separación entre la grilla y los detalles */
+.tours-main > .tour-detail-block:first-of-type{
+    margin-top:20px;
+}

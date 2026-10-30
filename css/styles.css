@@ -3501,7 +3501,7 @@ main{ padding-top:var(--header-h); }
    32. TOURS PAGE — SIDEBAR FILTROS + GRILLA
    ========================================== */
 
-/* --- Layout --- */
+/* --- Layout principal --- */
 .tours-page-layout{
     display:grid;
     grid-template-columns:300px 1fr;
@@ -3509,7 +3509,7 @@ main{ padding-top:var(--header-h); }
     align-items:start;
 }
 
-/* --- Botón filtros mobile --- */
+/* --- Botón filtros (solo visible en móvil) --- */
 .filters-mobile-toggle{
     display:none;
     align-items:center;
@@ -3546,12 +3546,19 @@ main{ padding-top:var(--header-h); }
 .tours-sidebar{
     position:sticky;
     top:calc(var(--header-h-scrolled) + 20px);
+    max-height:calc(100vh - var(--header-h-scrolled) - 40px);
+    overflow-y:auto;
     background:var(--white);
     border-radius:var(--radius-lg);
     box-shadow:var(--shadow);
     padding:28px 24px;
     border:1px solid var(--gray-100);
 }
+.tours-sidebar::-webkit-scrollbar{ width:6px; }
+.tours-sidebar::-webkit-scrollbar-track{ background:var(--gray-100); border-radius:999px; }
+.tours-sidebar::-webkit-scrollbar-thumb{ background:var(--gray-300); border-radius:999px; }
+.tours-sidebar::-webkit-scrollbar-thumb:hover{ background:var(--accent); }
+
 .tours-sidebar-header{
     display:flex;
     align-items:center;
@@ -3709,7 +3716,7 @@ main{ padding-top:var(--header-h); }
     line-height:1.5;
 }
 
-/* --- Overlay filtros mobile --- */
+/* --- Overlay filtros (solo móvil) --- */
 .filters-overlay{
     display:none;
     position:fixed;
@@ -3961,9 +3968,9 @@ main{ padding-top:var(--header-h); }
 }
 .tour-card__btn:hover i{ transform:translateX(3px); }
 
-/* --- Empty state --- */
+/* --- Empty state (oculto por defecto, forzado) --- */
 .tours-empty{
-    display:none;
+    display:none !important;
     flex-direction:column;
     align-items:center;
     text-align:center;
@@ -3973,7 +3980,7 @@ main{ padding-top:var(--header-h); }
     border-radius:var(--radius-lg);
     margin-top:20px;
 }
-.tours-empty.show{ display:flex; }
+.tours-empty.show{ display:flex !important; }
 .tours-empty__icon{
     width:72px;
     height:72px;
@@ -4003,7 +4010,7 @@ main{ padding-top:var(--header-h); }
    33. RESPONSIVE — TOURS PAGE
    ========================================== */
 
-/* Tablets grandes / desktop pequeño */
+/* Desktop pequeño / tablet grande */
 @media (max-width: 1200px){
     .tours-page-layout{
         grid-template-columns:260px 1fr;
@@ -4028,6 +4035,7 @@ main{ padding-top:var(--header-h); }
         bottom:0;
         width:min(340px, 88vw);
         height:100vh;
+        max-height:100vh;
         z-index:99;
         border-radius:0;
         overflow-y:auto;

@@ -123,907 +123,646 @@
         <!-- ==============================
              TOURS PAGE (sidebar + paquetes)
         =============================== -->
-        <!-- ==============================
-     TOURS PAGE (sidebar + grilla + detalles)
-================================ -->
-<section class="tours-page" id="paquetes">
-    <div class="container">
-        <div class="tours-page-layout">
+        <section class="tours-page" id="paquetes">
+            <div class="container">
+                <div class="tours-page-layout">
 
-            <!-- SIDEBAR -->
-            <aside class="tours-sidebar">
-                <h3>Tipos de turismo</h3>
-                <p class="tours-sidebar-lead">Filtra los paquetes según el tipo de experiencia que buscas.</p>
+                    <!-- SIDEBAR -->
+                    <aside class="tours-sidebar">
+                        <h3>Tipos de turismo</h3>
+                        <p class="tours-sidebar-lead">Filtra los paquetes según el tipo de experiencia que buscas.</p>
 
-                <div class="tours-cat-list">
-                    <button class="tours-cat-item active" data-cat="all">
-                        <span>Todos los paquetes</span>
-                        <span class="count">7</span>
-                    </button>
-                    <button class="tours-cat-item" data-cat="vivencial">
-                        <span>Turismo Vivencial Kichwa Otavalo</span>
-                        <span class="count">7</span>
-                    </button>
-                </div>
+                        <div class="tours-cat-list">
+                            <button class="tours-cat-item active" data-cat="all">
+                                <span>Todos los paquetes</span>
+                                <span class="count">7</span>
+                            </button>
+                            <button class="tours-cat-item" data-cat="vivencial">
+                                <span>Turismo Vivencial Kichwa Otavalo</span>
+                                <span class="count">7</span>
+                            </button>
+                            <!-- Estructura preparada para futuras categorías -->
+                            <!--
+                            <button class="tours-cat-item" data-cat="naturaleza">
+                                <span>Naturaleza & Aventura</span>
+                                <span class="count">0</span>
+                            </button>
+                            -->
+                        </div>
 
-                <div class="tours-sidebar-cta">
-                    <p>¿No encuentras lo que buscas? Diseñamos tu viaje a medida.</p>
-                    <a href="contacto.html" class="btn btn-accent btn-sm" style="width:100%;justify-content:center;">
-                        Cotizar a medida
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
-            </aside>
+                        <div class="tours-sidebar-cta">
+                            <p>¿No encuentras lo que buscas? Diseñamos tu viaje a medida.</p>
+                            <a href="contacto.html" class="btn btn-accent btn-sm" style="width:100%;justify-content:center;">
+                                Cotizar a medida
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </aside>
 
-            <!-- CONTENIDO -->
-            <div class="tours-main">
+                    <!-- CONTENIDO -->
+                    <div class="tours-main">
 
-                <div class="tours-main-header">
-                    <h2>Paquetes disponibles</h2>
-                    <p>Todos nuestros paquetes incluyen guía nativo especializado, transporte y experiencias auténticas. Precios por persona con mínimo 4 pax.</p>
-                </div>
+                        <div class="tours-main-header">
+                            <h2>Paquetes disponibles</h2>
+                            <p>Todos nuestros paquetes incluyen guía nativo especializado, transporte y experiencias auténticas. Precios por persona con mínimo 4 pax.</p>
+                        </div>
 
-                <!-- ============================================
-                     GRILLA DE TARJETAS (estilo JetEngine)
-                ============================================ -->
-                <div class="tours-cards-grid">
-
-                    <!-- ============ PAQUETE 1 — RAÍCES DE OTAVALO ============ -->
-                    <article class="tour-card-premium" id="paquete-1">
-                        <!-- Bloque imagen + título -->
-                        <div class="tour-card-hero">
-                            <a href="#detalle-paquete-1" class="tour-card-img-link">
+                        <!-- ============================================
+                             PAQUETE 1 — RAÍCES DE OTAVALO
+                        ============================================ -->
+                        <article class="tour-detail-block" id="paquete-1">
+                            <div class="tour-detail-hero">
+                                <!-- REEMPLAZAR IMAGEN: Raíces de Otavalo (carpeta Drive usuario) -->
                                 <img src="img/otavalo.jpg" alt="Raíces de Otavalo" loading="lazy" />
-                            </a>
-                            <div class="tour-card-title-bar">
-                                <a href="#detalle-paquete-1">RAÍCES DE OTAVALO</a>
+                                <div class="tour-detail-hero-overlay"></div>
+                                <div class="tour-detail-hero-text">
+                                    <h2>RAÍCES DE OTAVALO</h2>
+                                    <p>"Meet the people, share the traditions, live the Andes." — Conoce a la gente, comparte las tradiciones, vive los Andes.</p>
+                                    <div class="tour-detail-pricebar">
+                                        <span class="price">$ 76,00 por persona</span>
+                                        <span class="pax">Mínimo 4 pax</span>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
 
-                        <!-- Bloque de datos -->
-                        <div class="tour-card-data">
-                            <div class="tour-data-row">
-                                <div class="tour-data-label">Tipo:</div>
-                                <div class="tour-data-value">
-                                    <img class="tour-data-icon" src="img/icon-vivencial.png" alt="Vivencial Kichwa" width="42" height="42" loading="lazy">
-                                    <span>Vivencial Kichwa</span>
-                                </div>
-                            </div>
-                            <div class="tour-data-row">
-                                <div class="tour-data-label">Dificultad:</div>
-                                <div class="tour-data-value">
-                                    <img class="tour-data-icon" src="img/icon-facil.png" alt="Bajo" width="42" height="42" loading="lazy">
-                                    <span>Bajo</span>
-                                </div>
-                            </div>
-                            <div class="tour-data-row">
-                                <div class="tour-data-label">Servicio:</div>
-                                <div class="tour-data-value">
-                                    <img class="tour-data-icon" src="img/icon-guia.png" alt="Guía nativo" width="42" height="42" loading="lazy">
-                                    <span>Guía nativo</span>
-                                </div>
-                            </div>
-                            <div class="tour-data-row">
-                                <div class="tour-data-label">Grupo:</div>
-                                <div class="tour-data-value">
-                                    <img class="tour-data-icon" src="img/icon-grupo.png" alt="Mínimo 4 pax" width="42" height="42" loading="lazy">
-                                    <span>Mín. 4 pax</span>
-                                </div>
-                            </div>
-                            <div class="tour-card-pricebar">
-                                <div class="tour-card-days">
-                                    <span class="tour-days-label">Full Day</span>
-                                    <span class="tour-price-label">$ 76,00 por persona</span>
-                                </div>
-                                <div class="tour-card-cta">
-                                    <a href="#detalle-paquete-1" class="btn btn-accent btn-sm">Ver detalles</a>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
+                            <div class="tour-detail-body">
+                                <div class="tour-detail-cols">
 
-                    <!-- ============ PAQUETE 2 — COTACACHI ============ -->
-                    <article class="tour-card-premium" id="paquete-2">
-                        <div class="tour-card-hero">
-                            <a href="#detalle-paquete-2" class="tour-card-img-link">
+                                    <div class="tour-detail-main">
+                                        <div class="tour-detail-callout">
+                                            Una inmersión auténtica en el corazón de las comunidades Kichwa de Otavalo, donde el arte ancestral del tejido, la música viva, la gastronomía andina y la artesanía en totora se entrelazan para brindarte un encuentro humano inolvidable.
+                                        </div>
+
+                                        <h3 class="tour-detail-subtitle">Descripción de la Experiencia</h3>
+                                        <p>Invita al viajero a salir de los circuitos convencionales para entrar en la vida cotidiana de las familias Kichwa. A través de talleres prácticos con artesanos, músicos y familias locales (muchas de ellas impulsadas por mujeres emprendedoras), el visitante descubre una cultura viva que preserva su identidad, tradiciones y cosmovisión en cada tejido, sabor y melodía.</p>
+
+                                        <h3 class="tour-detail-subtitle">Itinerario</h3>
+                                        <ul class="tour-itinerary">
+                                            <li><span class="itinerary-time">08:00 – 08:30</span><span class="itinerary-text">Bienvenida en Otavalo e introducción cultural.</span></li>
+                                            <li><span class="itinerary-time">08:30 – 10:30</span><span class="itinerary-text">Viviendo la Totora (Totora Wasi): historia, cosecha y elaboración de tu propia artesanía en San Rafael de la Laguna.</span></li>
+                                            <li><span class="itinerary-time">10:30 – 12:15</span><span class="itinerary-text">Entre Hilos y Memoria: taller participativo de hilado y telar de cintura en la Comuna de Agato (Tahuantinsuyo Weaving Workshop).</span></li>
+                                            <li><span class="itinerary-time">12:30 – 14:00</span><span class="itinerary-text">Almuerzo Comunitario: gastronomía local compartida en Peguche (Restaurante Ñanda Mañachi).</span></li>
+                                            <li><span class="itinerary-time">14:15 – 16:00</span><span class="itinerary-text">Cascada de Peguche: caminata interpretativa de naturaleza y espiritualidad andina.</span></li>
+                                            <li><span class="itinerary-time">16:15 – 17:30</span><span class="itinerary-text">Música que Vive: taller interactivo de instrumentos ancestrales y ritmos andinos con músicos de Ñanda Mañachi.</span></li>
+                                        </ul>
+                                    </div>
+
+                                    <aside class="tour-detail-side">
+                                        <div class="tour-facts">
+                                            <h3 class="tour-detail-subtitle">Ficha Técnica</h3>
+                                            <ul>
+                                                <li><strong>Duración</strong><span>Full Day / 1 día (08:00 – 17:30)</span></li>
+                                                <li><strong>Destino</strong><span>Otavalo, San Rafael de la Laguna, Agato y Peguche</span></li>
+                                                <li><strong>Dificultad</strong><span>Bajo (apto para familias, niños y adultos mayores)</span></li>
+                                                <li><strong>Estilo</strong><span>Turismo artesanal, cultural, vivencial comunitario y naturaleza</span></li>
+                                                <li><strong>Salida / Retorno</strong><span>Otavalo</span></li>
+                                                <li><strong>Destacados</strong><span>Taller de totora, telar de cintura, almuerzo tradicional, cascada de Peguche, música Kichwa</span></li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="tour-includes">
+                                            <h4><i class="fa-solid fa-circle-check"></i> Incluye</h4>
+                                            <ul>
+                                                <li>Transporte turístico privado</li>
+                                                <li>Guía nativo especializado (español/inglés)</li>
+                                                <li>Almuerzo tradicional completo</li>
+                                                <li>Entradas a todos los atractivos</li>
+                                                <li>Taller interactivo y materiales artesanales (Totora Wasi)</li>
+                                                <li>Acompañamiento permanente y tiempo para compras directas</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="tour-not-includes">
+                                            <h4><i class="fa-solid fa-circle-xmark"></i> No incluye</h4>
+                                            <ul>
+                                                <li>Bebidas o consumos adicionales</li>
+                                                <li>Compras personales</li>
+                                                <li>Propinas</li>
+                                                <li>Seguro personal de viaje</li>
+                                            </ul>
+                                        </div>
+
+                                        <a href="contacto.html" class="btn btn-accent">
+                                            Cotizar este tour
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </a>
+                                    </aside>
+
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- ============================================
+                             PAQUETE 2 — TIERRA, SABOR Y ESPÍRITU KICHWA COTACACHI
+                        ============================================ -->
+                        <article class="tour-detail-block" id="paquete-2">
+                            <div class="tour-detail-hero">
+                                <!-- REEMPLAZAR IMAGEN: Cotacachi (carpeta Drive usuario) -->
                                 <img src="img/cotacachi.jpg" alt="Tierra, Sabor y Espíritu Kichwa Cotacachi" loading="lazy" />
-                            </a>
-                            <div class="tour-card-title-bar">
-                                <a href="#detalle-paquete-2">TIERRA, SABOR Y ESPÍRITU KICHWA COTACACHI</a>
-                            </div>
-                        </div>
-                        <div class="tour-card-data">
-                            <div class="tour-data-row">
-                                <div class="tour-data-label">Tipo:</div>
-                                <div class="tour-data-value">
-                                    <img class="tour-data-icon" src="img/icon-vivencial.png" alt="Gastronómico ancestral" width="42" height="42" loading="lazy">
-                                    <span>Gastronómico ancestral</span>
+                                <div class="tour-detail-hero-overlay"></div>
+                                <div class="tour-detail-hero-text">
+                                    <h2>TIERRA, SABOR Y ESPÍRITU KICHWA COTACACHI</h2>
+                                    <p>"Taste the Andes, share the traditions, connect with Pachamama." — Prueba los Andes, comparte las tradiciones, conéctate con la Pachamama.</p>
+                                    <div class="tour-detail-pricebar">
+                                        <span class="price">$ 143,00 por persona</span>
+                                        <span class="pax">Mínimo 4 pax</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="tour-data-row">
-                                <div class="tour-data-label">Dificultad:</div>
-                                <div class="tour-data-value">
-                                    <img class="tour-data-icon" src="img/icon-facil.png" alt="Bajo a Moderado" width="42" height="42" loading="lazy">
-                                    <span>Bajo a Moderado</span>
-                                </div>
-                            </div>
-                            <div class="tour-data-row">
-                                <div class="tour-data-label">Servicio:</div>
-                                <div class="tour-data-value">
-                                    <img class="tour-data-icon" src="img/icon-guia.png" alt="Guía nativo" width="42" height="42" loading="lazy">
-                                    <span>Guía nativo</span>
-                                </div>
-                            </div>
-                            <div class="tour-data-row">
-                                <div class="tour-data-label">Grupo:</div>
-                                <div class="tour-data-value">
-                                    <img class="tour-data-icon" src="img/icon-grupo.png" alt="Mínimo 4 pax" width="42" height="42" loading="lazy">
-                                    <span>Mín. 4 pax</span>
-                                </div>
-                            </div>
-                            <div class="tour-card-pricebar">
-                                <div class="tour-card-days">
-                                    <span class="tour-days-label">Full Day</span>
-                                    <span class="tour-price-label">$ 143,00 por persona</span>
-                                </div>
-                                <div class="tour-card-cta">
-                                    <a href="#detalle-paquete-2" class="btn btn-accent btn-sm">Ver detalles</a>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
 
-                    <!-- ============ PAQUETE 3 — PATRIMONIO ANCESTRAL ============ -->
-                    <article class="tour-card-premium" id="paquete-3">
-                        <div class="tour-card-hero">
-                            <a href="#detalle-paquete-3" class="tour-card-img-link">
+                            <div class="tour-detail-body">
+                                <div class="tour-detail-cols">
+
+                                    <div class="tour-detail-main">
+                                        <div class="tour-detail-callout">
+                                            Siente la energía ancestral de La Calera: moldea el barro con tus manos, descubre el secreto ancestral de la Pachamanka cocida bajo tierra y renueva tu espíritu en las vertientes sagradas de Cotacachi.
+                                        </div>
+
+                                        <h3 class="tour-detail-subtitle">Descripción de la Experiencia</h3>
+                                        <p>Una experiencia de convivencia rural que entrelaza la tierra, la gastronomía, el arte y la espiritualidad Kichwa. El visitante trabaja el barro, cosecha en la chakra, participa en la preparación ritual de la Pachamanka, conoce la artesanía en semillas elaborada por mujeres locales y experimenta una conexión tranquila con la naturaleza en las vertientes sagradas.</p>
+
+                                        <h3 class="tour-detail-subtitle">Itinerario</h3>
+                                        <ul class="tour-itinerary">
+                                            <li><span class="itinerary-time">08:00 – 08:30</span><span class="itinerary-text">Bienvenida y traslado hacia la comunidad La Calera.</span></li>
+                                            <li><span class="itinerary-time">08:30 – 10:30</span><span class="itinerary-text">Barro, Manos y Memoria: taller artesanal de moldeado y pintura en cerámica en Rumy Allpa (te llevas tu recuerdo).</span></li>
+                                            <li><span class="itinerary-time">10:45 – 12:30</span><span class="itinerary-text">De la Chakra a la Pachamanka: cosecha de productos andinos, taller de bisutería en semillas con mujeres emprendedoras y ritual de siembra del alimento bajo tierra.</span></li>
+                                            <li><span class="itinerary-time">13:00 – 14:30</span><span class="itinerary-text">Pachamanka – Sabores de la Tierra: apertura de la Pachamanka y almuerzo buffet comunitario en La Casa del Kachipukru.</span></li>
+                                            <li><span class="itinerary-time">15:00 – 17:00</span><span class="itinerary-text">Ritual y Baño de Purificación (TUN-DUN): caminata interpretativa hacia las vertientes de agua y espacio ceremonial de limpieza espiritual.</span></li>
+                                            <li><span class="itinerary-time">17:30 – 18:00</span><span class="itinerary-text">Cierre y reflexión con los anfitriones comunitarios.</span></li>
+                                        </ul>
+                                    </div>
+
+                                    <aside class="tour-detail-side">
+                                        <div class="tour-facts">
+                                            <h3 class="tour-detail-subtitle">Ficha Técnica</h3>
+                                            <ul>
+                                                <li><strong>Duración</strong><span>Full Day / 1 día (08:00 – 18:00)</span></li>
+                                                <li><strong>Destino</strong><span>Comunidad La Calera y zonas rurales de Cotacachi</span></li>
+                                                <li><strong>Dificultad</strong><span>Bajo a Moderado</span></li>
+                                                <li><strong>Estilo</strong><span>Gastronómico ancestral, cultural, artesanal y bienestar/espiritual</span></li>
+                                                <li><strong>Salida / Retorno</strong><span>Cotacachi / Otavalo</span></li>
+                                                <li><strong>Destacados</strong><span>Cerámica Rumy Allpa, Pachamanka, bisutería en semillas, ritual de purificación</span></li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="tour-includes">
+                                            <h4><i class="fa-solid fa-circle-check"></i> Incluye</h4>
+                                            <ul>
+                                                <li>Transporte turístico privado</li>
+                                                <li>Guía nativo especializado</li>
+                                                <li>Almuerzo tipo Pachamanka completo</li>
+                                                <li>Materiales para taller de barro y bisutería en semillas</li>
+                                                <li>Guía comunitario para el ritual de agua</li>
+                                                <li>Entradas a los sitios visitados</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="tour-not-includes">
+                                            <h4><i class="fa-solid fa-circle-xmark"></i> No incluye</h4>
+                                            <ul>
+                                                <li>Ropa de baño / toallas personales</li>
+                                                <li>Consumos o compras adicionales</li>
+                                                <li>Propinas</li>
+                                                <li>Seguro de viaje</li>
+                                            </ul>
+                                        </div>
+
+                                        <a href="contacto.html" class="btn btn-accent">
+                                            Cotizar este tour
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </a>
+                                    </aside>
+
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- ============================================
+                             PAQUETE 3 — PATRIMONIO ANCESTRAL KICHWA
+                        ============================================ -->
+                        <article class="tour-detail-block" id="paquete-3">
+                            <div class="tour-detail-hero">
+                                <!-- REEMPLAZAR IMAGEN: Patrimonio Ancestral (carpeta Drive usuario) -->
                                 <img src="img/kichwa.jpg" alt="Patrimonio Ancestral Kichwa" loading="lazy" />
-                            </a>
-                            <div class="tour-card-title-bar">
-                                <a href="#detalle-paquete-3">PATRIMONIO ANCESTRAL KICHWA</a>
-                            </div>
-                        </div>
-                        <div class="tour-card-data">
-                            <div class="tour-data-row">
-                                <div class="tour-data-label">Tipo:</div>
-                                <div class="tour-data-value">
-                                    <img class="tour-data-icon" src="img/icon-agro.png" alt="Agroturismo" width="42" height="42" loading="lazy">
-                                    <span>Agroturismo</span>
+                                <div class="tour-detail-hero-overlay"></div>
+                                <div class="tour-detail-hero-text">
+                                    <h2>PATRIMONIO ANCESTRAL KICHWA</h2>
+                                    <p>"Meet the women behind the living heritage of Cotacachi." — Conoce a las mujeres detrás del patrimonio vivo de Cotacachi.</p>
+                                    <div class="tour-detail-pricebar">
+                                        <span class="price">$ 139,00 por persona</span>
+                                        <span class="pax">Mínimo 4 pax</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="tour-data-row">
-                                <div class="tour-data-label">Dificultad:</div>
-                                <div class="tour-data-value">
-                                    <img class="tour-data-icon" src="img/icon-facil.png" alt="Bajo" width="42" height="42" loading="lazy">
-                                    <span>Bajo</span>
-                                </div>
-                            </div>
-                            <div class="tour-data-row">
-                                <div class="tour-data-label">Servicio:</div>
-                                <div class="tour-data-value">
-                                    <img class="tour-data-icon" src="img/icon-guia.png" alt="Guía especializado" width="42" height="42" loading="lazy">
-                                    <span>Guía especializado</span>
-                                </div>
-                            </div>
-                            <div class="tour-data-row">
-                                <div class="tour-data-label">Grupo:</div>
-                                <div class="tour-data-value">
-                                    <img class="tour-data-icon" src="img/icon-grupo.png" alt="Mínimo 4 pax" width="42" height="42" loading="lazy">
-                                    <span>Mín. 4 pax</span>
-                                </div>
-                            </div>
-                            <div class="tour-card-pricebar">
-                                <div class="tour-card-days">
-                                    <span class="tour-days-label">Full Day</span>
-                                    <span class="tour-price-label">$ 139,00 por persona</span>
-                                </div>
-                                <div class="tour-card-cta">
-                                    <a href="#detalle-paquete-3" class="btn btn-accent btn-sm">Ver detalles</a>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
 
-                    <!-- ============ PAQUETE 4 — CUICOCHA NATURE TREK ============ -->
-                    <article class="tour-card-premium" id="paquete-4">
-                        <div class="tour-card-hero">
-                            <a href="#detalle-paquete-4" class="tour-card-img-link">
+                            <div class="tour-detail-body">
+                                <div class="tour-detail-cols">
+
+                                    <div class="tour-detail-main">
+                                        <div class="tour-detail-callout">
+                                            Explora el patrimonio agrícola mundial reconocido por la UNESCO/FAO: un viaje conmovedor al corazón de la Chakra Andina, las abejas nativas, la mística chicha SARA MAMA y las mujeres guardianas de semillas.
+                                        </div>
+
+                                        <h3 class="tour-detail-subtitle">Descripción de la Experiencia</h3>
+                                        <p>Este tour conecta directamente al visitante con el Sistema Importante del Patrimonio Agrícola Mundial (SIPAM) de Cotacachi. El eje central son las mujeres rurales y familias campesinas que preservan la agrobiodiversidad, las semillas ancestrales y las tradiciones culinarias, convirtiendo su herencia en un motor de desarrollo comunitario sustentable.</p>
+
+                                        <h3 class="tour-detail-subtitle">Itinerario</h3>
+                                        <ul class="tour-itinerary">
+                                            <li><span class="itinerary-time">08:00 – 10:00</span><span class="itinerary-text">Centro de Interpretación Jambi Mascari: exposición interactiva sobre la historia y estructura de la Chakra Andina (SIPAM).</span></li>
+                                            <li><span class="itinerary-time">10:15 – 12:00</span><span class="itinerary-text">Chakra y Mundo de las Abejas (Comuna Piava Chupa): recorrido entre cultivos, polinización y producción apícola.</span></li>
+                                            <li><span class="itinerary-time">12:15 – 13:30</span><span class="itinerary-text">Almuerzo Andino: menú elaborado con insumos agroecológicos de las chakras locales.</span></li>
+                                            <li><span class="itinerary-time">13:45 – 15:00</span><span class="itinerary-text">SARA MAMA (Comuna Turuco): encuentro con la asociación de mujeres procesadoras de la ancestral chicha de jora (incluye degustación).</span></li>
+                                            <li><span class="itinerary-time">15:30 – 17:00</span><span class="itinerary-text">Guardianas de Semillas (Comuna Cumbas Conde): vivencia con familias dedicadas al rescate y conservación de semillas nativas.</span></li>
+                                        </ul>
+                                    </div>
+
+                                    <aside class="tour-detail-side">
+                                        <div class="tour-facts">
+                                            <h3 class="tour-detail-subtitle">Ficha Técnica</h3>
+                                            <ul>
+                                                <li><strong>Duración</strong><span>Full Day / 1 día (08:00 – 17:30)</span></li>
+                                                <li><strong>Destino</strong><span>Comunidades Kichwas de Cotacachi (Jambi Mascari, Piava Chupa, Turuco y Cumbas Conde)</span></li>
+                                                <li><strong>Dificultad</strong><span>Bajo</span></li>
+                                                <li><strong>Estilo</strong><span>Agroturismo, turismo comunitario, gastronómico y patrimonio vivo</span></li>
+                                                <li><strong>Salida / Retorno</strong><span>Cotacachi / Otavalo</span></li>
+                                                <li><strong>Destacados</strong><span>Centro Jambi Mascari, ruta del polen, chicha SARA MAMA, guardianas de semillas</span></li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="tour-includes">
+                                            <h4><i class="fa-solid fa-circle-check"></i> Incluye</h4>
+                                            <ul>
+                                                <li>Transporte turístico</li>
+                                                <li>Guía especializado en agrobiodiversidad</li>
+                                                <li>Entrada al Centro Jambi Mascari</li>
+                                                <li>Almuerzo andino completo</li>
+                                                <li>Degustación y botella de chicha en SARA MAMA</li>
+                                                <li>Aportes a familias guardianas de semillas</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="tour-not-includes">
+                                            <h4><i class="fa-solid fa-circle-xmark"></i> No incluye</h4>
+                                            <ul>
+                                                <li>Compras directas de miel, semillas o artesanías</li>
+                                                <li>Bebidas extra</li>
+                                                <li>Propinas</li>
+                                                <li>Seguro individual</li>
+                                            </ul>
+                                        </div>
+
+                                        <a href="contacto.html" class="btn btn-accent">
+                                            Cotizar este tour
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </a>
+                                    </aside>
+
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- ============================================
+                             PAQUETE 4 — CUICOCHA NATURE TREK
+                        ============================================ -->
+                        <article class="tour-detail-block" id="paquete-4">
+                            <div class="tour-detail-hero">
+                                <!-- REEMPLAZAR IMAGEN: Cuicocha (carpeta Drive usuario) -->
                                 <img src="img/cuicocha.jpg" alt="Cuicocha Nature Trek" loading="lazy" />
-                            </a>
-                            <div class="tour-card-title-bar">
-                                <a href="#detalle-paquete-4">CUICOCHA NATURE TREK</a>
-                            </div>
-                        </div>
-                        <div class="tour-card-data">
-                            <div class="tour-data-row">
-                                <div class="tour-data-label">Tipo:</div>
-                                <div class="tour-data-value">
-                                    <img class="tour-data-icon" src="img/icon-trekking.png" alt="Trekking" width="42" height="42" loading="lazy">
-                                    <span>Trekking</span>
+                                <div class="tour-detail-hero-overlay"></div>
+                                <div class="tour-detail-hero-text">
+                                    <h2>CUICOCHA NATURE TREK</h2>
+                                    <p>"Walk the volcanic landscape, discover Andean nature, and experience Cotacachi." — Camina por el paisaje volcánico, descubre la naturaleza andina y vive Cotacachi.</p>
+                                    <div class="tour-detail-pricebar">
+                                        <span class="price">$ 95,00 por persona</span>
+                                        <span class="pax">Mínimo 4 pax</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="tour-data-row">
-                                <div class="tour-data-label">Dificultad:</div>
-                                <div class="tour-data-value">
-                                    <img class="tour-data-icon" src="img/icon-moderado.png" alt="Moderado a Medio/Alto" width="42" height="42" loading="lazy">
-                                    <span>Moderado a Medio/Alto</span>
-                                </div>
-                            </div>
-                            <div class="tour-data-row">
-                                <div class="tour-data-label">Servicio:</div>
-                                <div class="tour-data-value">
-                                    <img class="tour-data-icon" src="img/icon-guia.png" alt="Guía especializado" width="42" height="42" loading="lazy">
-                                    <span>Guía especializado</span>
-                                </div>
-                            </div>
-                            <div class="tour-data-row">
-                                <div class="tour-data-label">Grupo:</div>
-                                <div class="tour-data-value">
-                                    <img class="tour-data-icon" src="img/icon-grupo.png" alt="Mínimo 4 pax" width="42" height="42" loading="lazy">
-                                    <span>Mín. 4 pax</span>
-                                </div>
-                            </div>
-                            <div class="tour-card-pricebar">
-                                <div class="tour-card-days">
-                                    <span class="tour-days-label">Full Day</span>
-                                    <span class="tour-price-label">$ 95,00 por persona</span>
-                                </div>
-                                <div class="tour-card-cta">
-                                    <a href="#detalle-paquete-4" class="btn btn-accent btn-sm">Ver detalles</a>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
 
-                    <!-- ============ PAQUETE 5 — SABERES ANCESTRALES ============ -->
-                    <article class="tour-card-premium" id="paquete-5">
-                        <div class="tour-card-hero">
-                            <a href="#detalle-paquete-5" class="tour-card-img-link">
+                            <div class="tour-detail-body">
+                                <div class="tour-detail-cols">
+
+                                    <div class="tour-detail-main">
+                                        <div class="tour-detail-callout">
+                                            Acepta el desafío y bordea la caldera de un volcán activo: 14 kilómetros de trekking interpretativo rodeado de orquídeas, aves altoandinas, vistas majestuosas de la Laguna de Cuicocha y el encanto artesanal de Cotacachi.
+                                        </div>
+
+                                        <h3 class="tour-detail-subtitle">Descripción de la Experiencia</h3>
+                                        <p>Una travesía inolvidable diseñada para los amantes del senderismo y la fotografía. El recorrido bordea la cresta del cráter volcánico de Cuicocha, ofreciendo vistas panorámicas impresionantes del volcán Cotacachi y los valles andinos, complementado con guianza especializada en geología, botánica y un tiempo reconfortante en la ciudad del cuero.</p>
+
+                                        <h3 class="tour-detail-subtitle">Itinerario</h3>
+                                        <ul class="tour-itinerary">
+                                            <li><span class="itinerary-time">08:00 – 09:00</span><span class="itinerary-text">Salida e inducción en el Centro de Interpretación de la Reserva Ecológica.</span></li>
+                                            <li><span class="itinerary-time">09:00 – 13:00</span><span class="itinerary-text">Cuicocha Nature Trek: caminata de 4 a 5 horas por el sendero Gorky Campuzano con paradas interpretativas de flora, fauna y vulcanología.</span></li>
+                                            <li><span class="itinerary-time">13:30 – 14:30</span><span class="itinerary-text">Almuerzo Energético: comida reconfortante con sabores típicos de Cotacachi.</span></li>
+                                            <li><span class="itinerary-time">15:00 – 16:30</span><span class="itinerary-text">Cotacachi a tu Ritmo: recorrido libre por el centro comercial de cuero, con opción libre de café local.</span></li>
+                                        </ul>
+                                    </div>
+
+                                    <aside class="tour-detail-side">
+                                        <div class="tour-facts">
+                                            <h3 class="tour-detail-subtitle">Ficha Técnica</h3>
+                                            <ul>
+                                                <li><strong>Duración</strong><span>Full Day / 1 día (08:00 – 16:30)</span></li>
+                                                <li><strong>Destino</strong><span>Reserva Ecológica Cotacachi-Cayapas (Laguna de Cuicocha) y zona comercial de cuero Cotacachi</span></li>
+                                                <li><strong>Distancia</strong><span>12 a 14 km (Sendero Gorky Campuzano)</span></li>
+                                                <li><strong>Altitud</strong><span>3.100 a 3.500 m s. n. m.</span></li>
+                                                <li><strong>Dificultad</strong><span>Moderado a Medio/Alto (requiere condición física adecuada)</span></li>
+                                                <li><strong>Estilo</strong><span>Ecoturismo, trekking, aventura y naturaleza</span></li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="tour-includes">
+                                            <h4><i class="fa-solid fa-circle-check"></i> Incluye</h4>
+                                            <ul>
+                                                <li>Transporte turístico ida y vuelta</li>
+                                                <li>Guía nacional especializado en trekking y montaña</li>
+                                                <li>Registro / asistencia en Reserva Ecológica</li>
+                                                <li>Almuerzo local completo</li>
+                                                <li>Tiempo de exploración en Cotacachi</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="tour-not-includes">
+                                            <h4><i class="fa-solid fa-circle-xmark"></i> No incluye</h4>
+                                            <ul>
+                                                <li>Equipamiento personal de trekking</li>
+                                                <li>Patente / pago de ingreso a la laguna si aplicase</li>
+                                                <li>Consumos en cafeterías</li>
+                                                <li>Propinas</li>
+                                                <li>Seguro personal</li>
+                                            </ul>
+                                        </div>
+
+                                        <a href="contacto.html" class="btn btn-accent">
+                                            Cotizar este tour
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </a>
+                                    </aside>
+
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- ============================================
+                             PAQUETE 5 — SABERES ANCESTRALES
+                        ============================================ -->
+                        <article class="tour-detail-block" id="paquete-5">
+                            <div class="tour-detail-hero">
+                                <!-- REEMPLAZAR IMAGEN: Saberes Ancestrales (carpeta Drive usuario) -->
                                 <img src="img/ancestrales.jpg" alt="Saberes Ancestrales de la Tierra y la Mujer" loading="lazy" />
-                            </a>
-                            <div class="tour-card-title-bar">
-                                <a href="#detalle-paquete-5">SABERES ANCESTRALES DE LA TIERRA Y LA MUJER</a>
-                            </div>
-                        </div>
-                        <div class="tour-card-data">
-                            <div class="tour-data-row">
-                                <div class="tour-data-label">Tipo:</div>
-                                <div class="tour-data-value">
-                                    <img class="tour-data-icon" src="img/icon-vivencial.png" alt="Vivencial comunitario" width="42" height="42" loading="lazy">
-                                    <span>Vivencial comunitario</span>
+                                <div class="tour-detail-hero-overlay"></div>
+                                <div class="tour-detail-hero-text">
+                                    <h2>SABERES ANCESTRALES DE LA TIERRA Y LA MUJER</h2>
+                                    <p>"Where the land, women's hands and ancestral knowledge tell a story." — Donde la tierra, las manos de las mujeres y los saberes ancestrales cuentan una historia.</p>
+                                    <div class="tour-detail-pricebar">
+                                        <span class="price">$ 63,00 por persona</span>
+                                        <span class="pax">Mínimo 4 pax</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="tour-data-row">
-                                <div class="tour-data-label">Dificultad:</div>
-                                <div class="tour-data-value">
-                                    <img class="tour-data-icon" src="img/icon-moderado.png" alt="Bajo a Moderado" width="42" height="42" loading="lazy">
-                                    <span>Bajo a Moderado</span>
-                                </div>
-                            </div>
-                            <div class="tour-data-row">
-                                <div class="tour-data-label">Servicio:</div>
-                                <div class="tour-data-value">
-                                    <img class="tour-data-icon" src="img/icon-guia.png" alt="Guía nacional" width="42" height="42" loading="lazy">
-                                    <span>Guía nacional</span>
-                                </div>
-                            </div>
-                            <div class="tour-data-row">
-                                <div class="tour-data-label">Grupo:</div>
-                                <div class="tour-data-value">
-                                    <img class="tour-data-icon" src="img/icon-grupo.png" alt="Mínimo 4 pax" width="42" height="42" loading="lazy">
-                                    <span>Mín. 4 pax</span>
-                                </div>
-                            </div>
-                            <div class="tour-card-pricebar">
-                                <div class="tour-card-days">
-                                    <span class="tour-days-label">Full Day</span>
-                                    <span class="tour-price-label">$ 63,00 por persona</span>
-                                </div>
-                                <div class="tour-card-cta">
-                                    <a href="#detalle-paquete-5" class="btn btn-accent btn-sm">Ver detalles</a>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
 
-                    <!-- ============ PAQUETE 6 — INTAG ============ -->
-                    <article class="tour-card-premium" id="paquete-6">
-                        <div class="tour-card-hero">
-                            <a href="#detalle-paquete-6" class="tour-card-img-link">
+                            <div class="tour-detail-body">
+                                <div class="tour-detail-cols">
+
+                                    <div class="tour-detail-main">
+                                        <div class="tour-detail-callout">
+                                            Una experiencia transformadora que conecta el arado tradicional con yunta, la sabiduría médica de las parteras andinas, los hilos de las tejedoras Alli Maki y el poder curativo de las plantas medicinales.
+                                        </div>
+
+                                        <h3 class="tour-detail-subtitle">Descripción de la Experiencia</h3>
+                                        <p>Un homenaje a la memoria comunitaria a través de tres pilares: la tierra que alimenta (agronomía con yunta), las mujeres que crean (asociación de tejedoras) y la sabiduría que cuida la vida (medicina etnobotánica y partería tradicional). El viajero participa activamente en el trabajo del campo y escucha los saberes transmitidos de generación en generación.</p>
+
+                                        <h3 class="tour-detail-subtitle">Itinerario</h3>
+                                        <ul class="tour-itinerary">
+                                            <li><span class="itinerary-time">07:00 – 08:00</span><span class="itinerary-text">Traslado hacia la comunidad anfitriona.</span></li>
+                                            <li><span class="itinerary-time">08:00 – 09:30</span><span class="itinerary-text">La Tierra y la Yunta: explicación y práctica participativa de arado agrícola tradicional con bueyes.</span></li>
+                                            <li><span class="itinerary-time">09:30 – 11:30</span><span class="itinerary-text">Las Manos de las Mujeres: taller práctico de tejido y costura con la Asociación de Mujeres Alli Maki.</span></li>
+                                            <li><span class="itinerary-time">12:30 – 13:30</span><span class="itinerary-text">Almuerzo Comunitario: menú andino con insumos locales.</span></li>
+                                            <li><span class="itinerary-time">13:30 – 15:00</span><span class="itinerary-text">El Jardín de la Vida: recorrido interpretativo por el Jardín Etnobotánico de plantas medicinales.</span></li>
+                                            <li><span class="itinerary-time">15:00 – 17:30</span><span class="itinerary-text">La Sabiduría de la Partera: encuentro y simulación cultural sobre el cuidado ancestral de la mujer con la partera tradicional Sra. Inés Bonilla.</span></li>
+                                        </ul>
+                                    </div>
+
+                                    <aside class="tour-detail-side">
+                                        <div class="tour-facts">
+                                            <h3 class="tour-detail-subtitle">Ficha Técnica</h3>
+                                            <ul>
+                                                <li><strong>Duración</strong><span>Full Day / 1 día (07:00 – 18:30)</span></li>
+                                                <li><strong>Destino</strong><span>Comunidad La Calera (Cotacachi)</span></li>
+                                                <li><strong>Dificultad</strong><span>Bajo a Moderado</span></li>
+                                                <li><strong>Estilo</strong><span>Vivencial comunitario, etnobotánico, agropecuario y de género</span></li>
+                                                <li><strong>Salida / Retorno</strong><span>Otavalo / Cotacachi</span></li>
+                                                <li><strong>Destacados</strong><span>Arado con yunta, taller Alli Maki, jardín etnobotánico, partería tradicional</span></li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="tour-includes">
+                                            <h4><i class="fa-solid fa-circle-check"></i> Incluye</h4>
+                                            <ul>
+                                                <li>Transporte turístico privado</li>
+                                                <li>Guía nacional especializado (español/inglés)</li>
+                                                <li>Experiencia participativa con yunta</li>
+                                                <li>Taller y recuerdo artesanal con Asociación Alli Maki</li>
+                                                <li>Almuerzo comunitario</li>
+                                                <li>Ingreso al Jardín Etnobotánico y demostración de partería</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="tour-not-includes">
+                                            <h4><i class="fa-solid fa-circle-xmark"></i> No incluye</h4>
+                                            <ul>
+                                                <li>Compras de artesanías o remedios naturales</li>
+                                                <li>Atenciones médicas o consultas de salud</li>
+                                                <li>Propinas</li>
+                                                <li>Seguro individual</li>
+                                            </ul>
+                                        </div>
+
+                                        <a href="contacto.html" class="btn btn-accent">
+                                            Cotizar este tour
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </a>
+                                    </aside>
+
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- ============================================
+                             PAQUETE 6 — AROMAS, SABORES Y AVENTURA DE INTAG
+                        ============================================ -->
+                        <article class="tour-detail-block" id="paquete-6">
+                            <div class="tour-detail-hero">
+                                <!-- REEMPLAZAR IMAGEN: Intag (carpeta Drive usuario) -->
                                 <img src="img/intag.jpg" alt="Aromas, Sabores y Aventura de Intag" loading="lazy" />
-                            </a>
-                            <div class="tour-card-title-bar">
-                                <a href="#detalle-paquete-6">AROMAS, SABORES Y AVENTURA DE INTAG</a>
-                            </div>
-                        </div>
-                        <div class="tour-card-data">
-                            <div class="tour-data-row">
-                                <div class="tour-data-label">Tipo:</div>
-                                <div class="tour-data-value">
-                                    <img class="tour-data-icon" src="img/icon-aventura.png" alt="Aventura y agroturismo" width="42" height="42" loading="lazy">
-                                    <span>Aventura y agroturismo</span>
+                                <div class="tour-detail-hero-overlay"></div>
+                                <div class="tour-detail-hero-text">
+                                    <h2>AROMAS, SABORES Y AVENTURA DE INTAG</h2>
+                                    <p>"Fly through the forest, taste the land, discover the soul of Intag." — Vuela sobre el bosque, saborea la tierra y descubre el alma de Intag.</p>
+                                    <div class="tour-detail-pricebar">
+                                        <span class="price">$ 103,00 por persona</span>
+                                        <span class="pax">Mínimo 4 pax</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="tour-data-row">
-                                <div class="tour-data-label">Dificultad:</div>
-                                <div class="tour-data-value">
-                                    <img class="tour-data-icon" src="img/icon-moderado.png" alt="Bajo a Moderado" width="42" height="42" loading="lazy">
-                                    <span>Bajo a Moderado</span>
-                                </div>
-                            </div>
-                            <div class="tour-data-row">
-                                <div class="tour-data-label">Servicio:</div>
-                                <div class="tour-data-value">
-                                    <img class="tour-data-icon" src="img/icon-guia.png" alt="Guía bilingüe" width="42" height="42" loading="lazy">
-                                    <span>Guía bilingüe</span>
-                                </div>
-                            </div>
-                            <div class="tour-data-row">
-                                <div class="tour-data-label">Grupo:</div>
-                                <div class="tour-data-value">
-                                    <img class="tour-data-icon" src="img/icon-grupo.png" alt="Mínimo 4 pax" width="42" height="42" loading="lazy">
-                                    <span>Mín. 4 pax</span>
-                                </div>
-                            </div>
-                            <div class="tour-card-pricebar">
-                                <div class="tour-card-days">
-                                    <span class="tour-days-label">Full Day</span>
-                                    <span class="tour-price-label">$ 103,00 por persona</span>
-                                </div>
-                                <div class="tour-card-cta">
-                                    <a href="#detalle-paquete-6" class="btn btn-accent btn-sm">Ver detalles</a>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
 
-                    <!-- ============ PAQUETE 7 — ALPACAS Y TEJIDOS ============ -->
-                    <article class="tour-card-premium" id="paquete-7">
-                        <div class="tour-card-hero">
-                            <a href="#detalle-paquete-7" class="tour-card-img-link">
+                            <div class="tour-detail-body">
+                                <div class="tour-detail-cols">
+
+                                    <div class="tour-detail-main">
+                                        <div class="tour-detail-callout">
+                                            Desciende de los Andes al exuberante bosque subtropical de Intag: siente el dulce aroma del trapiche de caña, camina entre fincas ecológicas, saborea café orgánico de especialidad y vuela en 580 metros de canopy sobre las copas de los árboles.
+                                        </div>
+
+                                        <h3 class="tour-detail-subtitle">Descripción de la Experiencia</h3>
+                                        <p>Un recorrido progresivo que muestra el drástico cambio de paisaje desde el páramo andino hacia el bosque nublado subtropical de Intag. Combina la tradición de la panela, la agricultura sustentable, la degustación de uno de los mejores cafés orgánicos del país y la dosis perfecta de adrenalina rodeado de biodiversidad.</p>
+
+                                        <h3 class="tour-detail-subtitle">Itinerario</h3>
+                                        <ul class="tour-itinerary">
+                                            <li><span class="itinerary-time">07:00 – 08:30</span><span class="itinerary-text">Viaje panorámico e interpretación del cambio de piso climático hacia Intag.</span></li>
+                                            <li><span class="itinerary-time">08:30 – 10:00</span><span class="itinerary-text">El Trapiche: molienda artesanal de caña de azúcar y degustación de panela fresca en Pucará.</span></li>
+                                            <li><span class="itinerary-time">10:30 – 13:00</span><span class="itinerary-text">Finca La Rizaralda y Almuerzo: caminata por cultivos ecológicos hacia el mirador Balcón de Intag y almuerzo de la chakra a la mesa.</span></li>
+                                            <li><span class="itinerary-time">13:30 – 15:00</span><span class="itinerary-text">Del Grano a la Taza (Café El Carmelo): proceso completo del café orgánico (cultivo, tueste, molienda y cata).</span></li>
+                                            <li><span class="itinerary-time">15:30 – 17:30</span><span class="itinerary-text">Campo Colibrí: vuelo en Canopy (3 tramos / 580 metros) sobre el bosque subtropical.</span></li>
+                                        </ul>
+                                    </div>
+
+                                    <aside class="tour-detail-side">
+                                        <div class="tour-facts">
+                                            <h3 class="tour-detail-subtitle">Ficha Técnica</h3>
+                                            <ul>
+                                                <li><strong>Duración</strong><span>Full Day / 1 día (07:00 – 18:30)</span></li>
+                                                <li><strong>Destino</strong><span>Zona subtropical de Intag (Comunidad de Pucará / Apuela)</span></li>
+                                                <li><strong>Dificultad</strong><span>Bajo a Moderado</span></li>
+                                                <li><strong>Estilo</strong><span>Aventura, agroturismo, naturaleza y café de especialidad</span></li>
+                                                <li><strong>Salida / Retorno</strong><span>Otavalo</span></li>
+                                                <li><strong>Destacados</strong><span>Trapiche, Finca La Rizaralda, Café El Carmelo, Canopy 580 m</span></li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="tour-includes">
+                                            <h4><i class="fa-solid fa-circle-check"></i> Incluye</h4>
+                                            <ul>
+                                                <li>Transporte turístico privado adaptado a la zona</li>
+                                                <li>Guía bilingüe especializado</li>
+                                                <li>Entrada a la molienda</li>
+                                                <li>Ingreso a finca agroecológica</li>
+                                                <li>Almuerzo en Finca La Rizaralda</li>
+                                                <li>Experiencia y cata en Café El Carmelo</li>
+                                                <li>Circuito completo de Canopy en Campo Colibrí</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="tour-not-includes">
+                                            <h4><i class="fa-solid fa-circle-xmark"></i> No incluye</h4>
+                                            <ul>
+                                                <li>Compras de café o panela para llevar</li>
+                                                <li>Bebidas alcohólicas</li>
+                                                <li>Propinas</li>
+                                                <li>Seguro personal</li>
+                                            </ul>
+                                        </div>
+
+                                        <a href="contacto.html" class="btn btn-accent">
+                                            Cotizar este tour
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </a>
+                                    </aside>
+
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- ============================================
+                             PAQUETE 7 — ENTRE ALPACAS Y TEJIDOS ANDINOS
+                        ============================================ -->
+                        <article class="tour-detail-block" id="paquete-7">
+                            <div class="tour-detail-hero">
+                                <!-- REEMPLAZAR IMAGEN: Alpacas (carpeta Drive usuario) -->
                                 <img src="img/tejidos.jpg" alt="Entre Alpacas y Tejidos Andinos" loading="lazy" />
-                            </a>
-                            <div class="tour-card-title-bar">
-                                <a href="#detalle-paquete-7">ENTRE ALPACAS Y TEJIDOS ANDINOS</a>
-                            </div>
-                        </div>
-                        <div class="tour-card-data">
-                            <div class="tour-data-row">
-                                <div class="tour-data-label">Tipo:</div>
-                                <div class="tour-data-value">
-                                    <img class="tour-data-icon" src="img/icon-cultural.png" alt="Cultural y textil" width="42" height="42" loading="lazy">
-                                    <span>Cultural y textil</span>
+                                <div class="tour-detail-hero-overlay"></div>
+                                <div class="tour-detail-hero-text">
+                                    <h2>ENTRE ALPACAS Y TEJIDOS ANDINOS</h2>
+                                    <p>"From the highlands of Cotacachi to the hands that weave Andean identity." — Desde las tierras altas de Cotacachi hasta las manos que tejen la identidad andina.</p>
+                                    <div class="tour-detail-pricebar">
+                                        <span class="price">$ 102,00 por persona</span>
+                                        <span class="pax">Mínimo 4 pax</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="tour-data-row">
-                                <div class="tour-data-label">Dificultad:</div>
-                                <div class="tour-data-value">
-                                    <img class="tour-data-icon" src="img/icon-moderado.png" alt="Bajo a Moderado" width="42" height="42" loading="lazy">
-                                    <span>Bajo a Moderado</span>
-                                </div>
-                            </div>
-                            <div class="tour-data-row">
-                                <div class="tour-data-label">Servicio:</div>
-                                <div class="tour-data-value">
-                                    <img class="tour-data-icon" src="img/icon-guia.png" alt="Guía profesional" width="42" height="42" loading="lazy">
-                                    <span>Guía profesional</span>
-                                </div>
-                            </div>
-                            <div class="tour-data-row">
-                                <div class="tour-data-label">Grupo:</div>
-                                <div class="tour-data-value">
-                                    <img class="tour-data-icon" src="img/icon-grupo.png" alt="Mínimo 4 pax" width="42" height="42" loading="lazy">
-                                    <span>Mín. 4 pax</span>
-                                </div>
-                            </div>
-                            <div class="tour-card-pricebar">
-                                <div class="tour-card-days">
-                                    <span class="tour-days-label">Full Day</span>
-                                    <span class="tour-price-label">$ 102,00 por persona</span>
-                                </div>
-                                <div class="tour-card-cta">
-                                    <a href="#detalle-paquete-7" class="btn btn-accent btn-sm">Ver detalles</a>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
 
-                </div><!-- /.tours-cards-grid -->
+                            <div class="tour-detail-body">
+                                <div class="tour-detail-cols">
 
-                <!-- ============================================
-                     DETALLES COMPLETOS (se mantienen tus bloques)
-                ============================================ -->
+                                    <div class="tour-detail-main">
+                                        <div class="tour-detail-callout">
+                                            Una aventura en 4x4 hacia las faldas del volcán Cotacachi: conoce el criadero comunitario de alpacas en el páramo, camina por el Sendero Sagrado de Cuicocha y descubre el secreto del tinturado natural y tejido ancestral en telar.
+                                        </div>
 
-                <!-- PAQUETE 1 — DETALLE -->
-                <article class="tour-detail-block" id="detalle-paquete-1">
-                    <div class="tour-detail-hero">
-                        <img src="img/otavalo.jpg" alt="Raíces de Otavalo" loading="lazy" />
-                        <div class="tour-detail-hero-overlay"></div>
-                        <div class="tour-detail-hero-text">
-                            <h2>RAÍCES DE OTAVALO</h2>
-                            <p>"Meet the people, share the traditions, live the Andes." — Conoce a la gente, comparte las tradiciones, vive los Andes.</p>
-                            <div class="tour-detail-pricebar">
-                                <span class="price">$ 76,00 por persona</span>
-                                <span class="pax">Mínimo 4 pax</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tour-detail-body">
-                        <div class="tour-detail-cols">
-                            <div class="tour-detail-main">
-                                <div class="tour-detail-callout">
-                                    Una inmersión auténtica en el corazón de las comunidades Kichwa de Otavalo, donde el arte ancestral del tejido, la música viva, la gastronomía andina y la artesanía en totora se entrelazan para brindarte un encuentro humano inolvidable.
-                                </div>
-                                <h3 class="tour-detail-subtitle">Descripción de la Experiencia</h3>
-                                <p>Invita al viajero a salir de los circuitos convencionales para entrar en la vida cotidiana de las familias Kichwa. A través de talleres prácticos con artesanos, músicos y familias locales (muchas de ellas impulsadas por mujeres emprendedoras), el visitante descubre una cultura viva que preserva su identidad, tradiciones y cosmovisión en cada tejido, sabor y melodía.</p>
-                                <h3 class="tour-detail-subtitle">Itinerario</h3>
-                                <ul class="tour-itinerary">
-                                    <li><span class="itinerary-time">08:00 – 08:30</span><span class="itinerary-text">Bienvenida en Otavalo e introducción cultural.</span></li>
-                                    <li><span class="itinerary-time">08:30 – 10:30</span><span class="itinerary-text">Viviendo la Totora (Totora Wasi): historia, cosecha y elaboración de tu propia artesanía en San Rafael de la Laguna.</span></li>
-                                    <li><span class="itinerary-time">10:30 – 12:15</span><span class="itinerary-text">Entre Hilos y Memoria: taller participativo de hilado y telar de cintura en la Comuna de Agato (Tahuantinsuyo Weaving Workshop).</span></li>
-                                    <li><span class="itinerary-time">12:30 – 14:00</span><span class="itinerary-text">Almuerzo Comunitario: gastronomía local compartida en Peguche (Restaurante Ñanda Mañachi).</span></li>
-                                    <li><span class="itinerary-time">14:15 – 16:00</span><span class="itinerary-text">Cascada de Peguche: caminata interpretativa de naturaleza y espiritualidad andina.</span></li>
-                                    <li><span class="itinerary-time">16:15 – 17:30</span><span class="itinerary-text">Música que Vive: taller interactivo de instrumentos ancestrales y ritmos andinos con músicos de Ñanda Mañachi.</span></li>
-                                </ul>
-                            </div>
-                            <aside class="tour-detail-side">
-                                <div class="tour-facts">
-                                    <h3 class="tour-detail-subtitle">Ficha Técnica</h3>
-                                    <ul>
-                                        <li><strong>Duración</strong><span>Full Day / 1 día (08:00 – 17:30)</span></li>
-                                        <li><strong>Destino</strong><span>Otavalo, San Rafael de la Laguna, Agato y Peguche</span></li>
-                                        <li><strong>Dificultad</strong><span>Bajo (apto para familias, niños y adultos mayores)</span></li>
-                                        <li><strong>Estilo</strong><span>Turismo artesanal, cultural, vivencial comunitario y naturaleza</span></li>
-                                        <li><strong>Salida / Retorno</strong><span>Otavalo</span></li>
-                                        <li><strong>Destacados</strong><span>Taller de totora, telar de cintura, almuerzo tradicional, cascada de Peguche, música Kichwa</span></li>
-                                    </ul>
-                                </div>
-                                <div class="tour-includes">
-                                    <h4><i class="fa-solid fa-circle-check"></i> Incluye</h4>
-                                    <ul>
-                                        <li>Transporte turístico privado</li>
-                                        <li>Guía nativo especializado (español/inglés)</li>
-                                        <li>Almuerzo tradicional completo</li>
-                                        <li>Entradas a todos los atractivos</li>
-                                        <li>Taller interactivo y materiales artesanales (Totora Wasi)</li>
-                                        <li>Acompañamiento permanente y tiempo para compras directas</li>
-                                    </ul>
-                                </div>
-                                <div class="tour-not-includes">
-                                    <h4><i class="fa-solid fa-circle-xmark"></i> No incluye</h4>
-                                    <ul>
-                                        <li>Bebidas o consumos adicionales</li>
-                                        <li>Compras personales</li>
-                                        <li>Propinas</li>
-                                        <li>Seguro personal de viaje</li>
-                                    </ul>
-                                </div>
-                                <a href="contacto.html" class="btn btn-accent">Cotizar este tour <i class="fa-solid fa-arrow-right"></i></a>
-                            </aside>
-                        </div>
-                    </div>
-                </article>
+                                        <h3 class="tour-detail-subtitle">Descripción de la Experiencia</h3>
+                                        <p>Sigue el viaje completo de la fibra andina desde su origen en las alturas hasta la obra de arte terminada. Conecta la majestuosidad del páramo y la convivencia con alpacas, la espiritualidad de la laguna sagrada y el dominio técnico de los maestros tejedores de Agato.</p>
 
-                <!-- PAQUETE 2 — DETALLE -->
-                <article class="tour-detail-block" id="detalle-paquete-2">
-                    <div class="tour-detail-hero">
-                        <img src="img/cotacachi.jpg" alt="Tierra, Sabor y Espíritu Kichwa Cotacachi" loading="lazy" />
-                        <div class="tour-detail-hero-overlay"></div>
-                        <div class="tour-detail-hero-text">
-                            <h2>TIERRA, SABOR Y ESPÍRITU KICHWA COTACACHI</h2>
-                            <p>"Taste the Andes, share the traditions, connect with Pachamama." — Prueba los Andes, comparte las tradiciones, conéctate con la Pachamama.</p>
-                            <div class="tour-detail-pricebar">
-                                <span class="price">$ 143,00 por persona</span>
-                                <span class="pax">Mínimo 4 pax</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tour-detail-body">
-                        <div class="tour-detail-cols">
-                            <div class="tour-detail-main">
-                                <div class="tour-detail-callout">
-                                    Siente la energía ancestral de La Calera: moldea el barro con tus manos, descubre el secreto ancestral de la Pachamanka cocida bajo tierra y renueva tu espíritu en las vertientes sagradas de Cotacachi.
-                                </div>
-                                <h3 class="tour-detail-subtitle">Descripción de la Experiencia</h3>
-                                <p>Una experiencia de convivencia rural que entrelaza la tierra, la gastronomía, el arte y la espiritualidad Kichwa. El visitante trabaja el barro, cosecha en la chakra, participa en la preparación ritual de la Pachamanka, conoce la artesanía en semillas elaborada por mujeres locales y experimenta una conexión tranquila con la naturaleza en las vertientes sagradas.</p>
-                                <h3 class="tour-detail-subtitle">Itinerario</h3>
-                                <ul class="tour-itinerary">
-                                    <li><span class="itinerary-time">08:00 – 08:30</span><span class="itinerary-text">Bienvenida y traslado hacia la comunidad La Calera.</span></li>
-                                    <li><span class="itinerary-time">08:30 – 10:30</span><span class="itinerary-text">Barro, Manos y Memoria: taller artesanal de moldeado y pintura en cerámica en Rumy Allpa (te llevas tu recuerdo).</span></li>
-                                    <li><span class="itinerary-time">10:45 – 12:30</span><span class="itinerary-text">De la Chakra a la Pachamanka: cosecha de productos andinos, taller de bisutería en semillas con mujeres emprendedoras y ritual de siembra del alimento bajo tierra.</span></li>
-                                    <li><span class="itinerary-time">13:00 – 14:30</span><span class="itinerary-text">Pachamanka – Sabores de la Tierra: apertura de la Pachamanka y almuerzo buffet comunitario en La Casa del Kachipukru.</span></li>
-                                    <li><span class="itinerary-time">15:00 – 17:00</span><span class="itinerary-text">Ritual y Baño de Purificación (TUN-DUN): caminata interpretativa hacia las vertientes de agua y espacio ceremonial de limpieza espiritual.</span></li>
-                                    <li><span class="itinerary-time">17:30 – 18:00</span><span class="itinerary-text">Cierre y reflexión con los anfitriones comunitarios.</span></li>
-                                </ul>
-                            </div>
-                            <aside class="tour-detail-side">
-                                <div class="tour-facts">
-                                    <h3 class="tour-detail-subtitle">Ficha Técnica</h3>
-                                    <ul>
-                                        <li><strong>Duración</strong><span>Full Day / 1 día (08:00 – 18:00)</span></li>
-                                        <li><strong>Destino</strong><span>Comunidad La Calera y zonas rurales de Cotacachi</span></li>
-                                        <li><strong>Dificultad</strong><span>Bajo a Moderado</span></li>
-                                        <li><strong>Estilo</strong><span>Gastronómico ancestral, cultural, artesanal y bienestar/espiritual</span></li>
-                                        <li><strong>Salida / Retorno</strong><span>Cotacachi / Otavalo</span></li>
-                                        <li><strong>Destacados</strong><span>Cerámica Rumy Allpa, Pachamanka, bisutería en semillas, ritual de purificación</span></li>
-                                    </ul>
-                                </div>
-                                <div class="tour-includes">
-                                    <h4><i class="fa-solid fa-circle-check"></i> Incluye</h4>
-                                    <ul>
-                                        <li>Transporte turístico privado</li>
-                                        <li>Guía nativo especializado</li>
-                                        <li>Almuerzo tipo Pachamanka completo</li>
-                                        <li>Materiales para taller de barro y bisutería en semillas</li>
-                                        <li>Guía comunitario para el ritual de agua</li>
-                                        <li>Entradas a los sitios visitados</li>
-                                    </ul>
-                                </div>
-                                                                <div class="tour-not-includes">
-                                    <h4><i class="fa-solid fa-circle-xmark"></i> No incluye</h4>
-                                    <ul>
-                                        <li>Ropa de baño / toallas personales</li>
-                                        <li>Consumos o compras adicionales</li>
-                                        <li>Propinas</li>
-                                        <li>Seguro de viaje</li>
-                                    </ul>
-                                </div>
-                                <a href="contacto.html" class="btn btn-accent">Cotizar este tour <i class="fa-solid fa-arrow-right"></i></a>
-                            </aside>
-                        </div>
-                    </div>
-                </article>
+                                        <h3 class="tour-detail-subtitle">Itinerario</h3>
+                                        <ul class="tour-itinerary">
+                                            <li><span class="itinerary-time">08:00 – 09:15</span><span class="itinerary-text">Traslado e ingreso a la Comuna de Morochos para abordaje de vehículos 4x4.</span></li>
+                                            <li><span class="itinerary-time">09:15 – 11:15</span><span class="itinerary-text">Criadero Comunitario de Alpacas: ascenso en 4x4 a las faldas del Volcán Cotacachi, convivencia con alpacas y demostración del trasquilado / cuidado del animal.</span></li>
+                                            <li><span class="itinerary-time">11:45 – 13:00</span><span class="itinerary-text">Laguna de Cuicocha: interpretación de la cosmovisión andina en el Sendero Sagrado.</span></li>
+                                            <li><span class="itinerary-time">13:00 – 14:00</span><span class="itinerary-text">Almuerzo Comunitario: gastronomía local.</span></li>
+                                            <li><span class="itinerary-time">14:30 – 17:30</span><span class="itinerary-text">Tahuantinsuyo Weaving Workshop (Agato): museo textil, fibras de alpaca/lana, tintes vegetales y demostración en telares ancestrales.</span></li>
+                                        </ul>
+                                    </div>
 
-                <!-- PAQUETE 3 — DETALLE -->
-                <article class="tour-detail-block" id="detalle-paquete-3">
-                    <div class="tour-detail-hero">
-                        <img src="img/kichwa.jpg" alt="Patrimonio Ancestral Kichwa" loading="lazy" />
-                        <div class="tour-detail-hero-overlay"></div>
-                        <div class="tour-detail-hero-text">
-                            <h2>PATRIMONIO ANCESTRAL KICHWA</h2>
-                            <p>"Meet the women behind the living heritage of Cotacachi." — Conoce a las mujeres detrás del patrimonio vivo de Cotacachi.</p>
-                            <div class="tour-detail-pricebar">
-                                <span class="price">$ 139,00 por persona</span>
-                                <span class="pax">Mínimo 4 pax</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tour-detail-body">
-                        <div class="tour-detail-cols">
-                            <div class="tour-detail-main">
-                                <div class="tour-detail-callout">
-                                    Explora el patrimonio agrícola mundial reconocido por la UNESCO/FAO: un viaje conmovedor al corazón de la Chakra Andina, las abejas nativas, la mística chicha SARA MAMA y las mujeres guardianas de semillas.
-                                </div>
-                                <h3 class="tour-detail-subtitle">Descripción de la Experiencia</h3>
-                                <p>Este tour conecta directamente al visitante con el Sistema Importante del Patrimonio Agrícola Mundial (SIPAM) de Cotacachi. El eje central son las mujeres rurales y familias campesinas que preservan la agrobiodiversidad, las semillas ancestrales y las tradiciones culinarias, convirtiendo su herencia en un motor de desarrollo comunitario sustentable.</p>
-                                <h3 class="tour-detail-subtitle">Itinerario</h3>
-                                <ul class="tour-itinerary">
-                                    <li><span class="itinerary-time">08:00 – 10:00</span><span class="itinerary-text">Centro de Interpretación Jambi Mascari: exposición interactiva sobre la historia y estructura de la Chakra Andina (SIPAM).</span></li>
-                                    <li><span class="itinerary-time">10:15 – 12:00</span><span class="itinerary-text">Chakra y Mundo de las Abejas (Comuna Piava Chupa): recorrido entre cultivos, polinización y producción apícola.</span></li>
-                                    <li><span class="itinerary-time">12:15 – 13:30</span><span class="itinerary-text">Almuerzo Andino: menú elaborado con insumos agroecológicos de las chakras locales.</span></li>
-                                    <li><span class="itinerary-time">13:45 – 15:00</span><span class="itinerary-text">SARA MAMA (Comuna Turuco): encuentro con la asociación de mujeres procesadoras de la ancestral chicha de jora (incluye degustación).</span></li>
-                                    <li><span class="itinerary-time">15:30 – 17:00</span><span class="itinerary-text">Guardianas de Semillas (Comuna Cumbas Conde): vivencia con familias dedicadas al rescate y conservación de semillas nativas.</span></li>
-                                </ul>
-                            </div>
-                            <aside class="tour-detail-side">
-                                <div class="tour-facts">
-                                    <h3 class="tour-detail-subtitle">Ficha Técnica</h3>
-                                    <ul>
-                                        <li><strong>Duración</strong><span>Full Day / 1 día (08:00 – 17:30)</span></li>
-                                        <li><strong>Destino</strong><span>Comunidades Kichwas de Cotacachi (Jambi Mascari, Piava Chupa, Turuco y Cumbas Conde)</span></li>
-                                        <li><strong>Dificultad</strong><span>Bajo</span></li>
-                                        <li><strong>Estilo</strong><span>Agroturismo, turismo comunitario, gastronómico y patrimonio vivo</span></li>
-                                        <li><strong>Salida / Retorno</strong><span>Cotacachi / Otavalo</span></li>
-                                        <li><strong>Destacados</strong><span>Centro Jambi Mascari, ruta del polen, chicha SARA MAMA, guardianas de semillas</span></li>
-                                    </ul>
-                                </div>
-                                <div class="tour-includes">
-                                    <h4><i class="fa-solid fa-circle-check"></i> Incluye</h4>
-                                    <ul>
-                                        <li>Transporte turístico</li>
-                                        <li>Guía especializado en agrobiodiversidad</li>
-                                        <li>Entrada al Centro Jambi Mascari</li>
-                                        <li>Almuerzo andino completo</li>
-                                        <li>Degustación y botella de chicha en SARA MAMA</li>
-                                        <li>Aportes a familias guardianas de semillas</li>
-                                    </ul>
-                                </div>
-                                <div class="tour-not-includes">
-                                    <h4><i class="fa-solid fa-circle-xmark"></i> No incluye</h4>
-                                    <ul>
-                                        <li>Compras directas de miel, semillas o artesanías</li>
-                                        <li>Bebidas extra</li>
-                                        <li>Propinas</li>
-                                        <li>Seguro individual</li>
-                                    </ul>
-                                </div>
-                                <a href="contacto.html" class="btn btn-accent">Cotizar este tour <i class="fa-solid fa-arrow-right"></i></a>
-                            </aside>
-                        </div>
-                    </div>
-                </article>
+                                    <aside class="tour-detail-side">
+                                        <div class="tour-facts">
+                                            <h3 class="tour-detail-subtitle">Ficha Técnica</h3>
+                                            <ul>
+                                                <li><strong>Duración</strong><span>Full Day / 1 día (08:00 – 18:00)</span></li>
+                                                <li><strong>Destino</strong><span>Comuna de Morochos, Volcán Cotacachi, Cuicocha y Agato</span></li>
+                                                <li><strong>Dificultad</strong><span>Bajo a Moderado</span></li>
+                                                <li><strong>Estilo</strong><span>Turismo cultural, comunitario, agropecuario, textil y páramos</span></li>
+                                                <li><strong>Salida / Retorno</strong><span>Otavalo / Cotacachi</span></li>
+                                                <li><strong>Destacados</strong><span>Ascenso en 4x4, criadero de alpacas, trasquilado, Sendero Sagrado de Cuicocha, Tahuantinsuyo Weaving Workshop</span></li>
+                                            </ul>
+                                        </div>
 
-                <!-- PAQUETE 4 — DETALLE -->
-                <article class="tour-detail-block" id="detalle-paquete-4">
-                    <div class="tour-detail-hero">
-                        <img src="img/cuicocha.jpg" alt="Cuicocha Nature Trek" loading="lazy" />
-                        <div class="tour-detail-hero-overlay"></div>
-                        <div class="tour-detail-hero-text">
-                            <h2>CUICOCHA NATURE TREK</h2>
-                            <p>"Walk the volcanic landscape, discover Andean nature, and experience Cotacachi." — Camina por el paisaje volcánico, descubre la naturaleza andina y vive Cotacachi.</p>
-                            <div class="tour-detail-pricebar">
-                                <span class="price">$ 95,00 por persona</span>
-                                <span class="pax">Mínimo 4 pax</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tour-detail-body">
-                        <div class="tour-detail-cols">
-                            <div class="tour-detail-main">
-                                <div class="tour-detail-callout">
-                                    Acepta el desafío y bordea la caldera de un volcán activo: 14 kilómetros de trekking interpretativo rodeado de orquídeas, aves altoandinas, vistas majestuosas de la Laguna de Cuicocha y el encanto artesanal de Cotacachi.
-                                </div>
-                                <h3 class="tour-detail-subtitle">Descripción de la Experiencia</h3>
-                                <p>Una travesía inolvidable diseñada para los amantes del senderismo y la fotografía. El recorrido bordea la cresta del cráter volcánico de Cuicocha, ofreciendo vistas panorámicas impresionantes del volcán Cotacachi y los valles andinos, complementado con guianza especializada en geología, botánica y un tiempo reconfortante en la ciudad del cuero.</p>
-                                <h3 class="tour-detail-subtitle">Itinerario</h3>
-                                <ul class="tour-itinerary">
-                                    <li><span class="itinerary-time">08:00 – 09:00</span><span class="itinerary-text">Salida e inducción en el Centro de Interpretación de la Reserva Ecológica.</span></li>
-                                    <li><span class="itinerary-time">09:00 – 13:00</span><span class="itinerary-text">Cuicocha Nature Trek: caminata de 4 a 5 horas por el sendero Gorky Campuzano con paradas interpretativas de flora, fauna y vulcanología.</span></li>
-                                    <li><span class="itinerary-time">13:30 – 14:30</span><span class="itinerary-text">Almuerzo Energético: comida reconfortante con sabores típicos de Cotacachi.</span></li>
-                                    <li><span class="itinerary-time">15:00 – 16:30</span><span class="itinerary-text">Cotacachi a tu Ritmo: recorrido libre por el centro comercial de cuero, con opción libre de café local.</span></li>
-                                </ul>
-                            </div>
-                            <aside class="tour-detail-side">
-                                <div class="tour-facts">
-                                    <h3 class="tour-detail-subtitle">Ficha Técnica</h3>
-                                    <ul>
-                                        <li><strong>Duración</strong><span>Full Day / 1 día (08:00 – 16:30)</span></li>
-                                        <li><strong>Destino</strong><span>Reserva Ecológica Cotacachi-Cayapas (Laguna de Cuicocha) y zona comercial de cuero Cotacachi</span></li>
-                                        <li><strong>Distancia</strong><span>12 a 14 km (Sendero Gorky Campuzano)</span></li>
-                                        <li><strong>Altitud</strong><span>3.100 a 3.500 m s. n. m.</span></li>
-                                        <li><strong>Dificultad</strong><span>Moderado a Medio/Alto (requiere condición física adecuada)</span></li>
-                                        <li><strong>Estilo</strong><span>Ecoturismo, trekking, aventura y naturaleza</span></li>
-                                    </ul>
-                                </div>
-                                <div class="tour-includes">
-                                    <h4><i class="fa-solid fa-circle-check"></i> Incluye</h4>
-                                    <ul>
-                                        <li>Transporte turístico ida y vuelta</li>
-                                        <li>Guía nacional especializado en trekking y montaña</li>
-                                        <li>Registro / asistencia en Reserva Ecológica</li>
-                                        <li>Almuerzo local completo</li>
-                                        <li>Tiempo de exploración en Cotacachi</li>
-                                    </ul>
-                                </div>
-                                <div class="tour-not-includes">
-                                    <h4><i class="fa-solid fa-circle-xmark"></i> No incluye</h4>
-                                    <ul>
-                                        <li>Equipamiento personal de trekking</li>
-                                        <li>Patente / pago de ingreso a la laguna si aplicase</li>
-                                        <li>Consumos en cafeterías</li>
-                                        <li>Propinas</li>
-                                        <li>Seguro personal</li>
-                                    </ul>
-                                </div>
-                                <a href="contacto.html" class="btn btn-accent">Cotizar este tour <i class="fa-solid fa-arrow-right"></i></a>
-                            </aside>
-                        </div>
-                    </div>
-                </article>
+                                        <div class="tour-includes">
+                                            <h4><i class="fa-solid fa-circle-check"></i> Incluye</h4>
+                                            <ul>
+                                                <li>Transporte turístico privado</li>
+                                                <li>Expedición en vehículo 4x4 hacia el criadero de alpacas</li>
+                                                <li>Guía profesional de turismo</li>
+                                                <li>Entradas a la Comuna Morochos y taller de trasquilado</li>
+                                                <li>Almuerzo local completo</li>
+                                                <li>Visita guiada al taller textil con maestros artesanos</li>
+                                            </ul>
+                                        </div>
 
-                <!-- PAQUETE 5 — DETALLE -->
-                <article class="tour-detail-block" id="detalle-paquete-5">
-                    <div class="tour-detail-hero">
-                        <img src="img/ancestrales.jpg" alt="Saberes Ancestrales de la Tierra y la Mujer" loading="lazy" />
-                        <div class="tour-detail-hero-overlay"></div>
-                        <div class="tour-detail-hero-text">
-                            <h2>SABERES ANCESTRALES DE LA TIERRA Y LA MUJER</h2>
-                            <p>"Where the land, women's hands and ancestral knowledge tell a story." — Donde la tierra, las manos de las mujeres y los saberes ancestrales cuentan una historia.</p>
-                            <div class="tour-detail-pricebar">
-                                <span class="price">$ 63,00 por persona</span>
-                                <span class="pax">Mínimo 4 pax</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tour-detail-body">
-                        <div class="tour-detail-cols">
-                            <div class="tour-detail-main">
-                                <div class="tour-detail-callout">
-                                    Una experiencia transformadora que conecta el arado tradicional con yunta, la sabiduría médica de las parteras andinas, los hilos de las tejedoras Alli Maki y el poder curativo de las plantas medicinales.
-                                </div>
-                                <h3 class="tour-detail-subtitle">Descripción de la Experiencia</h3>
-                                <p>Un homenaje a la memoria comunitaria a través de tres pilares: la tierra que alimenta (agronomía con yunta), las mujeres que crean (asociación de tejedoras) y la sabiduría que cuida la vida (medicina etnobotánica y partería tradicional). El viajero participa activamente en el trabajo del campo y escucha los saberes transmitidos de generación en generación.</p>
-                                <h3 class="tour-detail-subtitle">Itinerario</h3>
-                                <ul class="tour-itinerary">
-                                    <li><span class="itinerary-time">07:00 – 08:00</span><span class="itinerary-text">Traslado hacia la comunidad anfitriona.</span></li>
-                                    <li><span class="itinerary-time">08:00 – 09:30</span><span class="itinerary-text">La Tierra y la Yunta: explicación y práctica participativa de arado agrícola tradicional con bueyes.</span></li>
-                                    <li><span class="itinerary-time">09:30 – 11:30</span><span class="itinerary-text">Las Manos de las Mujeres: taller práctico de tejido y costura con la Asociación de Mujeres Alli Maki.</span></li>
-                                    <li><span class="itinerary-time">12:30 – 13:30</span><span class="itinerary-text">Almuerzo Comunitario: menú andino con insumos locales.</span></li>
-                                    <li><span class="itinerary-time">13:30 – 15:00</span><span class="itinerary-text">El Jardín de la Vida: recorrido interpretativo por el Jardín Etnobotánico de plantas medicinales.</span></li>
-                                    <li><span class="itinerary-time">15:00 – 17:30</span><span class="itinerary-text">La Sabiduría de la Partera: encuentro y simulación cultural sobre el cuidado ancestral de la mujer con la partera tradicional Sra. Inés Bonilla.</span></li>
-                                </ul>
-                            </div>
-                            <aside class="tour-detail-side">
-                                <div class="tour-facts">
-                                    <h3 class="tour-detail-subtitle">Ficha Técnica</h3>
-                                    <ul>
-                                        <li><strong>Duración</strong><span>Full Day / 1 día (07:00 – 18:30)</span></li>
-                                        <li><strong>Destino</strong><span>Comunidad La Calera (Cotacachi)</span></li>
-                                        <li><strong>Dificultad</strong><span>Bajo a Moderado</span></li>
-                                        <li><strong>Estilo</strong><span>Vivencial comunitario, etnobotánico, agropecuario y de género</span></li>
-                                        <li><strong>Salida / Retorno</strong><span>Otavalo / Cotacachi</span></li>
-                                        <li><strong>Destacados</strong><span>Arado con yunta, taller Alli Maki, jardín etnobotánico, partería tradicional</span></li>
-                                    </ul>
-                                </div>
-                                <div class="tour-includes">
-                                    <h4><i class="fa-solid fa-circle-check"></i> Incluye</h4>
-                                    <ul>
-                                        <li>Transporte turístico privado</li>
-                                        <li>Guía nacional especializado (español/inglés)</li>
-                                        <li>Experiencia participativa con yunta</li>
-                                        <li>Taller y recuerdo artesanal con Asociación Alli Maki</li>
-                                        <li>Almuerzo comunitario</li>
-                                        <li>Ingreso al Jardín Etnobotánico y demostración de partería</li>
-                                    </ul>
-                                </div>
-                                <div class="tour-not-includes">
-                                    <h4><i class="fa-solid fa-circle-xmark"></i> No incluye</h4>
-                                    <ul>
-                                        <li>Compras de artesanías o remedios naturales</li>
-                                        <li>Atenciones médicas o consultas de salud</li>
-                                        <li>Propinas</li>
-                                        <li>Seguro individual</li>
-                                    </ul>
-                                </div>
-                                <a href="contacto.html" class="btn btn-accent">Cotizar este tour <i class="fa-solid fa-arrow-right"></i></a>
-                            </aside>
-                        </div>
-                    </div>
-                </article>
+                                        <div class="tour-not-includes">
+                                            <h4><i class="fa-solid fa-circle-xmark"></i> No incluye</h4>
+                                            <ul>
+                                                <li>Compras de prendas o artesanías en lana de alpaca</li>
+                                                <li>Consumos adicionales</li>
+                                                <li>Propinas</li>
+                                                <li>Seguro individual</li>
+                                            </ul>
+                                        </div>
 
-                <!-- PAQUETE 6 — DETALLE -->
-                <article class="tour-detail-block" id="detalle-paquete-6">
-                    <div class="tour-detail-hero">
-                        <img src="img/intag.jpg" alt="Aromas, Sabores y Aventura de Intag" loading="lazy" />
-                        <div class="tour-detail-hero-overlay"></div>
-                        <div class="tour-detail-hero-text">
-                            <h2>AROMAS, SABORES Y AVENTURA DE INTAG</h2>
-                            <p>"Fly through the forest, taste the land, discover the soul of Intag." — Vuela sobre el bosque, saborea la tierra y descubre el alma de Intag.</p>
-                            <div class="tour-detail-pricebar">
-                                <span class="price">$ 103,00 por persona</span>
-                                <span class="pax">Mínimo 4 pax</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tour-detail-body">
-                        <div class="tour-detail-cols">
-                            <div class="tour-detail-main">
-                                <div class="tour-detail-callout">
-                                    Desciende de los Andes al exuberante bosque subtropical de Intag: siente el dulce aroma del trapiche de caña, camina entre fincas ecológicas, saborea café orgánico de especialidad y vuela en 580 metros de canopy sobre las copas de los árboles.
-                                </div>
-                                <h3 class="tour-detail-subtitle">Descripción de la Experiencia</h3>
-                                <p>Un recorrido progresivo que muestra el drástico cambio de paisaje desde el páramo andino hacia el bosque nublado subtropical de Intag. Combina la tradición de la panela, la agricultura sustentable, la degustación de uno de los mejores cafés orgánicos del país y la dosis perfecta de adrenalina rodeado de biodiversidad.</p>
-                                <h3 class="tour-detail-subtitle">Itinerario</h3>
-                                <ul class="tour-itinerary">
-                                    <li><span class="itinerary-time">07:00 – 08:30</span><span class="itinerary-text">Viaje panorámico e interpretación del cambio de piso climático hacia Intag.</span></li>
-                                    <li><span class="itinerary-time">08:30 – 10:00</span><span class="itinerary-text">El Trapiche: molienda artesanal de caña de azúcar y degustación de panela fresca en Pucará.</span></li>
-                                    <li><span class="itinerary-time">10:30 – 13:00</span><span class="itinerary-text">Finca La Rizaralda y Almuerzo: caminata por cultivos ecológicos hacia el mirador Balcón de Intag y almuerzo de la chakra a la mesa.</span></li>
-                                    <li><span class="itinerary-time">13:30 – 15:00</span><span class="itinerary-text">Del Grano a la Taza (Café El Carmelo): proceso completo del café orgánico (cultivo, tueste, molienda y cata).</span></li>
-                                    <li><span class="itinerary-time">15:30 – 17:30</span><span class="itinerary-text">Campo Colibrí: vuelo en Canopy (3 tramos / 580 metros) sobre el bosque subtropical.</span></li>
-                                </ul>
-                            </div>
-                            <aside class="tour-detail-side">
-                                <div class="tour-facts">
-                                    <h3 class="tour-detail-subtitle">Ficha Técnica</h3>
-                                    <ul>
-                                        <li><strong>Duración</strong><span>Full Day / 1 día (07:00 – 18:30)</span></li>
-                                        <li><strong>Destino</strong><span>Zona subtropical de Intag (Comunidad de Pucará / Apuela)</span></li>
-                                        <li><strong>Dificultad</strong><span>Bajo a Moderado</span></li>
-                                        <li><strong>Estilo</strong><span>Aventura, agroturismo, naturaleza y café de especialidad</span></li>
-                                        <li><strong>Salida / Retorno</strong><span>Otavalo</span></li>
-                                        <li><strong>Destacados</strong><span>Trapiche, Finca La Rizaralda, Café El Carmelo, Canopy 580 m</span></li>
-                                    </ul>
-                                </div>
-                                <div class="tour-includes">
-                                    <h4><i class="fa-solid fa-circle-check"></i> Incluye</h4>
-                                    <ul>
-                                        <li>Transporte turístico privado adaptado a la zona</li>
-                                        <li>Guía bilingüe especializado</li>
-                                        <li>Entrada a la molienda</li>
-                                        <li>Ingreso a finca agroecológica</li>
-                                        <li>Almuerzo en Finca La Rizaralda</li>
-                                        <li>Experiencia y cata en Café El Carmelo</li>
-                                        <li>Circuito completo de Canopy en Campo Colibrí</li>
-                                    </ul>
-                                </div>
-                                <div class="tour-not-includes">
-                                    <h4><i class="fa-solid fa-circle-xmark"></i> No incluye</h4>
-                                    <ul>
-                                        <li>Compras de café o panela para llevar</li>
-                                        <li>Bebidas alcohólicas</li>
-                                        <li>Propinas</li>
-                                        <li>Seguro personal</li>
-                                    </ul>
-                                </div>
-                                <a href="contacto.html" class="btn btn-accent">Cotizar este tour <i class="fa-solid fa-arrow-right"></i></a>
-                            </aside>
-                        </div>
-                    </div>
-                </article>
+                                        <a href="contacto.html" class="btn btn-accent">
+                                            Cotizar este tour
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </a>
+                                    </aside>
 
-                <!-- PAQUETE 7 — DETALLE -->
-                <article class="tour-detail-block" id="detalle-paquete-7">
-                    <div class="tour-detail-hero">
-                        <img src="img/tejidos.jpg" alt="Entre Alpacas y Tejidos Andinos" loading="lazy" />
-                        <div class="tour-detail-hero-overlay"></div>
-                        <div class="tour-detail-hero-text">
-                            <h2>ENTRE ALPACAS Y TEJIDOS ANDINOS</h2>
-                            <p>"From the highlands of Cotacachi to the hands that weave Andean identity." — Desde las tierras altas de Cotacachi hasta las manos que tejen la identidad andina.</p>
-                            <div class="tour-detail-pricebar">
-                                <span class="price">$ 102,00 por persona</span>
-                                <span class="pax">Mínimo 4 pax</span>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="tour-detail-body">
-                        <div class="tour-detail-cols">
-                            <div class="tour-detail-main">
-                                <div class="tour-detail-callout">
-                                    Una aventura en 4x4 hacia las faldas del volcán Cotacachi: conoce el criadero comunitario de alpacas en el páramo, camina por el Sendero Sagrado de Cuicocha y descubre el secreto del tinturado natural y tejido ancestral en telar.
-                                </div>
-                                <h3 class="tour-detail-subtitle">Descripción de la Experiencia</h3>
-                                <p>Sigue el viaje completo de la fibra andina desde su origen en las alturas hasta la obra de arte terminada. Conecta la majestuosidad del páramo y la convivencia con alpacas, la espiritualidad de la laguna sagrada y el dominio técnico de los maestros tejedores de Agato.</p>
-                                <h3 class="tour-detail-subtitle">Itinerario</h3>
-                                <ul class="tour-itinerary">
-                                    <li><span class="itinerary-time">08:00 – 09:15</span><span class="itinerary-text">Traslado e ingreso a la Comuna de Morochos para abordaje de vehículos 4x4.</span></li>
-                                    <li><span class="itinerary-time">09:15 – 11:15</span><span class="itinerary-text">Criadero Comunitario de Alpacas: ascenso en 4x4 a las faldas del Volcán Cotacachi, convivencia con alpacas y demostración del trasquilado / cuidado del animal.</span></li>
-                                    <li><span class="itinerary-time">11:45 – 13:00</span><span class="itinerary-text">Laguna de Cuicocha: interpretación de la cosmovisión andina en el Sendero Sagrado.</span></li>
-                                    <li><span class="itinerary-time">13:00 – 14:00</span><span class="itinerary-text">Almuerzo Comunitario: gastronomía local.</span></li>
-                                    <li><span class="itinerary-time">14:30 – 17:30</span><span class="itinerary-text">Tahuantinsuyo Weaving Workshop (Agato): museo textil, fibras de alpaca/lana, tintes vegetales y demostración en telares ancestrales.</span></li>
-                                </ul>
-                            </div>
-                            <aside class="tour-detail-side">
-                                <div class="tour-facts">
-                                    <h3 class="tour-detail-subtitle">Ficha Técnica</h3>
-                                    <ul>
-                                        <li><strong>Duración</strong><span>Full Day / 1 día (08:00 – 18:00)</span></li>
-                                        <li><strong>Destino</strong><span>Comuna de Morochos, Volcán Cotacachi, Cuicocha y Agato</span></li>
-                                        <li><strong>Dificultad</strong><span>Bajo a Moderado</span></li>
-                                        <li><strong>Estilo</strong><span>Turismo cultural, comunitario, agropecuario, textil y páramos</span></li>
-                                        <li><strong>Salida / Retorno</strong><span>Otavalo / Cotacachi</span></li>
-                                        <li><strong>Destacados</strong><span>Ascenso en 4x4, criadero de alpacas, trasquilado, Sendero Sagrado de Cuicocha, Tahuantinsuyo Weaving Workshop</span></li>
-                                    </ul>
-                                </div>
-                                <div class="tour-includes">
-                                    <h4><i class="fa-solid fa-circle-check"></i> Incluye</h4>
-                                    <ul>
-                                        <li>Transporte turístico privado</li>
-                                        <li>Expedición en vehículo 4x4 hacia el criadero de alpacas</li>
-                                        <li>Guía profesional de turismo</li>
-                                        <li>Entradas a la Comuna Morochos y taller de trasquilado</li>
-                                        <li>Almuerzo local completo</li>
-                                        <li>Visita guiada al taller textil con maestros artesanos</li>
-                                    </ul>
-                                </div>
-                                <div class="tour-not-includes">
-                                    <h4><i class="fa-solid fa-circle-xmark"></i> No incluye</h4>
-                                    <ul>
-                                        <li>Compras de prendas o artesanías en lana de alpaca</li>
-                                        <li>Consumos adicionales</li>
-                                        <li>Propinas</li>
-                                        <li>Seguro individual</li>
-                                    </ul>
-                                </div>
-                                <a href="contacto.html" class="btn btn-accent">Cotizar este tour <i class="fa-solid fa-arrow-right"></i></a>
-                            </aside>
-                        </div>
-                    </div>
-                </article>
+                        </article>
 
-            </div><!-- /.tours-main -->
-        </div><!-- /.tours-page-layout -->
-    </div>
-</section>
+                    </div><!-- /.tours-main -->
+                </div><!-- /.tours-page-layout -->
+            </div>
+        </section>
+
         <!-- ==============================
              CTA FINAL
         =============================== -->

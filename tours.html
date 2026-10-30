@@ -1394,71 +1394,88 @@
         <i class="fa-solid fa-arrow-up"></i>
     </button>
 
-    <script src="js/script.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
 
-    <!-- ============================================================
-         FILTROS + MODALES (JS específico de tours.html)
-    ============================================================ -->
-    <script>
-    document.addEventListener('DOMContentLoaded', function () {
+    /* ============================================================
+       1. SIDEBAR (drawer en móvil)
+    ============================================================ */
+    const filtersToggle  = document.getElementById('filtersToggle');
+    const filtersClose   = document.getElementById('filtersClose');
+    const filtersOverlay = document.getElementById('filtersOverlay');
+    const sidebar        = document.getElementById('toursSidebar');
 
-        /* ---------- SIDEBAR FILTROS ---------- */
-        const filtersToggle  = document.getElementById('filtersToggle');
-        const filtersClose   = document.getElementById('filtersClose');
-        const filtersOverlay = document.getElementById('filtersOverlay');
-        const sidebar        = document.getElementById('toursSidebar');
+    function openSidebar() {
+        if (!sidebar || !filtersOverlay) return;
+        sidebar.classList.add('open');
+        filtersOverlay.classList.add('show');
+        document.body.classList.add('no-scroll');
+    }
 
-        function openSidebar() {
-            sidebar.classList.add('open');
-            filtersOverlay.classList.add('show');
-            document.body.classList.add('no-scroll');
-        }
-        function closeSidebar() {
-            sidebar.classList.remove('open');
-            filtersOverlay.classList.remove('show');
-            document.body.classList.remove('no-scroll');
-        }
-        if (filtersToggle) filtersToggle.addEventListener('click', openSidebar);
-        if (filtersClose)  filtersClose.addEventListener('click', closeSidebar);
-        if (filtersOverlay) filtersOverlay.addEventListener('click', closeSidebar);
+    function closeSidebar() {
+        if (!sidebar || !filtersOverlay) return;
+        sidebar.classList.remove('open');
+        filtersOverlay.classList.remove('show');
+        document.body.classList.remove('no-scroll');
+    }
 
-        /* ---------- ACORDEONES ---------- */
+    if (filtersToggle)  filtersToggle.addEventListener('click', openSidebar);
+    if (filtersClose)   filtersClose.addEventListener('click', closeSidebar);
+    if (filtersOverlay) filtersOverlay.addEventListener('click', closeSidebar);
+
+    /* ============================================================
+       2. ACORDEONES DE FILTROS
+    ============================================================ */
+    function initAccordions() {
         document.querySelectorAll('[data-accordion]').forEach(function (acc) {
             const toggle  = acc.querySelector('[data-toggle]');
             const content = acc.querySelector('.filter-accordion__content');
+            if (!toggle || !content) return;
 
             toggle.addEventListener('click', function () {
                 const isOpen = acc.classList.contains('open');
-                // Cerrar otros (comportamiento tipo acordeón único)
+
+                // Cerrar los demás (comportamiento de acordeón único)
                 document.querySelectorAll('[data-accordion].open').forEach(function (other) {
                     if (other !== acc) {
                         other.classList.remove('open');
-                        other.querySelector('.filter-accordion__content').style.maxHeight = null;
+                        const otherContent = other.querySelector('.filter-accordion__content');
+                        if (otherContent) otherContent.style.maxHeight = null;
                     }
                 });
+
                 acc.classList.toggle('open', !isOpen);
                 content.style.maxHeight = !isOpen ? content.scrollHeight + 'px' : null;
             });
         });
 
-        /* Abrir el primer acordeón por defecto */
+        // Abrir el primero por defecto
         const firstAcc = document.querySelector('[data-accordion]');
         if (firstAcc) {
             firstAcc.classList.add('open');
             const c = firstAcc.querySelector('.filter-accordion__content');
-            c.style.maxHeight = c.scrollHeight + 'px';
+            if (c) c.style.maxHeight = c.scrollHeight + 'px';
         }
+    }
+    initAccordions();
 
-        /* ---------- FILTRADO ---------- */
-        const cards         = Array.from(document.querySelectorAll('.tour-card'));
-        const checkboxes    = Array.from(document.querySelectorAll('.filter-check input'));
-        const resultsNum    = document.getElementById('resultsNum');
-        const emptyState    = document.getElementById('toursEmpty');
-        const removeFilters = document.getElementById('removeFilters');
-        const emptyReset    = document.getElementById('emptyResetFilters');
-        const mobileCount   = document.getElementById('filtersMobileCount');
+    /* ============================================================
+       3. FILTRADO DE TARJETAS
+    ============================================================ */
+    const cards         = Array.from(document.querySelectorAll('.tour-card'));
+    const checkboxes    = Array.from(document.querySelectorAll('.filter-check input'));
+    const resultsNum    = document.getElementById('resultsNum');
+    const emptyState    = document.getElementById('toursEmpty');
+    const removeFilters = document.getElementById('removeFilters');
+    const emptyReset    = document.getElementById('emptyResetFilters');
+    const mobileCount   = document.getElementById('filtersMobileCount');
+    const gridEl        = document.getElementById('toursGrid');
 
-        // Precalcular contadores por opción
+    // Asegurar que el empty state esté oculto al cargar
+    if (emptyState) emptyState.classList.remove('show');
+
+    // Calcular contadores por opción
+    function computeCounts() {
         const counts = {};
         cards.forEach(function (card) {
             ['type', 'level', 'duration', 'service'].forEach(function (key) {
@@ -1469,110 +1486,140 @@
                 });
             });
         });
-        // Rellenar los span de contador
         document.querySelectorAll('[data-count-for]').forEach(function (el) {
             const key = el.getAttribute('data-count-for');
             el.textContent = counts[key] || 0;
         });
+    }
+    computeCounts();
 
-        function applyFilters() {
-            // Recolectar seleccionados por grupo
-            const selected = { type: [], level: [], duration: [], service: [] };
-            checkboxes.forEach(function (cb) {
-                if (cb.checked) selected[cb.dataset.filter].push(cb.value);
-            });
+    let initialLoad = true;
 
-            const hasFilters = Object.values(selected).some(function (arr) { return arr.length > 0; });
-
-            let visibleCount = 0;
-
-            cards.forEach(function (card) {
-                let matches = true;
-
-                if (selected.type.length) {
-                    const cardTypes = (card.dataset.type || '').split(/\s+/);
-                    if (!selected.type.some(function (t) { return cardTypes.includes(t); })) matches = false;
-                }
-                if (matches && selected.level.length) {
-                    const cardLevels = (card.dataset.level || '').split(/\s+/);
-                    if (!selected.level.some(function (l) { return cardLevels.includes(l); })) matches = false;
-                }
-                if (matches && selected.duration.length) {
-                    const cardDur = (card.dataset.duration || '').split(/\s+/);
-                    if (!selected.duration.some(function (d) { return cardDur.includes(d); })) matches = false;
-                }
-                if (matches && selected.service.length) {
-                    const cardServ = (card.dataset.service || '').split(/\s+/);
-                    if (!selected.service.some(function (s) { return cardServ.includes(s); })) matches = false;
-                }
-
-                if (matches) {
-                    card.classList.remove('is-hidden');
-                    card.style.display = '';
-                    visibleCount++;
-                } else {
-                    card.classList.add('is-hidden');
-                    card.style.display = 'none';
-                }
-            });
-
-            // Actualizar contador
-            resultsNum.textContent = visibleCount;
-            if (mobileCount) mobileCount.textContent = visibleCount;
-
-            // Empty state
-            emptyState.classList.toggle('show', visibleCount === 0);
-
-            // Botón quitar filtros
-            removeFilters.classList.toggle('hide', !hasFilters);
-        }
-
+    // Aplica los filtros activos y actualiza la UI
+    function applyFilters() {
+        const selected = { type: [], level: [], duration: [], service: [] };
         checkboxes.forEach(function (cb) {
-            cb.addEventListener('change', applyFilters);
+            if (cb.checked) selected[cb.dataset.filter].push(cb.value);
         });
 
-        function resetFilters() {
-            checkboxes.forEach(function (cb) { cb.checked = false; });
-            applyFilters();
-            closeSidebar();
-        }
-        if (removeFilters) removeFilters.addEventListener('click', resetFilters);
-        if (emptyReset)    emptyReset.addEventListener('click', resetFilters);
+        const hasFilters = Object.values(selected).some(function (arr) {
+            return arr.length > 0;
+        });
 
-        // Inicializar
+        let visibleCount = 0;
+
+        cards.forEach(function (card) {
+            let matches = true;
+
+            if (selected.type.length) {
+                const cardTypes = (card.dataset.type || '').split(/\s+/);
+                if (!selected.type.some(function (t) { return cardTypes.includes(t); })) matches = false;
+            }
+            if (matches && selected.level.length) {
+                const cardLevels = (card.dataset.level || '').split(/\s+/);
+                if (!selected.level.some(function (l) { return cardLevels.includes(l); })) matches = false;
+            }
+            if (matches && selected.duration.length) {
+                const cardDur = (card.dataset.duration || '').split(/\s+/);
+                if (!selected.duration.some(function (d) { return cardDur.includes(d); })) matches = false;
+            }
+            if (matches && selected.service.length) {
+                const cardServ = (card.dataset.service || '').split(/\s+/);
+                if (!selected.service.some(function (s) { return cardServ.includes(s); })) matches = false;
+            }
+
+            if (matches) {
+                card.classList.remove('is-hidden');
+                card.style.display = '';
+                visibleCount++;
+            } else {
+                card.classList.add('is-hidden');
+                card.style.display = 'none';
+            }
+        });
+
+        // Contadores
+        if (resultsNum)  resultsNum.textContent = visibleCount;
+        if (mobileCount) mobileCount.textContent = visibleCount;
+
+        // Empty state
+        if (emptyState) emptyState.classList.toggle('show', visibleCount === 0);
+
+        // Botón quitar filtros
+        if (removeFilters) removeFilters.classList.toggle('hide', !hasFilters);
+
+        // Reset de scroll solo en interacción del usuario (no en carga inicial)
+        if (!initialLoad && visibleCount > 0 && gridEl) {
+            const headerOffset = 110;
+            const targetY = gridEl.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+            if (window.pageYOffset > targetY) {
+                window.scrollTo({ top: targetY, behavior: 'smooth' });
+            }
+        }
+        initialLoad = false;
+    }
+
+    // Listeners de filtros
+    checkboxes.forEach(function (cb) {
+        cb.addEventListener('change', applyFilters);
+    });
+
+    // Resetea todos los filtros
+    function resetFilters() {
+        checkboxes.forEach(function (cb) { cb.checked = false; });
+        initialLoad = true; // evita scroll al resetear
         applyFilters();
+        closeSidebar();
+    }
 
-        /* ---------- MODALES ---------- */
-        const modalOpeners = document.querySelectorAll('[data-open-modal]');
-        const allModals    = document.querySelectorAll('.tour-modal');
-        const modalClosers = document.querySelectorAll('[data-close-modal]');
+    if (removeFilters) removeFilters.addEventListener('click', resetFilters);
+    if (emptyReset)    emptyReset.addEventListener('click', resetFilters);
 
-        function openModal(id) {
-            const modal = document.getElementById('tourModal' + id);
-            if (!modal) return;
-            modal.classList.add('open');
-            document.body.classList.add('no-scroll');
-        }
-        function closeAllModals() {
-            allModals.forEach(function (m) { m.classList.remove('open'); });
-            document.body.classList.remove('no-scroll');
-        }
+    // Inicializar filtros (sin scroll)
+    applyFilters();
 
-        modalOpeners.forEach(function (el) {
-            el.addEventListener('click', function (e) {
-                e.preventDefault();
-                const id = el.getAttribute('data-open-modal');
-                if (id) openModal(id);
-            });
-        });
-        modalClosers.forEach(function (el) {
-            el.addEventListener('click', closeAllModals);
-        });
-        document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape') closeAllModals();
+    /* ============================================================
+       4. MODALES DE TOUR
+    ============================================================ */
+    const modalOpeners = document.querySelectorAll('[data-open-modal]');
+    const allModals    = document.querySelectorAll('.tour-modal');
+    const modalClosers = document.querySelectorAll('[data-close-modal]');
+
+    // Abre un modal por id numérico
+    function openModal(id) {
+        const modal = document.getElementById('tourModal' + id);
+        if (!modal) return;
+        modal.classList.add('open');
+        document.body.classList.add('no-scroll');
+    }
+
+    // Cierra todos los modales abiertos
+    function closeAllModals() {
+        allModals.forEach(function (m) { m.classList.remove('open'); });
+        document.body.classList.remove('no-scroll');
+    }
+
+    // Listeners de apertura
+    modalOpeners.forEach(function (el) {
+        el.addEventListener('click', function (e) {
+            e.preventDefault();
+            const id = el.getAttribute('data-open-modal');
+            if (id) openModal(id);
         });
     });
-    </script>
+
+    // Listeners de cierre
+    modalClosers.forEach(function (el) {
+        el.addEventListener('click', closeAllModals);
+    });
+
+    // Cierre con tecla Escape
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeAllModals();
+    });
+
+});
+</script>
 </body>
 </html>
 

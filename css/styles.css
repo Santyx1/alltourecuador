@@ -3497,3 +3497,175 @@ main{ padding-top:var(--header-h); }
     .tour-detail-hero-text p{ font-size:0.9rem; }
 }
 
+
+/* ==========================================
+   GRILLA DE TARJETAS PREMIUM (estilo JetEngine)
+   ========================================== */
+.tours-cards-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:28px;
+    margin-bottom:60px;
+}
+
+.tour-card-premium{
+    background:var(--white);
+    border-radius:var(--radius-lg);
+    overflow:hidden;
+    box-shadow:var(--shadow-sm);
+    border:1px solid var(--gray-100);
+    transition:transform 800ms cubic-bezier(0.25, 1, 0.5, 1), box-shadow var(--transition);
+    will-change:transform;
+    backface-visibility:hidden;
+    display:flex;
+    flex-direction:column;
+}
+.tour-card-premium:hover{
+    transform:scale(1.005);
+    box-shadow:var(--shadow-lg);
+}
+
+/* Bloque imagen + título */
+.tour-card-hero{
+    position:relative;
+}
+.tour-card-img-link{
+    display:block;
+    height:220px;
+    overflow:hidden;
+}
+.tour-card-img-link img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:transform 0.8s ease;
+}
+.tour-card-premium:hover .tour-card-img-link img{
+    transform:scale(1.06);
+}
+
+.tour-card-title-bar{
+    background:linear-gradient(360deg, #2BA8A0 0%, #1E7F79 100%);
+    min-height:70px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:14px 20px;
+}
+.tour-card-title-bar a{
+    color:var(--white);
+    font-family:var(--font-sans);
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:1.5px;
+    line-height:1.35;
+    text-transform:uppercase;
+}
+.tour-card-title-bar a:hover{
+    color:var(--accent-light);
+}
+
+/* Bloque de datos */
+.tour-card-data{
+    display:flex;
+    flex-direction:column;
+    flex:1;
+}
+
+.tour-data-row{
+    display:grid;
+    grid-template-columns:40% 60%;
+    align-items:center;
+    background:var(--white);
+    border-bottom:1px solid var(--gray-100);
+    padding:10px 0;
+}
+.tour-data-label{
+    font-family:var(--font-sans);
+    font-size:13px;
+    font-weight:500;
+    color:var(--text-light);
+    padding-left:20px;
+}
+.tour-data-value{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-family:var(--font-sans);
+    font-size:12px;
+    font-weight:500;
+    color:var(--text);
+}
+.tour-data-icon{
+    display:block;
+    width:42px;
+    height:42px;
+    max-width:42px;
+    object-fit:contain;
+    flex-shrink:0;
+    float:left;
+    margin-right:7px;
+}
+
+/* Barra días + precio + botón */
+.tour-card-pricebar{
+    display:grid;
+    grid-template-columns:60% 40%;
+    align-items:center;
+    background:#00889917;
+    margin-top:10px;
+    padding:10px 0;
+    flex:1;
+}
+.tour-card-days{
+    display:flex;
+    flex-direction:column;
+    gap:2px;
+    padding-left:20px;
+}
+.tour-days-label{
+    font-family:var(--font-sans);
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:var(--accent-dark);
+}
+.tour-price-label{
+    font-family:var(--font-sans);
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:2.5px;
+    text-transform:uppercase;
+    color:var(--text);
+}
+.tour-card-cta{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.tour-card-cta .btn{
+    width:90%;
+    justify-content:center;
+    border-radius:1px;
+    box-shadow:6px 2px 5px 0 rgba(28,44,41,0.5);
+    font-size:12px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    padding:10px 14px;
+}
+.tour-card-cta .btn:hover{
+    box-shadow:0 0 10px 0 rgba(0,0,0,0.5);
+}
+
+/* Responsive de la grilla */
+@media (max-width:1200px){
+    .tours-cards-grid{ grid-template-columns:repeat(2, 1fr); }
+}
+@media (max-width:720px){
+    .tours-cards-grid{ grid-template-columns:1fr; gap:20px; }
+    .tour-card-img-link{ height:190px; }
+    .tour-data-row{ grid-template-columns:45% 55%; }
+    .tour-card-pricebar{ grid-template-columns:45% 55%; }
+    .tour-days-label{ letter-spacing:2px; font

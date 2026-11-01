@@ -466,16 +466,37 @@ if (langBtn && langDropdown) {
 }
 
 // ==========================================
-// 3. PRELOADER
+// 3. PRELOADER — tiempo mínimo para ver los logos
 // ==========================================
-window.addEventListener('load', () => {
+(function () {
     const preloader = document.getElementById('preloader');
-    if (preloader) {
+    if (!preloader) return;
+
+    // Tiempo mínimo que el preloader permanece visible (en ms).
+    // 3000ms = 3 segundos → suficiente para ver los dos logos al menos una vez.
+    const MIN_DURATION = 3000;
+
+    const startTime = Date.now();
+
+    function hidePreloader() {
+        const elapsed = Date.now() - startTime;
+        const remaining = Math.max(0, MIN_DURATION - elapsed);
+
         setTimeout(() => {
             preloader.classList.add('hidden');
-        }, 600);
+            // Eliminar del DOM después del fade (0.6s)
+            setTimeout(() => {
+                preloader.remove();
+            }, 700);
+        }, remaining);
     }
-});
+
+    if (document.readyState === 'complete') {
+        hidePreloader();
+    } else {
+        window.addEventListener('load', hidePreloader);
+    }
+})();
 
 // ==========================================
 // 4. HEADER SCROLLED

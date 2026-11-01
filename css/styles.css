@@ -297,16 +297,15 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; }
 /* Contenedor de los dos logos que se alternan */
 .preloader-logos{
     position:relative;
-    width:260px;
-    height:140px;
+    width:340px;
+    height:260px;
     display:grid;
     place-items:center;
 }
 
-/* Estilo base para cada logo */
 .preloader-logo{
     position:absolute;
-    height:120px;
+    height:220px;
     width:auto;
     max-width:100%;
     object-fit:contain;

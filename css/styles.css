@@ -284,16 +284,65 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; }
     transition:opacity 0.6s ease, visibility 0.6s ease;
 }
 .preloader.hidden{ opacity:0; visibility:hidden; }
-.preloader-inner{ text-align:center; }
-.preloader-inner img{
-    height:250px;
-    margin:0 auto 24px;
-    animation:pulseLogo 1.6s ease-in-out infinite;
+
+.preloader-inner{
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:28px;
 }
-@keyframes pulseLogo{
-    0%, 100%{ opacity:1; transform:scale(1); }
-    50%{ opacity:0.7; transform:scale(1.05); }
+
+/* Contenedor de los dos logos que se alternan */
+.preloader-logos{
+    position:relative;
+    width:260px;
+    height:140px;
+    display:grid;
+    place-items:center;
 }
+
+/* Estilo base para cada logo */
+.preloader-logo{
+    position:absolute;
+    height:120px;
+    width:auto;
+    max-width:100%;
+    object-fit:contain;
+    opacity:0;
+    transform:scale(0.92);
+    will-change:opacity, transform;
+    backface-visibility:hidden;
+    -webkit-backface-visibility:hidden;
+}
+
+/* Logo 1: visible en la primera mitad del ciclo */
+.preloader-logo-1{
+    animation:logoSequence1 2.6s ease-in-out infinite;
+}
+
+/* Logo 2: visible en la segunda mitad del ciclo */
+.preloader-logo-2{
+    animation:logoSequence2 2.6s ease-in-out infinite;
+}
+
+@keyframes logoSequence1{
+    0%   { opacity:0; transform:scale(0.92); }
+    6%   { opacity:1; transform:scale(1); }
+    46%  { opacity:1; transform:scale(1); }
+    50%  { opacity:0; transform:scale(0.92); }
+    100% { opacity:0; transform:scale(0.92); }
+}
+@keyframes logoSequence2{
+    0%   { opacity:0; transform:scale(0.92); }
+    50%  { opacity:0; transform:scale(0.92); }
+    54%  { opacity:1; transform:scale(1); }
+    94%  { opacity:1; transform:scale(1); }
+    100% { opacity:0; transform:scale(0.92); }
+}
+
+/* Barra de carga debajo de los logos */
 .preloader-bar{
     width:180px;
     height:3px;
@@ -313,6 +362,34 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; }
 @keyframes loadBar{
     0%{ transform:translateX(-100%); }
     100%{ transform:translateX(250%); }
+}
+
+/* Responsive preloader */
+@media (max-width:560px){
+    .preloader-logos{
+        width:200px;
+        height:110px;
+    }
+    .preloader-logo{
+        height:90px;
+    }
+}
+@media (prefers-reduced-motion: reduce){
+    .preloader-logo-1,
+    .preloader-logo-2{
+        animation:none;
+        opacity:1;
+        transform:none;
+        position:relative;
+        height:70px;
+        margin:0 8px;
+    }
+    .preloader-logos{
+        display:flex;
+        gap:16px;
+        height:auto;
+        width:auto;
+    }
 }
 
 /* ==========================================

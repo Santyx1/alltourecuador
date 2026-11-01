@@ -3810,3 +3810,240 @@ main{ padding-top:var(--header-h); }
     .filter-accordion{ flex-direction:column; }
     .tour-card-compact__image{ height:200px; }
 }
+
+
+/////////////////////////////////////////////
+
+/* ==========================================
+   SECCIÓN CONTACTO CTA (2 columnas)
+   Usada en tours.html, index.html, servicios.html
+   ========================================== */
+
+.section-contact-cta{
+    padding:80px 0;
+    background:var(--bg-veil-soft);
+    backdrop-filter:blur(2px);
+    -webkit-backdrop-filter:blur(2px);
+}
+
+.contact-cta-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:0;
+    border-radius:var(--radius-lg);
+    overflow:hidden;
+    box-shadow:var(--shadow-lg);
+    background:var(--white);
+}
+
+/* --- Columna izquierda (imagen + título + botón) --- */
+.contact-cta-left{
+    position:relative;
+    background:var(--text);
+    color:var(--white);
+    padding:60px 50px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:28px;
+    overflow:hidden;
+}
+
+.contact-cta-left::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image:url('../img/fondo-silueta.jpg');
+    background-size:cover;
+    background-position:center;
+    opacity:0.25;
+    z-index:0;
+    pointer-events:none;
+}
+
+.contact-cta-left::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(135deg, rgba(26,58,79,0.92), rgba(30,136,199,0.78));
+    z-index:1;
+    pointer-events:none;
+}
+
+.contact-cta-left > *{
+    position:relative;
+    z-index:2;
+}
+
+.contact-cta-img{
+    width:100%;
+    max-width:340px;
+    border-radius:var(--radius);
+    box-shadow:0 16px 40px rgba(0,0,0,0.35);
+    margin:0 auto;
+    display:block;
+}
+
+.contact-cta-heading{
+    font-family:var(--font-serif);
+    font-size:clamp(1.5rem, 2.4vw, 2rem);
+    font-weight:700;
+    line-height:1.25;
+    color:var(--white);
+    margin:0;
+    text-align:center;
+}
+
+.contact-cta-left .btn{
+    align-self:center;
+}
+
+/* --- Columna derecha (título + texto + teléfonos) --- */
+.contact-cta-right{
+    background:var(--white);
+    padding:60px 50px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:20px;
+}
+
+.contact-cta-eyebrow{
+    display:inline-block;
+    font-size:0.75rem;
+    font-weight:700;
+    letter-spacing:0.2em;
+    text-transform:uppercase;
+    color:var(--accent-dark);
+    margin-bottom:6px;
+}
+
+.contact-cta-title{
+    font-family:var(--font-serif);
+    font-size:clamp(1.7rem, 2.8vw, 2.4rem);
+    font-weight:700;
+    line-height:1.2;
+    color:var(--text);
+    margin:0 0 8px;
+}
+
+.contact-cta-text{
+    font-size:1rem;
+    color:var(--text-light);
+    line-height:1.7;
+    margin:0 0 12px;
+}
+
+.contact-cta-subtitle{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-family:var(--font-sans);
+    font-size:0.85rem;
+    font-weight:700;
+    letter-spacing:0.15em;
+    text-transform:uppercase;
+    color:var(--text);
+    margin:12px 0 4px;
+}
+
+.contact-cta-subtitle::after{
+    content:"";
+    flex:1;
+    height:1px;
+    background:var(--gray-200);
+}
+
+/* --- Lista de teléfonos --- */
+.contact-cta-phones{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    margin-top:8px;
+}
+
+.contact-phone-btn{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding:16px 22px;
+    border-radius:999px;
+    background:var(--off-white);
+    border:1px solid var(--gray-100);
+    color:var(--text);
+    font-size:1rem;
+    font-weight:600;
+    text-decoration:none;
+    transition:var(--transition);
+    position:relative;
+    overflow:hidden;
+}
+
+.contact-phone-btn:hover{
+    background:var(--accent);
+    color:var(--white);
+    border-color:var(--accent);
+    transform:translateY(-2px);
+    box-shadow:0 12px 28px rgba(43,168,160,0.3);
+}
+
+.contact-phone-btn i{
+    display:grid;
+    place-items:center;
+    width:36px;
+    height:36px;
+    border-radius:50%;
+    background:var(--accent-pale);
+    color:var(--accent-dark);
+    font-size:0.95rem;
+    flex-shrink:0;
+    transition:var(--transition);
+}
+
+.contact-phone-btn:hover i{
+    background:var(--white);
+    color:var(--accent-dark);
+}
+
+.contact-phone-btn span{
+    letter-spacing:0.02em;
+}
+
+/* --- Responsive --- */
+@media (max-width:992px){
+    .contact-cta-grid{
+        grid-template-columns:1fr;
+    }
+    .contact-cta-left,
+    .contact-cta-right{
+        padding:48px 32px;
+    }
+    .contact-cta-img{
+        max-width:280px;
+    }
+}
+
+@media (max-width:560px){
+    .section-contact-cta{
+        padding:60px 0;
+    }
+    .contact-cta-left,
+    .contact-cta-right{
+        padding:40px 24px;
+    }
+    .contact-cta-heading{
+        font-size:1.4rem;
+    }
+    .contact-cta-title{
+        font-size:1.5rem;
+    }
+    .contact-phone-btn{
+        padding:14px 18px;
+        font-size:0.92rem;
+    }
+    .contact-phone-btn i{
+        width:32px;
+        height:32px;
+        font-size:0.85rem;
+    }
+}

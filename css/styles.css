@@ -1783,8 +1783,11 @@ main{ padding-top:var(--header-h); }
 .cta-overlay{
     position:absolute;
     inset:0;
-    background:linear-gradient(135deg, rgba(26,58,79,0.88), rgba(30,136,199,0.62));
-    z-index:1;
+   /* 
+   background:linear-gradient(135deg, rgba(26,58,79,0.88), rgba(30,136,199,0.62));
+   */
+   background:transparent;
+   z-index:1;
 }
 .cta-content{
     position:relative;

@@ -434,12 +434,25 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; }
     box-shadow:0 8px 24px rgba(0,0,0,0.18);
     transition:height var(--transition), background var(--transition), box-shadow var(--transition);
 }
+/*
 .site-header.scrolled{
     height:var(--header-h-scrolled);
     background:linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(245,250,253,0.98) 100%);
     border-bottom:1px solid var(--gray-200);
     box-shadow:0 8px 24px rgba(26,58,79,0.08);
 }
+*/
+/* Header al hacer scroll: solo reduce altura, mantiene el color original */
+.site-header.scrolled{
+    height:var(--header-h-scrolled);
+    /* Conserva el mismo fondo del header original */
+    background:linear-gradient(180deg, rgba(26,58,79,0.92) 0%, rgba(26,58,79,0.78) 100%);
+    border-bottom:1px solid rgba(255,255,255,0.08);
+    box-shadow:0 8px 24px rgba(0,0,0,0.22);
+}
+
+.site-header.scrolled .brand-logo{ height:56px; }
+/* El resto de reglas .scrolled de color se eliminan para que el texto siga blanco */
 .nav-wrapper{
     display:flex;
     align-items:center;

@@ -662,10 +662,11 @@ main{ padding-top:var(--header-h); }
 .hero-slide-overlay{
     position:absolute;
     inset:0;
-   /* 
+    
    background:linear-gradient(135deg, rgba(26,58,79,0.75) 0%, rgba(26,58,79,0.35) 50%, rgba(26,58,79,0.65) 100%);
-   */
+   /*
    background:transparent;
+   */
 }
 .hero-slide-content{
     position:relative;
@@ -702,13 +703,14 @@ main{ padding-top:var(--header-h); }
     line-height: 1.1;
     margin-bottom: 14px;
     color: var(--white);
-    /* Delineado múltiple para que resalte sobre cualquier foto */
+    /* Delineado múltiple para que resalte sobre cualquier foto 
     text-shadow: 
         -2px -2px 0 rgba(0,0,0,0.7),  
          2px -2px 0 rgba(0,0,0,0.7),
         -2px  2px 0 rgba(0,0,0,0.7),
          2px  2px 0 rgba(0,0,0,0.7),
          0px  4px 15px rgba(0,0,0,0.8); /* Sombra difuminada extra */
+   */
 }
 
 .hero-subtitle {
@@ -718,13 +720,14 @@ main{ padding-top:var(--header-h); }
     color: var(--accent-light);
     margin-bottom: 32px;
     font-weight: 400;
-    /* Delineado más sutil para el subtítulo */
+    /* Delineado más sutil para el subtítulo 
     text-shadow: 
         -1px -1px 0 rgba(0,0,0,0.6),  
          1px -1px 0 rgba(0,0,0,0.6),
         -1px  1px 0 rgba(0,0,0,0.6),
          1px  1px 0 rgba(0,0,0,0.6),
          0px  3px 10px rgba(0,0,0,0.7);
+   */
 }
 
 .hero-eyebrow {

@@ -243,10 +243,12 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; }
    AJUSTES DE CONTRASTE PARA LA NUEVA PALETA
    ========================================== */
 
-/* El naranja brillante a veces necesita un texto más grueso para leerse bien */
 .btn-accent {
-    font-weight: 800;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    background: var(--accent);
+    color: var(--white);
+    font-weight: 700;
+    /* NUEVO: Aseguramos que resalte en el menú oscuro y en el claro */
+    box-shadow: 0 4px 12px rgba(242, 124, 33, 0.4); 
 }
 
 /* El turquesa brillante en textos pequeños a veces pierde legibilidad, lo oscurecemos un poco */

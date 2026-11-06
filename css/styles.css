@@ -735,13 +735,14 @@ main{ padding-top:var(--header-h); }
     letter-spacing: 0.22em;
     text-transform: uppercase;
     margin-bottom: 22px;
-    /* Delineado para el texto pequeño */
+    /* Delineado para el texto pequeño 
     text-shadow: 
         -1px -1px 0 rgba(0,0,0,0.7),  
          1px -1px 0 rgba(0,0,0,0.7),
         -1px  1px 0 rgba(0,0,0,0.7),
          1px  1px 0 rgba(0,0,0,0.7),
          0px  2px 8px rgba(0,0,0,0.8);
+   */
 }
 .hero-eyebrow::before{
     content:"";

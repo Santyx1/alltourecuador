@@ -318,51 +318,29 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; }
     gap:28px;
 }
 
-/* Contenedor de los dos logos que se alternan */
+/* Contenedor del logo */
 .preloader-logos{
     position:relative;
     width:340px;
-    height:260px;
+    height:160px; /* Ajusta la altura según tu logo */
     display:grid;
     place-items:center;
 }
 
+/* El logo único y estático */
 .preloader-logo{
-    position:absolute;
-    height:220px;
+    height:160px; /* Ajusta el tamaño de tu logo aquí */
     width:auto;
     max-width:100%;
     object-fit:contain;
-    opacity:0;
-    transform:scale(0.92);
-    will-change:opacity, transform;
-    backface-visibility:hidden;
-    -webkit-backface-visibility:hidden;
+    /* Efecto sutil de entrada (opcional) */
+    animation: logoFadeIn 1s ease-out forwards; 
 }
 
-/* Logo 1: visible en la primera mitad del ciclo */
-.preloader-logo-1{
-    animation:logoSequence1 2.6s ease-in-out infinite;
-}
-
-/* Logo 2: visible en la segunda mitad del ciclo */
-.preloader-logo-2{
-    animation:logoSequence2 2.6s ease-in-out infinite;
-}
-
-@keyframes logoSequence1{
-    0%   { opacity:0; transform:scale(0.92); }
-    6%   { opacity:1; transform:scale(1); }
-    46%  { opacity:1; transform:scale(1); }
-    50%  { opacity:0; transform:scale(0.92); }
-    100% { opacity:0; transform:scale(0.92); }
-}
-@keyframes logoSequence2{
-    0%   { opacity:0; transform:scale(0.92); }
-    50%  { opacity:0; transform:scale(0.92); }
-    54%  { opacity:1; transform:scale(1); }
-    94%  { opacity:1; transform:scale(1); }
-    100% { opacity:0; transform:scale(0.92); }
+/* Animación de entrada para que no aparezca de golpe */
+@keyframes logoFadeIn {
+    0% { opacity: 0; transform: scale(0.92); }
+    100% { opacity: 1; transform: scale(1); }
 }
 
 /* Barra de carga debajo de los logos */

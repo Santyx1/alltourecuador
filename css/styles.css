@@ -9,17 +9,17 @@
    1. VARIABLES Y RESET
    ========================================== */
 :root{
-    /* === Marca (basado en logotipo) === */
-    --brand:#4DB8E8;
-    --brand-dark:#1E88C7;
-    --brand-light:#A5DCF2;
-    --brand-pale:#E6F4FB;
+    /* === MARCA: Turquesa del logo === */
+    --brand:#00A6B5;        /* Turquesa principal (All / Ecuador) */
+    --brand-dark:#007A85;   /* Turquesa oscuro para hovers */
+    --brand-light:#66D0D9;  /* Turquesa claro */
+    --brand-pale:#E0F5F7;   /* Fondo muy suave turquesa */
 
-    /* === Acento turquesa === */
-    --accent:#2BA8A0;
-    --accent-dark:#1E7F79;
-    --accent-light:#5FC8C1;
-    --accent-pale:#E0F5F3;
+    /* === ACENTO: Naranja del logo === */
+    --accent:#F27C21;       /* Naranja vibrante (TOUR) */
+    --accent-dark:#D1610B;  /* Naranja oscuro para hovers */
+    --accent-light:#FF9D52; /* Naranja claro */
+    --accent-pale:#FEF0E6;  /* Fondo muy suave naranja */
 
     /* Alias compatibles con nombres anteriores */
     --sky-blue:var(--brand);
@@ -31,7 +31,7 @@
     --orange-light:var(--accent-light);
     --orange-pale:var(--accent-pale);
 
-    /* === Neutros === */
+    /* === Neutros (Mantenemos los tuyos) === */
     --white:#ffffff;
     --off-white:#F5FAFD;
     --gray-100:#EEF5FA;
@@ -40,7 +40,7 @@
     --gray-400:#8FA8BC;
     --gray-500:#5A7A94;
     --gray-600:#3D5568;
-    --text:#1A3A4F;
+    --text:#1A3A4F;         /* Azul muy oscuro para textos y fondos */
     --text-light:#5A7A94;
 
     /* === Estados === */
@@ -71,7 +71,7 @@
     --header-h:88px;
     --header-h-scrolled:76px;
 
-    /* === Fondo semitransparente para secciones (deja ver la silueta) === */
+    /* === Fondo semitransparente para secciones === */
     --bg-veil-light:rgba(255,255,255,0.78);
     --bg-veil-soft:rgba(245,250,253,0.72);
     --bg-veil-strong:rgba(255,255,255,0.90);
@@ -239,15 +239,37 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; }
     box-shadow:0 12px 24px rgba(26,58,79,0.25);
 }
 
-.btn-accent{
-    background:var(--accent);
-    color:var(--white);
-    font-weight:700;
+/* ==========================================
+   AJUSTES DE CONTRASTE PARA LA NUEVA PALETA
+   ========================================== */
+
+/* El naranja brillante a veces necesita un texto más grueso para leerse bien */
+.btn-accent {
+    font-weight: 800;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.1);
 }
-.btn-accent:hover{
-    background:var(--accent-dark);
-    transform:translateY(-2px);
-    box-shadow:0 12px 24px rgba(43,168,160,0.35);
+
+/* El turquesa brillante en textos pequeños a veces pierde legibilidad, lo oscurecemos un poco */
+.section-eyebrow {
+    color: var(--brand-dark);
+}
+.section-eyebrow.light {
+    color: var(--brand-light);
+}
+
+/* En los precios, usamos el turquesa oscuro para que resalte sobre el blanco */
+.tour-price strong {
+    color: var(--brand-dark);
+}
+
+/* Ajustamos los iconos de la historia para que usen la nueva paleta */
+.history-icon {
+    background: linear-gradient(135deg, var(--brand-pale), var(--accent-pale));
+    color: var(--brand-dark);
+}
+.history-card:hover .history-icon {
+    background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+    color: var(--white);
 }
 
 .btn-ghost{

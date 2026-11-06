@@ -810,20 +810,23 @@ main{ padding-top:var(--header-h); }
 }
 
 /* ==========================================
-   7. CADENA DE VALOR (solo texto + título)
+   7. CADENA DE VALOR (Rediseñada)
    ========================================== */
 .section-philosophy{
     background:var(--text);
     color:var(--white);
-    padding:70px 0;
+    padding:80px 0;
     position:relative;
-    overflow-x:auto;
+    overflow:hidden;
 }
+
 .value-chain{
     display:flex;
     flex-direction:column;
-    gap:28px;
+    gap:40px;
+    align-items:center;
 }
+
 .value-chain-title{
     font-family:var(--font-serif);
     font-size:clamp(1.4rem, 2.4vw, 2rem);
@@ -832,6 +835,7 @@ main{ padding-top:var(--header-h); }
     text-align:center;
     letter-spacing:0.01em;
     line-height:1.3;
+    max-width:600px;
 }
 .value-chain-title::after{
     content:"";
@@ -842,30 +846,103 @@ main{ padding-top:var(--header-h); }
     margin:16px auto 0;
     border-radius:2px;
 }
+
+/* Contenedor de los pasos */
 .value-chain-steps{
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+    gap:8px;
+    width:100%;
+    flex-wrap:wrap; /* Permite que se acomoden en varias filas */
+}
+
+/* Cada paso individual */
+.chain-step{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:12px;
+    text-align:center;
+    flex:1;
+    min-width:120px;
+    max-width:160px;
+}
+
+/* Icono animado */
+.chain-icon{
+    width:64px;
+    height:64px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.15);
+    display:grid;
+    place-items:center;
+    font-size:1.4rem;
+    color:var(--accent);
+    transition:var(--transition);
+    position:relative;
+}
+
+.chain-step:hover .chain-icon{
+    background:var(--accent);
+    color:var(--white);
+    transform:translateY(-4px) scale(1.05);
+    box-shadow:0 12px 24px rgba(242,124,33,0.35);
+    border-color:var(--accent);
+}
+
+/* Texto del paso */
+.chain-step span{
+    font-family:var(--font-sans);
+    font-weight:800;
+    font-size:0.78rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--accent-light);
+    line-height:1.4;
+    max-width:110px;
+}
+
+/* Flechas entre pasos */
+.chain-arrow{
+    color:rgba(255,255,255,0.25);
+    font-size:0.85rem;
+    flex-shrink:0;
     display:flex;
     align-items:center;
     justify-content:center;
-    gap:16px;
-    min-width:max-content;
-    padding:0 16px;
+    padding-top:32px; /* Alinea la flecha con los iconos */
+    height:64px;
+    transition:var(--transition);
 }
-.chain-step{
-    font-family:var(--font-sans);
-    font-weight:800;
-    font-size:0.92rem;
-    letter-spacing:0.14em;
-    text-transform:uppercase;
-    color:var(--accent-light);
-    text-align:center;
-    white-space:nowrap;
+
+/* Responsive */
+@media (max-width: 992px){
+    .value-chain-steps{
+        gap:20px;
+    }
+    .chain-arrow{
+        display:none; /* Ocultamos las flechas en tablet para evitar desorden */
+    }
+    .chain-step{
+        flex:1 1 calc(33.333% - 20px);
+        max-width:none;
+    }
 }
-.chain-arrow{
-    color:var(--accent);
-    font-size:1rem;
-    flex-shrink:0;
-    display:inline-flex;
-    align-items:center;
+
+@media (max-width: 560px){
+    .chain-step{
+        flex:1 1 calc(50% - 16px);
+    }
+    .chain-icon{
+        width:56px;
+        height:56px;
+        font-size:1.2rem;
+    }
+    .chain-step span{
+        font-size:0.72rem;
+    }
 }
 
 /* ==========================================

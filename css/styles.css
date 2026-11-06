@@ -690,16 +690,11 @@ main{ padding-top:var(--header-h); }
     margin-bottom:22px;
 }
 */
-.hero-eyebrow::before{
-    content:"";
-    display:inline-block;
-    width:32px;
-    height:2px;
-    background:var(--accent);
-    vertical-align:middle;
-    margin-right:12px;
-    margin-bottom:3px;
-}
+
+/* ==========================================
+   TEXTO DEL HERO (Delineado para legibilidad)
+   ========================================== */
+
 .hero-title {
     font-family: var(--font-serif);
     font-size: clamp(2.4rem, 5.5vw, 4.5rem);
@@ -707,8 +702,13 @@ main{ padding-top:var(--header-h); }
     line-height: 1.1;
     margin-bottom: 14px;
     color: var(--white);
-    /* NUEVO: Sombra para legibilidad */
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6); 
+    /* Delineado múltiple para que resalte sobre cualquier foto */
+    text-shadow: 
+        -2px -2px 0 rgba(0,0,0,0.7),  
+         2px -2px 0 rgba(0,0,0,0.7),
+        -2px  2px 0 rgba(0,0,0,0.7),
+         2px  2px 0 rgba(0,0,0,0.7),
+         0px  4px 15px rgba(0,0,0,0.8); /* Sombra difuminada extra */
 }
 
 .hero-subtitle {
@@ -718,20 +718,40 @@ main{ padding-top:var(--header-h); }
     color: var(--accent-light);
     margin-bottom: 32px;
     font-weight: 400;
-    /* NUEVO: Sombra para legibilidad */
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+    /* Delineado más sutil para el subtítulo */
+    text-shadow: 
+        -1px -1px 0 rgba(0,0,0,0.6),  
+         1px -1px 0 rgba(0,0,0,0.6),
+        -1px  1px 0 rgba(0,0,0,0.6),
+         1px  1px 0 rgba(0,0,0,0.6),
+         0px  3px 10px rgba(0,0,0,0.7);
 }
 
 .hero-eyebrow {
     display: inline-block;
-    color: var(--accent);
+    color: var(--accent); /* Tu naranja */
     font-size: 0.8rem;
     font-weight: 700;
     letter-spacing: 0.22em;
     text-transform: uppercase;
     margin-bottom: 22px;
-    /* NUEVO: Sombra para legibilidad */
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+    /* Delineado para el texto pequeño */
+    text-shadow: 
+        -1px -1px 0 rgba(0,0,0,0.7),  
+         1px -1px 0 rgba(0,0,0,0.7),
+        -1px  1px 0 rgba(0,0,0,0.7),
+         1px  1px 0 rgba(0,0,0,0.7),
+         0px  2px 8px rgba(0,0,0,0.8);
+}
+.hero-eyebrow::before{
+    content:"";
+    display:inline-block;
+    width:32px;
+    height:2px;
+    background:var(--accent);
+    vertical-align:middle;
+    margin-right:12px;
+    margin-bottom:3px;
 }
 .hero-buttons{ display:flex; gap:16px; flex-wrap:wrap; }
 

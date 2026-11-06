@@ -25,7 +25,7 @@ const translations = {
 
         // WELCOME
         "welcome.eyebrow": "Bienvenidos a",
-        "welcome.title": "ALL TOUR ECUADOR",
+        "welcome.title": "ALLTOURECUADOR",
         "welcome.text": "Tu puerta de entrada a un Ecuador auténtico, diverso y lleno de experiencias. Diseñamos y operamos viajes que conectan a nuestros viajeros con la naturaleza, las culturas, las comunidades y la esencia de cada territorio, ofreciendo experiencias personalizadas con calidad, seguridad y atención profesional.",
         "welcome.card1.title": "Experiencias auténticas",
         "welcome.card1.text": "Conectamos al viajero con el Ecuador real: sus gentes, sus paisajes y su cultura viva.",
@@ -49,7 +49,7 @@ const translations = {
         // ABOUT
         "about.eyebrow": "Quiénes somos",
         "about.title": "Más que un viaje,<br>una experiencia de vida",
-        "about.text": "En All Tour Ecuador creemos en el turismo como una herramienta de conexión, aprendizaje y desarrollo. Somos un equipo de profesionales locales, guías nativos y amantes de nuestra tierra, que te acompañarán a vivir experiencias auténticas, seguras y memorables.",
+        "about.text": "En AllTourEcuador creemos en el turismo como una herramienta de conexión, aprendizaje y desarrollo. Somos un equipo de profesionales locales, guías nativos y amantes de nuestra tierra, que te acompañarán a vivir experiencias auténticas, seguras y memorables.",
         "about.btn": "Conoce nuestro equipo",
         "about.hero.title": "Más que un viaje,<br>una experiencia de vida",
         "about.hero.desc": "Conoce la historia, el equipo y la esencia que hacen posible vivir un Ecuador auténtico.",
@@ -120,7 +120,7 @@ const translations = {
         "footer.address": "Calle Bolívar, entre Neptalí Ordoñez y Av. Quito",
         "footer.explore": "Explora",
         "footer.follow": "Síguenos",
-        "footer.copy": "© 2026 All Tour Ecuador. Todos los derechos reservados.",
+        "footer.copy": "© 2026 AllTourEcuador. Todos los derechos reservados.",
         "footer.privacy": "Política de privacidad",
         "footer.terms": "Términos y condiciones",
 
@@ -155,7 +155,7 @@ const translations = {
 
         // WELCOME
         "welcome.eyebrow": "Welcome to",
-        "welcome.title": "ALL TOUR ECUADOR",
+        "welcome.title": "ALLTOURECUADOR",
         "welcome.text": "Your gateway to an authentic, diverse and experience-filled Ecuador. We design and operate trips that connect our travelers with nature, cultures, communities and the essence of each territory, offering personalized experiences with quality, safety and professional attention.",
         "welcome.card1.title": "Authentic experiences",
         "welcome.card1.text": "We connect travelers with the real Ecuador: its people, landscapes and living culture.",
@@ -179,7 +179,7 @@ const translations = {
         // ABOUT
         "about.eyebrow": "Who we are",
         "about.title": "More than a trip,<br>a life experience",
-        "about.text": "At All Tour Ecuador we believe in tourism as a tool for connection, learning and development. We are a team of local professionals, native guides and lovers of our land, who will accompany you to live authentic, safe and memorable experiences.",
+        "about.text": "At AllTourEcuador we believe in tourism as a tool for connection, learning and development. We are a team of local professionals, native guides and lovers of our land, who will accompany you to live authentic, safe and memorable experiences.",
         "about.btn": "Meet our team",
         "about.hero.title": "More than a trip,<br>a life experience",
         "about.hero.desc": "Discover the history, team and essence that make it possible to live an authentic Ecuador.",
@@ -250,7 +250,7 @@ const translations = {
         "footer.address": "Bolívar Street, between Neptalí Ordoñez and Av. Quito",
         "footer.explore": "Explore",
         "footer.follow": "Follow us",
-        "footer.copy": "© 2026 All Tour Ecuador. All rights reserved.",
+        "footer.copy": "© 2026 AllTourEcuador. All rights reserved.",
         "footer.privacy": "Privacy Policy",
         "footer.terms": "Terms and Conditions",
 
@@ -285,7 +285,7 @@ const translations = {
 
         // WELCOME
         "welcome.eyebrow": "Bienvenue à",
-        "welcome.title": "ALL TOUR ECUADOR",
+        "welcome.title": "ALLTOURECUADOR",
         "welcome.text": "Votre porte d'entrée vers un Équateur authentique, diversifié et riche en expériences. Nous concevons et opérons des voyages qui connectent nos voyageurs à la nature, aux cultures, aux communautés et à l'essence de chaque territoire, offrant des expériences personnalisées avec qualité, sécurité et attention professionnelle.",
         "welcome.card1.title": "Expériences authentiques",
         "welcome.card1.text": "Nous connectons le voyageur à l'Équateur réel : ses gens, ses paysages et sa culture vivante.",
@@ -309,7 +309,7 @@ const translations = {
         // ABOUT
         "about.eyebrow": "Qui sommes-nous",
         "about.title": "Plus qu'un voyage,<br>une expérience de vie",
-        "about.text": "Chez All Tour Ecuador, nous croyons au tourisme comme outil de connexion, d'apprentissage et de développement. Nous sommes une équipe de professionnels locaux, guides natifs et amoureux de notre terre.",
+        "about.text": "Chez AllTourEcuador, nous croyons au tourisme comme outil de connexion, d'apprentissage et de développement. Nous sommes une équipe de professionnels locaux, guides natifs et amoureux de notre terre.",
         "about.btn": "Rencontrer notre équipe",
         "about.hero.title": "Plus qu'un voyage,<br>une expérience de vie",
         "about.hero.desc": "Découvrez l'histoire, l'équipe et l'essence qui rendent possible de vivre un Équateur authentique.",
@@ -380,7 +380,7 @@ const translations = {
         "footer.address": "Rue Bolívar, entre Neptalí Ordoñez et Av. Quito",
         "footer.explore": "Explorer",
         "footer.follow": "Suivez-nous",
-        "footer.copy": "© 2026 All Tour Ecuador. Tous droits réservés.",
+        "footer.copy": "© 2026 AllTourEcuador. Tous droits réservés.",
         "footer.privacy": "Politique de confidentialité",
         "footer.terms": "Termes et conditions",
 
@@ -703,7 +703,7 @@ if (contactForm) {
                 body: formData
             });
 
-            alert(`✅ ¡Gracias ${nombre}!\n\nTu mensaje fue enviado correctamente.\nTe responderemos a ${email} en menos de 24 horas.\n\nAll Tour Ecuador`);
+            alert(`✅ ¡Gracias ${nombre}!\n\nTu mensaje fue enviado correctamente.\nTe responderemos a ${email} en menos de 24 horas.\n\nAllTourEcuador`);
             contactForm.reset();
 
         } catch (error) {
@@ -858,7 +858,7 @@ if (contactMapEl && typeof L !== 'undefined') {
     const officeMarker = L.marker(officeCoords, { icon: contactIcon }).addTo(contactMap);
 
     officeMarker.bindPopup(`
-        <h4>All Tour Ecuador</h4>
+        <h4>AllTourEcuador</h4>
         <p>Calle Bolívar, entre Neptalí Ordoñez y Av. Quito</p>
         <p style="margin-top:6px;font-size:0.8rem;color:#5A7A94;">Otavalo, Imbabura - Ecuador</p>
         <a href="https://www.google.com/maps/dir/?api=1&destination=0.23072435180832726,-78.25970581792483"

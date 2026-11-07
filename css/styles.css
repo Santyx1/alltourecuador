@@ -252,7 +252,7 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; }
 }
 
 .section-eyebrow.light {
-    color: var(--brand-light);
+    color: var(--accent-light); /* Naranja claro en vez de turquesa */
 }
 
 /* En los precios, usamos el turquesa oscuro para que resalte sobre el blanco */

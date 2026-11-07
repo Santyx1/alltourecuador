@@ -758,7 +758,7 @@ main{ padding-top:var(--header-h); }
 .hero-eyebrow::before{
     content:"";
     display:inline-block;
-    width:32px;
+    width:40px;
     height:2px;
     background:var(--accent);
     vertical-align:middle;

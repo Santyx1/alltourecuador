@@ -2247,6 +2247,8 @@ main{ padding-top:var(--header-h); }
     z-index:2;
     max-width:880px;
     margin:0 auto;
+       padding-top: 60px; 
+
 }
 .page-hero-content .section-eyebrow{
     display:inline-block;

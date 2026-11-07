@@ -2231,10 +2231,10 @@ main{ padding-top:var(--header-h); }
    background:linear-gradient(135deg, rgba(26,58,79,0.85), rgba(30,136,199,0.65));
    */
    background: linear-gradient(
-        135deg, 
-        rgba(26,58,79, 0.75) 0%,   /* Arriba-Izquierda: Oscuro (protege el título) */
-        rgba(26,58,79, 0.20) 50%,  /* Centro: Muy transparente (foto a todo color) */
-        rgba(26,58,79, 0.60) 100%  /* Abajo-Derecha: Oscuro (protege el texto inferior) */
+        to bottom,
+        rgba(26,58,79, 0.00) 0%,    /* 1. Arriba: Claridad total (imagen pura) */
+        rgba(26,58,79, 0.35) 45%,   /* 2. Centro: Tono medio para leer el texto */
+        rgba(26,58,79, 0.75) 100%   /* 3. Abajo: Más oscuro para el contraste inferior */
     );
     z-index:1;
 }

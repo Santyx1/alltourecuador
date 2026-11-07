@@ -244,7 +244,7 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; }
    ========================================== */
 
 .btn-accent {
-    background: var(--brand-light);
+    background: var(--accent);
     color: var(--white);
     font-weight: 700;
     /* NUEVO: Aseguramos que resalte en el menú oscuro y en el claro */

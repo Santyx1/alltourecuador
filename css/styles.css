@@ -132,11 +132,11 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; }
 
 .section-eyebrow{
     display:block;
-    font-size:0.78rem;
+    font-size:1rem;
     font-weight:700;
     letter-spacing:0.2em;
     text-transform:uppercase;
-    color:var(--accent-dark);
+    color: var(--accent); /* <-- Lo dejamos en naranja aquí */
     margin-bottom:14px;
     position:relative;
     padding-left:44px;

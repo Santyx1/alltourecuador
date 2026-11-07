@@ -2262,7 +2262,7 @@ main{ padding-top:var(--header-h); }
     font-weight:700;
     line-height:1.15;
     margin-bottom:20px;
-    color:var(--white);
+    color:var(--brand-light);
 }
 .page-hero-desc{
     font-size:1.05rem;

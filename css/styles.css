@@ -667,12 +667,12 @@ main{ padding-top:var(--header-h); }
    /*33333
    background:transparent;
    */
-   /* Degradado vertical: de arriba hacia abajo */
+   /* Este degradado está perfecto para el carrusel */
     background: linear-gradient(
         to bottom,
-        rgba(26,58,79, 0.00) 0%,    /* 1. Arriba: Totalmente transparente (imagen pura) */
-        rgba(26,58,79, 0.20) 40%,   /* 2. Media: Un velo muy sutil para que no sea tan brusco */
-        rgba(26,58,79, 0.75) 100%   /* 3. Abajo: Oscuro, pero dejando ver la foto */
+        rgba(26,58,79, 0.00) 0%,    
+        rgba(26,58,79, 0.20) 40%,   
+        rgba(26,58,79, 0.75) 100%   
     );
     z-index: 1;
 }

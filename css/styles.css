@@ -251,10 +251,6 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; }
     box-shadow: 0 4px 12px rgba(242, 124, 33, 0.4); 
 }
 
-/* El turquesa brillante en textos pequeños a veces pierde legibilidad, lo oscurecemos un poco */
-.section-eyebrow {
-    color: var(--brand-dark);
-}
 .section-eyebrow.light {
     color: var(--brand-light);
 }

@@ -663,7 +663,8 @@ main{ padding-top:var(--header-h); }
     position:absolute;
     inset:0;
     
-   background:linear-gradient(135deg, rgba(26,58,79,0.55) 0%, rgba(26,58,79,0.20) 50%, rgba(26,58,79,0.50) 100%);
+       background:linear-gradient(135deg, rgba(26,58,79,0.65) 0%, rgba(26,58,79,0.15) 40%, rgba(26,58,79,0.50) 100%);
+
    /*
    background:transparent;
    */

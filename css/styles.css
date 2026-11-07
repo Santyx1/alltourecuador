@@ -653,7 +653,7 @@ main{ padding-top:var(--header-h); }
     -webkit-backface-visibility:hidden;
     
     /* AGREGA ESTA LÍNEA AQUÍ: */
-    opacity: 0.1; /* Juega con valores entre 0.1 (casi invisible) y 1 (opaca) */
+    opacity: 0.9; /* Juega con valores entre 0.1 (casi invisible) y 1 (opaca) */
 }
 .swiper-slide-active .hero-slide-bg{ transform:scale(1); }
 .swiper-slide-prev .hero-slide-bg,

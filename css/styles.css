@@ -2088,9 +2088,10 @@ main{ padding-top:var(--header-h); }
 .footer-bottom{ padding:26px 0; }
 .footer-bottom-content{
     display:flex;
-    justify-content:space-between;
+    justify-content:center; /* En lugar de space-between */
     align-items:center;
-    gap:20px;
+    gap:40px;               /* Separación entre copyright y enlaces */
+    text-align:center;
     font-size:0.82rem;
     color:rgba(255,255,255,0.5);
     flex-wrap:wrap;

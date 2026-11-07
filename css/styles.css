@@ -2232,7 +2232,13 @@ main{ padding-top:var(--header-h); }
    /* 
    background:linear-gradient(135deg, rgba(26,58,79,0.85), rgba(30,136,199,0.65));
    */
-   z-index:1;
+   background: linear-gradient(
+        135deg, 
+        rgba(26,58,79, 0.75) 0%,   /* Arriba-Izquierda: Oscuro (protege el título) */
+        rgba(26,58,79, 0.20) 50%,  /* Centro: Muy transparente (foto a todo color) */
+        rgba(26,58,79, 0.60) 100%  /* Abajo-Derecha: Oscuro (protege el texto inferior) */
+    );
+    z-index:1;
 }
 .page-hero-content{
     position:relative;

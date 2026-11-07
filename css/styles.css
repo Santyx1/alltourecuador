@@ -2254,6 +2254,8 @@ main{ padding-top:var(--header-h); }
     display:inline-block;
     padding-left:0;
     margin-bottom:20px;
+       color: var(--brand-light); /* <-- TURQUESA CLARO */
+
 }
 .page-hero-content .section-eyebrow::before{ display:none; }
 .page-hero-title{
@@ -2262,7 +2264,8 @@ main{ padding-top:var(--header-h); }
     font-weight:700;
     line-height:1.15;
     margin-bottom:20px;
-    color:var(--brand-light);
+   /*Titulos bajo quienes somos y las demas paginas*/
+    color:var(--white); 
 }
 .page-hero-desc{
     font-size:1.05rem;

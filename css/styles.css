@@ -4224,3 +4224,311 @@ main{ padding-top:var(--header-h); }
         font-size:0.85rem;
     }
 }
+
+/* ==========================================
+   PÁGINA DE DETALLE DE TOUR
+   ========================================== */
+
+.tour-detail-hero-section {
+    min-height: 480px;
+    padding: 160px 0 90px;
+}
+
+.tour-detail-hero-section .breadcrumb {
+    margin-bottom: 24px;
+}
+
+.section-tour-detail-body {
+    padding: 80px 0 100px;
+    background: var(--bg-veil-soft);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+}
+
+.tour-detail-layout {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+/* Columna principal */
+.tour-detail-main .tour-detail-heading {
+    font-family: var(--font-sans);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--brand-dark);
+    margin-bottom: 16px;
+    margin-top: 32px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--brand-pale);
+}
+
+.tour-detail-main .tour-detail-heading:first-child {
+    margin-top: 0;
+}
+
+.tour-detail-callout {
+    background: linear-gradient(135deg, var(--accent-pale), var(--brand-pale));
+    border-left: 4px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 24px 28px;
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 1.08rem;
+    color: var(--text);
+    line-height: 1.7;
+    margin-bottom: 32px;
+}
+
+.tour-detail-description {
+    font-size: 1rem;
+    color: var(--text-light);
+    line-height: 1.85;
+    margin-bottom: 24px;
+}
+
+.tour-detail-itinerary {
+    display: grid;
+    gap: 14px;
+}
+
+.tour-detail-itinerary li {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 18px;
+    padding: 16px 18px;
+    background: var(--white);
+    border-radius: var(--radius-sm);
+    border-left: 3px solid var(--brand);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.tour-detail-itinerary li:hover {
+    border-left-color: var(--accent);
+    box-shadow: var(--shadow);
+}
+
+/* Galería placeholder */
+.tour-gallery-placeholder {
+    margin-top: 40px;
+    padding: 24px;
+    background: var(--white);
+    border: 2px dashed var(--gray-200);
+    border-radius: var(--radius);
+}
+
+.tour-gallery-note {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-top: 12px;
+}
+
+.tour-gallery-note i {
+    color: var(--accent);
+    margin-right: 6px;
+}
+
+/* Sidebar */
+.tour-detail-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    position: sticky;
+    top: calc(var(--header-h-scrolled) + 20px);
+}
+
+.tour-facts-card,
+.tour-includes-card,
+.tour-not-includes-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 24px 22px 22px;
+    border: 1px solid var(--gray-100);
+    box-shadow: var(--shadow-sm);
+}
+
+.tour-sidebar-title {
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--brand-dark);
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--gray-100);
+}
+
+#tourFacts {
+    display: grid;
+    gap: 12px;
+}
+
+#tourFacts li {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--gray-100);
+}
+
+#tourFacts li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+#tourFacts strong {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--brand-dark);
+}
+
+#tourFacts span {
+    font-size: 0.9rem;
+    color: var(--text);
+    line-height: 1.5;
+}
+
+.tour-includes-card h4,
+.tour-not-includes-card h4 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-sans);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+.tour-includes-card h4 {
+    color: var(--accent-dark);
+}
+
+.tour-not-includes-card h4 {
+    color: var(--red);
+}
+
+.tour-includes-card h4 i {
+    color: var(--accent);
+    font-size: 1rem;
+}
+
+.tour-not-includes-card h4 i {
+    color: var(--red);
+    font-size: 1rem;
+}
+
+#tourIncludes,
+#tourNotIncludes {
+    display: grid;
+    gap: 8px;
+}
+
+#tourIncludes li,
+#tourNotIncludes li {
+    font-size: 0.88rem;
+    color: var(--text);
+    line-height: 1.5;
+    padding-left: 18px;
+    position: relative;
+}
+
+#tourIncludes li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 700;
+}
+
+#tourNotIncludes li::before {
+    content: "✕";
+    position: absolute;
+    left: 0;
+    color: var(--red);
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+.tour-detail-cta {
+    width: 100%;
+    justify-content: center;
+}
+
+/* Precio sugerido */
+.tour-price-sidebar {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 20px 22px;
+    border: 2px solid var(--accent-pale);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+}
+
+.tour-price-sidebar-label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-bottom: 4px;
+}
+
+.tour-price-sidebar-value {
+    display: block;
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--brand-dark);
+    line-height: 1;
+}
+
+.tour-price-sidebar-note {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-top: 4px;
+}
+
+.tour-price-sidebar-suggestion {
+    font-size: 0.75rem;
+    color: var(--text-light);
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px dashed var(--gray-200);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .tour-detail-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .tour-detail-sidebar {
+        position: static;
+    }
+}
+
+@media (max-width: 720px) {
+    .section-tour-detail-body {
+        padding: 60px 0 80px;
+    }
+    .tour-detail-itinerary li {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
+    .tour-detail-hero-section {
+        min-height: 400px;
+        padding: 130px 0 70px;
+    }
+}

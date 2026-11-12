@@ -32,10 +32,6 @@
     <!-- Swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <!-- Leaflet -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-
     <!-- CSS principal -->
     <link rel="stylesheet" href="css/styles.css">
 
@@ -45,21 +41,19 @@
 <body>
 
     <!-- PRELOADER -->
-<div class="preloader" id="preloader">
-    <div class="preloader-inner">
-        <div class="preloader-logos">
-            <!-- Deja solo esta imagen -->
-            <img src="img/logo3.png" alt="AllTourEcuador" class="preloader-logo" />
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-logos">
+                <img src="img/logo3.png" alt="AllTourEcuador" class="preloader-logo" />
+            </div>
+            <div class="preloader-bar"><span></span></div>
         </div>
-        <div class="preloader-bar"><span></span></div>
     </div>
-</div>
 
     <!-- HEADER -->
     <header class="site-header" id="siteHeader">
         <div class="container nav-wrapper">
             <a href="index.html" class="brand" aria-label="AllTourEcuador - Inicio">
-                <!-- REEMPLAZAR IMAGEN: logo oficial (más grande) -->
                 <img src="img/logo3.png" alt="AllTourEcuador" class="brand-logo" />
             </a>
 
@@ -67,7 +61,7 @@
                 <a href="index.html" class="active" data-i18n="nav.inicio">Inicio</a>
                 <a href="nosotros.html" data-i18n="nav.nosotros">Nosotros</a>
                 <a href="tours.html" data-i18n="nav.tours">Tours</a>
-                <!--<a href="servicios.html" data-i18n="nav.servicios">Servicios</a>-->
+                <a href="destinos.html" data-i18n="nav.destinos">Destinos</a>
                 <a href="experiencias.html" data-i18n="nav.experiencias">Experiencias</a>
                 <a href="contacto.html" data-i18n="nav.contacto">Contacto</a>
             </nav>
@@ -105,7 +99,7 @@
             <a href="index.html" data-i18n="nav.inicio">Inicio</a>
             <a href="nosotros.html" data-i18n="nav.nosotros">Nosotros</a>
             <a href="tours.html" data-i18n="nav.tours">Tours</a>
-            <!--<a href="servicios.html" data-i18n="nav.servicios">Servicios</a>-->
+            <a href="destinos.html" data-i18n="nav.destinos">Destinos</a>
             <a href="experiencias.html" data-i18n="nav.experiencias">Experiencias</a>
             <a href="contacto.html" data-i18n="nav.contacto">Contacto</a>
         </nav>
@@ -126,9 +120,7 @@
 
             <!-- Slide 1 -->
             <div class="swiper-slide hero-slide">
-                <!-- REEMPLAZAR IMAGEN: turista compartiendo paisaje (carpeta Drive usuario) -->
-                    <div class="hero-slide-bg" style="background-image:url('img/imbabura-inicio.jpg');"></div>
-
+                <div class="hero-slide-bg" style="background-image:url('img/imbabura-inicio.jpg');"></div>
                 <div class="hero-slide-overlay"></div>
                 <div class="container hero-slide-content">
                     <span class="hero-eyebrow" data-i18n="hero.eyebrow">Agencia de Viajes y Operador Turístico</span>
@@ -146,9 +138,7 @@
 
             <!-- Slide 2 -->
             <div class="swiper-slide hero-slide">
-                <!-- REEMPLAZAR IMAGEN: turista compartiendo paisaje (carpeta Drive usuario) -->
-                    <div class="hero-slide-bg" style="background-image:url('img/alpacas-inicio.jpeg');"></div>
-
+                <div class="hero-slide-bg" style="background-image:url('img/alpacas-inicio.jpeg');"></div>
                 <div class="hero-slide-overlay"></div>
                 <div class="container hero-slide-content">
                     <span class="hero-eyebrow">Alpacas & Tejidos Andinos</span>
@@ -166,9 +156,7 @@
 
             <!-- Slide 3 -->
             <div class="swiper-slide hero-slide">
-                <!-- REEMPLAZAR IMAGEN: turista compartiendo paisaje (carpeta Drive usuario) -->
-                    <div class="hero-slide-bg" style="background-image:url('img/cuicoha-inicio.jpg');"></div>
-
+                <div class="hero-slide-bg" style="background-image:url('img/cuicoha-inicio.jpg');"></div>
                 <div class="hero-slide-overlay"></div>
                 <div class="container hero-slide-content">
                     <span class="hero-eyebrow">Naturaleza Viva</span>
@@ -186,9 +174,7 @@
 
             <!-- Slide 4 -->
             <div class="swiper-slide hero-slide">
-                <!-- REEMPLAZAR IMAGEN: turista compartiendo paisaje (carpeta Drive usuario) -->
-                    <div class="hero-slide-bg" style="background-image:url('img/sabiduria-inicio.jpg');"></div>
-
+                <div class="hero-slide-bg" style="background-image:url('img/sabiduria-inicio.jpg');"></div>
                 <div class="hero-slide-overlay"></div>
                 <div class="container hero-slide-content">
                     <span class="hero-eyebrow">Sabiduría Ancestral</span>
@@ -213,63 +199,47 @@
 </section>
 
         <!-- ==============================
-     BLOQUE 2: CADENA DE VALOR
-=============================== -->
-<section class="section-philosophy">
-    <div class="container">
-        <div class="value-chain">
-            <h2 class="value-chain-title">El efecto transformador de tu viaje</h2>
-            
-            <div class="value-chain-steps">
-                <!-- Paso 1 -->
-                <div class="chain-step">
-                    <div class="chain-icon"><i class="fa-solid fa-eye"></i></div>
-                    <span>CONOCER</span>
-                </div>
-                
-                <div class="chain-arrow"><i class="fa-solid fa-chevron-right"></i></div>
-                
-                <!-- Paso 2 -->
-                <div class="chain-step">
-                    <div class="chain-icon"><i class="fa-solid fa-share-nodes"></i></div>
-                    <span>COMPARTIR</span>
-                </div>
-                
-                <div class="chain-arrow"><i class="fa-solid fa-chevron-right"></i></div>
-                
-                <!-- Paso 3 -->
-                <div class="chain-step">
-                    <div class="chain-icon"><i class="fa-solid fa-basket-shopping"></i></div>
-                    <span>CONSUMIR LOCAL</span>
-                </div>
-                
-                <div class="chain-arrow"><i class="fa-solid fa-chevron-right"></i></div>
-                
-                <!-- Paso 4 -->
-                <div class="chain-step">
-                    <div class="chain-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
-                    <span>GENERAR INGRESOS</span>
-                </div>
-                
-                <div class="chain-arrow"><i class="fa-solid fa-chevron-right"></i></div>
-                
-                <!-- Paso 5 -->
-                <div class="chain-step">
-                    <div class="chain-icon"><i class="fa-solid fa-people-roof"></i></div>
-                    <span>FORTALECER FAMILIAS</span>
-                </div>
-                
-                <div class="chain-arrow"><i class="fa-solid fa-chevron-right"></i></div>
-                
-                <!-- Paso 6 -->
-                <div class="chain-step">
-                    <div class="chain-icon"><i class="fa-solid fa-leaf"></i></div>
-                    <span>CONSERVAR PATRIMONIO</span>
+             BLOQUE 2: CADENA DE VALOR
+        =============================== -->
+        <section class="section-philosophy">
+            <div class="container">
+                <div class="value-chain">
+                    <h2 class="value-chain-title">El efecto transformador de tu viaje</h2>
+
+                    <div class="value-chain-steps">
+                        <div class="chain-step">
+                            <div class="chain-icon"><i class="fa-solid fa-eye"></i></div>
+                            <span>CONOCER</span>
+                        </div>
+                        <div class="chain-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+                        <div class="chain-step">
+                            <div class="chain-icon"><i class="fa-solid fa-share-nodes"></i></div>
+                            <span>COMPARTIR</span>
+                        </div>
+                        <div class="chain-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+                        <div class="chain-step">
+                            <div class="chain-icon"><i class="fa-solid fa-basket-shopping"></i></div>
+                            <span>CONSUMIR LOCAL</span>
+                        </div>
+                        <div class="chain-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+                        <div class="chain-step">
+                            <div class="chain-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+                            <span>GENERAR INGRESOS</span>
+                        </div>
+                        <div class="chain-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+                        <div class="chain-step">
+                            <div class="chain-icon"><i class="fa-solid fa-people-roof"></i></div>
+                            <span>FORTALECER FAMILIAS</span>
+                        </div>
+                        <div class="chain-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+                        <div class="chain-step">
+                            <div class="chain-icon"><i class="fa-solid fa-leaf"></i></div>
+                            <span>CONSERVAR PATRIMONIO</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
         <!-- ==============================
              BLOQUE 3: BIENVENIDA
@@ -288,33 +258,30 @@
                 </div>
 
                 <div class="welcome-features">
-    <!-- Tarjeta 1 -->
-    <article class="welcome-card">
-        <div class="welcome-icon" style="background:none;display:grid;place-items:center;">
-            <img src="img/experiencias.png" alt="Experiencias auténticas" style="width:200px;height:200px;object-fit:contain;" />
-        </div>
-        <h3 data-i18n="welcome.card1.title">Experiencias auténticas</h3>
-        <p data-i18n="welcome.card1.text">Conectamos al viajero con el Ecuador real: sus gentes, sus paisajes y su cultura viva.</p>
-    </article>
+                    <article class="welcome-card">
+                        <div class="welcome-icon" style="background:none;display:grid;place-items:center;">
+                            <img src="img/experiencias.png" alt="Experiencias auténticas" style="width:200px;height:200px;object-fit:contain;" />
+                        </div>
+                        <h3 data-i18n="welcome.card1.title">Experiencias auténticas</h3>
+                        <p data-i18n="welcome.card1.text">Conectamos al viajero con el Ecuador real: sus gentes, sus paisajes y su cultura viva.</p>
+                    </article>
 
-    <!-- Tarjeta 2 -->
-    <article class="welcome-card">
-        <div class="welcome-icon" style="background:none;display:grid;place-items:center;">
-            <img src="img/comunidades.png" alt="Comunidades locales" style="width:200px;height:200px;object-fit:contain;" />
-        </div>
-        <h3 data-i18n="welcome.card2.title">Comunidades locales</h3>
-        <p data-i18n="welcome.card2.text">Trabajamos de la mano con familias, emprendimientos y prestadores de servicios locales.</p>
-    </article>
+                    <article class="welcome-card">
+                        <div class="welcome-icon" style="background:none;display:grid;place-items:center;">
+                            <img src="img/comunidades.png" alt="Comunidades locales" style="width:200px;height:200px;object-fit:contain;" />
+                        </div>
+                        <h3 data-i18n="welcome.card2.title">Comunidades locales</h3>
+                        <p data-i18n="welcome.card2.text">Trabajamos de la mano con familias, emprendimientos y prestadores de servicios locales.</p>
+                    </article>
 
-    <!-- Tarjeta 3 -->
-    <article class="welcome-card">
-        <div class="welcome-icon" style="background:none;display:grid;place-items:center;">
-            <img src="img/profesional.png" alt="Operación profesional" style="width:200px;height:200px;object-fit:contain;" />
-        </div>
-        <h3 data-i18n="welcome.card3.title">Operación profesional</h3>
-        <p data-i18n="welcome.card3.text">Calidad, seguridad y atención personalizada en cada experiencia que diseñamos.</p>
-    </article>
-</div>
+                    <article class="welcome-card">
+                        <div class="welcome-icon" style="background:none;display:grid;place-items:center;">
+                            <img src="img/profesional.png" alt="Operación profesional" style="width:200px;height:200px;object-fit:contain;" />
+                        </div>
+                        <h3 data-i18n="welcome.card3.title">Operación profesional</h3>
+                        <p data-i18n="welcome.card3.text">Calidad, seguridad y atención personalizada en cada experiencia que diseñamos.</p>
+                    </article>
+                </div>
             </div>
         </section>
 
@@ -364,7 +331,6 @@
              BLOQUE 5: QUIÉNES SOMOS
         =============================== -->
         <section class="section-about-parallax">
-            <!-- REEMPLAZAR IMAGEN: paisaje/turista (carpeta Drive usuario) -->
             <div class="parallax-bg" style="background-image:url('img/quienes_somos.jpg');"></div>
             <div class="parallax-overlay"></div>
 
@@ -401,7 +367,6 @@
 
                     <article class="region-card">
                         <div class="region-image">
-                            <!-- REEMPLAZAR IMAGEN: Costa (carpeta Drive usuario) -->
                             <img src="img/costa.jpg" alt="Costa ecuatoriana" loading="lazy" />
                             <div class="region-overlay"></div>
                             <div class="region-badge"><i class="fa-solid fa-umbrella-beach"></i> <span data-i18n="region.costa.badge">Costa</span></div>
@@ -410,21 +375,7 @@
                             <h3>COSTA</h3>
                             <p class="region-tagline" data-i18n="region.costa.tagline">Sabores, playas y cultura frente al Pacífico.</p>
                             <p class="region-desc" data-i18n="region.costa.desc">Vive la gastronomía, naturaleza y calidez de la Costa ecuatoriana.</p>
-                        </div>
-                    </article>
-
-                    <article class="region-card">
-                        <div class="region-image">
-                            <!-- REEMPLAZAR IMAGEN: Andes (carpeta Drive usuario) -->
-                            <img src="img/sierra.jpg" alt="Andes ecuatorianos" loading="lazy" />
-                            <div class="region-overlay"></div>
-                            <div class="region-badge"><i class="fa-solid fa-mountain"></i> <span data-i18n="region.sierra.badge">Andes</span></div>
-                        </div>
-                        <div class="region-info">
-                            <h3>SIERRA</h3>
-                            <p class="region-tagline" data-i18n="region.sierra.tagline">Andes, culturas y experiencias que nacen de la tierra.</p>
-                            <p class="region-desc" data-i18n="region.sierra.desc">Conecta con comunidades, tradiciones, montañas y paisajes andinos.</p>
-                            <a href="tours.html#paquetes" class="btn btn-accent btn-sm" style="margin-top:16px;align-self:flex-start;">
+                            <a href="destinos.html#costa" class="btn btn-accent btn-sm" style="margin-top:16px;align-self:flex-start;">
                                 Ver paquetes
                                 <i class="fa-solid fa-arrow-right"></i>
                             </a>
@@ -433,7 +384,23 @@
 
                     <article class="region-card">
                         <div class="region-image">
-                            <!-- REEMPLAZAR IMAGEN: Amazonía (carpeta Drive usuario) -->
+                            <img src="img/sierra.jpg" alt="Andes ecuatorianos" loading="lazy" />
+                            <div class="region-overlay"></div>
+                            <div class="region-badge"><i class="fa-solid fa-mountain"></i> <span data-i18n="region.sierra.badge">Andes</span></div>
+                        </div>
+                        <div class="region-info">
+                            <h3>SIERRA</h3>
+                            <p class="region-tagline" data-i18n="region.sierra.tagline">Andes, culturas y experiencias que nacen de la tierra.</p>
+                            <p class="region-desc" data-i18n="region.sierra.desc">Conecta con comunidades, tradiciones, montañas y paisajes andinos.</p>
+                            <a href="destinos.html#andes" class="btn btn-accent btn-sm" style="margin-top:16px;align-self:flex-start;">
+                                Ver paquetes
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="region-card">
+                        <div class="region-image">
                             <img src="img/amazonia.jpg" alt="Amazonía ecuatoriana" loading="lazy" />
                             <div class="region-overlay"></div>
                             <div class="region-badge"><i class="fa-solid fa-tree"></i> <span data-i18n="region.amazonia.badge">Amazonía</span></div>
@@ -442,12 +409,15 @@
                             <h3>AMAZONÍA</h3>
                             <p class="region-tagline" data-i18n="region.amazonia.tagline">Naturaleza viva, selva y sabiduría ancestral.</p>
                             <p class="region-desc" data-i18n="region.amazonia.desc">Explora la biodiversidad y descubre la conexión entre sus pueblos y la Amazonía.</p>
+                            <a href="destinos.html#amazonia" class="btn btn-accent btn-sm" style="margin-top:16px;align-self:flex-start;">
+                                Ver paquetes
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
                         </div>
                     </article>
 
                     <article class="region-card">
                         <div class="region-image">
-                            <!-- REEMPLAZAR IMAGEN: Galápagos (carpeta Drive usuario) -->
                             <img src="img/galapagos.jpg" alt="Galápagos" loading="lazy" />
                             <div class="region-overlay"></div>
                             <div class="region-badge"><i class="fa-solid fa-fish"></i> <span data-i18n="region.galapagos.badge">Galápagos</span></div>
@@ -456,14 +426,18 @@
                             <h3>GALÁPAGOS</h3>
                             <p class="region-tagline" data-i18n="region.galapagos.tagline">Un mundo único para descubrir y conservar.</p>
                             <p class="region-desc" data-i18n="region.galapagos.desc">Vive una experiencia extraordinaria entre fauna, océano y paisajes únicos.</p>
+                            <a href="destinos.html#galapagos" class="btn btn-accent btn-sm" style="margin-top:16px;align-self:flex-start;">
+                                Ver paquetes
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
                         </div>
                     </article>
 
                 </div>
 
                 <div class="regions-cta">
-                    <a href="tours.html" class="btn btn-primary">
-                        <span data-i18n="regions.btn">Explorar todos los tours</span>
+                    <a href="destinos.html" class="btn btn-primary">
+                        <span data-i18n="regions.btn">Explorar todos los destinos</span>
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
@@ -489,7 +463,6 @@
                             <div class="swiper-slide">
                                 <article class="tour-card">
                                     <div class="tour-image">
-                                        <!-- REEMPLAZAR IMAGEN: Raíces de Otavalo (carpeta Drive usuario) -->
                                         <img src="img/otavalo.jpg" alt="Raíces de Otavalo" loading="lazy" />
                                         <span class="tour-tag">Cultura Kichwa</span>
                                     </div>
@@ -508,11 +481,10 @@
                                 </article>
                             </div>
 
-                            <!-- Tour 2: TIERRA, SABOR Y ESPÍRITU KICHWA COTACACHI -->
+                            <!-- Tour 2 -->
                             <div class="swiper-slide">
                                 <article class="tour-card">
                                     <div class="tour-image">
-                                        <!-- REEMPLAZAR IMAGEN: Cotacachi (carpeta Drive usuario) -->
                                         <img src="img/cotacachi.jpg" alt="Cotacachi" loading="lazy" />
                                         <span class="tour-tag">Gastronomía Ancestral</span>
                                     </div>
@@ -531,11 +503,10 @@
                                 </article>
                             </div>
 
-                            <!-- Tour 3: PATRIMONIO ANCESTRAL KICHWA -->
+                            <!-- Tour 3 -->
                             <div class="swiper-slide">
                                 <article class="tour-card">
                                     <div class="tour-image">
-                                        <!-- REEMPLAZAR IMAGEN: Patrimonio Ancestral (carpeta Drive usuario) -->
                                         <img src="img/kichwa.jpg" alt="Patrimonio Ancestral" loading="lazy" />
                                         <span class="tour-tag">Patrimonio Vivo</span>
                                     </div>
@@ -554,11 +525,10 @@
                                 </article>
                             </div>
 
-                            <!-- Tour 4: CUICOCHA NATURE TREK -->
+                            <!-- Tour 4 -->
                             <div class="swiper-slide">
                                 <article class="tour-card">
                                     <div class="tour-image">
-                                        <!-- REEMPLAZAR IMAGEN: Cuicocha (carpeta Drive usuario) -->
                                         <img src="img/cuicocha.jpg" alt="Cuicocha" loading="lazy" />
                                         <span class="tour-tag">Trekking & Volcán</span>
                                     </div>
@@ -577,11 +547,10 @@
                                 </article>
                             </div>
 
-                            <!-- Tour 5: SABERES ANCESTRALES DE LA TIERRA Y LA MUJER -->
+                            <!-- Tour 5 -->
                             <div class="swiper-slide">
                                 <article class="tour-card">
                                     <div class="tour-image">
-                                        <!-- REEMPLAZAR IMAGEN: Saberes Ancestrales (carpeta Drive usuario) -->
                                         <img src="img/ancestrales.jpg" alt="Saberes Ancestrales" loading="lazy" />
                                         <span class="tour-tag">Vivencial & Etnobotánico</span>
                                     </div>
@@ -600,11 +569,10 @@
                                 </article>
                             </div>
 
-                            <!-- Tour 6: AROMAS, SABORES Y AVENTURA DE INTAG -->
+                            <!-- Tour 6 -->
                             <div class="swiper-slide">
                                 <article class="tour-card">
                                     <div class="tour-image">
-                                        <!-- REEMPLAZAR IMAGEN: Intag (carpeta Drive usuario) -->
                                         <img src="img/intag.jpg" alt="Intag" loading="lazy" />
                                         <span class="tour-tag">Café & Aventura</span>
                                     </div>
@@ -623,11 +591,10 @@
                                 </article>
                             </div>
 
-                            <!-- Tour 7: ENTRE ALPACAS Y TEJIDOS ANDINOS -->
+                            <!-- Tour 7 -->
                             <div class="swiper-slide">
                                 <article class="tour-card">
                                     <div class="tour-image">
-                                        <!-- REEMPLAZAR IMAGEN: Alpacas (carpeta Drive usuario) -->
                                         <img src="img/tejidos.jpg" alt="Alpacas y Tejidos" loading="lazy" />
                                         <span class="tour-tag">Páramo & Comunidad</span>
                                     </div>
@@ -664,60 +631,9 @@
         </section>
 
         <!-- ==============================
-             MAPA INTERACTIVO
-        =============================== -->
-        <section class="section-map-interactive" id="experiencias">
-            <div class="container">
-                <div class="section-header-center">
-                    <span class="section-eyebrow" data-i18n="map.eyebrow">Explora el mapa</span>
-                    <h2 class="section-heading" data-i18n="map.title">Ecuador, un país. Cuatro mundos.</h2>
-                    <p class="section-lead" data-i18n="map.lead">Costa | Andes | Amazonía | Galápagos. Haz clic en cada región para descubrir sus destinos.</p>
-                </div>
-
-                <div class="map-layout">
-                    <div id="tourMap" class="tour-map" aria-label="Mapa de Ecuador con sus 4 regiones"></div>
-
-                    <aside class="map-panel" id="mapPanel">
-                        <div class="map-panel-content">
-                            <div class="panel-img-wrapper">
-                                <!-- REEMPLAZAR IMAGEN: placeholder panel mapa -->
-                                <img id="panelImg"
-                                     src="https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=900&q=80"
-                                     alt="Explora Ecuador"
-                                     class="panel-img" />
-                                <div class="panel-img-overlay" id="panelImgOverlay">
-                                    <span>🗺️</span>
-                                    <p data-i18n="map.select">Selecciona una región en el mapa</p>
-                                </div>
-                            </div>
-
-                            <div class="panel-body">
-                                <span class="panel-tag" id="panelTag" data-i18n="map.tag">Ecuador</span>
-                                <h3 id="panelTitle" data-i18n="map.welcome">Bienvenido a Ecuador</h3>
-                                <p id="panelDesc" data-i18n="map.desc">Haz clic en cualquier región del mapa para descubrir sus destinos y experiencias.</p>
-
-                                <ul class="panel-info" id="panelInfo">
-                                    <li><strong data-i18n="map.info.regions">Regiones:</strong> <span>4 regiones</span></li>
-                                    <li><strong data-i18n="map.info.destinations">Destinos:</strong> <span>+20 lugares</span></li>
-                                    <li><strong data-i18n="map.info.experiences">Experiencias:</strong> <span data-i18n="map.info.custom">Personalizadas</span></li>
-                                </ul>
-
-                                <a href="contacto.html" class="btn btn-accent" style="width:100%;justify-content:center;">
-                                    <span data-i18n="map.btn">Cotizar mi viaje</span>
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </aside>
-                </div>
-            </div>
-        </section>
-
-        <!-- ==============================
              CTA FINAL
         =============================== -->
         <section class="section-cta-final">
-            <!-- REEMPLAZAR IMAGEN: CTA final (carpeta Drive usuario) -->
             <div class="cta-bg" style="background-image:url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1920&q=80');"></div>
             <div class="cta-overlay"></div>
 
@@ -741,7 +657,6 @@
     <footer class="site-footer">
         <div class="container footer-grid">
             <div class="footer-col footer-brand-col">
-                <!-- REEMPLAZAR IMAGEN: logo oficial (footer) -->
                 <img src="img/logo3.png" alt="AllTourEcuador" class="footer-logo" />
                 <p class="footer-tagline">Your Gateway to Authenticity</p>
                 <p class="footer-desc" data-i18n="footer.desc">Agencia de Viajes y Operador Turístico. Ecuador, desde el corazón del planeta.</p>
@@ -761,7 +676,7 @@
                 <h4 data-i18n="footer.explore">Explora</h4>
                 <ul class="footer-list footer-links">
                     <li><a href="tours.html" data-i18n="nav.tours">Tours</a></li>
-                    <!--<a href="servicios.html" data-i18n="nav.servicios">Servicios</a>-->
+                    <li><a href="destinos.html" data-i18n="nav.destinos">Destinos</a></li>
                     <li><a href="experiencias.html" data-i18n="nav.experiencias">Experiencias</a></li>
                     <li><a href="nosotros.html" data-i18n="nav.nosotros">Nosotros</a></li>
                     <li><a href="contacto.html" data-i18n="nav.contacto">Contacto</a></li>
@@ -770,13 +685,12 @@
 
             <div class="footer-col">
                 <h4 data-i18n="footer.follow">Síguenos</h4>
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/Alltourecuador" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/alltourecuador593/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://www.tiktok.com/@alltourecuador" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-                        <!-- Nuevo botón de YouTube -->
-                        <a href="https://www.youtube.com/@alltourecuador2485" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                    </div>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/Alltourecuador" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/alltourecuador593/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@alltourecuador" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://www.youtube.com/@alltourecuador2485" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
                 <p class="social-hashtag">#AllTourEcuador</p>
             </div>
         </div>
@@ -805,10 +719,6 @@
     <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
         <i class="fa-solid fa-arrow-up"></i>
     </button>
-
-    <!-- Leaflet JS -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

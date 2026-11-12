@@ -54,5 +54,12 @@
     "duracion": "3day",
     "descripcion": "PRUEBA RAPIDA",
     "imagen": "/img/comparte-1.jpg"
+  },
+  {
+    "titulo": "HOLA 2",
+    "precio": 100,
+    "duracion": "2day",
+    "descripcion": "PRUEBA NUMERO 2",
+    "imagen": "/img/ancestrales-1.jpg"
   }
 ]

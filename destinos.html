@@ -19,10 +19,6 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <!-- Leaflet -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-
     <link rel="stylesheet" href="css/styles.css">
 
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
@@ -110,58 +106,26 @@
                 <h1 class="page-hero-title" data-i18n="destinos.hero.title">Cuatro regiones, infinitas experiencias</h1>
                 <p class="page-hero-desc" data-i18n="destinos.hero.desc">
                     Ecuador reúne en un territorio compacto una extraordinaria diversidad de paisajes,
-                    culturas, ecosistemas y formas de vida. Descubre el país con ALL TOUR ECUADOR.
+                    culturas, ecosistemas y formas de vida. Desde las montañas y comunidades de los Andes
+                    hasta la biodiversidad de la Amazonía, las playas de la Costa y los ecosistemas únicos
+                    de Galápagos.
                 </p>
             </div>
         </section>
 
-        <!-- INTRO + MAPA INTERACTIVO -->
-        <section class="section-map-interactive" id="mapa">
+        <!-- INTRO -->
+        <section class="section-destinos-intro">
             <div class="container">
                 <div class="section-header-center">
-                    <span class="section-eyebrow" data-i18n="destinos.map.eyebrow">Explora el mapa</span>
-                    <h2 class="section-heading" data-i18n="destinos.map.title">Ecuador, un país. Cuatro mundos.</h2>
-                    <p class="section-lead" data-i18n="destinos.map.lead">
+                    <span class="section-eyebrow" data-i18n="destinos.intro.eyebrow">Descubre el país</span>
+                    <h2 class="section-heading" data-i18n="destinos.intro.title">Ecuador, un país. Cuatro mundos.</h2>
+                    <p class="section-lead" data-i18n="destinos.intro.lead">
                         Costa | Andes | Amazonía | Galápagos. Explora diferentes paisajes, culturas y
-                        experiencias en un mismo viaje. Selecciona una región en el mapa para descubrir
-                        sus destinos y paquetes disponibles.
+                        experiencias en un mismo viaje. ALL TOUR ECUADOR te permite descubrir el país
+                        mediante viajes organizados, experiencias culturales, turismo comunitario,
+                        naturaleza, aventura, gastronomía y recorridos diseñados de acuerdo con los
+                        intereses de cada viajero.
                     </p>
-                </div>
-
-                <div class="map-layout">
-                    <div id="tourMap" class="tour-map" aria-label="Mapa de Ecuador con sus 4 regiones"></div>
-
-                    <aside class="map-panel" id="mapPanel">
-                        <div class="map-panel-content">
-                            <div class="panel-img-wrapper">
-                                <img id="panelImg"
-                                     src="https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=900&q=80"
-                                     alt="Explora Ecuador"
-                                     class="panel-img" />
-                                <div class="panel-img-overlay" id="panelImgOverlay">
-                                    <span>🗺️</span>
-                                    <p data-i18n="map.select">Selecciona una región en el mapa</p>
-                                </div>
-                            </div>
-
-                            <div class="panel-body">
-                                <span class="panel-tag" id="panelTag" data-i18n="map.tag">Ecuador</span>
-                                <h3 id="panelTitle" data-i18n="map.welcome">Bienvenido a Ecuador</h3>
-                                <p id="panelDesc" data-i18n="map.desc">Haz clic en cualquier región del mapa para descubrir sus destinos y experiencias.</p>
-
-                                <ul class="panel-info" id="panelInfo">
-                                    <li><strong data-i18n="map.info.regions">Regiones:</strong> <span>4 regiones</span></li>
-                                    <li><strong data-i18n="map.info.destinations">Destinos:</strong> <span>+20 lugares</span></li>
-                                    <li><strong data-i18n="map.info.experiences">Experiencias:</strong> <span data-i18n="map.info.custom">Personalizadas</span></li>
-                                </ul>
-
-                                <a href="contacto.html" class="btn btn-accent" style="width:100%;justify-content:center;">
-                                    <span data-i18n="map.btn">Cotizar mi viaje</span>
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </aside>
                 </div>
             </div>
         </section>
@@ -170,17 +134,18 @@
         <section class="section-region-detail" id="andes">
             <div class="container">
                 <div class="section-header-center">
-                    <span class="section-eyebrow" data-i18n="andes.eyebrow">Región Andes</span>
-                    <h2 class="section-heading" data-i18n="andes.title">Montañas, cultura y tradiciones vivas</h2>
-                    <p class="section-lead" data-i18n="andes.lead">
+                    <span class="section-eyebrow">Región Andes</span>
+                    <h2 class="section-heading">Montañas, cultura y tradiciones vivas</h2>
+                    <p class="section-lead">
                         Los Andes ecuatorianos combinan volcanes, lagunas, páramos, ciudades patrimoniales
-                        y comunidades indígenas que mantienen vivas sus tradiciones.
+                        y comunidades indígenas que mantienen vivas sus tradiciones. En esta región,
+                        ALL TOUR ECUADOR desarrolla experiencias relacionadas con:
                     </p>
                 </div>
 
                 <div class="region-detail-grid">
                     <article class="region-detail-card">
-                        <h3 class="region-detail-subtitle" data-i18n="region.experiencias">Experiencias</h3>
+                        <h3 class="region-detail-subtitle">Experiencias</h3>
                         <ul class="region-detail-list">
                             <li>Turismo cultural</li>
                             <li>Turismo comunitario</li>
@@ -197,7 +162,7 @@
                     </article>
 
                     <article class="region-detail-card">
-                        <h3 class="region-detail-subtitle" data-i18n="region.destinos">Destinos destacados</h3>
+                        <h3 class="region-detail-subtitle">Destinos destacados</h3>
                         <ul class="region-detail-tags">
                             <li>Otavalo</li>
                             <li>Cotacachi</li>
@@ -210,7 +175,7 @@
                         </ul>
 
                         <a href="tours.html" class="btn btn-accent" style="margin-top:24px;">
-                            <span data-i18n="region.btn.paquetes">Ver paquetes disponibles</span>
+                            Ver paquetes disponibles
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>
                     </article>
@@ -222,9 +187,9 @@
         <section class="section-region-detail alt" id="amazonia">
             <div class="container">
                 <div class="section-header-center">
-                    <span class="section-eyebrow" data-i18n="amazonia.eyebrow">Región Amazonía</span>
-                    <h2 class="section-heading" data-i18n="amazonia.title">Naturaleza, biodiversidad y culturas ancestrales</h2>
-                    <p class="section-lead" data-i18n="amazonia.lead">
+                    <span class="section-eyebrow">Región Amazonía</span>
+                    <h2 class="section-heading">Naturaleza, biodiversidad y culturas ancestrales</h2>
+                    <p class="section-lead">
                         La Amazonía ecuatoriana ofrece una experiencia de inmersión en bosques tropicales,
                         ríos, biodiversidad y territorios de pueblos y nacionalidades indígenas.
                     </p>
@@ -232,7 +197,7 @@
 
                 <div class="region-detail-grid">
                     <article class="region-detail-card">
-                        <h3 class="region-detail-subtitle" data-i18n="region.experiencias">Experiencias</h3>
+                        <h3 class="region-detail-subtitle">Experiencias</h3>
                         <ul class="region-detail-list">
                             <li>Turismo de naturaleza</li>
                             <li>Observación de flora y fauna</li>
@@ -248,7 +213,7 @@
                     </article>
 
                     <article class="region-detail-card">
-                        <h3 class="region-detail-subtitle" data-i18n="region.destinos">Destinos destacados</h3>
+                        <h3 class="region-detail-subtitle">Destinos destacados</h3>
                         <ul class="region-detail-tags">
                             <li>Tena</li>
                             <li>Yasuní</li>
@@ -257,7 +222,7 @@
                         </ul>
 
                         <a href="tours.html" class="btn btn-accent" style="margin-top:24px;">
-                            <span data-i18n="region.btn.paquetes">Ver paquetes disponibles</span>
+                            Ver paquetes disponibles
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>
                     </article>
@@ -269,9 +234,9 @@
         <section class="section-region-detail" id="galapagos">
             <div class="container">
                 <div class="section-header-center">
-                    <span class="section-eyebrow" data-i18n="galapagos.eyebrow">Región Galápagos</span>
-                    <h2 class="section-heading" data-i18n="galapagos.title">Naturaleza que no existe en ningún otro lugar</h2>
-                    <p class="section-lead" data-i18n="galapagos.lead">
+                    <span class="section-eyebrow">Región Galápagos</span>
+                    <h2 class="section-heading">Naturaleza que no existe en ningún otro lugar</h2>
+                    <p class="section-lead">
                         Las Islas Galápagos representan uno de los grandes destinos naturales del Ecuador,
                         con ecosistemas volcánicos, fauna endémica y experiencias de conservación y
                         contacto con la naturaleza.
@@ -280,7 +245,7 @@
 
                 <div class="region-detail-grid">
                     <article class="region-detail-card">
-                        <h3 class="region-detail-subtitle" data-i18n="region.experiencias">Experiencias</h3>
+                        <h3 class="region-detail-subtitle">Experiencias</h3>
                         <ul class="region-detail-list">
                             <li>Snorkeling</li>
                             <li>Buceo</li>
@@ -297,7 +262,7 @@
                     </article>
 
                     <article class="region-detail-card">
-                        <h3 class="region-detail-subtitle" data-i18n="region.islas">Islas destacadas</h3>
+                        <h3 class="region-detail-subtitle">Islas destacadas</h3>
                         <ul class="region-detail-tags">
                             <li>Santa Cruz</li>
                             <li>San Cristóbal</li>
@@ -305,7 +270,7 @@
                         </ul>
 
                         <a href="tours.html" class="btn btn-accent" style="margin-top:24px;">
-                            <span data-i18n="region.btn.paquetes">Ver paquetes disponibles</span>
+                            Ver paquetes disponibles
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>
                     </article>
@@ -317,9 +282,9 @@
         <section class="section-region-detail alt" id="costa">
             <div class="container">
                 <div class="section-header-center">
-                    <span class="section-eyebrow" data-i18n="costa.eyebrow">Región Costa</span>
-                    <h2 class="section-heading" data-i18n="costa.title">Pacífico, naturaleza y sabores del Ecuador</h2>
-                    <p class="section-lead" data-i18n="costa.lead">
+                    <span class="section-eyebrow">Región Costa</span>
+                    <h2 class="section-heading">Pacífico, naturaleza y sabores del Ecuador</h2>
+                    <p class="section-lead">
                         La Costa ecuatoriana combina playas, manglares, bosques, gastronomía, comunidades
                         pesqueras y experiencias vinculadas al océano Pacífico.
                     </p>
@@ -327,7 +292,7 @@
 
                 <div class="region-detail-grid">
                     <article class="region-detail-card">
-                        <h3 class="region-detail-subtitle" data-i18n="region.experiencias">Experiencias</h3>
+                        <h3 class="region-detail-subtitle">Experiencias</h3>
                         <ul class="region-detail-list">
                             <li>Sol y playa</li>
                             <li>Surf</li>
@@ -343,7 +308,7 @@
                     </article>
 
                     <article class="region-detail-card">
-                        <h3 class="region-detail-subtitle" data-i18n="region.destinos">Destinos destacados</h3>
+                        <h3 class="region-detail-subtitle">Destinos destacados</h3>
                         <ul class="region-detail-tags">
                             <li>Guayaquil</li>
                             <li>Montañita</li>
@@ -354,7 +319,7 @@
                         </ul>
 
                         <a href="tours.html" class="btn btn-accent" style="margin-top:24px;">
-                            <span data-i18n="region.btn.paquetes">Ver paquetes disponibles</span>
+                            Ver paquetes disponibles
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>
                     </article>
@@ -450,11 +415,6 @@
         <i class="fa-solid fa-arrow-up"></i>
     </button>
 
-    <!-- Leaflet JS -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-
     <script src="js/script.js"></script>
-    <script src="js/destinos.js"></script>
 </body>
 </html>

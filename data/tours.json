@@ -1,337 +1,58 @@
-
 [
   {
-    "id": 1,
-    "slug": "raices-de-otavalo",
     "titulo": "Raíces de Otavalo",
     "precio": 76,
     "duracion": "fullday",
-    "duracionTexto": "1 día",
-    "destino": ["otavalo"],
-    "tipo": ["vivencial", "cultural"],
-    "nivel": "bajo",
-    "minPax": 4,
-    "imagen": "img/otavalo.jpg",
-    "imagenAlt": "Raíces de Otavalo",
-    "resumen": "Totora, textiles, sabores y melodías de la cultura Kichwa.",
-    "eyebrow": "Tour cultural · Otavalo",
-    "slogan": "Meet the people, share the traditions, live the Andes.",
-    "callout": "Una inmersión auténtica en el corazón de las comunidades Kichwa de Otavalo, donde el arte ancestral del tejido, la música viva, la gastronomía andina y la artesanía en totora se entrelazan para brindarte un encuentro humano inolvidable.",
     "descripcion": "Invita al viajero a salir de los circuitos convencionales para entrar en la vida cotidiana de las familias Kichwa. A través de talleres prácticos con artesanos, músicos y familias locales (muchas de ellas impulsadas por mujeres emprendedoras), el visitante descubre una cultura viva que preserva su identidad, tradiciones y cosmovisión en cada tejido, sabor y melodía.",
-    "itinerario": [
-      { "hora": "08:00 – 08:30", "texto": "Bienvenida en Otavalo e introducción cultural." },
-      { "hora": "08:30 – 10:30", "texto": "Viviendo la Totora (Totora Wasi): historia, cosecha y elaboración de tu propia artesanía en San Rafael de la Laguna." },
-      { "hora": "10:30 – 12:15", "texto": "Entre Hilos y Memoria: taller participativo de hilado y telar de cintura en la Comuna de Agato." },
-      { "hora": "12:30 – 14:00", "texto": "Almuerzo Comunitario: gastronomía local compartida en Peguche (Restaurante Ñanda Mañachi)." },
-      { "hora": "14:15 – 16:00", "texto": "Cascada de Peguche: caminata interpretativa de naturaleza y espiritualidad andina." },
-      { "hora": "16:15 – 17:30", "texto": "Música que Vive: taller interactivo de instrumentos ancestrales y ritmos andinos." }
-    ],
-    "ficha": [
-      { "label": "Duración", "valor": "Full Day (08:00 – 17:30)" },
-      { "label": "Destino", "valor": "Otavalo, San Rafael, Agato y Peguche" },
-      { "label": "Dificultad", "valor": "Bajo" },
-      { "label": "Estilo", "valor": "Cultural, vivencial comunitario y naturaleza" },
-      { "label": "Salida", "valor": "Otavalo" },
-      { "label": "Precio", "valor": "$76 por persona" }
-    ],
-    "incluye": [
-      "Transporte turístico privado",
-      "Guía nativo especializado (español/inglés)",
-      "Almuerzo tradicional completo",
-      "Entradas a todos los atractivos",
-      "Taller interactivo y materiales artesanales"
-    ],
-    "noIncluye": [
-      "Bebidas o consumos adicionales",
-      "Compras personales",
-      "Propinas",
-      "Seguro personal de viaje"
-    ]
+    "imagen": "/img/otavalo.jpg"
   },
   {
-    "id": 2,
-    "slug": "tierra-sabor-espiritu-kichwa-cotacachi",
     "titulo": "Tierra, Sabor y Espíritu Kichwa Cotacachi",
     "precio": 143,
     "duracion": "fullday",
-    "duracionTexto": "1 día",
-    "destino": ["cotacachi"],
-    "tipo": ["vivencial", "gastronomico", "cultural"],
-    "nivel": "moderado",
-    "minPax": 4,
-    "imagen": "img/cotacachi.jpg",
-    "imagenAlt": "Tierra, Sabor y Espíritu Kichwa Cotacachi",
-    "resumen": "Una experiencia Kichwa en La Calera.",
-    "eyebrow": "Tour gastronómico · Cotacachi",
-    "slogan": "Taste the Andes, share the traditions, connect with Pachamama.",
-    "callout": "Siente la energía ancestral de La Calera: moldea el barro con tus manos, descubre el secreto ancestral de la Pachamanka cocida bajo tierra y renueva tu espíritu en las vertientes sagradas de Cotacachi.",
     "descripcion": "Una experiencia de convivencia rural que entrelaza la tierra, la gastronomía, el arte y la espiritualidad Kichwa. El visitante trabaja el barro, cosecha en la chakra, participa en la preparación ritual de la Pachamanka, conoce la artesanía en semillas elaborada por mujeres locales y experimenta una conexión tranquila con la naturaleza en las vertientes sagradas.",
-    "itinerario": [
-      { "hora": "08:00 – 08:30", "texto": "Bienvenida y traslado hacia la comunidad La Calera." },
-      { "hora": "08:30 – 10:30", "texto": "Barro, Manos y Memoria: taller artesanal de moldeado y pintura en cerámica en Rumy Allpa." },
-      { "hora": "10:45 – 12:30", "texto": "De la Chakra a la Pachamanka: cosecha de productos andinos, taller de bisutería en semillas y ritual de siembra bajo tierra." },
-      { "hora": "13:00 – 14:30", "texto": "Pachamanka – Sabores de la Tierra: apertura de la Pachamanka y almuerzo buffet comunitario." },
-      { "hora": "15:00 – 17:00", "texto": "Ritual y Baño de Purificación (TUN-DUN): caminata interpretativa hacia las vertientes de agua." },
-      { "hora": "17:30 – 18:00", "texto": "Cierre y reflexión con los anfitriones comunitarios." }
-    ],
-    "ficha": [
-      { "label": "Duración", "valor": "Full Day (08:00 – 18:00)" },
-      { "label": "Destino", "valor": "Comunidad La Calera (Cotacachi)" },
-      { "label": "Dificultad", "valor": "Bajo a Moderado" },
-      { "label": "Estilo", "valor": "Gastronómico ancestral, cultural y espiritual" },
-      { "label": "Salida", "valor": "Cotacachi / Otavalo" },
-      { "label": "Precio", "valor": "$143 por persona" }
-    ],
-    "incluye": [
-      "Transporte turístico privado",
-      "Guía nativo especializado",
-      "Almuerzo tipo Pachamanka completo",
-      "Materiales para taller de barro y bisutería",
-      "Guía comunitario para el ritual de agua"
-    ],
-    "noIncluye": [
-      "Ropa de baño / toallas personales",
-      "Consumos o compras adicionales",
-      "Propinas",
-      "Seguro de viaje"
-    ]
+    "imagen": "/img/cotacachi.jpg"
   },
   {
-    "id": 3,
-    "slug": "patrimonio-ancestral-kichwa",
     "titulo": "Patrimonio Ancestral Kichwa",
     "precio": 139,
     "duracion": "fullday",
-    "duracionTexto": "1 día",
-    "destino": ["cotacachi"],
-    "tipo": ["vivencial", "cultural", "gastronomico"],
-    "nivel": "bajo",
-    "minPax": 4,
-    "imagen": "img/kichwa.jpg",
-    "imagenAlt": "Patrimonio Ancestral Kichwa",
-    "resumen": "Mujeres, territorio y saberes vivos de Cotacachi.",
-    "eyebrow": "Tour agroturístico · Cotacachi",
-    "slogan": "Meet the women behind the living heritage of Cotacachi.",
-    "callout": "Explora el patrimonio agrícola mundial reconocido por la UNESCO/FAO: un viaje conmovedor al corazón de la Chakra Andina, las abejas nativas, la mística chicha SARA MAMA y las mujeres guardianas de semillas.",
     "descripcion": "Este tour conecta directamente al visitante con el Sistema Importante del Patrimonio Agrícola Mundial (SIPAM) de Cotacachi. El eje central son las mujeres rurales y familias campesinas que preservan la agrobiodiversidad, las semillas ancestrales y las tradiciones culinarias, convirtiendo su herencia en un motor de desarrollo comunitario sustentable.",
-    "itinerario": [
-      { "hora": "08:00 – 10:00", "texto": "Centro de Interpretación Jambi Mascari: exposición interactiva sobre la Chakra Andina." },
-      { "hora": "10:15 – 12:00", "texto": "Chakra y Mundo de las Abejas (Comuna Piava Chupa)." },
-      { "hora": "12:15 – 13:30", "texto": "Almuerzo Andino: menú con insumos agroecológicos locales." },
-      { "hora": "13:45 – 15:00", "texto": "SARA MAMA (Comuna Turuco): encuentro con mujeres procesadoras de chicha de jora." },
-      { "hora": "15:30 – 17:00", "texto": "Guardianas de Semillas (Comuna Cumbas Conde)." }
-    ],
-    "ficha": [
-      { "label": "Duración", "valor": "Full Day (08:00 – 17:30)" },
-      { "label": "Destino", "valor": "Comunidades Kichwas de Cotacachi" },
-      { "label": "Dificultad", "valor": "Bajo" },
-      { "label": "Estilo", "valor": "Agroturismo y patrimonio vivo" },
-      { "label": "Salida", "valor": "Cotacachi / Otavalo" },
-      { "label": "Precio", "valor": "$139 por persona" }
-    ],
-    "incluye": [
-      "Transporte turístico",
-      "Guía especializado en agrobiodiversidad",
-      "Entrada al Centro Jambi Mascari",
-      "Almuerzo andino completo",
-      "Degustación de chicha en SARA MAMA"
-    ],
-    "noIncluye": [
-      "Compras directas de miel, semillas o artesanías",
-      "Bebidas extra",
-      "Propinas",
-      "Seguro individual"
-    ]
+    "imagen": "/img/kichwa.jpg"
   },
   {
-    "id": 4,
-    "slug": "cuicocha-nature-trek",
     "titulo": "Cuicocha Nature Trek",
     "precio": 95,
     "duracion": "fullday",
-    "duracionTexto": "1 día",
-    "destino": ["cuicocha", "cotacachi"],
-    "tipo": ["naturaleza", "aventura"],
-    "nivel": "alto",
-    "minPax": 4,
-    "imagen": "img/cuicocha.jpg",
-    "imagenAlt": "Cuicocha Nature Trek",
-    "resumen": "Naturaleza, trekking y cultura viva de Cotacachi.",
-    "eyebrow": "Trekking · Reserva Cotacachi-Cayapas",
-    "slogan": "Walk the volcanic landscape, discover Andean nature.",
-    "callout": "Acepta el desafío y bordea la caldera de un volcán activo: 14 kilómetros de trekking interpretativo rodeado de orquídeas, aves altoandinas y vistas majestuosas de la Laguna de Cuicocha.",
     "descripcion": "Una travesía inolvidable diseñada para los amantes del senderismo y la fotografía. El recorrido bordea la cresta del cráter volcánico de Cuicocha, ofreciendo vistas panorámicas impresionantes del volcán Cotacachi y los valles andinos, complementado con guianza especializada en geología, botánica y un tiempo reconfortante en la ciudad del cuero.",
-    "itinerario": [
-      { "hora": "08:00 – 09:00", "texto": "Salida e inducción en el Centro de Interpretación de la Reserva." },
-      { "hora": "09:00 – 13:00", "texto": "Cuicocha Nature Trek: caminata de 4 a 5 horas por el sendero Gorky Campuzano." },
-      { "hora": "13:30 – 14:30", "texto": "Almuerzo Energético con sabores típicos de Cotacachi." },
-      { "hora": "15:00 – 16:30", "texto": "Cotacachi a tu Ritmo: recorrido libre por el centro comercial de cuero." }
-    ],
-    "ficha": [
-      { "label": "Duración", "valor": "Full Day (08:00 – 16:30)" },
-      { "label": "Destino", "valor": "Reserva Cotacachi-Cayapas + Cotacachi" },
-      { "label": "Distancia", "valor": "12 a 14 km" },
-      { "label": "Altitud", "valor": "3.100 a 3.500 m s. n. m." },
-      { "label": "Dificultad", "valor": "Alto (requiere condición física)" },
-      { "label": "Precio", "valor": "$95 por persona" }
-    ],
-    "incluye": [
-      "Transporte turístico ida y vuelta",
-      "Guía especializado en trekking y montaña",
-      "Registro en Reserva Ecológica",
-      "Almuerzo local completo",
-      "Tiempo de exploración en Cotacachi"
-    ],
-    "noIncluye": [
-      "Equipamiento personal de trekking",
-      "Pago de ingreso a la laguna si aplicase",
-      "Consumos en cafeterías",
-      "Propinas"
-    ]
+    "imagen": "/img/cuicocha.jpg"
   },
   {
-    "id": 5,
-    "slug": "saberes-ancestrales-tierra-mujer",
     "titulo": "Saberes Ancestrales de la Tierra y la Mujer",
     "precio": 63,
     "duracion": "fullday",
-    "duracionTexto": "1 día",
-    "destino": ["cotacachi"],
-    "tipo": ["vivencial", "cultural"],
-    "nivel": "moderado",
-    "minPax": 4,
-    "imagen": "img/ancestrales.jpg",
-    "imagenAlt": "Saberes Ancestrales de la Tierra y la Mujer",
-    "resumen": "Yunta, tejido, plantas medicinales y conocimientos de partería.",
-    "eyebrow": "Tour vivencial · Cotacachi",
-    "slogan": "Where the land, women's hands and ancestral knowledge tell a story.",
-    "callout": "Una experiencia transformadora que conecta el arado tradicional con yunta, la sabiduría médica de las parteras andinas, los hilos de las tejedoras Alli Maki y el poder curativo de las plantas medicinales.",
     "descripcion": "Un homenaje a la memoria comunitaria a través de tres pilares: la tierra que alimenta (agronomía con yunta), las mujeres que crean (asociación de tejedoras) y la sabiduría que cuida la vida (medicina etnobotánica y partería tradicional). El viajero participa activamente en el trabajo del campo y escucha los saberes transmitidos de generación en generación.",
-    "itinerario": [
-      { "hora": "07:00 – 08:00", "texto": "Traslado hacia la comunidad anfitriona." },
-      { "hora": "08:00 – 09:30", "texto": "La Tierra y la Yunta: práctica participativa de arado tradicional con bueyes." },
-      { "hora": "09:30 – 11:30", "texto": "Las Manos de las Mujeres: taller de tejido y costura con la Asociación Alli Maki." },
-      { "hora": "12:30 – 13:30", "texto": "Almuerzo Comunitario con insumos locales." },
-      { "hora": "13:30 – 15:00", "texto": "El Jardín de la Vida: recorrido interpretativo por el Jardín Etnobotánico." },
-      { "hora": "15:00 – 17:30", "texto": "La Sabiduría de la Partera: encuentro con la Sra. Inés Bonilla." }
-    ],
-    "ficha": [
-      { "label": "Duración", "valor": "Full Day (07:00 – 18:30)" },
-      { "label": "Destino", "valor": "Comunidad La Calera (Cotacachi)" },
-      { "label": "Dificultad", "valor": "Bajo a Moderado" },
-      { "label": "Estilo", "valor": "Vivencial comunitario y etnobotánico" },
-      { "label": "Salida", "valor": "Otavalo / Cotacachi" },
-      { "label": "Precio", "valor": "$63 por persona" }
-    ],
-    "incluye": [
-      "Transporte turístico privado",
-      "Guía nacional especializado (español/inglés)",
-      "Experiencia participativa con yunta",
-      "Taller y recuerdo artesanal con Alli Maki",
-      "Almuerzo comunitario",
-      "Ingreso al Jardín Etnobotánico"
-    ],
-    "noIncluye": [
-      "Compras de artesanías o remedios naturales",
-      "Atenciones médicas o consultas de salud",
-      "Propinas",
-      "Seguro individual"
-    ]
+    "imagen": "/img/ancestrales.jpg"
   },
   {
-    "id": 6,
-    "slug": "aromas-sabores-aventura-intag",
     "titulo": "Aromas, Sabores y Aventura de Intag",
     "precio": 103,
     "duracion": "fullday",
-    "duracionTexto": "1 día",
-    "destino": ["intag"],
-    "tipo": ["aventura", "naturaleza", "gastronomico"],
-    "nivel": "moderado",
-    "minPax": 4,
-    "imagen": "img/intag.jpg",
-    "imagenAlt": "Aromas, Sabores y Aventura de Intag",
-    "resumen": "Una experiencia entre café, caña, naturaleza y aventura.",
-    "eyebrow": "Aventura · Intag",
-    "slogan": "Fly through the forest, taste the land, discover the soul of Intag.",
-    "callout": "Desciende de los Andes al exuberante bosque subtropical de Intag: siente el dulce aroma del trapiche de caña, camina entre fincas ecológicas, saborea café orgánico de especialidad y vuela en 580 metros de canopy sobre las copas de los árboles.",
     "descripcion": "Un recorrido progresivo que muestra el drástico cambio de paisaje desde el páramo andino hacia el bosque nublado subtropical de Intag. Combina la tradición de la panela, la agricultura sustentable, la degustación de uno de los mejores cafés orgánicos del país y la dosis perfecta de adrenalina rodeado de biodiversidad.",
-    "itinerario": [
-      { "hora": "07:00 – 08:30", "texto": "Viaje panorámico hacia Intag." },
-      { "hora": "08:30 – 10:00", "texto": "El Trapiche: molienda de caña y degustación de panela fresca." },
-      { "hora": "10:30 – 13:00", "texto": "Finca La Rizaralda y almuerzo de la chakra a la mesa." },
-      { "hora": "13:30 – 15:00", "texto": "Del Grano a la Taza (Café El Carmelo): proceso y cata del café." },
-      { "hora": "15:30 – 17:30", "texto": "Campo Colibrí: vuelo en Canopy (3 tramos / 580 m)." }
-    ],
-    "ficha": [
-      { "label": "Duración", "valor": "Full Day (07:00 – 18:30)" },
-      { "label": "Destino", "valor": "Zona subtropical de Intag (Pucará / Apuela)" },
-      { "label": "Dificultad", "valor": "Bajo a Moderado" },
-      { "label": "Estilo", "valor": "Aventura, agroturismo y café de especialidad" },
-      { "label": "Salida", "valor": "Otavalo" },
-      { "label": "Precio", "valor": "$103 por persona" }
-    ],
-    "incluye": [
-      "Transporte turístico privado adaptado a la zona",
-      "Guía bilingüe especializado",
-      "Entrada a la molienda",
-      "Almuerzo en Finca La Rizaralda",
-      "Experiencia y cata en Café El Carmelo",
-      "Circuito de Canopy en Campo Colibrí"
-    ],
-    "noIncluye": [
-      "Compras de café o panela para llevar",
-      "Bebidas alcohólicas",
-      "Propinas",
-      "Seguro personal"
-    ]
+    "imagen": "/img/intag.jpg"
   },
   {
-    "id": 7,
-    "slug": "entre-alpacas-tejidos-andinos",
     "titulo": "Entre Alpacas y Tejidos Andinos",
     "precio": 102,
     "duracion": "fullday",
-    "duracionTexto": "1 día",
-    "destino": ["cotacachi", "cuicocha"],
-    "tipo": ["cultural", "vivencial", "naturaleza"],
-    "nivel": "moderado",
-    "minPax": 4,
-    "imagen": "img/tejidos.jpg",
-    "imagenAlt": "Entre Alpacas y Tejidos Andinos",
-    "resumen": "Una experiencia de páramo, comunidad y tradición Kichwa.",
-    "eyebrow": "Cultural · Cotacachi",
-    "slogan": "From the highlands of Cotacachi to the hands that weave Andean identity.",
-    "callout": "Una aventura en 4x4 hacia las faldas del volcán Cotacachi: conoce el criadero comunitario de alpacas en el páramo, camina por el Sendero Sagrado de Cuicocha y descubre el secreto del tinturado natural y tejido ancestral en telar.",
     "descripcion": "Sigue el viaje completo de la fibra andina desde su origen en las alturas hasta la obra de arte terminada. Conecta la majestuosidad del páramo y la convivencia con alpacas, la espiritualidad de la laguna sagrada y el dominio técnico de los maestros tejedores de Agato.",
-    "itinerario": [
-      { "hora": "08:00 – 09:15", "texto": "Traslado e ingreso a la Comuna de Morochos para abordaje de 4x4." },
-      { "hora": "09:15 – 11:15", "texto": "Criadero Comunitario de Alpacas en las faldas del Volcán Cotacachi." },
-      { "hora": "11:45 – 13:00", "texto": "Laguna de Cuicocha: interpretación de la cosmovisión andina." },
-      { "hora": "13:00 – 14:00", "texto": "Almuerzo comunitario con gastronomía local." },
-      { "hora": "14:30 – 17:30", "texto": "Tahuantinsuyo Weaving Workshop (Agato): museo textil y telares ancestrales." }
-    ],
-    "ficha": [
-      { "label": "Duración", "valor": "Full Day (08:00 – 18:00)" },
-      { "label": "Destino", "valor": "Morochos, Volcán Cotacachi, Cuicocha y Agato" },
-      { "label": "Dificultad", "valor": "Bajo a Moderado" },
-      { "label": "Estilo", "valor": "Cultural, comunitario, textil y páramos" },
-      { "label": "Salida", "valor": "Otavalo / Cotacachi" },
-      { "label": "Precio", "valor": "$102 por persona" }
-    ],
-    "incluye": [
-      "Transporte turístico privado",
-      "Expedición en vehículo 4x4",
-      "Guía profesional de turismo",
-      "Entradas a la Comuna Morochos",
-      "Almuerzo local completo",
-      "Visita al taller textil con maestros artesanos"
-    ],
-    "noIncluye": [
-      "Compras de prendas o artesanías",
-      "Consumos adicionales",
-      "Propinas",
-      "Seguro individual"
-    ]
+    "imagen": "/img/tejidos.jpg"
+  },
+  {
+    "titulo": "HOLA",
+    "precio": 78,
+    "duracion": "3day",
+    "descripcion": "PRUEBA RAPIDA",
+    "imagen": "/img/comparte-1.jpg"
   }
 ]

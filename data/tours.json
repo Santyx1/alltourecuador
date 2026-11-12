@@ -603,5 +603,63 @@
       "Propinas",
       "Seguro individual"
     ]
+  },
+  {
+    "titulo": "NUEVO",
+    "slug": "nuevo",
+    "precio": 100,
+    "duracion": "2day",
+    "duracionTexto": "2 días",
+    "nivel": "bajo",
+    "minPax": 3,
+    "destino": [
+      "destino 1",
+      "destino 2"
+    ],
+    "tipo": [
+      "experiencia 1",
+      "experiencia 2"
+    ],
+    "imagen": "/img/comunidades-3.png",
+    "imagenAlt": "TEXTO ALTERNO",
+    "resumen": "resumen corto",
+    "eyebrow": "etiqueta superior",
+    "slogan": "nuevo uno",
+    "callout": "recuadro destacado",
+    "descripcion": "desscripción larga",
+    "itinerario": [
+      {
+        "hora": "8am a 9am",
+        "texto": "salida"
+      },
+      {
+        "hora": "9am a 10am",
+        "texto": "LLEGADA"
+      }
+    ],
+    "ficha": [
+      {
+        "label": "CAMPO FICHA",
+        "valor": "VALOR FICHA"
+      }
+    ],
+    "incluye": [
+      "INCLUYE 1",
+      "INCLUYE 2"
+    ],
+    "noIncluye": [
+      "NO INCLUYE 1",
+      "NO INCLUYE 2"
+    ],
+    "galeria": [
+      {
+        "imagen": "/img/costa-1.jpg",
+        "alt": "HOLA"
+      },
+      {
+        "imagen": "/img/alpacas-inicio.jpeg",
+        "alt": "HOLA 2"
+      }
+    ]
   }
 ]

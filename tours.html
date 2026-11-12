@@ -47,6 +47,7 @@
                 <a href="index.html" data-i18n="nav.inicio">Inicio</a>
                 <a href="nosotros.html" data-i18n="nav.nosotros">Nosotros</a>
                 <a href="tours.html" class="active" data-i18n="nav.tours">Tours</a>
+                <a href="destinos.html" data-i18n="nav.destinos">Destinos</a>
                 <!--<a href="servicios.html" data-i18n="nav.servicios">Servicios</a>-->
                 <a href="experiencias.html" data-i18n="nav.experiencias">Experiencias</a>
                 <a href="contacto.html" data-i18n="nav.contacto">Contacto</a>
@@ -152,6 +153,17 @@
                                     <li><label><input type="checkbox" data-filter="nivel" value="alto"> Alto</label></li>
                                 </ul>
                             </details>
+
+                            <!-- NUEVO FILTRO: POR DURACIÓN -->
+                            <details class="filter-item">
+                                <summary>Por duración <i class="fa-solid fa-plus"></i></summary>
+                                <ul class="filter-list">
+                                    <li><label><input type="checkbox" data-filter="duracion" value="fullday"> Full Day</label></li>
+                                    <li><label><input type="checkbox" data-filter="duracion" value="2day"> 2 DAY</label></li>
+                                    <li><label><input type="checkbox" data-filter="duracion" value="3day"> 3 DAY</label></li>
+                                    <li><label><input type="checkbox" data-filter="duracion" value="4day"> 4 DAY</label></li>
+                                </ul>
+                            </details>
                         </div>
                     </aside>
 
@@ -168,7 +180,8 @@
                             <article class="tour-card-compact"
                                      data-destino="otavalo"
                                      data-tipo="vivencial cultural"
-                                     data-nivel="bajo">
+                                     data-nivel="bajo"
+                                     data-duracion="fullday">
                                 <div class="tour-card-compact__image">
                                     <img src="img/otavalo.jpg" alt="Raíces de Otavalo" loading="lazy">
                                     <span class="tour-badge-duration">1 día</span>
@@ -195,7 +208,8 @@
                             <article class="tour-card-compact"
                                      data-destino="cotacachi"
                                      data-tipo="vivencial gastronomico cultural"
-                                     data-nivel="moderado">
+                                     data-nivel="moderado"
+                                     data-duracion="fullday">
                                 <div class="tour-card-compact__image">
                                     <img src="img/cotacachi.jpg" alt="Tierra, Sabor y Espíritu Kichwa Cotacachi" loading="lazy">
                                     <span class="tour-badge-duration">1 día</span>
@@ -222,7 +236,8 @@
                             <article class="tour-card-compact"
                                      data-destino="cotacachi"
                                      data-tipo="vivencial cultural gastronomico"
-                                     data-nivel="bajo">
+                                     data-nivel="bajo"
+                                     data-duracion="fullday">
                                 <div class="tour-card-compact__image">
                                     <img src="img/kichwa.jpg" alt="Patrimonio Ancestral Kichwa" loading="lazy">
                                     <span class="tour-badge-duration">1 día</span>
@@ -249,7 +264,8 @@
                             <article class="tour-card-compact"
                                      data-destino="cuicocha cotacachi"
                                      data-tipo="naturaleza aventura"
-                                     data-nivel="alto">
+                                     data-nivel="alto"
+                                     data-duracion="fullday">
                                 <div class="tour-card-compact__image">
                                     <img src="img/cuicocha.jpg" alt="Cuicocha Nature Trek" loading="lazy">
                                     <span class="tour-badge-duration">1 día</span>
@@ -276,7 +292,8 @@
                             <article class="tour-card-compact"
                                      data-destino="cotacachi"
                                      data-tipo="vivencial cultural"
-                                     data-nivel="moderado">
+                                     data-nivel="moderado"
+                                     data-duracion="fullday">
                                 <div class="tour-card-compact__image">
                                     <img src="img/ancestrales.jpg" alt="Saberes Ancestrales de la Tierra y la Mujer" loading="lazy">
                                     <span class="tour-badge-duration">1 día</span>
@@ -303,7 +320,8 @@
                             <article class="tour-card-compact"
                                      data-destino="intag"
                                      data-tipo="aventura naturaleza gastronomico"
-                                     data-nivel="moderado">
+                                     data-nivel="moderado"
+                                     data-duracion="fullday">
                                 <div class="tour-card-compact__image">
                                     <img src="img/intag.jpg" alt="Aromas, Sabores y Aventura de Intag" loading="lazy">
                                     <span class="tour-badge-duration">1 día</span>
@@ -330,7 +348,8 @@
                             <article class="tour-card-compact"
                                      data-destino="cotacachi cuicocha"
                                      data-tipo="cultural vivencial naturaleza"
-                                     data-nivel="moderado">
+                                     data-nivel="moderado"
+                                     data-duracion="fullday">
                                 <div class="tour-card-compact__image">
                                     <img src="img/tejidos.jpg" alt="Entre Alpacas y Tejidos Andinos" loading="lazy">
                                     <span class="tour-badge-duration">1 día</span>
@@ -1033,6 +1052,7 @@
                 <h4 data-i18n="footer.explore">Explora</h4>
                 <ul class="footer-list footer-links">
                     <li><a href="tours.html">Tours</a></li>
+                    <li><a href="destinos.html">Destinos</a></li>
                     <!--<li><a href="servicios.html">Servicios</a></li>-->
                     <li><a href="experiencias.html">Experiencias</a></li>
                     <li><a href="nosotros.html">Nosotros</a></li>
@@ -1123,7 +1143,7 @@
         const removeBtn    = document.getElementById('removeFilters');
 
         function applyFilters() {
-            const active = { destino: [], tipo: [], nivel: [] };
+            const active = { destino: [], tipo: [], nivel: [], duracion: [] };
             filterInputs.forEach(function (inp) {
                 if (inp.checked) active[inp.dataset.filter].push(inp.value);
             });
@@ -1136,8 +1156,10 @@
                     active.tipo.some(t => card.dataset.tipo.includes(t));
                 const matchNivel = active.nivel.length === 0 ||
                     active.nivel.some(n => card.dataset.nivel.includes(n));
+                const matchDuracion = active.duracion.length === 0 ||
+                    active.duracion.some(d => (card.dataset.duracion || '').includes(d));
 
-                const show = matchDestino && matchTipo && matchNivel;
+                const show = matchDestino && matchTipo && matchNivel && matchDuracion;
                 card.classList.toggle('is-hidden', !show);
                 if (show) visible++;
             });

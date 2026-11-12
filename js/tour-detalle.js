@@ -1,14 +1,13 @@
 // ==========================================
 // PÁGINA DE DETALLE DE TOUR
 // Lee ?tour=SLUG de la URL y renderiza desde data/tours.json
+// Blindado para tolerar campos null / string / array
 // ==========================================
 
 (function () {
     'use strict';
 
-    // --- Parámetros de la URL ---
     const params = new URLSearchParams(window.location.search);
-    // Acepta tanto ?tour=raices-de-otavalo (slug) como ?tour=1 (id, compatibilidad)
     const tourParam = params.get('tour') || 'raices-de-otavalo';
 
     // --- Referencias al DOM ---
@@ -24,21 +23,30 @@
     const includes    = document.getElementById('tourIncludes');
     const notIncludes = document.getElementById('tourNotIncludes');
 
+    // --- Utilidades defensivas ---
+    function toArray(v) {
+        if (Array.isArray(v)) return v.filter(x => x != null && x !== '');
+        if (v == null || v === '') return [];
+        return [v];
+    }
+
+    function safe(v, fallback = '') {
+        return (v == null) ? fallback : v;
+    }
+
     // --- Buscar tour por slug o por id ---
     function findTour(tours, param) {
-        if (!tours) return null;
-        // Primero por slug
-        let t = tours.find(x => x.slug === param);
+        if (!Array.isArray(tours)) return null;
+        let t = tours.find(x => x && x.slug === param);
         if (t) return t;
-        // Fallback: por id numérico
         if (!isNaN(param)) {
-            t = tours.find(x => String(x.id) === String(param));
+            t = tours.find(x => x && String(x.id) === String(param));
             if (t) return t;
         }
         return null;
     }
 
-    // --- Renderizar ---
+    // --- Render ---
     function renderTour(tour) {
         if (!tour) {
             if (titleEl)    titleEl.textContent = 'Tour no encontrado';
@@ -48,25 +56,29 @@
             return;
         }
 
+        const titulo = safe(tour.titulo, 'Tour');
+
         // Hero
-        if (heroBg)     heroBg.style.backgroundImage = `url('${tour.imagen}')`;
-        if (breadcrumb) breadcrumb.textContent = tour.titulo;
-        if (eyebrow)    eyebrow.textContent = tour.eyebrow || '';
-        if (titleEl)    titleEl.textContent = tour.titulo;
+        if (heroBg)     heroBg.style.backgroundImage = `url('${safe(tour.imagen, 'img/otavalo.jpg')}')`;
+        if (breadcrumb) breadcrumb.textContent = titulo;
+        if (eyebrow)    eyebrow.textContent = safe(tour.eyebrow, '');
+        if (titleEl)    titleEl.textContent = titulo;
         if (slogan)     slogan.textContent = tour.slogan ? `"${tour.slogan}"` : '';
 
         // Callout y descripción
-        if (callout)     callout.textContent = tour.callout || '';
-        if (description) description.textContent = tour.descripcion || '';
+        if (callout)     callout.textContent = safe(tour.callout, '');
+        if (description) description.textContent = safe(tour.descripcion, '');
 
         // Itinerario
         if (itinerary) {
-            const items = tour.itinerario || [];
+            const items = toArray(tour.itinerario);
             itinerary.innerHTML = items.map(function (i) {
+                const hora = safe(i && i.hora, '');
+                const texto = safe(i && i.texto, typeof i === 'string' ? i : '');
                 return `
                     <li>
-                        <span class="itinerary-time">${i.hora}</span>
-                        <span class="itinerary-text">${i.texto}</span>
+                        <span class="itinerary-time">${hora}</span>
+                        <span class="itinerary-text">${texto}</span>
                     </li>
                 `;
             }).join('');
@@ -74,12 +86,14 @@
 
         // Ficha técnica
         if (facts) {
-            const items = tour.ficha || [];
+            const items = toArray(tour.ficha);
             facts.innerHTML = items.map(function (f) {
+                const label = safe(f && f.label, '');
+                const valor = safe(f && f.valor, typeof f === 'string' ? f : '');
                 return `
                     <li>
-                        <strong>${f.label}</strong>
-                        <span>${f.valor}</span>
+                        <strong>${label}</strong>
+                        <span>${valor}</span>
                     </li>
                 `;
             }).join('');
@@ -87,35 +101,37 @@
 
         // Incluye
         if (includes) {
-            const items = tour.incluye || [];
+            const items = toArray(tour.incluye);
             includes.innerHTML = items.map(function (i) {
-                return `<li>${i}</li>`;
+                const txt = (i && typeof i === 'object') ? safe(i.valor || i.texto, '') : i;
+                return `<li>${txt}</li>`;
             }).join('');
         }
 
         // No incluye
         if (notIncludes) {
-            const items = tour.noIncluye || [];
+            const items = toArray(tour.noIncluye);
             notIncludes.innerHTML = items.map(function (i) {
-                return `<li>${i}</li>`;
+                const txt = (i && typeof i === 'object') ? safe(i.valor || i.texto, '') : i;
+                return `<li>${txt}</li>`;
             }).join('');
         }
 
-        // Precio del sidebar (si existe el bloque)
+        // Precio sidebar
         const priceVal = document.querySelector('.tour-price-sidebar-value');
         if (priceVal && tour.precio != null) {
             priceVal.textContent = '$' + tour.precio;
         }
 
-        // Título de la pestaña
-        document.title = `${tour.titulo} | All Tour Ecuador`;
+        // Título pestaña
+        document.title = `${titulo} | All Tour Ecuador`;
     }
 
     // --- Carga inicial ---
     document.addEventListener('DOMContentLoaded', function () {
         fetch('data/tours.json')
             .then(function (r) {
-                if (!r.ok) throw new Error('No se pudo cargar tours.json');
+                if (!r.ok) throw new Error('HTTP ' + r.status);
                 return r.json();
             })
             .then(function (tours) {
@@ -123,7 +139,7 @@
                 renderTour(tour);
             })
             .catch(function (err) {
-                console.error('Error cargando tours:', err);
+                console.error('Error cargando tour:', err);
                 renderTour(null);
             });
     });

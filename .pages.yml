@@ -1,1 +1,29 @@
+media:
+  input: img
+  output: /img
 
+content:
+  - name: tours
+    label: Tours
+    type: file
+    path: data/tours.json
+    list: true
+    fields:
+      - name: titulo
+        label: Título
+        type: string
+        required: true
+      - name: precio
+        label: Precio
+        type: number
+      - name: duracion
+        label: Duración
+        type: select
+        options:
+          values: [fullday, 2day, 3day, 4day]
+      - name: descripcion
+        label: Descripción corta
+        type: text
+      - name: imagen
+        label: Imagen principal
+        type: image

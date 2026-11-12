@@ -41,11 +41,11 @@ content:
         label: Mínimo de personas
         type: number
       - name: destino
-        label: Destinos (uno por línea con +)
+        label: Destinos
         type: list
         required: true
       - name: tipo
-        label: Tipos de experiencia (uno por línea con +)
+        label: Tipos de experiencia
         type: list
         required: true
       - name: imagen
@@ -66,7 +66,6 @@ content:
       - name: slogan
         label: Slogan
         type: string
-        description: "Frase corta en inglés entre comillas"
       - name: callout
         label: Callout (recuadro destacado)
         type: text

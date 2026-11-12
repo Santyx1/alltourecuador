@@ -4727,3 +4727,33 @@ main{ padding-top:var(--header-h); }
     .section-region-detail{ padding:70px 0; }
     .region-detail-card{ padding:32px 26px; }
 }
+
+
+/* Galería de fotos del tour */
+.tour-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 12px;
+    margin-top: 12px;
+}
+.tour-gallery-item {
+    display: block;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+.tour-gallery-item:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+}
+.tour-gallery-item img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+.tour-gallery-item:hover img {
+    transform: scale(1.05);
+}

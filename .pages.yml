@@ -9,21 +9,105 @@ content:
     path: data/tours.json
     list: true
     fields:
+      # --- Datos de tarjeta ---
       - name: titulo
         label: Título
         type: string
         required: true
+      - name: slug
+        label: Slug (URL)
+        type: string
+        required: true
+        description: "Minúsculas, sin espacios. Ej: raices-de-otavalo"
       - name: precio
-        label: Precio
+        label: Precio (USD)
         type: number
+        required: true
       - name: duracion
-        label: Duración
+        label: Duración (código)
         type: select
         options:
           values: [fullday, 2day, 3day, 4day]
-      - name: descripcion
-        label: Descripción corta
-        type: text
+      - name: duracionTexto
+        label: Texto duración
+        type: string
+        description: "Ej: 1 día, 2 días, 3 días"
+      - name: nivel
+        label: Nivel de actividad
+        type: select
+        options:
+          values: [bajo, moderado, alto]
+      - name: minPax
+        label: Mínimo de personas
+        type: number
+      - name: destino
+        label: Destinos (uno por línea con +)
+        type: list
+        required: true
+      - name: tipo
+        label: Tipos de experiencia (uno por línea con +)
+        type: list
+        required: true
       - name: imagen
         label: Imagen principal
         type: image
+      - name: imagenAlt
+        label: Texto alternativo de la imagen
+        type: string
+      - name: resumen
+        label: Resumen corto (tarjeta)
+        type: text
+
+      # --- Datos del detalle ---
+      - name: eyebrow
+        label: Etiqueta superior
+        type: string
+        description: "Ej: Tour cultural · Otavalo"
+      - name: slogan
+        label: Slogan
+        type: string
+        description: "Frase corta en inglés entre comillas"
+      - name: callout
+        label: Callout (recuadro destacado)
+        type: text
+      - name: descripcion
+        label: Descripción larga
+        type: text
+      - name: itinerario
+        label: Itinerario
+        type: list
+        fields:
+          - name: hora
+            label: Hora
+            type: string
+          - name: texto
+            label: Actividad
+            type: text
+      - name: ficha
+        label: Ficha técnica
+        type: list
+        fields:
+          - name: label
+            label: Campo
+            type: string
+          - name: valor
+            label: Valor
+            type: string
+      - name: incluye
+        label: Incluye
+        type: list
+      - name: noIncluye
+        label: No incluye
+        type: list
+
+      # --- Galería (opcional) ---
+      - name: galeria
+        label: Galería de fotos
+        type: list
+        fields:
+          - name: imagen
+            label: Imagen
+            type: image
+          - name: alt
+            label: Texto alternativo
+            type: string

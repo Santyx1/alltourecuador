@@ -74,9 +74,12 @@ content:
       - name: descripcion
         label: Descripción larga
         type: text
+
+      # --- Listas de objetos ---
       - name: itinerario
         label: Itinerario
-        type: list
+        type: object
+        list: true
         fields:
           - name: hora
             label: Hora
@@ -84,9 +87,11 @@ content:
           - name: texto
             label: Actividad
             type: text
+
       - name: ficha
         label: Ficha técnica
-        type: list
+        type: object
+        list: true
         fields:
           - name: label
             label: Campo
@@ -94,12 +99,17 @@ content:
           - name: valor
             label: Valor
             type: string
+
+      # --- Listas de textos ---
       - name: incluye
         label: Incluye
-        type: list
+        type: string
+        list: true
+
       - name: noIncluye
         label: No incluye
-        type: list
+        type: string
+        list: true
 
       # --- Galería (opcional) ---
       - name: galeria

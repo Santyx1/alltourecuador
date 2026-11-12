@@ -1,5 +1,6 @@
 // ==========================================
 // LISTADO DE TOURS — carga desde data/tours.json
+// Blindado para tolerar campos null / string / array
 // ==========================================
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -8,32 +9,56 @@ document.addEventListener('DOMContentLoaded', function () {
     const filterInputs = document.querySelectorAll('.filter-list input[type="checkbox"]');
     const removeBtn = document.getElementById('removeFilters');
 
-    let toursData = [];
+    // --- Utilidades defensivas ---
+    function toArray(v) {
+        if (Array.isArray(v)) return v.filter(x => x != null && x !== '');
+        if (v == null || v === '') return [];
+        return [String(v)];
+    }
+
+    function safe(v, fallback = '') {
+        return (v == null) ? fallback : v;
+    }
+
+    function capitalize(s) {
+        return s ? s.charAt(0).toUpperCase() + s.slice(1) : '';
+    }
 
     // --- Renderizar una tarjeta ---
     function renderCard(t) {
+        const destinos = toArray(t.destino);
+        const tipos = toArray(t.tipo);
+        const titulo = safe(t.titulo, 'Tour');
+        const imagen = safe(t.imagen, 'img/otavalo.jpg');
+        const imagenAlt = safe(t.imagenAlt, titulo);
+        const duracionTexto = safe(t.duracionTexto, '');
+        const nivel = safe(t.nivel, '');
+        const minPax = safe(t.minPax, 4);
+        const precio = safe(t.precio, 0);
+        const link = `tour-detalle.html?tour=${encodeURIComponent(t.slug || t.id || '')}`;
+
         return `
             <article class="tour-card-compact"
-                     data-destino="${t.destino.join(' ')}"
-                     data-tipo="${t.tipo.join(' ')}"
-                     data-nivel="${t.nivel}"
-                     data-duracion="${t.duracion}">
+                     data-destino="${destinos.join(' ')}"
+                     data-tipo="${tipos.join(' ')}"
+                     data-nivel="${nivel}"
+                     data-duracion="${safe(t.duracion, '')}">
                 <div class="tour-card-compact__image">
-                    <img src="${t.imagen}" alt="${t.imagenAlt}" loading="lazy">
-                    <span class="tour-badge-duration">${t.duracionTexto}</span>
+                    <img src="${imagen}" alt="${imagenAlt}" loading="lazy">
+                    <span class="tour-badge-duration">${duracionTexto}</span>
                 </div>
                 <div class="tour-card-compact__body">
-                    <h3>${t.titulo}</h3>
+                    <h3>${titulo}</h3>
                     <div class="tour-meta">
-                        <span class="meta-pill"><i class="fa-solid fa-users"></i> Mín. ${t.minPax} pax</span>
-                        <span class="meta-pill"><i class="fa-solid fa-mountain"></i> ${capitalize(t.nivel)}</span>
+                        <span class="meta-pill"><i class="fa-solid fa-users"></i> Mín. ${minPax} pax</span>
+                        <span class="meta-pill"><i class="fa-solid fa-mountain"></i> ${capitalize(nivel)}</span>
                     </div>
                     <div class="tour-card-compact__footer">
                         <div class="tour-price-compact">
                             <small>Desde</small>
-                            <strong>$${t.precio}</strong>
+                            <strong>$${precio}</strong>
                         </div>
-                        <a href="tour-detalle.html?tour=${t.slug}" class="btn btn-accent btn-sm">
+                        <a href="${link}" class="btn btn-accent btn-sm">
                             Ver tour <i class="fa-solid fa-arrow-right"></i>
                         </a>
                     </div>
@@ -42,18 +67,17 @@ document.addEventListener('DOMContentLoaded', function () {
         `;
     }
 
-    function capitalize(s) {
-        return s ? s.charAt(0).toUpperCase() + s.slice(1) : '';
-    }
-
     // --- Cargar y renderizar todos ---
     fetch('data/tours.json')
-        .then(r => r.json())
-        .then(data => {
-            toursData = data;
+        .then(function (r) {
+            if (!r.ok) throw new Error('HTTP ' + r.status);
+            return r.json();
+        })
+        .then(function (data) {
+            if (!Array.isArray(data)) throw new Error('El JSON no es un array');
             grid.innerHTML = data.map(renderCard).join('');
         })
-        .catch(err => {
+        .catch(function (err) {
             console.error('Error cargando tours:', err);
             grid.innerHTML = `<p style="grid-column:1/-1;text-align:center;color:var(--text-light);padding:40px 0;">
                 No se pudieron cargar los tours. Intenta más tarde.
@@ -63,20 +87,23 @@ document.addEventListener('DOMContentLoaded', function () {
     // --- Filtros ---
     function applyFilters() {
         const active = { destino: [], tipo: [], nivel: [], duracion: [] };
-        filterInputs.forEach(inp => {
-            if (inp.checked) active[inp.dataset.filter].push(inp.value);
+        filterInputs.forEach(function (inp) {
+            if (inp.checked) {
+                const key = inp.dataset.filter;
+                if (active[key]) active[key].push(inp.value);
+            }
         });
 
         const cards = document.querySelectorAll('.tour-card-compact');
         let visible = 0;
 
-        cards.forEach(card => {
+        cards.forEach(function (card) {
             const matchDestino = active.destino.length === 0 ||
-                active.destino.some(d => card.dataset.destino.includes(d));
+                active.destino.some(d => (card.dataset.destino || '').includes(d));
             const matchTipo = active.tipo.length === 0 ||
-                active.tipo.some(t => card.dataset.tipo.includes(t));
+                active.tipo.some(t => (card.dataset.tipo || '').includes(t));
             const matchNivel = active.nivel.length === 0 ||
-                active.nivel.some(n => card.dataset.nivel.includes(n));
+                active.nivel.some(n => (card.dataset.nivel || '').includes(n));
             const matchDuracion = active.duracion.length === 0 ||
                 active.duracion.some(d => (card.dataset.duracion || '').includes(d));
 
@@ -85,14 +112,18 @@ document.addEventListener('DOMContentLoaded', function () {
             if (show) visible++;
         });
 
-        noResults.style.display = visible === 0 ? 'block' : 'none';
+        if (noResults) {
+            noResults.style.display = visible === 0 ? 'block' : 'none';
+        }
     }
 
-    filterInputs.forEach(inp => inp.addEventListener('change', applyFilters));
+    filterInputs.forEach(function (inp) {
+        inp.addEventListener('change', applyFilters);
+    });
 
     if (removeBtn) {
         removeBtn.addEventListener('click', function () {
-            filterInputs.forEach(inp => { inp.checked = false; });
+            filterInputs.forEach(function (inp) { inp.checked = false; });
             applyFilters();
         });
     }

@@ -42,11 +42,13 @@ content:
         type: number
       - name: destino
         label: Destinos
-        type: list
+        type: string
+        list: true
         required: true
       - name: tipo
         label: Tipos de experiencia
-        type: list
+        type: string
+        list: true
         required: true
       - name: imagen
         label: Imagen principal

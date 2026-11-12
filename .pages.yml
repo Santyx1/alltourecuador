@@ -104,7 +104,8 @@ content:
       # --- Galería (opcional) ---
       - name: galeria
         label: Galería de fotos
-        type: list
+        type: object
+        list: true
         fields:
           - name: imagen
             label: Imagen

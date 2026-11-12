@@ -108,7 +108,7 @@ const translations = {
         "map.btn": "Cotizar mi viaje",
 
         // CTA FINAL
-        "cta.eyebrow": "Encuentra la aventura perfecta",
+        "cta.eyebrow": "Encuentra la convivencia cultural perfecta",
         "cta.title": "Ecuador no solo se conoce:<br>se siente, se comparte y se vive.",
         "cta.desc": "Te ayudamos a construir tu próxima experiencia.",
         "cta.btn1": "Comienza tu viaje",

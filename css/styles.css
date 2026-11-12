@@ -1827,69 +1827,165 @@ main{ padding-top:var(--header-h); }
     background:var(--accent);
 }
 
-/* 16.c Testimonios cadena de valor (experiencias.html) */
+/* ==========================================
+   16.c Testimonios cadena de valor (experiencias.html)
+   ========================================== */
 .section-value-testimonials{
     padding:100px 0;
     background:var(--bg-veil-soft);
     backdrop-filter:blur(2px);
     -webkit-backdrop-filter:blur(2px);
 }
+
 .value-testimonials-grid{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:32px;
-    max-width:1000px;
+    display:flex;
+    flex-direction:column;
+    gap:40px;
+    max-width:1200px;
     margin:0 auto;
 }
+
 .value-testimonial-card{
+    display:grid;
+    grid-template-columns:1fr 1.3fr;
+    gap:0;
     background:var(--white);
     border-radius:var(--radius-lg);
-    padding:44px 44px 40px;
     border:1px solid var(--gray-100);
     box-shadow:var(--shadow-sm);
+    overflow:hidden;
     transition:var(--transition);
     position:relative;
-    overflow:hidden;
-}
-.value-testimonial-card::before{
-    content:"";
-    position:absolute;
-    left:0;
-    top:0;
-    bottom:0;
-    width:6px;
-    background:linear-gradient(180deg, var(--brand), var(--accent));
 }
 .value-testimonial-card:hover{
-    transform:translateY(-4px);
     box-shadow:var(--shadow-lg);
     border-color:transparent;
+    transform:translateY(-2px);
 }
-.value-testimonial-card h3{
+
+/* Alternar imagen derecha / izquierda */
+.value-testimonial-card.reverse{
+    grid-template-columns:1.3fr 1fr;
+}
+.value-testimonial-card.reverse .value-testimonial-image{
+    order:2;
+}
+.value-testimonial-card.reverse .value-testimonial-body{
+    order:1;
+}
+
+/* Imagen lateral */
+.value-testimonial-image{
+    position:relative;
+    overflow:hidden;
+    min-height:340px;
+    background:var(--brand-pale);
+}
+.value-testimonial-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:transform 0.8s ease;
+}
+.value-testimonial-card:hover .value-testimonial-image img{
+    transform:scale(1.05);
+}
+/* Franja de color turquesa/naranja sobre la imagen */
+.value-testimonial-image::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        135deg,
+        rgba(0,166,181,0.10) 0%,
+        rgba(26,58,79,0.0) 40%,
+        rgba(242,124,33,0.10) 100%
+    );
+    pointer-events:none;
+}
+
+/* Cuerpo del testimonio */
+.value-testimonial-body{
+    padding:44px 44px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:12px;
+}
+
+.value-testimonial-body h3{
     font-family:var(--font-serif);
     font-size:1.5rem;
     font-weight:700;
     color:var(--text);
-    margin-bottom:8px;
+    margin:0;
+    line-height:1.25;
 }
+
 .value-testimonial-role{
-    font-size:0.82rem;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    align-self:flex-start;
+    font-size:0.78rem;
     font-weight:700;
-    letter-spacing:0.12em;
+    letter-spacing:0.1em;
     text-transform:uppercase;
     color:var(--accent-dark);
-    margin-bottom:20px;
-    display:block;
+    background:var(--accent-pale);
+    padding:6px 14px;
+    border-radius:999px;
+    margin-bottom:6px;
+    line-height:1.4;
 }
+.value-testimonial-role i{
+    font-size:0.85rem;
+    color:var(--accent);
+}
+
 .value-testimonial-text{
     font-family:var(--font-serif);
     font-style:italic;
-    font-size:1.05rem;
+    font-size:1.02rem;
     color:var(--text);
     line-height:1.8;
     margin:0;
 }
 
+/* Responsive */
+@media (max-width:992px){
+    .value-testimonial-card,
+    .value-testimonial-card.reverse{
+        grid-template-columns:1fr;
+    }
+    .value-testimonial-card.reverse .value-testimonial-image,
+    .value-testimonial-card.reverse .value-testimonial-body{
+        order:initial;
+    }
+    .value-testimonial-image{
+        min-height:260px;
+        max-height:320px;
+    }
+    .value-testimonial-body{
+        padding:32px 28px;
+    }
+}
+
+@media (max-width:560px){
+    .value-testimonial-body{
+        padding:26px 22px;
+    }
+    .value-testimonial-body h3{
+        font-size:1.25rem;
+    }
+    .value-testimonial-text{
+        font-size:0.95rem;
+    }
+    .value-testimonial-image{
+        min-height:220px;
+    }
+}
 /* ==========================================
    17. CTA FINAL
    ========================================== */

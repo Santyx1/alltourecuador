@@ -16,7 +16,7 @@
 </head>
 <body>
 
-    <!-- PRELOADER (reutilizado) -->
+    <!-- PRELOADER -->
     <div class="preloader" id="preloader">
         <div class="preloader-inner">
             <div class="preloader-logos">
@@ -26,7 +26,7 @@
         </div>
     </div>
 
-    <!-- HEADER (reutilizado) -->
+    <!-- HEADER -->
     <header class="site-header scrolled" id="siteHeader">
         <div class="container nav-wrapper">
             <a href="index.html" class="brand" aria-label="All Tour Ecuador - Inicio">
@@ -60,7 +60,7 @@
         </div>
     </header>
 
-    <!-- MOBILE MENU (reutilizado) -->
+    <!-- MOBILE MENU -->
     <div class="mobile-menu" id="mobileMenu">
         <nav class="mobile-nav">
             <a href="index.html" data-i18n="nav.inicio">Inicio</a>
@@ -78,12 +78,9 @@
 
     <main>
 
-        <!-- ==========================================
-             HERO DEL TOUR (dinámico)
-             ========================================== -->
+        <!-- HERO DEL TOUR -->
         <section class="page-hero tour-detail-hero-section" id="tourHero">
-            <!-- La imagen de fondo se asigna con JS -->
-            <div class="page-hero-bg" id="tourHeroBg" style="background-image:url('img/otavalo.jpg');"></div>
+            <div class="page-hero-bg" id="tourHeroBg"></div>
             <div class="page-hero-overlay"></div>
             <div class="container page-hero-content">
                 <nav class="breadcrumb" aria-label="breadcrumb">
@@ -91,17 +88,15 @@
                     <i class="fa-solid fa-chevron-right"></i>
                     <a href="tours.html">Tours</a>
                     <i class="fa-solid fa-chevron-right"></i>
-                    <span id="tourBreadcrumb">Raíces de Otavalo</span>
+                    <span id="tourBreadcrumb">Tour</span>
                 </nav>
-                <span class="section-eyebrow light" id="tourEyebrow">Tour cultural · Otavalo</span>
-                <h1 class="page-hero-title" id="tourTitle">Raíces de Otavalo</h1>
-                <p class="page-hero-desc" id="tourSlogan">"Meet the people, share the traditions, live the Andes."</p>
+                <span class="section-eyebrow light" id="tourEyebrow"></span>
+                <h1 class="page-hero-title" id="tourTitle">Cargando...</h1>
+                <p class="page-hero-desc" id="tourSlogan"></p>
             </div>
         </section>
 
-        <!-- ==========================================
-             CUERPO DEL TOUR
-             ========================================== -->
+        <!-- CUERPO DEL TOUR -->
         <section class="section-tour-detail-body">
             <div class="container">
                 <div class="tour-detail-layout">
@@ -109,64 +104,49 @@
                     <!-- COLUMNA PRINCIPAL -->
                     <div class="tour-detail-main">
 
-                        <!-- Callout -->
-                        <div class="tour-detail-callout" id="tourCallout">
-                            <!-- Se llena con JS -->
-                        </div>
+                        <div class="tour-detail-callout" id="tourCallout"></div>
 
-                        <!-- Descripción -->
                         <h2 class="tour-detail-heading" data-i18n="modal.description">Descripción de la Experiencia</h2>
-                        <p class="tour-detail-description" id="tourDescription">
-                            <!-- Se llena con JS -->
-                        </p>
+                        <p class="tour-detail-description" id="tourDescription"></p>
 
-                        <!-- Itinerario -->
                         <h2 class="tour-detail-heading" data-i18n="modal.itinerary">Itinerario</h2>
-                        <ul class="tour-modal-itinerary tour-detail-itinerary" id="tourItinerary">
-                            <!-- Se llena con JS -->
-                        </ul>
+                        <ul class="tour-modal-itinerary tour-detail-itinerary" id="tourItinerary"></ul>
 
-                        
+                        <!-- GALERÍA (solo aparece si el tour tiene imágenes) -->
+                        <div id="tourGalleryWrapper" style="display:none;">
+                            <h2 class="tour-detail-heading">Galería de Fotos</h2>
+                            <div class="tour-gallery" id="tourGallery"></div>
+                        </div>
 
                     </div>
 
                     <!-- SIDEBAR -->
                     <aside class="tour-detail-sidebar">
 
-                        <!-- Ficha Técnica -->
                         <div class="tour-facts-card">
                             <h3 class="tour-sidebar-title" data-i18n="modal.facts">Ficha Técnica</h3>
-                            <ul id="tourFacts">
-                                <!-- Se llena con JS -->
-                            </ul>
+                            <ul id="tourFacts"></ul>
                         </div>
 
-                        <!-- Incluye -->
                         <div class="tour-includes-card">
                             <h4><i class="fa-solid fa-circle-check"></i> <span data-i18n="modal.includes">Incluye</span></h4>
-                            <ul id="tourIncludes">
-                                <!-- Se llena con JS -->
-                            </ul>
+                            <ul id="tourIncludes"></ul>
                         </div>
 
-                        <!-- No Incluye -->
                         <div class="tour-not-includes-card">
                             <h4><i class="fa-solid fa-circle-xmark"></i> <span data-i18n="modal.notIncludes">No incluye</span></h4>
-                            <ul id="tourNotIncludes">
-                                <!-- Se llena con JS -->
-                            </ul>
+                            <ul id="tourNotIncludes"></ul>
                         </div>
 
-                        <!-- CTA -->
                         <a href="contacto.html" class="btn btn-accent btn-lg tour-detail-cta" data-i18n="modal.cta">
                             Cotizar este tour <i class="fa-solid fa-arrow-right"></i>
                         </a>
 
                         <div class="tour-price-sidebar">
-    <span class="tour-price-sidebar-label">Precio desde</span>
-    <strong class="tour-price-sidebar-value">$0</strong>
-    <span class="tour-price-sidebar-note">por persona</span>
-</div>
+                            <span class="tour-price-sidebar-label">Precio desde</span>
+                            <strong class="tour-price-sidebar-value">$0</strong>
+                            <span class="tour-price-sidebar-note">por persona</span>
+                        </div>
 
                     </aside>
 
@@ -174,9 +154,7 @@
             </div>
         </section>
 
-        <!-- ==========================================
-             SECCIÓN CONTACTO CTA (reutilizada)
-             ========================================== -->
+        <!-- CONTACTO CTA -->
         <section class="section-contact-cta">
             <div class="container">
                 <div class="contact-cta-grid">
@@ -199,7 +177,7 @@
             </div>
         </section>
 
-        <!-- CTA FINAL (reutilizado) -->
+        <!-- CTA FINAL -->
         <section class="section-cta-final">
             <div class="cta-bg" style="background-image:url('img/comparte.jpg');"></div>
             <div class="cta-overlay"></div>
@@ -216,7 +194,7 @@
 
     </main>
 
-    <!-- FOOTER (reutilizado) -->
+    <!-- FOOTER -->
     <footer class="site-footer">
         <div class="container footer-grid">
             <div class="footer-col footer-brand-col">
@@ -237,6 +215,7 @@
                 <h4 data-i18n="footer.explore">Explora</h4>
                 <ul class="footer-list footer-links">
                     <li><a href="tours.html">Tours</a></li>
+                    <li><a href="destinos.html">Destinos</a></li>
                     <li><a href="experiencias.html">Experiencias</a></li>
                     <li><a href="nosotros.html">Nosotros</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
@@ -274,7 +253,6 @@
     </button>
 
     <script src="js/script.js"></script>
-    <!-- JS específico para la página de detalle -->
     <script src="js/tour-detalle.js"></script>
 </body>
 </html>

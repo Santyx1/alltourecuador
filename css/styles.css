@@ -818,7 +818,7 @@ main{ padding-top:var(--header-h); }
 }
 
 /* ==========================================
-   7. CADENA DE VALOR (Rediseñada)
+   7. CADENA DE VALOR (Rediseñada — Compacta)
    ========================================== */
 .section-philosophy{
     background:var(--text);
@@ -831,7 +831,7 @@ main{ padding-top:var(--header-h); }
 .value-chain{
     display:flex;
     flex-direction:column;
-    gap:40px;
+    gap:32px;
     align-items:center;
 }
 
@@ -860,9 +860,11 @@ main{ padding-top:var(--header-h); }
     display:flex;
     align-items:flex-start;
     justify-content:center;
-    gap:8px;
+    gap:4px;
     width:100%;
-    flex-wrap:wrap; /* Permite que se acomoden en varias filas */
+    max-width:1000px;
+    margin:0 auto;
+    flex-wrap:wrap;
 }
 
 /* Cada paso individual */
@@ -870,23 +872,23 @@ main{ padding-top:var(--header-h); }
     display:flex;
     flex-direction:column;
     align-items:center;
-    gap:12px;
+    gap:8px;
     text-align:center;
-    flex:1;
-    min-width:120px;
-    max-width:160px;
+    flex:0 1 auto;
+    min-width:90px;
+    max-width:120px;
 }
 
 /* Icono animado */
 .chain-icon{
-    width:64px;
-    height:64px;
+    width:56px;
+    height:56px;
     border-radius:50%;
     background:rgba(255,255,255,0.06);
     border:1px solid rgba(255,255,255,0.15);
     display:grid;
     place-items:center;
-    font-size:1.4rem;
+    font-size:1.2rem;
     color:var(--accent);
     transition:var(--transition);
     position:relative;
@@ -904,34 +906,50 @@ main{ padding-top:var(--header-h); }
 .chain-step span{
     font-family:var(--font-sans);
     font-weight:800;
-    font-size:0.78rem;
-    letter-spacing:0.08em;
+    font-size:0.7rem;
+    letter-spacing:0.06em;
     text-transform:uppercase;
     color:var(--accent-light);
-    line-height:1.4;
-    max-width:110px;
+    line-height:1.3;
+    max-width:100px;
 }
 
 /* Flechas entre pasos */
 .chain-arrow{
     color:rgba(255,255,255,0.25);
-    font-size:0.85rem;
+    font-size:0.7rem;
     flex-shrink:0;
     display:flex;
     align-items:center;
     justify-content:center;
-    padding-top:32px; /* Alinea la flecha con los iconos */
-    height:64px;
+    padding-top:26px;
+    height:56px;
     transition:var(--transition);
 }
 
 /* Responsive */
+@media (max-width: 1200px){
+    .chain-step{
+        min-width:80px;
+        max-width:110px;
+    }
+    .chain-icon{
+        width:50px;
+        height:50px;
+        font-size:1.05rem;
+    }
+    .chain-arrow{
+        padding-top:22px;
+        height:50px;
+    }
+}
+
 @media (max-width: 992px){
     .value-chain-steps{
         gap:20px;
     }
     .chain-arrow{
-        display:none; /* Ocultamos las flechas en tablet para evitar desorden */
+        display:none;
     }
     .chain-step{
         flex:1 1 calc(33.333% - 20px);
@@ -944,15 +962,14 @@ main{ padding-top:var(--header-h); }
         flex:1 1 calc(50% - 16px);
     }
     .chain-icon{
-        width:56px;
-        height:56px;
-        font-size:1.2rem;
+        width:50px;
+        height:50px;
+        font-size:1.05rem;
     }
     .chain-step span{
-        font-size:0.72rem;
+        font-size:0.68rem;
     }
 }
-
 /* ==========================================
    8. WELCOME
    ========================================== */

@@ -818,12 +818,12 @@ main{ padding-top:var(--header-h); }
 }
 
 /* ==========================================
-   7. CADENA DE VALOR (Rediseñada — Compacta)
+   7. CADENA DE VALOR (Compacta en vertical)
    ========================================== */
 .section-philosophy{
     background:var(--text);
     color:var(--white);
-    padding:80px 0;
+    padding:48px 0;          /* ← Antes 80px. Reduce el alto de la sección */
     position:relative;
     overflow:hidden;
 }
@@ -831,27 +831,28 @@ main{ padding-top:var(--header-h); }
 .value-chain{
     display:flex;
     flex-direction:column;
-    gap:32px;
+    gap:20px;                /* ← Antes 32px. Menos espacio entre título y pasos */
     align-items:center;
 }
 
 .value-chain-title{
     font-family:var(--font-serif);
-    font-size:clamp(1.4rem, 2.4vw, 2rem);
+    font-size:clamp(1.3rem, 2.2vw, 1.8rem); /* ← Un pelín más pequeño */
     font-weight:700;
     color:var(--white);
     text-align:center;
     letter-spacing:0.01em;
-    line-height:1.3;
+    line-height:1.25;
     max-width:600px;
+    margin:0;                /* ← Sin margen extra */
 }
 .value-chain-title::after{
     content:"";
     display:block;
-    width:60px;
+    width:50px;
     height:3px;
     background:var(--accent);
-    margin:16px auto 0;
+    margin:10px auto 0;      /* ← Antes 16px. Menos espacio debajo del título */
     border-radius:2px;
 }
 
@@ -872,7 +873,7 @@ main{ padding-top:var(--header-h); }
     display:flex;
     flex-direction:column;
     align-items:center;
-    gap:8px;
+    gap:6px;                 /* ← Antes 8px. Menos espacio icono-texto */
     text-align:center;
     flex:0 1 auto;
     min-width:90px;
@@ -881,14 +882,14 @@ main{ padding-top:var(--header-h); }
 
 /* Icono animado */
 .chain-icon{
-    width:56px;
-    height:56px;
+    width:52px;              /* ← Antes 56px. Icono un poco más pequeño */
+    height:52px;
     border-radius:50%;
     background:rgba(255,255,255,0.06);
     border:1px solid rgba(255,255,255,0.15);
     display:grid;
     place-items:center;
-    font-size:1.2rem;
+    font-size:1.1rem;        /* ← Antes 1.2rem */
     color:var(--accent);
     transition:var(--transition);
     position:relative;
@@ -906,11 +907,11 @@ main{ padding-top:var(--header-h); }
 .chain-step span{
     font-family:var(--font-sans);
     font-weight:800;
-    font-size:0.7rem;
-    letter-spacing:0.06em;
+    font-size:0.68rem;       /* ← Antes 0.7rem */
+    letter-spacing:0.05em;   /* ← Antes 0.06em */
     text-transform:uppercase;
     color:var(--accent-light);
-    line-height:1.3;
+    line-height:1.25;        /* ← Antes 1.3. Más compacto */
     max-width:100px;
 }
 
@@ -922,8 +923,8 @@ main{ padding-top:var(--header-h); }
     display:flex;
     align-items:center;
     justify-content:center;
-    padding-top:26px;
-    height:56px;
+    padding-top:22px;        /* ← Antes 26px. Alinea con el nuevo icono */
+    height:52px;             /* ← Igual al alto del icono */
     transition:var(--transition);
 }
 
@@ -934,17 +935,23 @@ main{ padding-top:var(--header-h); }
         max-width:110px;
     }
     .chain-icon{
-        width:50px;
-        height:50px;
-        font-size:1.05rem;
+        width:48px;
+        height:48px;
+        font-size:1rem;
     }
     .chain-arrow{
-        padding-top:22px;
-        height:50px;
+        padding-top:20px;
+        height:48px;
     }
 }
 
 @media (max-width: 992px){
+    .section-philosophy{
+        padding:40px 0;      /* ← Más compacto aún en tablet */
+    }
+    .value-chain{
+        gap:16px;
+    }
     .value-chain-steps{
         gap:20px;
     }
@@ -958,18 +965,25 @@ main{ padding-top:var(--header-h); }
 }
 
 @media (max-width: 560px){
+    .section-philosophy{
+        padding:36px 0;
+    }
+    .value-chain-title{
+        font-size:1.2rem;
+    }
     .chain-step{
         flex:1 1 calc(50% - 16px);
     }
     .chain-icon{
-        width:50px;
-        height:50px;
-        font-size:1.05rem;
+        width:46px;
+        height:46px;
+        font-size:0.95rem;
     }
     .chain-step span{
-        font-size:0.68rem;
+        font-size:0.65rem;
     }
 }
+
 /* ==========================================
    8. WELCOME
    ========================================== */

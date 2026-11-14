@@ -1,5 +1,5 @@
 // ==========================================
-// ALL TOUR ECUADOR - Script principal
+// ALL TOUR ECUADOR — Script principal
 // ==========================================
 
 // ==========================================
@@ -11,17 +11,27 @@ const translations = {
         "nav.inicio": "Inicio",
         "nav.nosotros": "Nosotros",
         "nav.tours": "Tours",
+        "nav.destinos": "Destinos",
         "nav.servicios": "Servicios",
         "nav.experiencias": "Experiencias",
         "nav.contacto": "Contacto",
         "nav.cta": "Reservar",
 
         // HERO
-        "hero.eyebrow": "Turismo que conecta con nuestras raíces",
+        "hero.eyebrow": "Agencia de Viajes y Operador Turístico",
         "hero.title": "Ecuador, desde el corazón del planeta",
         "hero.subtitle": "Naturaleza, cultura y experiencias que nacen desde la tierra",
         "hero.btn1": "Explorar tours",
         "hero.btn2": "Conócenos",
+        "hero.slide2.eyebrow": "Alpacas & Tejidos Andinos",
+        "hero.slide2.title": "Tradiciones que se tejen con el tiempo",
+        "hero.slide2.subtitle": "Páramo, comunidad y cultura Kichwa",
+        "hero.slide3.eyebrow": "Naturaleza Viva",
+        "hero.slide3.title": "Cascadas, páramos y paisajes únicos",
+        "hero.slide3.subtitle": "Experiencias que nacen desde la tierra",
+        "hero.slide4.eyebrow": "Sabiduría Ancestral",
+        "hero.slide4.title": "Rituales que conectan con la esencia",
+        "hero.slide4.subtitle": "Culturas vivas que trascienden el turismo",
 
         // WELCOME
         "welcome.eyebrow": "Bienvenidos a",
@@ -46,19 +56,17 @@ const translations = {
         "history.4.title": "NUESTRA ESENCIA",
         "history.4.text": "No solo mostramos Ecuador, lo hacemos vivir. Creemos en un turismo que conecta personas, culturas y territorios; que genera recuerdos, crea vínculos y permite descubrir el país desde el corazón del planeta.",
 
-        // ABOUT
+        // ABOUT (parallax index)
         "about.eyebrow": "Quiénes somos",
         "about.title": "Más que un viaje,<br>una experiencia de vida",
         "about.text": "En AllTourEcuador creemos en el turismo como una herramienta de conexión, aprendizaje y desarrollo. Somos un equipo de profesionales locales, guías nativos y amantes de nuestra tierra, que te acompañarán a vivir experiencias auténticas, seguras y memorables.",
         "about.btn": "Conoce nuestro equipo",
-        "about.hero.title": "Más que un viaje,<br>una experiencia de vida",
-        "about.hero.desc": "Conoce la historia, el equipo y la esencia que hacen posible vivir un Ecuador auténtico.",
 
         // REGIONS
         "regions.eyebrow": "Destinos Ecuador",
         "regions.title": "Cuatro regiones, un solo Ecuador,<br>infinitas experiencias.",
         "regions.lead": "Descubre, conecta y vive la diversidad de un país que tiene una historia en cada territorio.",
-        "regions.btn": "Explorar todos los tours",
+        "regions.btn": "Explorar todos los destinos",
         "region.costa.badge": "Costa",
         "region.costa.tagline": "Sabores, playas y cultura frente al Pacífico.",
         "region.costa.desc": "Vive la gastronomía, naturaleza y calidez de la Costa ecuatoriana.",
@@ -93,20 +101,6 @@ const translations = {
         "tour7.title": "ENTRE ALPACAS Y TEJIDOS ANDINOS",
         "tour7.desc": "Una experiencia de páramo, comunidad y tradición Kichwa.",
 
-        // MAP
-        "map.eyebrow": "Explora el mapa",
-        "map.title": "Ecuador, un país. Cuatro mundos.",
-        "map.lead": "Costa | Andes | Amazonía | Galápagos. Haz clic en cada región para descubrir sus destinos.",
-        "map.select": "Selecciona una región en el mapa",
-        "map.tag": "Ecuador",
-        "map.welcome": "Bienvenido a Ecuador",
-        "map.desc": "Haz clic en cualquier región del mapa para descubrir sus destinos y experiencias.",
-        "map.info.regions": "Regiones:",
-        "map.info.destinations": "Destinos:",
-        "map.info.experiences": "Experiencias:",
-        "map.info.custom": "Personalizadas",
-        "map.btn": "Cotizar mi viaje",
-
         // CTA FINAL
         "cta.eyebrow": "Encuentra la convivencia cultural perfecta",
         "cta.title": "Ecuador no solo se conoce:<br>se siente, se comparte y se vive.",
@@ -133,7 +127,136 @@ const translations = {
         "modal.facts": "Ficha Técnica",
         "modal.includes": "Incluye",
         "modal.notIncludes": "No incluye",
-        "modal.cta": "Cotizar este tour"
+        "modal.cta": "Cotizar este tour",
+
+        // ===== NOSOTROS =====
+        "nosotros.hero.eyebrow": "Quiénes somos",
+        "nosotros.hero.title": "Más que un viaje,<br>una experiencia de vida",
+        "nosotros.hero.desc": "Conoce la historia, el equipo y la esencia que hacen posible vivir un Ecuador auténtico.",
+        "nosotros.story.eyebrow": "Our Story",
+        "nosotros.story.title": "Nuestra historia",
+        "nosotros.story.text1": "ALL TOUR ECUADOR nace con el propósito de mostrar un Ecuador que va más allá de sus destinos turísticos. Nacemos desde el conocimiento y la experiencia en territorio, convencidos de que viajar también significa conocer personas, compartir culturas, descubrir sabores, caminar por paisajes y acercarse a las historias que hacen único a cada lugar.",
+        "nosotros.story.text2": "Con el tiempo, hemos construido una propuesta que combina autenticidad, atención personalizada, seguridad y profesionalismo, trabajando de manera cercana con comunidades, familias, emprendimientos y prestadores de servicios locales.",
+        "nosotros.story.text3": "Hoy, ALL TOUR ECUADOR diseña y opera experiencias que buscan conectar al viajero con la verdadera esencia del país: un Ecuador diverso, cultural y natural, que no solo se visita, sino que se vive.",
+        "nosotros.team.eyebrow": "About Our Team",
+        "nosotros.team.title": "Un equipo que conoce y vive cada territorio",
+        "nosotros.team.text1": "En ALL TOUR ECUADOR contamos con un equipo profesional y comprometido, integrado por guías especializados, personal de logística preparado y prestadores de servicios de calidad que trabajan de manera coordinada para garantizar experiencias seguras, auténticas y bien organizadas.",
+        "nosotros.team.text2": "Nuestro equipo también está formado por quienes conocen y viven cada territorio: mujeres y hombres del campo, organizaciones comunitarias, feriantes, agricultores, artesanos, emprendedores y conocedores de la espiritualidad, la cultura y las prácticas de sostenibilidad.",
+        "nosotros.team.text3": "Valoramos sus conocimientos y experiencias como parte fundamental de nuestros servicios, creando un vínculo entre el profesional del turismo y los verdaderos protagonistas de cada destino. Así construimos una propuesta donde la calidad del servicio se une con el conocimiento local, fortaleciendo a las familias y organizaciones que hacen posible vivir un Ecuador auténtico.",
+        "nosotros.why.eyebrow": "Why Us?",
+        "nosotros.why.title": "¿Por qué viajar con nosotros?",
+        "nosotros.why.text1": "Viajar con ALL TOUR ECUADOR es elegir una manera diferente de conocer Ecuador: no solo visitamos destinos, sino que conectamos al viajero con la esencia de cada territorio, sus culturas, comunidades, familias, gastronomía, naturaleza y saberes ancestrales.",
+        "nosotros.why.text2": "Diseñamos experiencias auténticas y personalizadas que combinan convivencia, aventura, cultura y naturaleza con una operación profesional, segura y responsable, generando además oportunidades para quienes hacen del turismo una forma de vida.",
+        "nosotros.why.text3": "Queremos que cada viajero no se lleve únicamente fotografías, sino historias, emociones y vínculos que permanezcan en su memoria. Porque Ecuador no solo se conoce: se siente, se comparte y se vive.",
+        "nosotros.meet.eyebrow": "Meet Our Team",
+        "nosotros.meet.title": "Los protagonistas de cada experiencia",
+        "nosotros.meet.lead": "Profesionales del turismo y conocedores locales unidos por un mismo propósito: hacer vivir un Ecuador auténtico.",
+        "nosotros.team.emprendedores": "EMPRENDEDORES",
+        "nosotros.team.emprendedores.text": "Como emprendedores del sector turístico, trabajamos con un profundo compromiso y constante preparación profesional, entregando en cada servicio la pasión, el detalle y la maestría artesanal de nuestra tierra para ofrecer vivencias auténticas e inolvidables.",
+        "nosotros.team.guias": "GUÍAS LOCALES",
+        "nosotros.team.guias.text": "Como conocedor de mi territorio, acompaño a nuestros visitantes compartiendo la historia, cultura, naturaleza y tradiciones que hacen único a cada destino.",
+        "nosotros.team.agricultores": "AGRICULTORES",
+        "nosotros.team.agricultores.text": "Desde la chakra y el trabajo de la tierra, compartimos nuestros productos, conocimientos y formas de vida, permitiendo al visitante conocer el origen de nuestros alimentos y nuestra cultura.",
+        "nosotros.team.mujeres": "ASOCIACIÓN DE MUJERES",
+        "nosotros.team.mujeres.text": "A través de nuestro trabajo asociativo, transformamos productos, conocimientos y tradiciones en experiencias que generan oportunidades para nuestras familias y fortalecen nuestra comunidad.",
+        "nosotros.team.sostenibilidad": "SOSTENIBILIDAD",
+        "nosotros.team.sostenibilidad.text": "Nuestro compromiso con la sostenibilidad asegura un futuro donde la riqueza de nuestra flora y fauna, y la belleza de este páramo sagrado, permanezcan intactos para las generaciones venideras.",
+        "nosotros.team.chefs": "CHEFS",
+        "nosotros.team.chefs.text": "Desde nuestra cocina llevamos a la mesa los sabores del territorio, utilizando productos locales para convertir cada plato en una forma de conocer nuestra cultura y nuestras tradiciones.",
+        "nosotros.team.transportistas": "TRANSPORTISTAS",
+        "nosotros.team.transportistas.text": "Con experiencia en las rutas y caminos del Ecuador, nuestro compromiso es brindar traslados seguros, responsables y puntuales, conectando cada destino con una operación turística de calidad.",
+
+        // ===== TOURS PAGE =====
+        "tourspage.hero.eyebrow": "Nuestros paquetes",
+        "tourspage.hero.title": "Experiencias que nacen de la tierra",
+        "tourspage.hero.desc": "Vive lo mejor de Ecuador con nuestros paquetes personalizados. Naturaleza, cultura, aventura y turismo vivencial Kichwa.",
+        "tourspage.sidebar.title": "Encuentra tu viaje",
+        "tourspage.sidebar.remove": "Quitar filtros",
+        "tourspage.filter.destino": "Destino",
+        "tourspage.filter.tipo": "Tipo de experiencia",
+        "tourspage.filter.nivel": "Nivel de actividad",
+        "tourspage.filter.duracion": "Por duración",
+        "tourspage.main.title": "Paquetes disponibles",
+        "tourspage.main.desc": "Todos nuestros paquetes incluyen guía nativo especializado, transporte y experiencias auténticas. Precios por persona con mínimo 4 pax.",
+        "tourspage.contact.cta": "Contáctanos",
+        "tourspage.contact.cta.heading": "Tu viaje ideal empieza con una conversación",
+        "tourspage.contact.cta.eyebrow": "Estamos para ayudarte",
+        "tourspage.contact.cta.title": "Descubre Ecuador con confianza",
+        "tourspage.contact.cta.text": "Cuéntanos qué te gustaría vivir y diseñamos juntos una experiencia a tu medida. Expertos locales, atención personalizada y viajes que se sienten desde el corazón del planeta.",
+        "tourspage.contact.cta.subtitle": "Llámanos",
+        "tourspage.contact.cta.whatsapp": "Escríbenos por WhatsApp",
+
+        // ===== DESTINOS PAGE =====
+        "destinos.eyebrow": "Destinos Ecuador",
+        "destinos.hero.title": "Cuatro regiones, infinitas experiencias",
+        "destinos.hero.desc": "Ecuador reúne en un territorio compacto una extraordinaria diversidad de paisajes, culturas, ecosistemas y formas de vida. Desde las montañas y comunidades de los Andes hasta la biodiversidad de la Amazonía, las playas de la Costa y los ecosistemas únicos de Galápagos.",
+        "destinos.intro.eyebrow": "Descubre el país",
+        "destinos.intro.title": "Ecuador, un país. Cuatro mundos.",
+        "destinos.intro.lead": "Costa | Andes | Amazonía | Galápagos. Explora diferentes paisajes, culturas y experiencias en un mismo viaje. ALL TOUR ECUADOR te permite descubrir el país mediante viajes organizados, experiencias culturales, turismo comunitario, naturaleza, aventura, gastronomía y recorridos diseñados de acuerdo con los intereses de cada viajero.",
+        "destinos.andes.eyebrow": "Región Andes",
+        "destinos.andes.title": "Montañas, cultura y tradiciones vivas",
+        "destinos.andes.lead": "Los Andes ecuatorianos combinan volcanes, lagunas, páramos, ciudades patrimoniales y comunidades indígenas que mantienen vivas sus tradiciones. En esta región, ALL TOUR ECUADOR desarrolla experiencias relacionadas con:",
+        "destinos.amazonia.eyebrow": "Región Amazonía",
+        "destinos.amazonia.title": "Naturaleza, biodiversidad y culturas ancestrales",
+        "destinos.amazonia.lead": "La Amazonía ecuatoriana ofrece una experiencia de inmersión en bosques tropicales, ríos, biodiversidad y territorios de pueblos y nacionalidades indígenas.",
+        "destinos.galapagos.eyebrow": "Región Galápagos",
+        "destinos.galapagos.title": "Naturaleza que no existe en ningún otro lugar",
+        "destinos.galapagos.lead": "Las Islas Galápagos representan uno de los grandes destinos naturales del Ecuador, con ecosistemas volcánicos, fauna endémica y experiencias de conservación y contacto con la naturaleza.",
+        "destinos.costa.eyebrow": "Región Costa",
+        "destinos.costa.title": "Pacífico, naturaleza y sabores del Ecuador",
+        "destinos.costa.lead": "La Costa ecuatoriana combina playas, manglares, bosques, gastronomía, comunidades pesqueras y experiencias vinculadas al océano Pacífico.",
+        "destinos.experiencias": "Experiencias",
+        "destinos.destinos": "Destinos destacados",
+        "destinos.islas": "Islas destacadas",
+        "destinos.verpaquetes": "Ver paquetes disponibles",
+
+        // ===== EXPERIENCIAS PAGE =====
+        "experiencias.hero.eyebrow": "Experiencias All Tour Ecuador",
+        "experiencias.hero.title": "Historias que transforman vidas",
+        "experiencias.hero.desc": "Cada viaje deja una huella: en los viajeros y en las comunidades que hacen posible vivir un Ecuador auténtico. Descubre sus voces.",
+        "experiencias.reviews.eyebrow": "Lo que dicen nuestros viajeros",
+        "experiencias.reviews.title": "Experiencias que se llevan en el corazón",
+        "experiencias.reviews.lead": "Reseñas reales de quienes han vivido los Andes, la Amazonía, la Costa y Galápagos con nosotros.",
+        "experiencias.value.eyebrow": "Voces de nuestra cadena de valor",
+        "experiencias.value.title": "El cambio de vida detrás de cada viaje",
+        "experiencias.value.lead": "El turismo que practicamos genera impacto real en las familias y organizaciones que son parte de cada experiencia. Estas son sus historias.",
+
+        // ===== CONTACTO PAGE =====
+        "contacto.hero.eyebrow": "Estamos aquí para ayudarte",
+        "contacto.hero.title": "Contáctanos",
+        "contacto.hero.desc": "Cuéntanos sobre tu viaje soñado y nuestro equipo te ayudará a planificarlo. Respondemos en menos de 24 horas.",
+        "contacto.info.eyebrow": "Información de contacto",
+        "contacto.info.title": "Hablemos de tu próximo viaje",
+        "contacto.info.desc": "Puedes escribirnos, llamarnos o visitarnos. ¡Nos encantará conocerte!",
+        "contacto.info.oficina": "Oficina principal",
+        "contacto.info.telefono": "Teléfono / Celular",
+        "contacto.info.whatsapp": "WhatsApp",
+        "contacto.info.email": "Email",
+        "contacto.info.horario": "Horario de atención",
+        "contacto.info.siguenos": "Síguenos",
+        "contacto.form.eyebrow": "Formulario de contacto",
+        "contacto.form.title": "Envíanos un mensaje",
+        "contacto.form.desc": "Los campos marcados con * son obligatorios.",
+        "contacto.form.nombre": "Nombre completo *",
+        "contacto.form.email": "Correo electrónico *",
+        "contacto.form.telefono": "Teléfono",
+        "contacto.form.region": "Región de interés *",
+        "contacto.form.tour": "Tour de interés",
+        "contacto.form.personas": "Número de personas",
+        "contacto.form.fecha": "Fecha aproximada del viaje",
+        "contacto.form.duracion": "Duración estimada",
+        "contacto.form.mensaje": "Cuéntanos sobre tu viaje soñado *",
+        "contacto.form.enviar": "Enviar mensaje",
+        "contacto.form.nota": "Al enviar aceptas nuestra <a href=\"#\">política de privacidad</a>.",
+        "contacto.map.eyebrow": "Encuéntranos",
+        "contacto.map.title": "Visítanos en nuestra oficina",
+        "contacto.map.lead": "Estamos ubicados en el corazón de Otavalo, Imbabura. ¡Te esperamos!",
+        "contacto.map.comollegar": "Cómo llegar",
+        "contacto.cta.eyebrow": "Atención personalizada",
+        "contacto.cta.title": "¿Prefieres hablar con nosotros directamente?",
+        "contacto.cta.desc": "Llámanos o escríbenos por WhatsApp y te atendemos al instante.",
+        "contacto.cta.llamar": "Llamar ahora",
+        "contacto.cta.whatsapp": "WhatsApp"
     },
 
     en: {
@@ -141,6 +264,7 @@ const translations = {
         "nav.inicio": "Home",
         "nav.nosotros": "About Us",
         "nav.tours": "Tours",
+        "nav.destinos": "Destinations",
         "nav.servicios": "Services",
         "nav.experiencias": "Experiences",
         "nav.contacto": "Contact",
@@ -152,6 +276,15 @@ const translations = {
         "hero.subtitle": "Nature, culture and experiences born from the land",
         "hero.btn1": "Explore tours",
         "hero.btn2": "About us",
+        "hero.slide2.eyebrow": "Alpacas & Andean Textiles",
+        "hero.slide2.title": "Traditions woven over time",
+        "hero.slide2.subtitle": "Páramo, community and Kichwa culture",
+        "hero.slide3.eyebrow": "Living Nature",
+        "hero.slide3.title": "Waterfalls, páramos and unique landscapes",
+        "hero.slide3.subtitle": "Experiences born from the land",
+        "hero.slide4.eyebrow": "Ancestral Wisdom",
+        "hero.slide4.title": "Rituals that connect with the essence",
+        "hero.slide4.subtitle": "Living cultures that go beyond tourism",
 
         // WELCOME
         "welcome.eyebrow": "Welcome to",
@@ -181,14 +314,12 @@ const translations = {
         "about.title": "More than a trip,<br>a life experience",
         "about.text": "At AllTourEcuador we believe in tourism as a tool for connection, learning and development. We are a team of local professionals, native guides and lovers of our land, who will accompany you to live authentic, safe and memorable experiences.",
         "about.btn": "Meet our team",
-        "about.hero.title": "More than a trip,<br>a life experience",
-        "about.hero.desc": "Discover the history, team and essence that make it possible to live an authentic Ecuador.",
 
         // REGIONS
         "regions.eyebrow": "Ecuador Destinations",
         "regions.title": "Four regions, one Ecuador,<br>infinite experiences.",
         "regions.lead": "Discover, connect and live the diversity of a country that has a story in every territory.",
-        "regions.btn": "Explore all tours",
+        "regions.btn": "Explore all destinations",
         "region.costa.badge": "Coast",
         "region.costa.tagline": "Flavors, beaches and culture facing the Pacific.",
         "region.costa.desc": "Experience the gastronomy, nature and warmth of the Ecuadorian Coast.",
@@ -223,20 +354,6 @@ const translations = {
         "tour7.title": "BETWEEN ALPACAS AND ANDEAN TEXTILES",
         "tour7.desc": "An experience of paramo, community and Kichwa tradition.",
 
-        // MAP
-        "map.eyebrow": "Explore the map",
-        "map.title": "Ecuador, one country. Four worlds.",
-        "map.lead": "Coast | Andes | Amazon | Galapagos. Click on each region to discover its destinations.",
-        "map.select": "Select a region on the map",
-        "map.tag": "Ecuador",
-        "map.welcome": "Welcome to Ecuador",
-        "map.desc": "Click on any region on the map to discover its destinations and experiences.",
-        "map.info.regions": "Regions:",
-        "map.info.destinations": "Destinations:",
-        "map.info.experiences": "Experiences:",
-        "map.info.custom": "Personalized",
-        "map.btn": "Quote my trip",
-
         // CTA FINAL
         "cta.eyebrow": "Find the perfect adventure",
         "cta.title": "Ecuador is not just known:<br>it is felt, shared and lived.",
@@ -263,7 +380,136 @@ const translations = {
         "modal.facts": "Key Facts",
         "modal.includes": "Includes",
         "modal.notIncludes": "Does not include",
-        "modal.cta": "Quote this tour"
+        "modal.cta": "Quote this tour",
+
+        // NOSOTROS
+        "nosotros.hero.eyebrow": "Who we are",
+        "nosotros.hero.title": "More than a trip,<br>a life experience",
+        "nosotros.hero.desc": "Discover the history, team and essence that make it possible to live an authentic Ecuador.",
+        "nosotros.story.eyebrow": "Our Story",
+        "nosotros.story.title": "Our history",
+        "nosotros.story.text1": "ALL TOUR ECUADOR was born with the purpose of showing an Ecuador that goes beyond its tourist destinations. We come from knowledge and experience in the territory, convinced that traveling also means meeting people, sharing cultures, discovering flavors, walking through landscapes and getting closer to the stories that make each place unique.",
+        "nosotros.story.text2": "Over time, we have built a proposal that combines authenticity, personalized attention, safety and professionalism, working closely with communities, families, businesses and local service providers.",
+        "nosotros.story.text3": "Today, ALL TOUR ECUADOR designs and operates experiences that seek to connect travelers with the true essence of the country: a diverse, cultural and natural Ecuador, which is not only visited, but lived.",
+        "nosotros.team.eyebrow": "About Our Team",
+        "nosotros.team.title": "A team that knows and lives each territory",
+        "nosotros.team.text1": "At ALL TOUR ECUADOR we have a professional and committed team, made up of specialized guides, prepared logistics staff and quality service providers who work in a coordinated manner to guarantee safe, authentic and well-organized experiences.",
+        "nosotros.team.text2": "Our team is also formed by those who know and live each territory: rural women and men, community organizations, market vendors, farmers, artisans, entrepreneurs and connoisseurs of spirituality, culture and sustainability practices.",
+        "nosotros.team.text3": "We value their knowledge and experiences as a fundamental part of our services, creating a link between the tourism professional and the true protagonists of each destination. This is how we build a proposal where service quality meets local knowledge, strengthening the families and organizations that make it possible to live an authentic Ecuador.",
+        "nosotros.why.eyebrow": "Why Us?",
+        "nosotros.why.title": "Why travel with us?",
+        "nosotros.why.text1": "Traveling with ALL TOUR ECUADOR means choosing a different way of knowing Ecuador: we don't just visit destinations, we connect the traveler with the essence of each territory, its cultures, communities, families, gastronomy, nature and ancestral knowledge.",
+        "nosotros.why.text2": "We design authentic and personalized experiences that combine coexistence, adventure, culture and nature with a professional, safe and responsible operation, also generating opportunities for those who make tourism a way of life.",
+        "nosotros.why.text3": "We want each traveler to take home not only photographs, but stories, emotions and bonds that remain in their memory. Because Ecuador is not only known: it is felt, shared and lived.",
+        "nosotros.meet.eyebrow": "Meet Our Team",
+        "nosotros.meet.title": "The protagonists of each experience",
+        "nosotros.meet.lead": "Tourism professionals and local connoisseurs united by the same purpose: to make an authentic Ecuador come alive.",
+        "nosotros.team.emprendedores": "ENTREPRENEURS",
+        "nosotros.team.emprendedores.text": "As entrepreneurs in the tourism sector, we work with deep commitment and constant professional preparation, delivering in each service the passion, detail and artisanal mastery of our land to offer authentic and unforgettable experiences.",
+        "nosotros.team.guias": "LOCAL GUIDES",
+        "nosotros.team.guias.text": "As a connoisseur of my territory, I accompany our visitors by sharing the history, culture, nature and traditions that make each destination unique.",
+        "nosotros.team.agricultores": "FARMERS",
+        "nosotros.team.agricultores.text": "From the chakra and the work of the land, we share our products, knowledge and ways of life, allowing visitors to know the origin of our food and our culture.",
+        "nosotros.team.mujeres": "WOMEN'S ASSOCIATION",
+        "nosotros.team.mujeres.text": "Through our associative work, we transform products, knowledge and traditions into experiences that create opportunities for our families and strengthen our community.",
+        "nosotros.team.sostenibilidad": "SUSTAINABILITY",
+        "nosotros.team.sostenibilidad.text": "Our commitment to sustainability ensures a future where the richness of our flora and fauna, and the beauty of this sacred páramo, remain intact for future generations.",
+        "nosotros.team.chefs": "CHEFS",
+        "nosotros.team.chefs.text": "From our kitchen we bring the flavors of the territory to the table, using local products to turn each dish into a way of knowing our culture and traditions.",
+        "nosotros.team.transportistas": "TRANSPORT PROVIDERS",
+        "nosotros.team.transportistas.text": "With experience on the roads and routes of Ecuador, our commitment is to provide safe, responsible and punctual transfers, connecting each destination with a quality tourism operation.",
+
+        // TOURS PAGE
+        "tourspage.hero.eyebrow": "Our packages",
+        "tourspage.hero.title": "Experiences born from the land",
+        "tourspage.hero.desc": "Live the best of Ecuador with our personalized packages. Nature, culture, adventure and Kichwa experiential tourism.",
+        "tourspage.sidebar.title": "Find your trip",
+        "tourspage.sidebar.remove": "Remove filters",
+        "tourspage.filter.destino": "Destination",
+        "tourspage.filter.tipo": "Experience type",
+        "tourspage.filter.nivel": "Activity level",
+        "tourspage.filter.duracion": "By duration",
+        "tourspage.main.title": "Available packages",
+        "tourspage.main.desc": "All our packages include a specialized native guide, transport and authentic experiences. Prices per person with a minimum of 4 pax.",
+        "tourspage.contact.cta": "Contact us",
+        "tourspage.contact.cta.heading": "Your ideal trip starts with a conversation",
+        "tourspage.contact.cta.eyebrow": "We are here to help you",
+        "tourspage.contact.cta.title": "Discover Ecuador with confidence",
+        "tourspage.contact.cta.text": "Tell us what you would like to experience and we will design an experience tailored to you. Local experts, personalized attention and trips that are felt from the heart of the planet.",
+        "tourspage.contact.cta.subtitle": "Call us",
+        "tourspage.contact.cta.whatsapp": "Write to us on WhatsApp",
+
+        // DESTINOS PAGE
+        "destinos.eyebrow": "Ecuador Destinations",
+        "destinos.hero.title": "Four regions, infinite experiences",
+        "destinos.hero.desc": "Ecuador brings together in a compact territory an extraordinary diversity of landscapes, cultures, ecosystems and ways of life. From the mountains and communities of the Andes to the biodiversity of the Amazon, the beaches of the Coast and the unique ecosystems of Galapagos.",
+        "destinos.intro.eyebrow": "Discover the country",
+        "destinos.intro.title": "Ecuador, one country. Four worlds.",
+        "destinos.intro.lead": "Coast | Andes | Amazon | Galapagos. Explore different landscapes, cultures and experiences in a single trip. ALL TOUR ECUADOR allows you to discover the country through organized trips, cultural experiences, community tourism, nature, adventure, gastronomy and routes designed according to the interests of each traveler.",
+        "destinos.andes.eyebrow": "Andes Region",
+        "destinos.andes.title": "Mountains, culture and living traditions",
+        "destinos.andes.lead": "The Ecuadorian Andes combine volcanoes, lagoons, páramos, heritage cities and indigenous communities that keep their traditions alive. In this region, ALL TOUR ECUADOR develops experiences related to:",
+        "destinos.amazonia.eyebrow": "Amazon Region",
+        "destinos.amazonia.title": "Nature, biodiversity and ancestral cultures",
+        "destinos.amazonia.lead": "The Ecuadorian Amazon offers an immersion experience in tropical forests, rivers, biodiversity and territories of indigenous peoples and nationalities.",
+        "destinos.galapagos.eyebrow": "Galapagos Region",
+        "destinos.galapagos.title": "Nature that exists nowhere else",
+        "destinos.galapagos.lead": "The Galapagos Islands represent one of Ecuador's great natural destinations, with volcanic ecosystems, endemic fauna and experiences of conservation and contact with nature.",
+        "destinos.costa.eyebrow": "Coast Region",
+        "destinos.costa.title": "Pacific, nature and flavors of Ecuador",
+        "destinos.costa.lead": "The Ecuadorian Coast combines beaches, mangroves, forests, gastronomy, fishing communities and experiences linked to the Pacific Ocean.",
+        "destinos.experiencias": "Experiences",
+        "destinos.destinos": "Featured destinations",
+        "destinos.islas": "Featured islands",
+        "destinos.verpaquetes": "See available packages",
+
+        // EXPERIENCIAS PAGE
+        "experiencias.hero.eyebrow": "All Tour Ecuador Experiences",
+        "experiencias.hero.title": "Stories that transform lives",
+        "experiencias.hero.desc": "Every trip leaves a mark: on travelers and on the communities that make it possible to live an authentic Ecuador. Discover their voices.",
+        "experiencias.reviews.eyebrow": "What our travelers say",
+        "experiencias.reviews.title": "Experiences carried in the heart",
+        "experiencias.reviews.lead": "Real reviews from those who have lived the Andes, the Amazon, the Coast and Galapagos with us.",
+        "experiencias.value.eyebrow": "Voices from our value chain",
+        "experiencias.value.title": "The life change behind every trip",
+        "experiencias.value.lead": "The tourism we practice generates real impact on the families and organizations that are part of each experience. These are their stories.",
+
+        // CONTACTO PAGE
+        "contacto.hero.eyebrow": "We are here to help you",
+        "contacto.hero.title": "Contact us",
+        "contacto.hero.desc": "Tell us about your dream trip and our team will help you plan it. We respond in less than 24 hours.",
+        "contacto.info.eyebrow": "Contact information",
+        "contacto.info.title": "Let's talk about your next trip",
+        "contacto.info.desc": "You can write to us, call us or visit us. We would love to meet you!",
+        "contacto.info.oficina": "Main office",
+        "contacto.info.telefono": "Phone / Mobile",
+        "contacto.info.whatsapp": "WhatsApp",
+        "contacto.info.email": "Email",
+        "contacto.info.horario": "Office hours",
+        "contacto.info.siguenos": "Follow us",
+        "contacto.form.eyebrow": "Contact form",
+        "contacto.form.title": "Send us a message",
+        "contacto.form.desc": "Fields marked with * are required.",
+        "contacto.form.nombre": "Full name *",
+        "contacto.form.email": "Email address *",
+        "contacto.form.telefono": "Phone",
+        "contacto.form.region": "Region of interest *",
+        "contacto.form.tour": "Tour of interest",
+        "contacto.form.personas": "Number of people",
+        "contacto.form.fecha": "Approximate travel date",
+        "contacto.form.duracion": "Estimated duration",
+        "contacto.form.mensaje": "Tell us about your dream trip *",
+        "contacto.form.enviar": "Send message",
+        "contacto.form.nota": "By submitting you accept our <a href=\"#\">privacy policy</a>.",
+        "contacto.map.eyebrow": "Find us",
+        "contacto.map.title": "Visit our office",
+        "contacto.map.lead": "We are located in the heart of Otavalo, Imbabura. We are waiting for you!",
+        "contacto.map.comollegar": "Get directions",
+        "contacto.cta.eyebrow": "Personalized attention",
+        "contacto.cta.title": "Do you prefer to talk to us directly?",
+        "contacto.cta.desc": "Call us or write to us on WhatsApp and we will assist you instantly.",
+        "contacto.cta.llamar": "Call now",
+        "contacto.cta.whatsapp": "WhatsApp"
     },
 
     fr: {
@@ -271,6 +517,7 @@ const translations = {
         "nav.inicio": "Accueil",
         "nav.nosotros": "À propos",
         "nav.tours": "Circuits",
+        "nav.destinos": "Destinations",
         "nav.servicios": "Services",
         "nav.experiencias": "Expériences",
         "nav.contacto": "Contact",
@@ -282,6 +529,15 @@ const translations = {
         "hero.subtitle": "Nature, culture et expériences nées de la terre",
         "hero.btn1": "Explorer les circuits",
         "hero.btn2": "À propos",
+        "hero.slide2.eyebrow": "Alpagas & Textiles Andins",
+        "hero.slide2.title": "Des traditions tissées avec le temps",
+        "hero.slide2.subtitle": "Páramo, communauté et culture Kichwa",
+        "hero.slide3.eyebrow": "Nature Vivante",
+        "hero.slide3.title": "Cascades, páramos et paysages uniques",
+        "hero.slide3.subtitle": "Des expériences nées de la terre",
+        "hero.slide4.eyebrow": "Sagesse Ancestrale",
+        "hero.slide4.title": "Des rituels qui connectent à l'essence",
+        "hero.slide4.subtitle": "Des cultures vivantes qui transcendent le tourisme",
 
         // WELCOME
         "welcome.eyebrow": "Bienvenue à",
@@ -311,14 +567,12 @@ const translations = {
         "about.title": "Plus qu'un voyage,<br>une expérience de vie",
         "about.text": "Chez AllTourEcuador, nous croyons au tourisme comme outil de connexion, d'apprentissage et de développement. Nous sommes une équipe de professionnels locaux, guides natifs et amoureux de notre terre.",
         "about.btn": "Rencontrer notre équipe",
-        "about.hero.title": "Plus qu'un voyage,<br>une expérience de vie",
-        "about.hero.desc": "Découvrez l'histoire, l'équipe et l'essence qui rendent possible de vivre un Équateur authentique.",
 
         // REGIONS
         "regions.eyebrow": "Destinations Équateur",
         "regions.title": "Quatre régions, un seul Équateur,<br>des expériences infinies.",
         "regions.lead": "Découvrez, connectez et vivez la diversité d'un pays qui a une histoire dans chaque territoire.",
-        "regions.btn": "Explorer tous les circuits",
+        "regions.btn": "Explorer toutes les destinations",
         "region.costa.badge": "Côte",
         "region.costa.tagline": "Saveurs, plages et culture face au Pacifique.",
         "region.costa.desc": "Vivez la gastronomie, la nature et la chaleur de la côte équatorienne.",
@@ -353,21 +607,7 @@ const translations = {
         "tour7.title": "ENTRE ALPAGAS ET TEXTILES ANDINS",
         "tour7.desc": "Une expérience de páramo, communauté et tradition Kichwa.",
 
-        // MAP
-        "map.eyebrow": "Explorer la carte",
-        "map.title": "Équateur, un pays. Quatre mondes.",
-        "map.lead": "Côte | Andes | Amazonie | Galápagos. Cliquez sur chaque région pour découvrir ses destinations.",
-        "map.select": "Sélectionnez une région sur la carte",
-        "map.tag": "Équateur",
-        "map.welcome": "Bienvenue en Équateur",
-        "map.desc": "Cliquez sur n'importe quelle région de la carte pour découvrir ses destinations et expériences.",
-        "map.info.regions": "Régions :",
-        "map.info.destinations": "Destinations :",
-        "map.info.experiences": "Expériences :",
-        "map.info.custom": "Personnalisées",
-        "map.btn": "Demander un devis",
-
-        // CTA FINAL
+        // CTA
         "cta.eyebrow": "Trouvez l'aventure parfaite",
         "cta.title": "L'Équateur ne se connaît pas seulement :<br>il se ressent, se partage et se vit.",
         "cta.desc": "Nous vous aidons à construire votre prochaine expérience.",
@@ -387,13 +627,142 @@ const translations = {
         // WHATSAPP
         "whatsapp.tooltip": "Besoin d'aide ?",
 
-        // MODAL TOURS
+        // MODAL
         "modal.description": "Description de l'Expérience",
         "modal.itinerary": "Itinéraire Résumé",
         "modal.facts": "Fiche Technique",
         "modal.includes": "Comprend",
         "modal.notIncludes": "Ne comprend pas",
-        "modal.cta": "Demander un devis"
+        "modal.cta": "Demander un devis",
+
+        // NOSOTROS
+        "nosotros.hero.eyebrow": "Qui sommes-nous",
+        "nosotros.hero.title": "Plus qu'un voyage,<br>une expérience de vie",
+        "nosotros.hero.desc": "Découvrez l'histoire, l'équipe et l'essence qui rendent possible de vivre un Équateur authentique.",
+        "nosotros.story.eyebrow": "Notre histoire",
+        "nosotros.story.title": "Notre histoire",
+        "nosotros.story.text1": "ALL TOUR ECUADOR est né dans le but de montrer un Équateur qui va au-delà de ses destinations touristiques. Nous sommes nés de la connaissance et de l'expérience du territoire, convaincus que voyager signifie aussi rencontrer des gens, partager des cultures, découvrir des saveurs, parcourir des paysages et s'approcher des histoires qui rendent chaque lieu unique.",
+        "nosotros.story.text2": "Au fil du temps, nous avons construit une proposition qui combine authenticité, attention personnalisée, sécurité et professionnalisme, en travaillant en étroite collaboration avec les communautés, les familles, les entreprises et les prestataires locaux.",
+        "nosotros.story.text3": "Aujourd'hui, ALL TOUR ECUADOR conçoit et opère des expériences qui cherchent à connecter le voyageur à la véritable essence du pays : un Équateur diversifié, culturel et naturel, qui ne se visite pas seulement, mais qui se vit.",
+        "nosotros.team.eyebrow": "À propos de notre équipe",
+        "nosotros.team.title": "Une équipe qui connaît et vit chaque territoire",
+        "nosotros.team.text1": "Chez ALL TOUR ECUADOR, nous avons une équipe professionnelle et engagée, composée de guides spécialisés, de personnel logistique préparé et de prestataires de services de qualité qui travaillent de manière coordonnée pour garantir des expériences sûres, authentiques et bien organisées.",
+        "nosotros.team.text2": "Notre équipe est également composée de ceux qui connaissent et vivent chaque territoire : femmes et hommes de la campagne, organisations communautaires, vendeurs de marché, agriculteurs, artisans, entrepreneurs et connaisseurs de la spiritualité, de la culture et des pratiques de durabilité.",
+        "nosotros.team.text3": "Nous valorisons leurs connaissances et leurs expériences comme partie fondamentale de nos services, en créant un lien entre le professionnel du tourisme et les véritables protagonistes de chaque destination. C'est ainsi que nous construisons une proposition où la qualité du service rencontre le savoir local, en renforçant les familles et les organisations qui rendent possible de vivre un Équateur authentique.",
+        "nosotros.why.eyebrow": "Pourquoi nous ?",
+        "nosotros.why.title": "Pourquoi voyager avec nous ?",
+        "nosotros.why.text1": "Voyager avec ALL TOUR ECUADOR, c'est choisir une autre façon de connaître l'Équateur : nous ne visitons pas seulement des destinations, nous connectons le voyageur à l'essence de chaque territoire, à ses cultures, communautés, familles, gastronomie, nature et savoirs ancestraux.",
+        "nosotros.why.text2": "Nous concevons des expériences authentiques et personnalisées qui combinent convivialité, aventure, culture et nature avec une opération professionnelle, sûre et responsable, en générant également des opportunités pour ceux qui font du tourisme un mode de vie.",
+        "nosotros.why.text3": "Nous voulons que chaque voyageur n'emporte pas seulement des photographies, mais des histoires, des émotions et des liens qui restent dans sa mémoire. Parce que l'Équateur ne se connaît pas seulement : il se ressent, se partage et se vit.",
+        "nosotros.meet.eyebrow": "Rencontrer notre équipe",
+        "nosotros.meet.title": "Les protagonistes de chaque expérience",
+        "nosotros.meet.lead": "Professionnels du tourisme et connaisseurs locaux unis par un même but : faire vivre un Équateur authentique.",
+        "nosotros.team.emprendedores": "ENTREPRENEURS",
+        "nosotros.team.emprendedores.text": "En tant qu'entrepreneurs du secteur touristique, nous travaillons avec un engagement profond et une préparation professionnelle constante, en offrant dans chaque service la passion, le détail et la maîtrise artisanale de notre terre pour offrir des expériences authentiques et inoubliables.",
+        "nosotros.team.guias": "GUIDES LOCAUX",
+        "nosotros.team.guias.text": "En tant que connaisseur de mon territoire, j'accompagne nos visiteurs en partageant l'histoire, la culture, la nature et les traditions qui rendent chaque destination unique.",
+        "nosotros.team.agricultores": "AGRICULTEURS",
+        "nosotros.team.agricultores.text": "Depuis la chakra et le travail de la terre, nous partageons nos produits, nos connaissances et nos modes de vie, permettant au visiteur de connaître l'origine de nos aliments et de notre culture.",
+        "nosotros.team.mujeres": "ASSOCIATION DE FEMMES",
+        "nosotros.team.mujeres.text": "À travers notre travail associatif, nous transformons produits, connaissances et traditions en expériences qui créent des opportunités pour nos familles et renforcent notre communauté.",
+        "nosotros.team.sostenibilidad": "DURABILITÉ",
+        "nosotros.team.sostenibilidad.text": "Notre engagement envers la durabilité assure un avenir où la richesse de notre flore et de notre faune, et la beauté de ce páramo sacré, restent intacts pour les générations futures.",
+        "nosotros.team.chefs": "CHEFS",
+        "nosotros.team.chefs.text": "Depuis notre cuisine, nous apportons à table les saveurs du territoire, en utilisant des produits locaux pour transformer chaque plat en un moyen de connaître notre culture et nos traditions.",
+        "nosotros.team.transportistas": "TRANSPORTEURS",
+        "nosotros.team.transportistas.text": "Forts de notre expérience sur les routes et chemins de l'Équateur, notre engagement est d'offrir des transferts sûrs, responsables et ponctuels, en reliant chaque destination à une opération touristique de qualité.",
+
+        // TOURS PAGE
+        "tourspage.hero.eyebrow": "Nos forfaits",
+        "tourspage.hero.title": "Des expériences nées de la terre",
+        "tourspage.hero.desc": "Vivez le meilleur de l'Équateur avec nos forfaits personnalisés. Nature, culture, aventure et tourisme expérientiel Kichwa.",
+        "tourspage.sidebar.title": "Trouvez votre voyage",
+        "tourspage.sidebar.remove": "Supprimer les filtres",
+        "tourspage.filter.destino": "Destination",
+        "tourspage.filter.tipo": "Type d'expérience",
+        "tourspage.filter.nivel": "Niveau d'activité",
+        "tourspage.filter.duracion": "Par durée",
+        "tourspage.main.title": "Forfaits disponibles",
+        "tourspage.main.desc": "Tous nos forfaits incluent un guide natif spécialisé, le transport et des expériences authentiques. Prix par personne avec un minimum de 4 pax.",
+        "tourspage.contact.cta": "Contactez-nous",
+        "tourspage.contact.cta.heading": "Votre voyage idéal commence par une conversation",
+        "tourspage.contact.cta.eyebrow": "Nous sommes là pour vous aider",
+        "tourspage.contact.cta.title": "Découvrez l'Équateur en toute confiance",
+        "tourspage.contact.cta.text": "Dites-nous ce que vous aimeriez vivre et nous concevons ensemble une expérience à votre mesure. Experts locaux, attention personnalisée et voyages qui se ressentent depuis le cœur de la planète.",
+        "tourspage.contact.cta.subtitle": "Appelez-nous",
+        "tourspage.contact.cta.whatsapp": "Écrivez-nous sur WhatsApp",
+
+        // DESTINOS PAGE
+        "destinos.eyebrow": "Destinations Équateur",
+        "destinos.hero.title": "Quatre régions, des expériences infinies",
+        "destinos.hero.desc": "L'Équateur réunit sur un territoire compact une extraordinaire diversité de paysages, cultures, écosystèmes et modes de vie. Des montagnes et communautés des Andes à la biodiversité de l'Amazonie, aux plages de la Côte et aux écosystèmes uniques des Galápagos.",
+        "destinos.intro.eyebrow": "Découvrez le pays",
+        "destinos.intro.title": "L'Équateur, un pays. Quatre mondes.",
+        "destinos.intro.lead": "Côte | Andes | Amazonie | Galápagos. Explorez différents paysages, cultures et expériences dans un même voyage. ALL TOUR ECUADOR vous permet de découvrir le pays à travers des voyages organisés, des expériences culturelles, du tourisme communautaire, de la nature, de l'aventure, de la gastronomie et des itinéraires conçus selon les intérêts de chaque voyageur.",
+        "destinos.andes.eyebrow": "Région Andes",
+        "destinos.andes.title": "Montagnes, culture et traditions vivantes",
+        "destinos.andes.lead": "Les Andes équatoriennes combinent volcans, lagunes, páramos, villes patrimoniales et communautés autochtones qui maintiennent leurs traditions vivantes. Dans cette région, ALL TOUR ECUADOR développe des expériences liées à :",
+        "destinos.amazonia.eyebrow": "Région Amazonie",
+        "destinos.amazonia.title": "Nature, biodiversité et cultures ancestrales",
+        "destinos.amazonia.lead": "L'Amazonie équatorienne offre une expérience d'immersion dans les forêts tropicales, les rivières, la biodiversité et les territoires des peuples et nationalités autochtones.",
+        "destinos.galapagos.eyebrow": "Région Galápagos",
+        "destinos.galapagos.title": "Une nature qui n'existe nulle part ailleurs",
+        "destinos.galapagos.lead": "Les îles Galápagos représentent l'une des grandes destinations naturelles de l'Équateur, avec des écosystèmes volcaniques, une faune endémique et des expériences de conservation et de contact avec la nature.",
+        "destinos.costa.eyebrow": "Région Côte",
+        "destinos.costa.title": "Pacifique, nature et saveurs de l'Équateur",
+        "destinos.costa.lead": "La côte équatorienne combine plages, mangroves, forêts, gastronomie, communautés de pêcheurs et expériences liées à l'océan Pacifique.",
+        "destinos.experiencias": "Expériences",
+        "destinos.destinos": "Destinations en vedette",
+        "destinos.islas": "Îles en vedette",
+        "destinos.verpaquetes": "Voir les forfaits disponibles",
+
+        // EXPERIENCIAS PAGE
+        "experiencias.hero.eyebrow": "Expériences All Tour Ecuador",
+        "experiencias.hero.title": "Des histoires qui transforment des vies",
+        "experiencias.hero.desc": "Chaque voyage laisse une empreinte : sur les voyageurs et sur les communautés qui rendent possible de vivre un Équateur authentique. Découvrez leurs voix.",
+        "experiencias.reviews.eyebrow": "Ce que disent nos voyageurs",
+        "experiencias.reviews.title": "Des expériences portées dans le cœur",
+        "experiencias.reviews.lead": "Avis réels de ceux qui ont vécu les Andes, l'Amazonie, la Côte et les Galápagos avec nous.",
+        "experiencias.value.eyebrow": "Voix de notre chaîne de valeur",
+        "experiencias.value.title": "Le changement de vie derrière chaque voyage",
+        "experiencias.value.lead": "Le tourisme que nous pratiquons génère un impact réel sur les familles et les organisations qui font partie de chaque expérience. Voici leurs histoires.",
+
+        // CONTACTO PAGE
+        "contacto.hero.eyebrow": "Nous sommes là pour vous aider",
+        "contacto.hero.title": "Contactez-nous",
+        "contacto.hero.desc": "Parlez-nous de votre voyage de rêve et notre équipe vous aidera à le planifier. Nous répondons en moins de 24 heures.",
+        "contacto.info.eyebrow": "Informations de contact",
+        "contacto.info.title": "Parlons de votre prochain voyage",
+        "contacto.info.desc": "Vous pouvez nous écrire, nous appeler ou nous rendre visite. Nous serons ravis de vous rencontrer !",
+        "contacto.info.oficina": "Bureau principal",
+        "contacto.info.telefono": "Téléphone / Mobile",
+        "contacto.info.whatsapp": "WhatsApp",
+        "contacto.info.email": "Email",
+        "contacto.info.horario": "Heures d'ouverture",
+        "contacto.info.siguenos": "Suivez-nous",
+        "contacto.form.eyebrow": "Formulaire de contact",
+        "contacto.form.title": "Envoyez-nous un message",
+        "contacto.form.desc": "Les champs marqués d'un * sont obligatoires.",
+        "contacto.form.nombre": "Nom complet *",
+        "contacto.form.email": "Adresse e-mail *",
+        "contacto.form.telefono": "Téléphone",
+        "contacto.form.region": "Région d'intérêt *",
+        "contacto.form.tour": "Circuit d'intérêt",
+        "contacto.form.personas": "Nombre de personnes",
+        "contacto.form.fecha": "Date approximative du voyage",
+        "contacto.form.duracion": "Durée estimée",
+        "contacto.form.mensaje": "Parlez-nous de votre voyage de rêve *",
+        "contacto.form.enviar": "Envoyer le message",
+        "contacto.form.nota": "En envoyant, vous acceptez notre <a href=\"#\">politique de confidentialité</a>.",
+        "contacto.map.eyebrow": "Trouvez-nous",
+        "contacto.map.title": "Visitez notre bureau",
+        "contacto.map.lead": "Nous sommes situés au cœur d'Otavalo, Imbabura. Nous vous attendons !",
+        "contacto.map.comollegar": "Obtenir l'itinéraire",
+        "contacto.cta.eyebrow": "Attention personnalisée",
+        "contacto.cta.title": "Préférez-vous nous parler directement ?",
+        "contacto.cta.desc": "Appelez-nous ou écrivez-nous sur WhatsApp et nous vous répondrons instantanément.",
+        "contacto.cta.llamar": "Appeler maintenant",
+        "contacto.cta.whatsapp": "WhatsApp"
     }
 };
 
@@ -413,6 +782,17 @@ function applyLanguage(lang) {
                 el.innerHTML = dict[key];
             }
         }
+    });
+
+    // Atributos opcionales traducibles
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const key = el.getAttribute('data-i18n-placeholder');
+        if (dict[key]) el.placeholder = dict[key];
+    });
+
+    document.querySelectorAll('[data-i18n-title]').forEach(el => {
+        const key = el.getAttribute('data-i18n-title');
+        if (dict[key]) el.title = dict[key];
     });
 
     document.querySelectorAll('.lang-option').forEach(btn => {
@@ -471,20 +851,14 @@ if (langBtn && langDropdown) {
 (function () {
     const preloader = document.getElementById('preloader');
     if (!preloader) return;
-
-    // Tiempo mínimo que el preloader permanece visible (en ms).
-    // 3000ms = 3 segundos → suficiente para ver los dos logos al menos una vez.
     const MIN_DURATION = 3000;
-
     const startTime = Date.now();
 
     function hidePreloader() {
         const elapsed = Date.now() - startTime;
         const remaining = Math.max(0, MIN_DURATION - elapsed);
-
         setTimeout(() => {
             preloader.classList.add('hidden');
-            // Eliminar del DOM después del fade (0.6s)
             setTimeout(() => {
                 preloader.remove();
             }, 700);
@@ -748,8 +1122,7 @@ if (tourMapEl && typeof L !== 'undefined') {
             nombre: 'Galápagos',
             tag: 'Región Insular',
             coords: [-0.9538, -90.9656],
-            /* REEMPLAZAR IMAGEN: Galápagos (carpeta Drive usuario) */
-            img: 'img/galapagos.jpg',   /* ← reemplazado */
+            img: 'img/galapagos.jpg',
             desc: 'Un mundo único para descubrir y conservar. Fauna endémica, ecosistemas volcánicos y experiencias de conservación.',
             destinos: 'Santa Cruz · San Cristóbal · Isabela',
             experiencias: 'Snorkeling · Buceo · Kayak · Cruceros',
@@ -759,8 +1132,7 @@ if (tourMapEl && typeof L !== 'undefined') {
             nombre: 'Costa',
             tag: 'Región Litoral',
             coords: [-1.5, -80.5],
-            /* REEMPLAZAR IMAGEN: Costa (carpeta Drive usuario) */
-            img: 'img/costa.jpg',       /* ← reemplazado */
+            img: 'img/costa.jpg',
             desc: 'Pacífico, naturaleza y sabores del Ecuador. Playas, manglares, gastronomía y cultura costera.',
             destinos: 'Guayaquil · Montañita · Puerto López · Manta',
             experiencias: 'Surf · Ballenas · Gastronomía · Manglares',
@@ -770,8 +1142,7 @@ if (tourMapEl && typeof L !== 'undefined') {
             nombre: 'Andes',
             tag: 'Región Interandina',
             coords: [-1.5, -78.5],
-            /* REEMPLAZAR IMAGEN: Andes (carpeta Drive usuario) */
-            img: 'img/sierra.jpg',      /* ← reemplazado */
+            img: 'img/sierra.jpg',
             desc: 'Montañas, cultura y tradiciones vivas. Volcanes, lagunas, páramos, ciudades patrimoniales y comunidades indígenas.',
             destinos: 'Otavalo · Cotacachi · Quito · Quilotoa · Cotopaxi · Cuenca',
             experiencias: 'Trekking · Comunidades · Gastronomía · Artesanías',
@@ -781,8 +1152,7 @@ if (tourMapEl && typeof L !== 'undefined') {
             nombre: 'Amazonía',
             tag: 'Región Oriental',
             coords: [-0.7, -76.9],
-            /* REEMPLAZAR IMAGEN: Amazonía (carpeta Drive usuario) */
-            img: 'img/amazonia.jpg',    /* ← reemplazado */
+            img: 'img/amazonia.jpg',
             desc: 'Naturaleza, biodiversidad y culturas ancestrales. Inmersión en bosques tropicales, ríos y territorios indígenas.',
             destinos: 'Tena · Yasuní · Cuyabeno · Papallacta',
             experiencias: 'Caminatas · Navegación · Aviturismo · Comunidades',
@@ -1515,7 +1885,7 @@ const toursData = {
             includes: [
                 "Transport touristique privé adapté à la zone",
                 "Guide bilingue spécialisé",
-                "Entrée à la moulins",
+                "Entrée au moulin",
                 "Entrée à la ferme agroécologique",
                 "Déjeuner à la Finca La Rizaralda",
                 "Expérience et dégustation au Café El Carmelo",
@@ -1752,8 +2122,6 @@ if (toursCatItems.length > 0 && tourDetailBlocks.length > 0) {
             btn.classList.add('active');
 
             const cat = btn.dataset.cat;
-            // Por ahora todas las categorías muestran todos los paquetes
-            // Estructura preparada para filtrar cuando se añadan más categorías
             tourDetailBlocks.forEach(block => {
                 if (cat === 'all' || cat === 'vivencial') {
                     block.style.display = '';

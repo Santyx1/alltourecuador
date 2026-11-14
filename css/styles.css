@@ -265,7 +265,7 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; }
 }
 
 .btn-accent{
-    background:var(--accent);
+    background:var(--brand);
     color:var(--white);
     font-weight:700;
     box-shadow:0 4px 12px rgba(242,124,33,0.4);
@@ -3315,3 +3315,16 @@ main{ padding-top:var(--header-h); }
     }
 }
 
+/*Botones Cuatro Regiones*/
+.btn-brand{
+    background: var(--brand);
+    color: var(--white);
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(0, 166, 181, 0.4);
+}
+.btn-brand:hover{
+    background: var(--brand-dark);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 166, 181, 0.5);
+}

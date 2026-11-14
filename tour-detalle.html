@@ -78,83 +78,101 @@
 
     <main>
 
-        <!-- HERO DEL TOUR -->
-        <section class="page-hero tour-detail-hero-section" id="tourHero">
+        <!-- ==============================
+             PORTADA DEL TOUR (mismas clases que nosotros.html)
+        =============================== -->
+        <section class="page-hero">
             <div class="page-hero-bg" id="tourHeroBg"></div>
             <div class="page-hero-overlay"></div>
+
             <div class="container page-hero-content">
-                <nav class="breadcrumb" aria-label="breadcrumb">
-                    <a href="index.html">Inicio</a>
-                    <i class="fa-solid fa-chevron-right"></i>
-                    <a href="tours.html">Tours</a>
-                    <i class="fa-solid fa-chevron-right"></i>
-                    <span id="tourBreadcrumb">Tour</span>
-                </nav>
-                <span class="section-eyebrow light" id="tourEyebrow"></span>
-                <h1 class="page-hero-title" id="tourTitle">Cargando...</h1>
-                <p class="page-hero-desc" id="tourSlogan"></p>
+                <span class="hero-eyebrow" id="tourEyebrow"></span>
+                <h1 class="hero-title" id="tourTitle">Cargando...</h1>
+                <p class="hero-subtitle" id="tourSlogan"></p>
             </div>
         </section>
 
-        <!-- CUERPO DEL TOUR -->
-        <section class="section-tour-detail-body">
+        <!-- ==============================
+             CUERPO DEL TOUR
+        =============================== -->
+        <section class="section-story">
             <div class="container">
-                <div class="tour-detail-layout">
+                <div class="story-grid">
 
-                    <!-- COLUMNA PRINCIPAL -->
-                    <div class="tour-detail-main">
+                    <!-- Columna principal -->
+                    <div class="story-content">
 
-                        <div class="tour-detail-callout" id="tourCallout"></div>
+                        <span class="section-eyebrow">Detalles del tour</span>
+                        <h2 class="section-heading">Descripción de la experiencia</h2>
 
-                        <h2 class="tour-detail-heading" data-i18n="modal.description">Descripción de la Experiencia</h2>
-                        <p class="tour-detail-description" id="tourDescription"></p>
+                        <p class="story-text" id="tourCallout"></p>
+                        <p class="story-text" id="tourDescription"></p>
 
-                        <h2 class="tour-detail-heading" data-i18n="modal.itinerary">Itinerario</h2>
-                        <ul class="tour-modal-itinerary tour-detail-itinerary" id="tourItinerary"></ul>
-
-                        <!-- GALERÍA (solo aparece si el tour tiene imágenes) -->
-                        <div id="tourGalleryWrapper" style="display:none;">
-                            <h2 class="tour-detail-heading">Galería de Fotos</h2>
-                            <div class="tour-gallery" id="tourGallery"></div>
-                        </div>
+                        <span class="section-eyebrow" style="margin-top:40px;">Itinerario</span>
+                        <h2 class="section-heading">Recorrido del tour</h2>
+                        <ul class="tour-modal-itinerary" id="tourItinerary"></ul>
 
                     </div>
 
-                    <!-- SIDEBAR -->
-                    <aside class="tour-detail-sidebar">
+                    <!-- Sidebar -->
+                    <div class="story-image">
 
-                        <div class="tour-facts-card">
-                            <h3 class="tour-sidebar-title" data-i18n="modal.facts">Ficha Técnica</h3>
-                            <ul id="tourFacts"></ul>
+                        <!-- Ficha técnica -->
+                        <div class="team-info" style="background:var(--white);border-radius:var(--radius-lg);padding:28px;margin-bottom:24px;">
+                            <span class="section-eyebrow">Ficha técnica</span>
+                            <ul id="tourFacts" style="display:grid;gap:12px;margin-top:12px;"></ul>
                         </div>
 
-                        <div class="tour-includes-card">
-                            <h4><i class="fa-solid fa-circle-check"></i> <span data-i18n="modal.includes">Incluye</span></h4>
-                            <ul id="tourIncludes"></ul>
+                        <!-- Incluye -->
+                        <div class="team-info" style="background:var(--white);border-radius:var(--radius-lg);padding:28px;margin-bottom:24px;">
+                            <h3 class="section-heading" style="font-size:1.2rem;">
+                                <i class="fa-solid fa-circle-check" style="color:var(--accent);"></i>
+                                Incluye
+                            </h3>
+                            <ul id="tourIncludes" style="display:grid;gap:8px;margin-top:12px;"></ul>
                         </div>
 
-                        <div class="tour-not-includes-card">
-                            <h4><i class="fa-solid fa-circle-xmark"></i> <span data-i18n="modal.notIncludes">No incluye</span></h4>
-                            <ul id="tourNotIncludes"></ul>
+                        <!-- No incluye -->
+                        <div class="team-info" style="background:var(--white);border-radius:var(--radius-lg);padding:28px;margin-bottom:24px;">
+                            <h3 class="section-heading" style="font-size:1.2rem;">
+                                <i class="fa-solid fa-circle-xmark" style="color:var(--red);"></i>
+                                No incluye
+                            </h3>
+                            <ul id="tourNotIncludes" style="display:grid;gap:8px;margin-top:12px;"></ul>
                         </div>
 
-                        <a href="contacto.html" class="btn btn-accent btn-lg tour-detail-cta" data-i18n="modal.cta">
-                            Cotizar este tour <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-
-                        <div class="tour-price-sidebar">
-                            <span class="tour-price-sidebar-label">Precio desde</span>
-                            <strong class="tour-price-sidebar-value">$0</strong>
-                            <span class="tour-price-sidebar-note">por persona</span>
+                        <!-- Precio y CTA -->
+                        <div style="background:var(--white);border-radius:var(--radius-lg);padding:28px;text-align:center;border:2px solid var(--accent-pale);">
+                            <span class="section-eyebrow" style="padding-left:0;">Precio desde</span>
+                            <p class="section-heading" style="font-size:2.2rem;color:var(--brand-dark);margin:8px 0;">$0</p>
+                            <p class="section-lead" style="font-size:0.85rem;">por persona</p>
+                            <a href="contacto.html" class="btn btn-accent btn-lg" style="margin-top:16px;width:100%;justify-content:center;">
+                                Cotizar este tour <i class="fa-solid fa-arrow-right"></i>
+                            </a>
                         </div>
 
-                    </aside>
+                    </div>
 
                 </div>
             </div>
         </section>
 
-        <!-- CONTACTO CTA -->
+        <!-- ==============================
+             GALERÍA (solo si hay imágenes)
+        =============================== -->
+        <section class="section-experience-reviews" id="tourGalleryWrapper" style="display:none;">
+            <div class="container">
+                <div class="section-header-center">
+                    <span class="section-eyebrow">Galería</span>
+                    <h2 class="section-heading">Fotos del tour</h2>
+                </div>
+                <div id="tourGallery" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px;"></div>
+            </div>
+        </section>
+
+        <!-- ==============================
+             CTA CONTACTO
+        =============================== -->
         <section class="section-contact-cta">
             <div class="container">
                 <div class="contact-cta-grid">
@@ -177,14 +195,16 @@
             </div>
         </section>
 
-        <!-- CTA FINAL -->
+        <!-- ==============================
+             CTA FINAL
+        =============================== -->
         <section class="section-cta-final">
             <div class="cta-bg" style="background-image:url('img/comparte.jpg');"></div>
             <div class="cta-overlay"></div>
             <div class="container cta-content">
-                <span class="section-eyebrow light">Encuentra la aventura perfecta</span>
-                <h2 class="cta-title">Ecuador no solo se conoce:<br>se siente, se comparte y se vive.</h2>
-                <p class="cta-desc">Te ayudamos a construir tu próxima experiencia.</p>
+                <span class="section-eyebrow">Encuentra la aventura perfecta</span>
+                <h2 class="cta-title section-heading">Ecuador no solo se conoce:<br>se siente, se comparte y se vive.</h2>
+                <p class="cta-desc section-lead">Te ayudamos a construir tu próxima experiencia.</p>
                 <div class="cta-buttons">
                     <a href="contacto.html" class="btn btn-accent btn-lg">Comienza tu viaje <i class="fa-solid fa-arrow-right"></i></a>
                     <a href="tours.html" class="btn btn-ghost btn-lg">Ver todos los tours</a>
@@ -200,7 +220,7 @@
             <div class="footer-col footer-brand-col">
                 <img src="img/logo3.png" alt="All Tour Ecuador" class="footer-logo" />
                 <p class="footer-tagline">Creando emociones para ti</p>
-                <p class="footer-desc" data-i18n="footer.desc">Agencia de Viajes y Operador Turístico. Ecuador, desde el corazón del planeta.</p>
+                <p class="footer-desc section-lead" data-i18n="footer.desc">Agencia de Viajes y Operador Turístico. Ecuador, desde el corazón del planeta.</p>
             </div>
             <div class="footer-col">
                 <h4 data-i18n="footer.contact">Contacto</h4>

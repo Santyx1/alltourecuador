@@ -3296,54 +3296,81 @@ main{ padding-top:var(--header-h); }
 }
 
 /* ==========================================
-   PORTADAS INTERNAS — Estilo unificado
-   (reemplaza hero-title/hero-subtitle del slider)
+   PORTADAS INTERNAS — Coherentes con el hero del index
    ========================================== */
 
-/* Alineación izquierda de la portada */
-.page-hero{
-    text-align: left;
-}
+/* Alineación izquierda */
+.page-hero{ text-align: left; }
 .page-hero-content{
     margin: 0;
     max-width: 880px;
+    padding-top: 0;   /* ← quitar el offset que empujaba el texto hacia abajo */
 }
 
-/* Eyebrow en portadas (usa section-eyebrow light) */
-.page-hero .section-eyebrow.light{
-    color: var(--brand-light);
-    margin-bottom: 20px;
+/* El contenido se alinea al centro verticalmente como el hero del index */
+.page-hero{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
-/* Título en portadas: mismo estilo que index pero más contenido */
+/* MISMAS clases que el index, solo con tamaño ligeramente menor */
+.page-hero .hero-eyebrow{
+    display: inline-block;
+    color: var(--accent);        /* ← NARANJA, igual que el index */
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+}
+.page-hero .hero-eyebrow::before{
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 2px;
+    background: var(--accent);   /* ← línea naranja, igual que el index */
+    vertical-align: middle;
+    margin-right: 12px;
+    margin-bottom: 3px;
+}
+
 .page-hero .hero-title{
     font-family: var(--font-serif);
-    font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+    font-size: clamp(2.2rem, 4.5vw, 3.8rem);  /* ligeramente menor que el index */
     font-weight: 700;
-    line-height: 1.15;
+    line-height: 1.1;
     color: var(--white);
-    margin-bottom: 20px;
+    margin-bottom: 14px;
     margin-left: 0;
     margin-right: 0;
     text-shadow:
-        0 2px 4px rgba(0,0,0,0.6),
-        0 4px 10px rgba(0,0,0,0.4);
+        0 2px 4px rgba(0,0,0,0.7),
+        0 4px 12px rgba(0,0,0,0.5),
+        0 0 20px rgba(0,0,0,0.3);   /* ← mismo text-shadow que el index */
 }
 
-/* Subtítulo en portadas: párrafo descriptivo, no frase poética */
 .page-hero .hero-subtitle{
-    font-family: var(--font-sans);
-    font-style: normal;
-    font-size: 1.05rem;
+    font-family: var(--font-serif);
+    font-style: italic;           /* ← ITÁLICA, igual que el index */
+    font-size: clamp(1.1rem, 2vw, 1.6rem);
+    color: var(--accent-light);   /* ← NARANJA claro, igual que el index */
+    margin-bottom: 32px;
     font-weight: 400;
-    line-height: 1.7;
-    color: rgba(255,255,255,0.9);
-    max-width: 700px;
-    margin: 0;
     margin-left: 0;
     margin-right: 0;
-    margin-bottom: 0;
+    max-width: 760px;
     text-shadow:
-        0 1px 3px rgba(0,0,0,0.5),
-        0 2px 6px rgba(0,0,0,0.3);
+        0 2px 4px rgba(0,0,0,0.7),
+        0 4px 12px rgba(0,0,0,0.5),
+        0 0 20px rgba(0,0,0,0.3);
+}
+
+/* La portada interna ahora tiene más altura para igualar visualmente al hero-slider */
+.page-hero{
+    min-height: 640px;   /* ← igual al min-height del hero-slider */
+}
+.page-hero-sm{
+    min-height: 520px;
+    padding: 160px 0 90px;
 }

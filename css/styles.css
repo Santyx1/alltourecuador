@@ -1655,7 +1655,7 @@ main{ padding-top:var(--header-h); }
     position:relative;
     z-index:2;
     max-width:880px;
-    margin:0 auto;
+    margin:0;
     padding-top:60px;
 }
 .breadcrumb{

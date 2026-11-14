@@ -248,6 +248,11 @@ const translations = {
         "contacto.form.mensaje": "Cuéntanos sobre tu viaje soñado *",
         "contacto.form.enviar": "Enviar mensaje",
         "contacto.form.nota": "Al enviar aceptas nuestra <a href=\"#\">política de privacidad</a>.",
+        "contacto.form.nombre.ph": "Tu nombre",
+"contacto.form.email.ph": "tu@email.com",
+"contacto.form.telefono.ph": "+593 99 789 8745",
+"contacto.form.personas.ph": "Ej: 4",
+"contacto.form.mensaje.ph": "Escríbenos aquí...",
         "contacto.map.eyebrow": "Encuéntranos",
         "contacto.map.title": "Visítanos en nuestra oficina",
         "contacto.map.lead": "Estamos ubicados en el corazón de Otavalo, Imbabura. ¡Te esperamos!",
@@ -501,6 +506,11 @@ const translations = {
         "contacto.form.mensaje": "Tell us about your dream trip *",
         "contacto.form.enviar": "Send message",
         "contacto.form.nota": "By submitting you accept our <a href=\"#\">privacy policy</a>.",
+        "contacto.form.nombre.ph": "Your name",
+"contacto.form.email.ph": "you@email.com",
+"contacto.form.telefono.ph": "+593 99 789 8745",
+"contacto.form.personas.ph": "E.g.: 4",
+"contacto.form.mensaje.ph": "Write to us here...",
         "contacto.map.eyebrow": "Find us",
         "contacto.map.title": "Visit our office",
         "contacto.map.lead": "We are located in the heart of Otavalo, Imbabura. We are waiting for you!",
@@ -754,6 +764,11 @@ const translations = {
         "contacto.form.mensaje": "Parlez-nous de votre voyage de rêve *",
         "contacto.form.enviar": "Envoyer le message",
         "contacto.form.nota": "En envoyant, vous acceptez notre <a href=\"#\">politique de confidentialité</a>.",
+        "contacto.form.nombre.ph": "Votre nom",
+"contacto.form.email.ph": "vous@email.com",
+"contacto.form.telefono.ph": "+593 99 789 8745",
+"contacto.form.personas.ph": "Ex : 4",
+"contacto.form.mensaje.ph": "Écrivez-nous ici...",
         "contacto.map.eyebrow": "Trouvez-nous",
         "contacto.map.title": "Visitez notre bureau",
         "contacto.map.lead": "Nous sommes situés au cœur d'Otavalo, Imbabura. Nous vous attendons !",
@@ -2132,3 +2147,5 @@ if (toursCatItems.length > 0 && tourDetailBlocks.length > 0) {
         });
     });
 }
+
+

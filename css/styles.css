@@ -165,18 +165,16 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; }
 .section-heading.light{ color:var(--white); }
 
 /* --- Lead (párrafo destacado) --- */
-/* --- Lead (párrafo destacado) --- */
 .section-lead{
     font-size:1.02rem;
     color:var(--text-light);
     line-height:1.8;
     max-width:720px;
-    /* Sombra suave clara para legibilidad sobre fondos de silueta */
+    /* Sombra oscura sutil para contraste sobre fondo claro */
     text-shadow:
-        0 1px 2px rgba(255,255,255,0.9),
-        0 0 8px rgba(255,255,255,0.7);
+        0 1px 2px rgba(0,0,0,0.15),
+        0 0 6px rgba(0,0,0,0.10);
 }
-
 /* Sobre fondos oscuros (parallax, cta, page-hero) NO se aplica sombra clara */
 .section-lead.light,
 .parallax-text,

@@ -2312,10 +2312,10 @@ main{ padding-top:var(--header-h); }
 }
 
 /* ==========================================
-   25. CONTACT CTA (tours.html / index.html)
+   25. CONTACT CTA (tours.html / tour-detalle.html)
    ========================================== */
 .section-contact-cta{
-    padding:80px 0;
+    padding:50px 0;   /* ← antes 80px, más compacto */
     background:var(--bg-veil-soft);
     backdrop-filter:blur(2px);
     -webkit-backdrop-filter:blur(2px);
@@ -2333,11 +2333,11 @@ main{ padding-top:var(--header-h); }
     position:relative;
     background:var(--text);
     color:var(--white);
-    padding:60px 50px;
+    padding:40px 40px;   /* ← antes 60px 50px, más compacto */
     display:flex;
     flex-direction:column;
     justify-content:center;
-    gap:28px;
+    gap:20px;            /* ← antes 28px */
     overflow:hidden;
 }
 .contact-cta-left::before{
@@ -2365,7 +2365,7 @@ main{ padding-top:var(--header-h); }
 }
 .contact-cta-img{
     width:100%;
-    max-width:340px;
+    max-width:260px;   /* ← antes 340px, imagen más pequeña */
     border-radius:var(--radius);
     box-shadow:0 16px 40px rgba(0,0,0,0.35);
     margin:0 auto;
@@ -2373,7 +2373,7 @@ main{ padding-top:var(--header-h); }
 }
 .contact-cta-heading{
     font-family:var(--font-serif);
-    font-size:clamp(1.5rem, 2.4vw, 2rem);
+    font-size:clamp(1.3rem, 2.2vw, 1.8rem);   /* ← un poco más pequeño */
     font-weight:700;
     line-height:1.25;
     color:var(--white);
@@ -2384,11 +2384,11 @@ main{ padding-top:var(--header-h); }
 
 .contact-cta-right{
     background:var(--white);
-    padding:60px 50px;
+    padding:40px 40px;   /* ← antes 60px 50px, más compacto */
     display:flex;
     flex-direction:column;
     justify-content:center;
-    gap:20px;
+    gap:16px;            /* ← antes 20px */
 }
 .contact-cta-eyebrow{
     display:inline-block;
@@ -2401,99 +2401,43 @@ main{ padding-top:var(--header-h); }
 }
 .contact-cta-title{
     font-family:var(--font-serif);
-    font-size:clamp(1.7rem, 2.8vw, 2.4rem);
+    font-size:clamp(1.5rem, 2.4vw, 2rem);   /* ← un poco más pequeño */
     font-weight:700;
     line-height:1.2;
     color:var(--text);
-    margin:0 0 8px;
+    margin:0 0 6px;
 }
 .contact-cta-text{
-    font-size:1rem;
+    font-size:0.95rem;   /* ← un poco más pequeño */
     color:var(--text-light);
     line-height:1.7;
     margin:0 0 12px;
 }
-.contact-cta-subtitle{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    font-family:var(--font-sans);
-    font-size:0.85rem;
-    font-weight:700;
-    letter-spacing:0.15em;
-    text-transform:uppercase;
-    color:var(--text);
-    margin:12px 0 4px;
+
+/* Botón Book Now */
+.contact-cta-right .btn{
+    align-self:flex-start;
+    margin-top:4px;
 }
-.contact-cta-subtitle::after{
-    content:"";
-    flex:1;
-    height:1px;
-    background:var(--gray-200);
-}
-.contact-cta-phones{
-    display:flex;
-    flex-direction:column;
-    gap:12px;
-    margin-top:8px;
-}
-.contact-phone-btn{
-    display:flex;
-    align-items:center;
-    gap:14px;
-    padding:16px 22px;
-    border-radius:999px;
-    background:var(--off-white);
-    border:1px solid var(--gray-100);
-    color:var(--text);
-    font-size:1rem;
-    font-weight:600;
-    text-decoration:none;
-    transition:var(--transition);
-    position:relative;
-    overflow:hidden;
-}
-.contact-phone-btn:hover{
-    background:var(--accent);
-    color:var(--white);
-    border-color:var(--accent);
-    transform:translateY(-2px);
-    box-shadow:0 12px 28px rgba(43,168,160,0.3);
-}
-.contact-phone-btn i{
-    display:grid;
-    place-items:center;
-    width:36px;
-    height:36px;
-    border-radius:50%;
-    background:var(--accent-pale);
-    color:var(--accent-dark);
-    font-size:0.95rem;
-    flex-shrink:0;
-    transition:var(--transition);
-}
-.contact-phone-btn:hover i{
-    background:var(--white);
-    color:var(--accent-dark);
-}
-.contact-phone-btn span{ letter-spacing:0.02em; }
+
+/* ⚠️ Eliminados: .contact-cta-subtitle, .contact-cta-phones, .contact-phone-btn
+   Ya no se usan en el HTML */
 
 @media (max-width:992px){
+    .section-contact-cta{ padding:40px 0; }
     .contact-cta-grid{ grid-template-columns:1fr; }
     .contact-cta-left,
-    .contact-cta-right{ padding:48px 32px; }
-    .contact-cta-img{ max-width:280px; }
+    .contact-cta-right{ padding:32px 28px; }
+    .contact-cta-img{ max-width:220px; }
 }
 @media (max-width:560px){
-    .section-contact-cta{ padding:60px 0; }
+    .section-contact-cta{ padding:30px 0; }
     .contact-cta-left,
-    .contact-cta-right{ padding:40px 24px; }
-    .contact-cta-heading{ font-size:1.4rem; }
-    .contact-cta-title{ font-size:1.5rem; }
-    .contact-phone-btn{ padding:14px 18px; font-size:0.92rem; }
-    .contact-phone-btn i{ width:32px; height:32px; font-size:0.85rem; }
+    .contact-cta-right{ padding:24px 20px; }
+    .contact-cta-heading{ font-size:1.3rem; }
+    .contact-cta-title{ font-size:1.4rem; }
+    .contact-cta-text{ font-size:0.9rem; }
 }
-
 /* ==========================================
    26. CONTACTO PRINCIPAL (contacto.html)
    ========================================== */

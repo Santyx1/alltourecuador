@@ -1,2 +1,0 @@
-/*
-  Content-Security-Policy: style-src *.tawk.to fonts.googleapis.com cdn.jsdelivr.net; script-src *.tawk.to cdn.jsdelivr.net; frame-src *.tawk.to; font-src *.tawk.to fonts.gstatic.com; img-src *.tawk.to cdn.jsdelivr.net tawk.link s3.amazonaws.com; connect-src *.tawk.to wss://*.tawk.to; form-action *.tawk.to;

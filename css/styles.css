@@ -4818,31 +4818,44 @@ main{ padding-top:var(--header-h); }
 }
 
 /* ==========================================
-   REDUCIR ESPACIO ENTRE WELCOME E HISTORIA
+   REDUCIR ESPACIOS VERTICALES ENTRE SECCIONES
    ========================================== */
+
+/* --- Welcome → History --- */
 .section-welcome {
-    padding-bottom: 50px; /* Antes 100px */
+    padding-bottom: 50px;
 }
-
 .section-history {
-    padding-top: 50px;    /* Antes 100px */
+    padding-top: 50px;
 }
 
-/* Ajuste adicional en tablet y móvil para que no quede muy apretado */
+/* --- Regions → Tours --- */
+.section-regions {
+    padding-bottom: 50px;
+}
+.section-tours {
+    padding-top: 50px;
+}
+
+/* --- Ajustes responsive --- */
 @media (max-width: 992px) {
-    .section-welcome {
+    .section-welcome,
+    .section-regions {
         padding-bottom: 40px;
     }
-    .section-history {
+    .section-history,
+    .section-tours {
         padding-top: 40px;
     }
 }
 
 @media (max-width: 720px) {
-    .section-welcome {
+    .section-welcome,
+    .section-regions {
         padding-bottom: 30px;
     }
-    .section-history {
+    .section-history,
+    .section-tours {
         padding-top: 30px;
     }
 }

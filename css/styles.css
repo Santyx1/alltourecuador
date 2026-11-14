@@ -290,8 +290,8 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; }
    4. ICONOS FOTOGRÁFICOS — HISTORIA
    ========================================== */
 .history-icon{
-    width:110px;
-    height:110px;
+    width:140px;              /* ← Antes 110px */
+    height:140px;             /* ← Antes 110px */
     border-radius:50%;
     overflow:hidden;
     position:relative;
@@ -968,6 +968,10 @@ main{ padding-top:var(--header-h); }
     border:1px solid var(--gray-100);
     transition:var(--transition);
     position:relative;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
 }
 .history-card:hover{
     transform:translateY(-8px);
@@ -984,6 +988,28 @@ main{ padding-top:var(--header-h); }
     color:var(--brand-light);
     line-height:1;
     opacity:0.4;
+}
+
+/* ==========================================
+   TIPOGRAFÍA INTERNA DE LA TARJETA HISTORIA
+   (más compacta que la global)
+   ========================================== */
+.history-title{
+    font-family:var(--font-serif);
+    font-size:1.15rem;
+    font-weight:700;
+    color:var(--text);
+    line-height:1.3;
+    margin-bottom:12px;
+    letter-spacing:0.01em;
+}
+.history-text{
+    font-family:var(--font-sans);
+    font-size:0.88rem;
+    color:var(--text-light);
+    line-height:1.7;
+    text-align:justify;
+    text-align-last:center;
 }
 
 /* ==========================================
@@ -3247,4 +3273,24 @@ main{ padding-top:var(--header-h); }
     margin-bottom:20px;
     padding-bottom:10px;
     border-bottom:2px solid var(--brand-pale);
+}
+
+@media (max-width: 992px){
+    .history-icon{
+        width:120px;
+        height:120px;
+    }
+    .history-title{
+        font-size:1.05rem;
+    }
+    .history-text{
+        font-size:0.85rem;
+    }
+}
+
+@media (max-width: 720px){
+    .history-icon{
+        width:110px;
+        height:110px;
+    }
 }

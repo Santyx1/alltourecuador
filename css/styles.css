@@ -1353,7 +1353,7 @@ main{ padding-top:var(--header-h); }
 .cta-overlay{
     position:absolute;
     inset:0;
-    background:rgba(26,58,79,0.70);
+    background:rgba(26,58,79,0.50);
     z-index:1;
 }
 .cta-content{

@@ -724,13 +724,6 @@
         <span class="whatsapp-tooltip" data-i18n="whatsapp.tooltip">¿Necesitas ayuda?</span>
     </a>
 
-    <!-- Chat flotante Tawk.to -->
-<button class="chat-float"
-        onclick="abrirChat()"
-        aria-label="Abrir chat">
-    <i class="fa-solid fa-comments"></i>
-    <span>Chat en vivo</span>
-</button>
 
     <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
         <i class="fa-solid fa-arrow-up"></i>
@@ -771,37 +764,6 @@
         });
     </script>
 
-<!-- Tawk.to -->
-<script type="text/javascript">
-var Tawk_API = Tawk_API || {};
-var Tawk_LoadStart = new Date();
-
-Tawk_API.onBeforeLoad = function() {
-    Tawk_API.hideWidget();
-};
-
-(function(){
-    var s1 = document.createElement("script");
-    var s0 = document.getElementsByTagName("script")[0];
-
-    s1.async = true;
-    s1.src = 'https://embed.tawk.to/6af8da3bab68833c4ae82921/1k7e18upa';
-    s1.charset = 'UTF-8';
-    s1.setAttribute('crossorigin', '*');
-
-    s0.parentNode.insertBefore(s1, s0);
-})();
-</script>
-
-<script>
-function abrirChat() {
-    Tawk_API.showWidget();
-
-    setTimeout(function() {
-        Tawk_API.maximize();
-    }, 300);
-}
-</script>    
     
 </body>
 </html>

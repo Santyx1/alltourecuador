@@ -102,9 +102,9 @@
             <div class="page-hero-overlay"></div>
 
             <div class="container page-hero-content">
-                <span class="hero-eyebrow">Nuestros paquetes</span>
-                <h1 class="hero-title">Experiencias que nacen de la tierra</h1>
-                <p class="hero-subtitle">
+                <span class="section-eyebrow light" data-i18n="tourspage.hero.eyebrow">Nuestros paquetes</span>
+                <h1 class="hero-title" data-i18n="tourspage.hero.title">Experiencias que nacen de la tierra</h1>
+                <p class="hero-subtitle" data-i18n="tourspage.hero.desc">
                     Vive lo mejor de Ecuador con nuestros paquetes personalizados.
                     Naturaleza, cultura, aventura y turismo vivencial Kichwa.
                 </p>
@@ -119,13 +119,13 @@
                     <!-- SIDEBAR FILTROS -->
                     <aside class="tours-sidebar">
                         <div class="sidebar-header">
-                            <h3>Encuentra tu viaje</h3>
-                            <button type="button" class="remove-filters" id="removeFilters">Quitar filtros</button>
+                            <h3 data-i18n="tourspage.sidebar.title">Encuentra tu viaje</h3>
+                            <button type="button" class="remove-filters" id="removeFilters" data-i18n="tourspage.sidebar.remove">Quitar filtros</button>
                         </div>
 
                         <div class="filter-accordion">
                             <details class="filter-item" open>
-                                <summary>Destino <i class="fa-solid fa-plus"></i></summary>
+                                <summary><span data-i18n="tourspage.filter.destino">Destino</span> <i class="fa-solid fa-plus"></i></summary>
                                 <ul class="filter-list">
                                     <li><label><input type="checkbox" data-filter="destino" value="otavalo"> Otavalo</label></li>
                                     <li><label><input type="checkbox" data-filter="destino" value="cotacachi"> Cotacachi</label></li>
@@ -135,7 +135,7 @@
                             </details>
 
                             <details class="filter-item">
-                                <summary>Tipo de experiencia <i class="fa-solid fa-plus"></i></summary>
+                                <summary><span data-i18n="tourspage.filter.tipo">Tipo de experiencia</span> <i class="fa-solid fa-plus"></i></summary>
                                 <ul class="filter-list">
                                     <li><label><input type="checkbox" data-filter="tipo" value="vivencial"> Vivencial</label></li>
                                     <li><label><input type="checkbox" data-filter="tipo" value="cultural"> Cultural</label></li>
@@ -146,7 +146,7 @@
                             </details>
 
                             <details class="filter-item">
-                                <summary>Nivel de actividad <i class="fa-solid fa-plus"></i></summary>
+                                <summary><span data-i18n="tourspage.filter.nivel">Nivel de actividad</span> <i class="fa-solid fa-plus"></i></summary>
                                 <ul class="filter-list">
                                     <li><label><input type="checkbox" data-filter="nivel" value="bajo"> Bajo</label></li>
                                     <li><label><input type="checkbox" data-filter="nivel" value="moderado"> Moderado</label></li>
@@ -155,7 +155,7 @@
                             </details>
 
                             <details class="filter-item">
-                                <summary>Por duración <i class="fa-solid fa-plus"></i></summary>
+                                <summary><span data-i18n="tourspage.filter.duracion">Por duración</span> <i class="fa-solid fa-plus"></i></summary>
                                 <ul class="filter-list">
                                     <li><label><input type="checkbox" data-filter="duracion" value="fullday"> Full Day</label></li>
                                     <li><label><input type="checkbox" data-filter="duracion" value="2day"> 2 DAY</label></li>
@@ -169,8 +169,8 @@
                     <!-- CONTENIDO -->
                     <div class="tours-main">
                         <div class="tours-main-header">
-                            <h2>Paquetes disponibles</h2>
-                            <p>Todos nuestros paquetes incluyen guía nativo especializado, transporte y experiencias auténticas. Precios por persona con mínimo 4 pax.</p>
+                            <h2 data-i18n="tourspage.main.title">Paquetes disponibles</h2>
+                            <p data-i18n="tourspage.main.desc">Todos nuestros paquetes incluyen guía nativo especializado, transporte y experiencias auténticas. Precios por persona con mínimo 4 pax.</p>
                         </div>
 
                         <!-- AQUÍ SE GENERAN LAS TARJETAS DESDE data/tours.json -->
@@ -189,26 +189,26 @@
             </div>
         </section>
 
-        <!-- CTA CONTACTO (sección exclusiva - clases originales) -->
+        <!-- CTA CONTACTO (sección exclusiva) -->
         <section class="section-contact-cta">
             <div class="container">
                 <div class="contact-cta-grid">
                     <div class="contact-cta-left">
                         <img src="img/quienes_somos.jpg" alt="Equipo de All Tour Ecuador" class="contact-cta-img" loading="lazy">
-                        <h3 class="contact-cta-heading">Tu viaje ideal empieza con una conversación</h3>
+                        <h3 class="contact-cta-heading" data-i18n="tourspage.contact.cta.heading">Tu viaje ideal empieza con una conversación</h3>
                         <a href="contacto.html" class="btn btn-accent">
-                            Contáctanos <i class="fa-solid fa-arrow-right"></i>
+                            <span data-i18n="tourspage.contact.cta">Contáctanos</span> <i class="fa-solid fa-arrow-right"></i>
                         </a>
                     </div>
                     <div class="contact-cta-right">
-                        <span class="contact-cta-eyebrow">Estamos para ayudarte</span>
-                        <h3 class="contact-cta-title">Descubre Ecuador con confianza</h3>
-                        <p class="contact-cta-text">
+                        <span class="contact-cta-eyebrow" data-i18n="tourspage.contact.cta.eyebrow">Estamos para ayudarte</span>
+                        <h3 class="contact-cta-title" data-i18n="tourspage.contact.cta.title">Descubre Ecuador con confianza</h3>
+                        <p class="contact-cta-text" data-i18n="tourspage.contact.cta.text">
                             Cuéntanos qué te gustaría vivir y diseñamos juntos una experiencia
                             a tu medida. Expertos locales, atención personalizada y viajes que
                             se sienten desde el corazón del planeta.
                         </p>
-                        <h4 class="contact-cta-subtitle">Llámanos</h4>
+                        <h4 class="contact-cta-subtitle" data-i18n="tourspage.contact.cta.subtitle">Llámanos</h4>
                         <div class="contact-cta-phones">
                             <a href="tel:+593997898745" class="contact-phone-btn">
                                 <i class="fa-solid fa-phone"></i>
@@ -216,7 +216,7 @@
                             </a>
                             <a href="https://wa.me/593997898745" target="_blank" rel="noopener" class="contact-phone-btn">
                                 <i class="fa-brands fa-whatsapp"></i>
-                                <span>Escríbenos por WhatsApp</span>
+                                <span data-i18n="tourspage.contact.cta.whatsapp">Escríbenos por WhatsApp</span>
                             </a>
                         </div>
                     </div>
@@ -230,14 +230,14 @@
             <div class="cta-overlay"></div>
 
             <div class="container cta-content">
-                <span class="section-eyebrow">Encuentra la convivencia cultural perfecta</span>
-                <h2 class="cta-title section-heading">Ecuador no solo se conoce:<br>se siente, se comparte y se vive.</h2>
-                <p class="cta-desc section-lead">Te ayudamos a construir tu próxima experiencia.</p>
+                <span class="section-eyebrow" data-i18n="cta.eyebrow">Encuentra la convivencia cultural perfecta</span>
+                <h2 class="cta-title section-heading" data-i18n="cta.title">Ecuador no solo se conoce:<br>se siente, se comparte y se vive.</h2>
+                <p class="cta-desc section-lead" data-i18n="cta.desc">Te ayudamos a construir tu próxima experiencia.</p>
                 <div class="cta-buttons">
                     <a href="contacto.html" class="btn btn-accent btn-lg">
-                        Comienza tu viaje <i class="fa-solid fa-arrow-right"></i>
+                        <span data-i18n="cta.btn1">Comienza tu viaje</span> <i class="fa-solid fa-arrow-right"></i>
                     </a>
-                    <a href="experiencias.html" class="btn btn-ghost btn-lg">Ver experiencias</a>
+                    <a href="experiencias.html" class="btn btn-ghost btn-lg" data-i18n="cta.btn2">Ver tours</a>
                 </div>
             </div>
         </section>
@@ -266,11 +266,11 @@
             <div class="footer-col">
                 <h4 data-i18n="footer.explore">Explora</h4>
                 <ul class="footer-list footer-links">
-                    <li><a href="tours.html">Tours</a></li>
-                    <li><a href="destinos.html">Destinos</a></li>
-                    <li><a href="experiencias.html">Experiencias</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="tours.html" data-i18n="nav.tours">Tours</a></li>
+                    <li><a href="destinos.html" data-i18n="nav.destinos">Destinos</a></li>
+                    <li><a href="experiencias.html" data-i18n="nav.experiencias">Experiencias</a></li>
+                    <li><a href="nosotros.html" data-i18n="nav.nosotros">Nosotros</a></li>
+                    <li><a href="contacto.html" data-i18n="nav.contacto">Contacto</a></li>
                 </ul>
             </div>
 
@@ -290,8 +290,8 @@
             <div class="container footer-bottom-content">
                 <span data-i18n="footer.copy">© 2026 All Tour Ecuador. Todos los derechos reservados.</span>
                 <div class="footer-bottom-links">
-                    <a href="#">Política de privacidad</a>
-                    <a href="#">Términos y condiciones</a>
+                    <a href="#" data-i18n="footer.privacy">Política de privacidad</a>
+                    <a href="#" data-i18n="footer.terms">Términos y condiciones</a>
                 </div>
             </div>
         </div>

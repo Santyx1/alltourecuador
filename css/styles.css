@@ -4904,10 +4904,10 @@ main{ padding-top:var(--header-h); }
 }
 
 /* ==========================================
-   LEGIBILIDAD DE PÁRRAFOS DE CONTENIDO
+   SOMBRA VISIBLE EN PÁRRAFOS DE CONTENIDO
+   (sin atenuar el fondo)
    ========================================== */
 
-/* Párrafos descriptivos en fondos con silueta */
 .section-lead,
 .welcome-card p,
 .history-card p,
@@ -4923,68 +4923,12 @@ main{ padding-top:var(--header-h); }
 .value-testimonial-text,
 .review-text,
 .about-parallax-text {
-    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
-}
-
-/* ==========================================
-   LEGIBILIDAD DEFINITIVA — TEXTOS SOBRE FONDO
-   ========================================== */
-
-/* 1. Reforzar el velo del fondo para que la silueta se vea sutil */
-body::after {
-    background: linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 0.75) 0%,
-        rgba(255, 255, 255, 0.65) 100%
-    );
-}
-
-/* 2. Párrafo de bienvenida (el que no se leía) — Refuerzo total */
-.section-welcome .section-lead {
-    color: var(--text);              /* ← Azul muy oscuro, máximo contraste */
-    font-weight: 500;                /* ← Un poco más grueso */
-    font-size: 1.05rem;              /* ← Un pelín más grande */
+    /* Contorno claro en 4 direcciones + halo suave */
     text-shadow: 
-        0 1px 1px rgba(255, 255, 255, 1),
-        0 -1px 1px rgba(255, 255, 255, 1),
-        1px 0 1px rgba(255, 255, 255, 1),
-        -1px 0 1px rgba(255, 255, 255, 1),
-        0 2px 4px rgba(255, 255, 255, 0.9);
-}
-
-/* 3. Título de "ALLTOURECUADOR" con refuerzo también */
-.section-welcome .section-heading {
-    text-shadow: 
-        0 1px 2px rgba(255, 255, 255, 0.9),
-        0 2px 8px rgba(255, 255, 255, 0.7);
-}
-
-/* 4. TODOS los párrafos de contenido — Sombra doble (blanca + oscura sutil) */
-.section-lead,
-.welcome-card p,
-.history-card p,
-.region-desc,
-.region-tagline,
-.tour-desc,
-.service-card p,
-.why-card p,
-.story-text,
-.team-intro-content p,
-.team-info p,
-.extra-service-card p,
-.value-testimonial-text,
-.review-text,
-.about-parallax-text {
-    text-shadow: 
-        0 1px 2px rgba(255, 255, 255, 0.95),
-        0 0 8px rgba(255, 255, 255, 0.8);
-}
-
-/* 5. Refuerzo extra para textos en secciones con silueta visible */
-.section-welcome,
-.section-history,
-.section-regions {
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+        0 1px 0 rgba(255, 255, 255, 0.9),
+        0 -1px 0 rgba(255, 255, 255, 0.9),
+        1px 0 0 rgba(255, 255, 255, 0.9),
+        -1px 0 0 rgba(255, 255, 255, 0.9),
+        0 0 6px rgba(255, 255, 255, 0.7),
+        1px 1px 3px rgba(26, 58, 79, 0.15);
 }

@@ -41,7 +41,7 @@
     --gray-500:#5A7A94;
     --gray-600:#3D5568;
     --text:#1A3A4F;         /* Azul muy oscuro para textos y fondos */
-    --text-light:#5A7A94;
+    --text-light:#3D5568;  /* ← Más oscuro, más contraste */
 
     /* === Estados === */
     --success:#27ae60;

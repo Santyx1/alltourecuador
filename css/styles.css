@@ -4903,32 +4903,29 @@ main{ padding-top:var(--header-h); }
         0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
+
 /* ==========================================
-   SOMBRA VISIBLE EN PÁRRAFOS DE CONTENIDO
-   (sin atenuar el fondo)
+   REFUERZO SOLO PARA 2 PÁRRAFOS ESPECÍFICOS
    ========================================== */
 
-.section-lead,
-.welcome-card p,
-.history-card p,
-.region-desc,
-.region-tagline,
-.tour-desc,
-.service-card p,
-.why-card p,
-.story-text,
-.team-intro-content p,
-.team-info p,
-.extra-service-card p,
-.value-testimonial-text,
-.review-text,
-.about-parallax-text {
-    /* Contorno claro en 4 direcciones + halo suave */
+/* 1. Párrafo de "Bienvenidos a AllTourEcuador" */
+.section-welcome .section-lead {
+    color: #1A3A4F;   /* ← Azul muy oscuro */
     text-shadow: 
-        0 1px 0 rgba(255, 255, 255, 0.9),
-        0 -1px 0 rgba(255, 255, 255, 0.9),
-        1px 0 0 rgba(255, 255, 255, 0.9),
-        -1px 0 0 rgba(255, 255, 255, 0.9),
-        0 0 6px rgba(255, 255, 255, 0.7),
-        1px 1px 3px rgba(26, 58, 79, 0.15);
+        0 1px 0 rgba(255, 255, 255, 1),
+        0 -1px 0 rgba(255, 255, 255, 1),
+        1px 0 0 rgba(255, 255, 255, 1),
+        -1px 0 0 rgba(255, 255, 255, 1),
+        0 0 8px rgba(255, 255, 255, 0.9);
+}
+
+/* 2. Párrafo de "Destinos Ecuador" */
+.section-regions .section-lead {
+    color: #1A3A4F;   /* ← Azul muy oscuro */
+    text-shadow: 
+        0 1px 0 rgba(255, 255, 255, 1),
+        0 -1px 0 rgba(255, 255, 255, 1),
+        1px 0 0 rgba(255, 255, 255, 1),
+        -1px 0 0 rgba(255, 255, 255, 1),
+        0 0 8px rgba(255, 255, 255, 0.9);
 }

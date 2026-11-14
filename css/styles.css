@@ -1177,7 +1177,7 @@ main{ padding-top:var(--header-h); }
     z-index:2;
     max-width:760px;
 }
-.about-parallax-text{
+.parallax-text{
     font-size:1.05rem;
     color:rgba(255,255,255,0.9);
     line-height:1.85;

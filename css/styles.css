@@ -3294,3 +3294,14 @@ main{ padding-top:var(--header-h); }
         height:110px;
     }
 }
+
+/* ==========================================
+   PORTADAS INTERNAS — Alineación izquierda
+   ========================================== */
+.page-hero{ text-align:left; }
+.page-hero-content{ margin:0; }
+.page-hero .hero-title,
+.page-hero .hero-subtitle{
+    margin-left:0;
+    margin-right:0;
+}

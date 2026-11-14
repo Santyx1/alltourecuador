@@ -3296,12 +3296,54 @@ main{ padding-top:var(--header-h); }
 }
 
 /* ==========================================
-   PORTADAS INTERNAS — Alineación izquierda
+   PORTADAS INTERNAS — Estilo unificado
+   (reemplaza hero-title/hero-subtitle del slider)
    ========================================== */
-.page-hero{ text-align:left; }
-.page-hero-content{ margin:0; }
-.page-hero .hero-title,
+
+/* Alineación izquierda de la portada */
+.page-hero{
+    text-align: left;
+}
+.page-hero-content{
+    margin: 0;
+    max-width: 880px;
+}
+
+/* Eyebrow en portadas (usa section-eyebrow light) */
+.page-hero .section-eyebrow.light{
+    color: var(--brand-light);
+    margin-bottom: 20px;
+}
+
+/* Título en portadas: mismo estilo que index pero más contenido */
+.page-hero .hero-title{
+    font-family: var(--font-serif);
+    font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--white);
+    margin-bottom: 20px;
+    margin-left: 0;
+    margin-right: 0;
+    text-shadow:
+        0 2px 4px rgba(0,0,0,0.6),
+        0 4px 10px rgba(0,0,0,0.4);
+}
+
+/* Subtítulo en portadas: párrafo descriptivo, no frase poética */
 .page-hero .hero-subtitle{
-    margin-left:0;
-    margin-right:0;
+    font-family: var(--font-sans);
+    font-style: normal;
+    font-size: 1.05rem;
+    font-weight: 400;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.9);
+    max-width: 700px;
+    margin: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    text-shadow:
+        0 1px 3px rgba(0,0,0,0.5),
+        0 2px 6px rgba(0,0,0,0.3);
 }

@@ -32,14 +32,16 @@
             <a href="index.html" class="brand" aria-label="All Tour Ecuador - Inicio">
                 <img src="img/logo3.png" alt="All Tour Ecuador" class="brand-logo" />
             </a>
+
             <nav class="main-nav" aria-label="Navegación principal">
                 <a href="index.html" data-i18n="nav.inicio">Inicio</a>
                 <a href="nosotros.html" data-i18n="nav.nosotros">Nosotros</a>
-                <a href="tours.html" data-i18n="nav.tours">Tours</a>
+                <a href="tours.html" class="active" data-i18n="nav.tours">Tours</a>
                 <a href="destinos.html" data-i18n="nav.destinos">Destinos</a>
                 <a href="experiencias.html" data-i18n="nav.experiencias">Experiencias</a>
                 <a href="contacto.html" data-i18n="nav.contacto">Contacto</a>
             </nav>
+
             <div class="nav-actions">
                 <div class="lang-switcher">
                     <button class="lang-btn" aria-label="Cambiar idioma" id="langBtn">
@@ -47,11 +49,18 @@
                         <i class="fa-solid fa-chevron-down"></i>
                     </button>
                     <div class="lang-dropdown" id="langDropdown">
-                        <button data-lang="es" class="lang-option active"><span class="lang-flag">🇪🇸</span> Español</button>
-                        <button data-lang="en" class="lang-option"><span class="lang-flag">🇬🇧</span> English</button>
-                        <button data-lang="fr" class="lang-option"><span class="lang-flag">🇫🇷</span> Français</button>
+                        <button data-lang="es" class="lang-option active">
+                            <span class="lang-flag">🇪🇸</span> Español
+                        </button>
+                        <button data-lang="en" class="lang-option">
+                            <span class="lang-flag">🇬🇧</span> English
+                        </button>
+                        <button data-lang="fr" class="lang-option">
+                            <span class="lang-flag">🇫🇷</span> Français
+                        </button>
                     </div>
                 </div>
+
                 <a href="contacto.html" class="btn btn-accent btn-sm nav-cta" data-i18n="nav.cta">Reservar</a>
                 <button class="menu-toggle" aria-label="Abrir menú" id="menuToggle">
                     <span></span><span></span><span></span>
@@ -60,7 +69,7 @@
         </div>
     </header>
 
-    <!-- MOBILE MENU -->
+    <!-- MENÚ MÓVIL -->
     <div class="mobile-menu" id="mobileMenu">
         <nav class="mobile-nav">
             <a href="index.html" data-i18n="nav.inicio">Inicio</a>
@@ -79,7 +88,8 @@
     <main>
 
         <!-- ==============================
-             PORTADA DEL TOUR (mismas clases que nosotros.html)
+             PORTADA DEL TOUR
+             (mismas clases que nosotros.html)
         =============================== -->
         <section class="page-hero">
             <div class="page-hero-bg" id="tourHeroBg"></div>
@@ -94,12 +104,13 @@
 
         <!-- ==============================
              CUERPO DEL TOUR
+             Layout de 2 columnas con .story-grid
         =============================== -->
         <section class="section-story">
             <div class="container">
                 <div class="story-grid">
 
-                    <!-- Columna principal -->
+                    <!-- Columna principal (izquierda) -->
                     <div class="story-content">
 
                         <span class="section-eyebrow">Detalles del tour</span>
@@ -114,7 +125,7 @@
 
                     </div>
 
-                    <!-- Sidebar -->
+                    <!-- Sidebar (derecha) -->
                     <div class="story-image">
 
                         <!-- Ficha técnica -->
@@ -144,7 +155,9 @@
                         <!-- Precio y CTA -->
                         <div style="background:var(--white);border-radius:var(--radius-lg);padding:28px;text-align:center;border:2px solid var(--accent-pale);">
                             <span class="section-eyebrow" style="padding-left:0;">Precio desde</span>
-                            <p class="section-heading" style="font-size:2.2rem;color:var(--brand-dark);margin:8px 0;">$0</p>
+                            <p class="section-heading" style="font-size:2.2rem;color:var(--brand-dark);margin:8px 0;">
+                                <span class="tour-price-sidebar-value">$0</span>
+                            </p>
                             <p class="section-lead" style="font-size:0.85rem;">por persona</p>
                             <a href="contacto.html" class="btn btn-accent btn-lg" style="margin-top:16px;width:100%;justify-content:center;">
                                 Cotizar este tour <i class="fa-solid fa-arrow-right"></i>
@@ -158,7 +171,7 @@
         </section>
 
         <!-- ==============================
-             GALERÍA (solo si hay imágenes)
+             GALERÍA (solo se muestra si el tour tiene imágenes)
         =============================== -->
         <section class="section-experience-reviews" id="tourGalleryWrapper" style="display:none;">
             <div class="container">
@@ -171,7 +184,7 @@
         </section>
 
         <!-- ==============================
-             CTA CONTACTO
+             CTA CONTACTO (idéntico a tours.html)
         =============================== -->
         <section class="section-contact-cta">
             <div class="container">
@@ -179,16 +192,28 @@
                     <div class="contact-cta-left">
                         <img src="img/quienes_somos.jpg" alt="Equipo de All Tour Ecuador" class="contact-cta-img" loading="lazy">
                         <h3 class="contact-cta-heading">Tu viaje ideal empieza con una conversación</h3>
-                        <a href="contacto.html" class="btn btn-accent">Contáctanos <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="contacto.html" class="btn btn-accent">
+                            Contáctanos <i class="fa-solid fa-arrow-right"></i>
+                        </a>
                     </div>
                     <div class="contact-cta-right">
                         <span class="contact-cta-eyebrow">Estamos para ayudarte</span>
                         <h3 class="contact-cta-title">Descubre Ecuador con confianza</h3>
-                        <p class="contact-cta-text">Cuéntanos qué te gustaría vivir y diseñamos juntos una experiencia a tu medida. Expertos locales, atención personalizada y viajes que se sienten desde el corazón del planeta.</p>
+                        <p class="contact-cta-text">
+                            Cuéntanos qué te gustaría vivir y diseñamos juntos una experiencia
+                            a tu medida. Expertos locales, atención personalizada y viajes que
+                            se sienten desde el corazón del planeta.
+                        </p>
                         <h4 class="contact-cta-subtitle">Llámanos</h4>
                         <div class="contact-cta-phones">
-                            <a href="tel:+593997898745" class="contact-phone-btn"><i class="fa-solid fa-phone"></i><span>+593 99 789 8745</span></a>
-                            <a href="https://wa.me/593997898745" target="_blank" rel="noopener" class="contact-phone-btn"><i class="fa-brands fa-whatsapp"></i><span>Escríbenos por WhatsApp</span></a>
+                            <a href="tel:+593997898745" class="contact-phone-btn">
+                                <i class="fa-solid fa-phone"></i>
+                                <span>+593 99 789 8745</span>
+                            </a>
+                            <a href="https://wa.me/593997898745" target="_blank" rel="noopener" class="contact-phone-btn">
+                                <i class="fa-brands fa-whatsapp"></i>
+                                <span>Escríbenos por WhatsApp</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -196,17 +221,20 @@
         </section>
 
         <!-- ==============================
-             CTA FINAL
+             CTA FINAL (idéntico a las demás webs)
         =============================== -->
         <section class="section-cta-final">
             <div class="cta-bg" style="background-image:url('img/comparte.jpg');"></div>
             <div class="cta-overlay"></div>
+
             <div class="container cta-content">
-                <span class="section-eyebrow">Encuentra la aventura perfecta</span>
+                <span class="section-eyebrow">Encuentra la convivencia cultural perfecta</span>
                 <h2 class="cta-title section-heading">Ecuador no solo se conoce:<br>se siente, se comparte y se vive.</h2>
                 <p class="cta-desc section-lead">Te ayudamos a construir tu próxima experiencia.</p>
                 <div class="cta-buttons">
-                    <a href="contacto.html" class="btn btn-accent btn-lg">Comienza tu viaje <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="contacto.html" class="btn btn-accent btn-lg">
+                        Comienza tu viaje <i class="fa-solid fa-arrow-right"></i>
+                    </a>
                     <a href="tours.html" class="btn btn-ghost btn-lg">Ver todos los tours</a>
                 </div>
             </div>
@@ -214,7 +242,7 @@
 
     </main>
 
-    <!-- FOOTER -->
+    <!-- FOOTER (sección repetida) -->
     <footer class="site-footer">
         <div class="container footer-grid">
             <div class="footer-col footer-brand-col">
@@ -222,6 +250,7 @@
                 <p class="footer-tagline">Creando emociones para ti</p>
                 <p class="footer-desc section-lead" data-i18n="footer.desc">Agencia de Viajes y Operador Turístico. Ecuador, desde el corazón del planeta.</p>
             </div>
+
             <div class="footer-col">
                 <h4 data-i18n="footer.contact">Contacto</h4>
                 <ul class="footer-list">
@@ -231,16 +260,18 @@
                     <li><i class="fa-solid fa-envelope"></i><a href="mailto:alltourecuador@gmail.com">alltourecuador@gmail.com</a></li>
                 </ul>
             </div>
+
             <div class="footer-col">
                 <h4 data-i18n="footer.explore">Explora</h4>
                 <ul class="footer-list footer-links">
-                    <li><a href="tours.html">Tours</a></li>
-                    <li><a href="destinos.html">Destinos</a></li>
-                    <li><a href="experiencias.html">Experiencias</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="tours.html" data-i18n="nav.tours">Tours</a></li>
+                    <li><a href="destinos.html" data-i18n="nav.destinos">Destinos</a></li>
+                    <li><a href="experiencias.html" data-i18n="nav.experiencias">Experiencias</a></li>
+                    <li><a href="nosotros.html" data-i18n="nav.nosotros">Nosotros</a></li>
+                    <li><a href="contacto.html" data-i18n="nav.contacto">Contacto</a></li>
                 </ul>
             </div>
+
             <div class="footer-col">
                 <h4 data-i18n="footer.follow">Síguenos</h4>
                 <div class="social-icons">
@@ -252,18 +283,24 @@
                 <p class="social-hashtag">#AllTourEcuador</p>
             </div>
         </div>
+
         <div class="footer-bottom">
             <div class="container footer-bottom-content">
                 <span data-i18n="footer.copy">© 2026 All Tour Ecuador. Todos los derechos reservados.</span>
                 <div class="footer-bottom-links">
-                    <a href="#">Política de privacidad</a>
-                    <a href="#">Términos y condiciones</a>
+                    <a href="#" data-i18n="footer.privacy">Política de privacidad</a>
+                    <a href="#" data-i18n="footer.terms">Términos y condiciones</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <a href="https://wa.me/593997898745?text=Hola%20All%20Tour%20Ecuador,%20quiero%20informaci%C3%B3n%20sobre%20sus%20tours" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+    <!-- WhatsApp Flotante -->
+    <a href="https://wa.me/593997898745?text=Hola%20All%20Tour%20Ecuador,%20quiero%20informaci%C3%B3n%20sobre%20sus%20tours"
+       target="_blank"
+       rel="noopener"
+       class="whatsapp-float"
+       aria-label="Contactar por WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
         <span class="whatsapp-tooltip" data-i18n="whatsapp.tooltip">¿Necesitas ayuda?</span>
     </a>

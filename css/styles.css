@@ -3299,25 +3299,36 @@ main{ padding-top:var(--header-h); }
    PORTADAS INTERNAS — Coherentes con el hero del index
    ========================================== */
 
-/* Alineación izquierda */
-.page-hero{ text-align: left; }
-.page-hero-content{
-    margin: 0;
-    max-width: 880px;
-    padding-top: 0;   /* ← quitar el offset que empujaba el texto hacia abajo */
-}
-
-/* El contenido se alinea al centro verticalmente como el hero del index */
+/* El contenido queda centrado en el viewport como el index, pero el texto alineado a la izquierda */
 .page-hero{
+    text-align: left;
     display: flex;
     align-items: center;
+    min-height: 640px;
+    padding: 180px 0 100px;
+}
+.page-hero-sm{
+    min-height: 520px;
+    padding: 160px 0 90px;
+}
+
+/* Este es el truco: mantener el contenedor centrado, pero alinear el texto a la izquierda */
+.page-hero .container{
+    display: flex;
     justify-content: flex-start;
 }
 
-/* MISMAS clases que el index, solo con tamaño ligeramente menor */
+.page-hero-content{
+    margin: 0;              /* dentro del .container, alineado a la izquierda */
+    max-width: 820px;       /* igual que .hero-slide-content del index */
+    padding-top: 0;
+    text-align: left;
+}
+
+/* Mismas clases que el index, solo con tamaño ligeramente menor */
 .page-hero .hero-eyebrow{
     display: inline-block;
-    color: var(--accent);        /* ← NARANJA, igual que el index */
+    color: var(--accent);
     font-size: 1rem;
     font-weight: 700;
     letter-spacing: 0.22em;
@@ -3329,7 +3340,7 @@ main{ padding-top:var(--header-h); }
     display: inline-block;
     width: 40px;
     height: 2px;
-    background: var(--accent);   /* ← línea naranja, igual que el index */
+    background: var(--accent);
     vertical-align: middle;
     margin-right: 12px;
     margin-bottom: 3px;
@@ -3337,7 +3348,7 @@ main{ padding-top:var(--header-h); }
 
 .page-hero .hero-title{
     font-family: var(--font-serif);
-    font-size: clamp(2.2rem, 4.5vw, 3.8rem);  /* ligeramente menor que el index */
+    font-size: clamp(2.2rem, 4.5vw, 3.8rem);
     font-weight: 700;
     line-height: 1.1;
     color: var(--white);
@@ -3347,14 +3358,14 @@ main{ padding-top:var(--header-h); }
     text-shadow:
         0 2px 4px rgba(0,0,0,0.7),
         0 4px 12px rgba(0,0,0,0.5),
-        0 0 20px rgba(0,0,0,0.3);   /* ← mismo text-shadow que el index */
+        0 0 20px rgba(0,0,0,0.3);
 }
 
 .page-hero .hero-subtitle{
     font-family: var(--font-serif);
-    font-style: italic;           /* ← ITÁLICA, igual que el index */
+    font-style: italic;
     font-size: clamp(1.1rem, 2vw, 1.6rem);
-    color: var(--accent-light);   /* ← NARANJA claro, igual que el index */
+    color: var(--accent-light);
     margin-bottom: 32px;
     font-weight: 400;
     margin-left: 0;
@@ -3364,13 +3375,4 @@ main{ padding-top:var(--header-h); }
         0 2px 4px rgba(0,0,0,0.7),
         0 4px 12px rgba(0,0,0,0.5),
         0 0 20px rgba(0,0,0,0.3);
-}
-
-/* La portada interna ahora tiene más altura para igualar visualmente al hero-slider */
-.page-hero{
-    min-height: 640px;   /* ← igual al min-height del hero-slider */
-}
-.page-hero-sm{
-    min-height: 520px;
-    padding: 160px 0 90px;
 }

@@ -106,7 +106,7 @@ body::before{
     background-position:center;
     background-attachment:fixed;
     background-repeat:no-repeat;
-    opacity:0.35; /* ajustar según la imagen */
+    opacity:0.70; /* ajustar según la imagen */
 }
 
 /* Capa suave para asegurar legibilidad del texto */
@@ -116,11 +116,15 @@ body::after{
     inset:0;
     z-index:-1;
     pointer-events:none;
+       background:linear-gradient(180deg, rgba(245,250,253,0.35) 0%, rgba(255,255,255,0.25) 100%);
+
+   /*
     background: linear-gradient(
         180deg,
         rgba(245,250,253, 0.65) 0%,  /* ← Antes 0.35. Más velo blanco */
         rgba(255,255,255, 0.55) 100%  /* ← Antes 0.25 */
     );
+   */
 }
 
 body.no-scroll{ overflow:hidden; }
@@ -4862,4 +4866,31 @@ main{ padding-top:var(--header-h); }
     .section-tours {
         padding-top: 30px;
     }
+}
+
+/* ==========================================
+   LEGIBILIDAD DE TEXTOS SOBRE IMAGEN
+   ========================================== */
+
+/* Textos blancos sobre hero y page-hero */
+.hero-title,
+.hero-subtitle,
+.hero-eyebrow,
+.page-hero-title,
+.page-hero-desc,
+.page-hero-content .section-eyebrow {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+/* Textos del CTA final */
+.cta-title,
+.cta-desc,
+.cta-content .section-eyebrow {
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.50);
+}
+
+/* Textos del modal hero */
+.tour-modal-hero-text h2,
+.tour-modal-hero-text p {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.40);
 }

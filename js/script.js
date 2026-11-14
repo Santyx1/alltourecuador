@@ -18,7 +18,7 @@ const translations = {
         "nav.cta": "Reservar",
 
         // HERO
-        "hero.eyebrow": "Agencia de Viajes y Operador Turístico",
+"hero.eyebrow": "Turismo que conecta con nuestras raíces",
         "hero.title": "Ecuador, desde el corazón del planeta",
         "hero.subtitle": "Naturaleza, cultura y experiencias que nacen desde la tierra",
         "hero.btn1": "Explorar tours",
@@ -276,7 +276,7 @@ const translations = {
         "nav.cta": "Book Now",
 
         // HERO
-        "hero.eyebrow": "Travel Agency & Tour Operator",
+"hero.eyebrow": "Travel that connects with our roots",
         "hero.title": "Ecuador, from the heart of the planet",
         "hero.subtitle": "Nature, culture and experiences born from the land",
         "hero.btn1": "Explore tours",
@@ -534,7 +534,7 @@ const translations = {
         "nav.cta": "Réserver",
 
         // HERO
-        "hero.eyebrow": "Agence de Voyage & Tour Opérateur",
+"hero.eyebrow": "Un tourisme qui connecte à nos racines",
         "hero.title": "L'Équateur, au cœur de la planète",
         "hero.subtitle": "Nature, culture et expériences nées de la terre",
         "hero.btn1": "Explorer les circuits",

@@ -156,7 +156,7 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; }
 /* --- Heading (título) --- */
 .section-heading{
     font-family:var(--font-serif);
-    font-size:clamp(2rem, 3.5vw, 3.2rem);
+    font-size:clamp(1.6rem, 2.8vw, 2.4rem);
     font-weight:700;
     line-height:1.15;
     color:var(--text);
@@ -3143,7 +3143,7 @@ main{ padding-top:var(--header-h); }
     .site-header.scrolled .brand-logo{ height:44px; }
 
     .hero-title{ font-size:1.85rem; }
-    .section-heading{ font-size:1.2rem; }
+    .section-heading{ font-size:1.6rem; }
     .section-lead{ font-size:0.95rem; }
 
     .hero-buttons,

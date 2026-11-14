@@ -266,12 +266,39 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; }
 
 /* Ajustamos los iconos de la historia para que usen la nueva paleta */
 .history-icon {
-    background: linear-gradient(135deg, var(--brand-pale), var(--accent-pale));
-    color: var(--brand-dark);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;               /* Círculo perfecto */
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20px;
+    border: 3px solid var(--brand-pale);
+    box-shadow: 0 8px 20px rgba(26,58,79,0.12);
+    transition: var(--transition);
+}
+.history-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+/* Overlay de color turquesa/naranja sutil */
+.history-icon::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+        rgba(0,166,181,0.15) 0%,
+        rgba(242,124,33,0.15) 100%);
+    pointer-events: none;
 }
 .history-card:hover .history-icon {
-    background: linear-gradient(135deg, var(--accent), var(--accent-dark));
-    color: var(--white);
+    border-color: var(--accent);
+    transform: scale(1.06);
+}
+.history-card:hover .history-icon img {
+    transform: scale(1.15);
 }
 
 .btn-ghost{

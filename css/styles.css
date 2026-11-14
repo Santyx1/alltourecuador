@@ -3329,26 +3329,3 @@ main{ padding-top:var(--header-h); }
     box-shadow: 0 8px 20px rgba(0, 166, 181, 0.5);
 }
 
-/* Botón flotante de chat */
-.chat-float {
-    position: fixed;
-    right: 25px;
-    bottom: 100px;
-    z-index: 9998;
-    background: #176b52;
-    color: white;
-    border: none;
-    border-radius: 50px;
-    padding: 14px 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-    font-family: inherit;
-    font-size: 14px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
-
-.chat-float:hover {
-    background: #10543f;
-}

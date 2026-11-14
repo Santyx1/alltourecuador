@@ -35,16 +35,14 @@
 <body>
 
     <!-- PRELOADER -->
-<div class="preloader" id="preloader">
-    <div class="preloader-inner">
-        <div class="preloader-logos">
-            <img src="img/logo3.png" alt="AllTourEcuador" class="preloader-logo" />
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-logos">
+                <img src="img/logo3.png" alt="AllTourEcuador" class="preloader-logo" />
+            </div>
+            <div class="preloader-bar"><span></span></div>
         </div>
-        <div class="preloader-bar"><span></span></div>
     </div>
-</div>
-
-
 
     <!-- HEADER -->
     <header class="site-header scrolled" id="siteHeader">
@@ -58,7 +56,6 @@
                 <a href="nosotros.html" data-i18n="nav.nosotros">Nosotros</a>
                 <a href="tours.html" data-i18n="nav.tours">Tours</a>
                 <a href="destinos.html" data-i18n="nav.destinos">Destinos</a>
-                <!--<a href="servicios.html" data-i18n="nav.servicios">Servicios</a>-->
                 <a href="experiencias.html" class="active" data-i18n="nav.experiencias">Experiencias</a>
                 <a href="contacto.html" data-i18n="nav.contacto">Contacto</a>
             </nav>
@@ -97,7 +94,6 @@
             <a href="nosotros.html" data-i18n="nav.nosotros">Nosotros</a>
             <a href="tours.html" data-i18n="nav.tours">Tours</a>
             <a href="destinos.html" data-i18n="nav.destinos">Destinos</a>
-            <!--<a href="servicios.html" data-i18n="nav.servicios">Servicios</a>-->
             <a href="experiencias.html" data-i18n="nav.experiencias">Experiencias</a>
             <a href="contacto.html" data-i18n="nav.contacto">Contacto</a>
         </nav>
@@ -113,14 +109,13 @@
              PAGE HERO (portada)
         =============================== -->
         <section class="page-hero page-hero-sm">
-            <!-- REEMPLAZAR IMAGEN: viajero viviendo experiencia (carpeta Drive usuario) -->
             <div class="page-hero-bg" style="background-image:url('img/historias.jpg');"></div>
             <div class="page-hero-overlay"></div>
 
             <div class="container page-hero-content">
-                <span class="hero-eyebrow">Experiencias All Tour Ecuador</span>
-                <h1 class="hero-title">Historias que transforman vidas</h1>
-                <p class="hero-subtitle">
+                <span class="section-eyebrow light" data-i18n="experiencias.hero.eyebrow">Experiencias All Tour Ecuador</span>
+                <h1 class="hero-title" data-i18n="experiencias.hero.title">Historias que transforman vidas</h1>
+                <p class="hero-subtitle" data-i18n="experiencias.hero.desc">
                     Cada viaje deja una huella: en los viajeros y en las comunidades que hacen
                     posible vivir un Ecuador auténtico. Descubre sus voces.
                 </p>
@@ -133,9 +128,9 @@
         <section class="section-experience-reviews">
             <div class="container">
                 <div class="section-header-center">
-                    <span class="section-eyebrow">Lo que dicen nuestros viajeros</span>
-                    <h2 class="section-heading">Experiencias que se llevan en el corazón</h2>
-                    <p class="section-lead">
+                    <span class="section-eyebrow" data-i18n="experiencias.reviews.eyebrow">Lo que dicen nuestros viajeros</span>
+                    <h2 class="section-heading" data-i18n="experiencias.reviews.title">Experiencias que se llevan en el corazón</h2>
+                    <p class="section-lead" data-i18n="experiencias.reviews.lead">
                         Reseñas reales de quienes han vivido los Andes, la Amazonía, la Costa
                         y Galápagos con nosotros.
                     </p>
@@ -279,9 +274,9 @@
 <section class="section-value-testimonials">
     <div class="container">
         <div class="section-header-center">
-            <span class="section-eyebrow">Voces de nuestra cadena de valor</span>
-            <h2 class="section-heading">El cambio de vida detrás de cada viaje</h2>
-            <p class="section-lead">
+            <span class="section-eyebrow" data-i18n="experiencias.value.eyebrow">Voces de nuestra cadena de valor</span>
+            <h2 class="section-heading" data-i18n="experiencias.value.title">El cambio de vida detrás de cada viaje</h2>
+            <p class="section-lead" data-i18n="experiencias.value.lead">
                 El turismo que practicamos genera impacto real en las familias y
                 organizaciones que son parte de cada experiencia. Estas son sus historias.
             </p>
@@ -433,15 +428,15 @@
             <div class="cta-overlay"></div>
 
             <div class="container cta-content">
-                <span class="section-eyebrow">Encuentra la convivencia cultural perfecta</span>
-                <h2 class="cta-title section-heading">Ecuador no solo se conoce:<br>se siente, se comparte y se vive.</h2>
-                <p class="cta-desc section-lead">Te ayudamos a construir tu próxima experiencia.</p>
+                <span class="section-eyebrow" data-i18n="cta.eyebrow">Encuentra la convivencia cultural perfecta</span>
+                <h2 class="cta-title section-heading" data-i18n="cta.title">Ecuador no solo se conoce:<br>se siente, se comparte y se vive.</h2>
+                <p class="cta-desc section-lead" data-i18n="cta.desc">Te ayudamos a construir tu próxima experiencia.</p>
                 <div class="cta-buttons">
                     <a href="contacto.html" class="btn btn-accent btn-lg">
-                        Comienza tu viaje
+                        <span data-i18n="cta.btn1">Comienza tu viaje</span>
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
-                    <a href="tours.html" class="btn btn-ghost btn-lg">Ver tours</a>
+                    <a href="tours.html" class="btn btn-ghost btn-lg" data-i18n="cta.btn2">Ver tours</a>
                 </div>
             </div>
         </section>
@@ -472,7 +467,6 @@
                 <ul class="footer-list footer-links">
                     <li><a href="tours.html" data-i18n="nav.tours">Tours</a></li>
                     <li><a href="destinos.html" data-i18n="nav.destinos">Destinos</a></li>
-                    <!--<a href="servicios.html" data-i18n="nav.servicios">Servicios</a>-->
                     <li><a href="experiencias.html" data-i18n="nav.experiencias">Experiencias</a></li>
                     <li><a href="nosotros.html" data-i18n="nav.nosotros">Nosotros</a></li>
                     <li><a href="contacto.html" data-i18n="nav.contacto">Contacto</a></li>

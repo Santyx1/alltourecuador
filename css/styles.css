@@ -916,7 +916,7 @@ main{ padding-top:var(--header-h); }
    9. WELCOME (index)
    ========================================== */
 .section-welcome{
-    padding:100px 0;
+    padding:100px 0 50px;   /* ← arriba 100px | lados 0 | abajo 50px */
     background:var(--bg-veil-light);
     backdrop-filter:blur(2px);
     -webkit-backdrop-filter:blur(2px);
@@ -969,7 +969,7 @@ main{ padding-top:var(--header-h); }
    10. HISTORY (index)
    ========================================== */
 .section-history{
-    padding:100px 0;
+    padding:50px 0 100px;   /* ← arriba 50px | lados 0 | abajo 100px */
     background:var(--bg-veil-soft);
     backdrop-filter:blur(2px);
     -webkit-backdrop-filter:blur(2px);
@@ -1107,7 +1107,7 @@ main{ padding-top:var(--header-h); }
    12. REGIONS (index)
    ========================================== */
 .section-regions{
-    padding:100px 0;
+    padding:100px 0 50px;   /* ← abajo 50px */
     background:var(--bg-veil-light);
     backdrop-filter:blur(2px);
     -webkit-backdrop-filter:blur(2px);
@@ -1179,7 +1179,7 @@ main{ padding-top:var(--header-h); }
    13. TOURS CARRUSEL (index)
    ========================================== */
 .section-tours{
-    padding:100px 0;
+    padding:50px 0 100px;   /* ← arriba 50px */
     background:var(--bg-veil-soft);
     backdrop-filter:blur(2px);
     -webkit-backdrop-filter:blur(2px);

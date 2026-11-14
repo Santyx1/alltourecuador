@@ -170,12 +170,14 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; }
     color:var(--text-light);
     line-height:1.8;
     max-width:720px;
-    /* Sombra oscura sutil para contraste sobre fondo claro */
+    /* Halo blanco suave para separar el texto del fondo difuminado sin ensuciarlo */
     text-shadow:
-        0 1px 2px rgba(0,0,0,0.15),
-        0 0 6px rgba(0,0,0,0.10);
+        0 0 1px rgba(255,255,255,1),
+        0 0 8px rgba(255,255,255,0.9),
+        0 1px 2px rgba(255,255,255,0.8);
 }
-/* Sobre fondos oscuros (parallax, cta, page-hero) NO se aplica sombra clara */
+
+/* Sobre fondos oscuros NO se aplica halo (parallax, cta, footer, page-hero) */
 .section-lead.light,
 .parallax-text,
 .section-cta-final .section-lead,
@@ -184,7 +186,7 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; }
     text-shadow:none;
 }
 
-/* En el footer, el texto ya tiene color claro propio */
+/* El footer mantiene su color claro propio sobre fondo oscuro */
 .footer-desc.section-lead{
     color:rgba(255,255,255,0.6);
     font-size:0.88rem;

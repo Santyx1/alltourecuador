@@ -136,10 +136,15 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; }
     letter-spacing:0.2em;
     text-transform:uppercase;
     color:var(--accent);
-   line-height:1.5;        /* ← interlineado suave */
     margin-bottom:14px;
     position:relative;
     padding-left:44px;
+   text-shadow:
+        -0.5px -0.5px 0 rgba(0,0,0,0.45),
+         0.5px -0.5px 0 rgba(0,0,0,0.45),
+        -0.5px  0.5px 0 rgba(0,0,0,0.45),
+         0.5px  0.5px 0 rgba(0,0,0,0.45),
+         0  1px 3px rgba(0,0,0,0.3);
 }
 .section-eyebrow::before{
     content:"";

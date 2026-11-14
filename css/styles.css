@@ -41,7 +41,7 @@
     --gray-500:#5A7A94;
     --gray-600:#3D5568;
     --text:#1A3A4F;         /* Azul muy oscuro para textos y fondos */
-    --text-light:#3D5568;  /* ← Más oscuro, más contraste */
+    --text-light:#5A7A94;  /* ← Más oscuro, más contraste */
 
     /* === Estados === */
     --success:#27ae60;
@@ -4903,14 +4903,13 @@ main{ padding-top:var(--header-h); }
         0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
-
 /* ==========================================
-   REFUERZO SOLO PARA 2 PÁRRAFOS ESPECÍFICOS
+   REFUERZO SOLO PARA 3 PÁRRAFOS ESPECÍFICOS
    ========================================== */
 
-/* 1. Párrafo de "Bienvenidos a AllTourEcuador" */
+/* 1. Párrafo de "Bienvenidos a AllTourEcuador" (welcome.text) */
 .section-welcome .section-lead {
-    color: #1A3A4F;   /* ← Azul muy oscuro */
+    color: #1A3A4F;
     text-shadow: 
         0 1px 0 rgba(255, 255, 255, 1),
         0 -1px 0 rgba(255, 255, 255, 1),
@@ -4919,9 +4918,20 @@ main{ padding-top:var(--header-h); }
         0 0 8px rgba(255, 255, 255, 0.9);
 }
 
-/* 2. Párrafo de "Destinos Ecuador" */
+/* 2. Párrafo de "Destinos Ecuador" (regions.lead) */
 .section-regions .section-lead {
-    color: #1A3A4F;   /* ← Azul muy oscuro */
+    color: #1A3A4F;
+    text-shadow: 
+        0 1px 0 rgba(255, 255, 255, 1),
+        0 -1px 0 rgba(255, 255, 255, 1),
+        1px 0 0 rgba(255, 255, 255, 1),
+        -1px 0 0 rgba(255, 255, 255, 1),
+        0 0 8px rgba(255, 255, 255, 0.9);
+}
+
+/* 3. Párrafo de "Tours destacados" (tours.lead) */
+.section-tours .section-lead {
+    color: #1A3A4F;
     text-shadow: 
         0 1px 0 rgba(255, 255, 255, 1),
         0 -1px 0 rgba(255, 255, 255, 1),

@@ -136,6 +136,7 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; }
     letter-spacing:0.2em;
     text-transform:uppercase;
     color:var(--accent);
+   line-height:1.5;        /* ← interlineado suave */
     margin-bottom:14px;
     position:relative;
     padding-left:44px;

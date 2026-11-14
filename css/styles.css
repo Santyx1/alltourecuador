@@ -167,34 +167,29 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; }
 /* --- Lead (párrafo destacado) --- */
 .section-lead{
     font-size:1.02rem;
-    color:var(--text-light);
+    color:var(--text);   /* ← más oscuro que --text-light, mejor contraste */
     line-height:1.8;
     max-width:720px;
-    /* Halo blanco suave para separar el texto del fondo difuminado sin ensuciarlo */
-    text-shadow:
-        0 0 1px rgba(255,255,255,1),
-        0 0 8px rgba(255,255,255,0.9),
-        0 1px 2px rgba(255,255,255,0.8);
+    /* Sin sombras: lectura limpia y formal */
 }
 
-/* Sobre fondos oscuros NO se aplica halo (parallax, cta, footer, page-hero) */
-.section-lead.light,
-.parallax-text,
-.section-cta-final .section-lead,
-.page-hero .hero-subtitle,
-.site-footer .footer-desc{
-    text-shadow:none;
+/* Sobre fondos oscuros (parallax, cta, footer, page-hero) */
+.section-lead.light{ color:rgba(255,255,255,0.85); }
+.parallax-text{
+    font-size:1.05rem;
+    color:rgba(255,255,255,0.9);
+    line-height:1.85;
+    margin:0 0 36px;
 }
+.section-cta-final .section-lead{ color:rgba(255,255,255,0.92); }
 
-/* El footer mantiene su color claro propio sobre fondo oscuro */
+/* Footer: conserva su tono claro sobre fondo oscuro */
 .footer-desc.section-lead{
     color:rgba(255,255,255,0.6);
     font-size:0.88rem;
     max-width:320px;
     line-height:1.6;
-    text-shadow:none;
 }
-
 /* --- Encabezado centrado --- */
 .section-header-center{
     text-align:center;

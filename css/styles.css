@@ -4879,18 +4879,25 @@ main{ padding-top:var(--header-h); }
 .page-hero-title,
 .page-hero-desc,
 .page-hero-content .section-eyebrow {
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+    text-shadow: 
+        0 2px 4px rgba(0, 0, 0, 0.7),
+        0 4px 12px rgba(0, 0, 0, 0.5),
+        0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Textos del CTA final */
 .cta-title,
 .cta-desc,
 .cta-content .section-eyebrow {
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.50);
+    text-shadow: 
+        0 2px 4px rgba(0, 0, 0, 0.7),
+        0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 /* Textos del modal hero */
 .tour-modal-hero-text h2,
 .tour-modal-hero-text p {
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.40);
+    text-shadow: 
+        0 2px 4px rgba(0, 0, 0, 0.6),
+        0 4px 10px rgba(0, 0, 0, 0.4);
 }

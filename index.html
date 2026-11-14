@@ -724,6 +724,14 @@
         <span class="whatsapp-tooltip" data-i18n="whatsapp.tooltip">¿Necesitas ayuda?</span>
     </a>
 
+    <!-- Chat flotante Tawk.to -->
+<button class="chat-float"
+        onclick="abrirChat()"
+        aria-label="Abrir chat">
+    <i class="fa-solid fa-comments"></i>
+    <span>Chat en vivo</span>
+</button>
+
     <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
         <i class="fa-solid fa-arrow-up"></i>
     </button>
@@ -785,19 +793,15 @@ Tawk_API.onBeforeLoad = function() {
 })();
 </script>
 
-    
-<button onclick="abrirChat()">
-    ¿Necesitas ayuda? Escríbenos
-</button>
-
 <script>
 function abrirChat() {
     Tawk_API.showWidget();
-    Tawk_API.maximize();
+
+    setTimeout(function() {
+        Tawk_API.maximize();
+    }, 300);
 }
-</script>
-
-
+</script>    
     
 </body>
 </html>

@@ -665,7 +665,7 @@ main{ padding-top:var(--header-h); }
    color:var(--accent);
    */
    color:var(--brand);
-   font-size:1.5rem;
+   font-size:1.2rem;
     font-weight:700;
     letter-spacing:0.22em;
     text-transform:uppercase;
@@ -3143,7 +3143,7 @@ main{ padding-top:var(--header-h); }
     .site-header.scrolled .brand-logo{ height:44px; }
 
     .hero-title{ font-size:1.85rem; }
-    .section-heading{ font-size:1.7rem; }
+    .section-heading{ font-size:1.2rem; }
     .section-lead{ font-size:0.95rem; }
 
     .hero-buttons,

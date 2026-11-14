@@ -667,14 +667,14 @@ main{ padding-top:var(--header-h); }
     letter-spacing:0.22em;
     text-transform:uppercase;
     margin-bottom:22px;
-    /* Delineado sutil para legibilidad sobre imagen */
     text-shadow:
-        -1px -1px 0 rgba(0,0,0,0.5),
-         1px -1px 0 rgba(0,0,0,0.5),
-        -1px  1px 0 rgba(0,0,0,0.5),
-         1px  1px 0 rgba(0,0,0,0.5),
-         0  2px 6px rgba(0,0,0,0.4);
-}.hero-eyebrow::before,
+        -0.5px -0.5px 0 rgba(0,0,0,0.45),
+         0.5px -0.5px 0 rgba(0,0,0,0.45),
+        -0.5px  0.5px 0 rgba(0,0,0,0.45),
+         0.5px  0.5px 0 rgba(0,0,0,0.45),
+         0  1px 3px rgba(0,0,0,0.3);
+}
+.hero-eyebrow::before,
 .page-hero .hero-eyebrow::before{
     content:"";
     display:none;

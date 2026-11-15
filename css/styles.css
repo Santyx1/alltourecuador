@@ -1068,7 +1068,17 @@ main{ padding-top:var(--header-h); }
     font-size:1.4rem;
     margin-bottom:20px;
     transition:var(--transition);
+    overflow:hidden;          /* NUEVO: recorta la imagen */
 }
+
+.history-icon img{            /* NUEVO bloque */
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    display:block;
+    padding:8px;
+}
+
 .history-card:hover .history-icon{
     background:linear-gradient(135deg, var(--accent), var(--accent-dark));
     color:var(--white);

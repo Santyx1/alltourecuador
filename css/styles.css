@@ -1150,7 +1150,7 @@ main{ padding-top:var(--header-h); }
 .parallax-overlay{
     position:absolute;
     inset:0;
-    background:linear-gradient(135deg, rgba(26,58,79,0.9), rgba(26,58,79,0.6));
+    background:linear-gradient(135deg, rgba(26,58,79,0.6), rgba(26,58,79,0.6));
     z-index:1;
 }
 .about-parallax-content{

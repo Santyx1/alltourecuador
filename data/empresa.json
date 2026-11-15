@@ -1,1 +1,49 @@
-
+{
+  "nombre": "AllTourEcuador",
+  "slogan": {
+    "es": "Your Gateway to Authenticity",
+    "en": "Your Gateway to Authenticity",
+    "fr": "Your Gateway to Authenticity"
+  },
+  "descripcion": {
+    "es": "Agencia de Viajes y Operador Turístico. Ecuador, desde el corazón del planeta.",
+    "en": "Travel Agency & Tour Operator. Ecuador, from the heart of the planet.",
+    "fr": "Agence de Voyage & Tour Opérateur. L'Équateur, au cœur de la planète."
+  },
+  "contacto": {
+    "telefono": "+593 99 789 8745",
+    "telefonoLink": "+593997898745",
+    "whatsapp": "593997898745",
+    "whatsappMensaje": "Hola All Tour Ecuador, quiero información sobre sus tours",
+    "email": "alltourecuador@gmail.com"
+  },
+  "direccion": {
+    "es": "Calle Bolívar, entre Neptalí Ordoñez y Av. Quito",
+    "en": "Bolívar Street, between Neptalí Ordoñez and Av. Quito",
+    "fr": "Rue Bolívar, entre Neptalí Ordoñez et Av. Quito"
+  },
+  "redes": {
+    "facebook": "https://www.facebook.com/Alltourecuador",
+    "instagram": "https://www.instagram.com/alltourecuador593/",
+    "tiktok": "https://www.tiktok.com/@alltourecuador",
+    "youtube": "https://www.youtube.com/@alltourecuador2485"
+  },
+  "hashtag": "#AllTourEcuador",
+  "copyright": {
+    "es": "© 2026 AllTourEcuador. Todos los derechos reservados.",
+    "en": "© 2026 AllTourEcuador. All rights reserved.",
+    "fr": "© 2026 AllTourEcuador. Tous droits réservés."
+  },
+  "legal": {
+    "privacidad": {
+      "es": "Política de privacidad",
+      "en": "Privacy Policy",
+      "fr": "Politique de confidentialité"
+    },
+    "terminos": {
+      "es": "Términos y condiciones",
+      "en": "Terms and Conditions",
+      "fr": "Termes et conditions"
+    }
+  }
+}

@@ -290,6 +290,31 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; }
     color:var(--text);
     border-color:var(--text);
 }
+/* Botón outline que se pinta en azul oscuro al hover
+   (variante de btn-outline-dark para usar sobre fondos claros) */
+.btn-outline-brand{
+    background:var(--white);
+    color:var(--text);
+    border-color:var(--text);
+}
+.btn-outline-brand:hover{
+    background:var(--text);
+    color:var(--white);
+    border-color:var(--text);
+}
+
+/* Botón outline que se pinta en naranja al hover */
+.btn-outline-accent{
+    background:var(--white);
+    color:var(--accent-dark);
+    border-color:var(--accent);
+}
+.btn-outline-accent:hover{
+    background:var(--accent);
+    color:var(--white);
+    border-color:var(--accent);
+    box-shadow:0 8px 20px rgba(242,124,33,0.35);
+}
 .btn-outline-dark:hover{
     background:var(--text);
     color:var(--white);

@@ -17,7 +17,7 @@ const translations = {
         "nav.cta": "Reservar",
 
         // HERO
-        "hero.eyebrow": "Agencia de Viajes y Operador Turístico",
+        "hero.eyebrow": "Turismo que conecta con nuestras raíces",
         "hero.title": "Ecuador, desde el corazón del planeta",
         "hero.subtitle": "Naturaleza, cultura y experiencias que nacen desde la tierra",
         "hero.btn1": "Explorar tours",

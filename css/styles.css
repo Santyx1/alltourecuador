@@ -306,7 +306,7 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; }
 /* Botón outline que se pinta en naranja al hover */
 .btn-outline-accent{
     background:var(--white);
-    color:var(--accent-dark);
+    color:var(--brand);
     border-color:var(--brand);
 }
 .btn-outline-accent:hover{

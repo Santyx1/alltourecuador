@@ -136,7 +136,7 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; }
     font-weight:700;
     letter-spacing:0.2em;
     text-transform:uppercase;
-    color: var(--accent-lightt); /* <-- Lo dejamos en naranja aquí */
+    color: var(--brand); /* <-- Lo dejamos en naranja aquí */
     margin-bottom:14px;
     position:relative;
     padding-left:44px;

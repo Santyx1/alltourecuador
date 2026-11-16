@@ -4860,3 +4860,50 @@ body.page-tour-detalle .tour-detail-hero-section{
     body.page-tour-detalle .tour-detail-hero-section{
         margin-top: 70px;
     }
+
+
+/* ==========================================
+   SEPARADOR antes del footer
+   ========================================== */
+.section-separator{
+    background: var(--off-white);
+    padding: 40px 0;
+    border-top: 1px solid var(--gray-200);
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.separator-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.separator-line{
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--accent), transparent);
+    max-width: 120px;
+}
+
+.separator-text{
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--text);
+    text-align: center;
+    margin: 0;
+    white-space: nowrap;
+}
+
+@media (max-width: 560px){
+    .separator-text{
+        white-space: normal;
+        font-size: 0.95rem;
+    }
+    .separator-line{
+        max-width: 60px;
+    }
+}

@@ -4899,7 +4899,6 @@ main{ padding-top:var(--header-h); }
 
 /* ==========================================
    TOUR DETALLE — hero empieza debajo del header
-   (header visible, título limpio)
    ========================================== */
 body.page-tour-detalle main{
     padding-top:0;
@@ -4913,61 +4912,10 @@ body.page-tour-detalle .tour-detail-hero-section{
     body.page-tour-detalle .tour-detail-hero-section{
         margin-top: 70px;
     }
-
-
-/* ==========================================
-   SEPARADOR con logos
-   ========================================== */
-.section-separator-logos{
-    background: var(--off-white);
-    padding: 40px 0;
-    border-top: 1px solid var(--gray-200);
-    border-bottom: 1px solid var(--gray-200);
-}
-
-.separator-logos-title{
-    text-align: center;
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--text-light);
-    margin-bottom: 24px;
-}
-
-.separator-logos-grid{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-.separator-logos-grid img{
-    max-height: 50px;
-    width: auto;
-    object-fit: contain;
-    opacity: 0.7;
-    transition: var(--transition);
-    filter: grayscale(100%);
-}
-
-.separator-logos-grid img:hover{
-    opacity: 1;
-    filter: grayscale(0%);
-}
-
-@media (max-width: 560px){
-    .separator-logos-grid{
-        gap: 24px;
-    }
-    .separator-logos-grid img{
-        max-height: 36px;
-    }
 }
 
 /* ==========================================
-   SEPARADOR con logos
+   31. SEPARADOR CON LOGOS (antes del footer)
    ========================================== */
 .section-separator-logos{
     background: var(--off-white);

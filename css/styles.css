@@ -307,7 +307,7 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; }
 .btn-outline-accent{
     background:var(--white);
     color:var(--accent-dark);
-    border-color:var(--accent);
+    border-color:var(--brand);
 }
 .btn-outline-accent:hover{
     background:var(--accent);

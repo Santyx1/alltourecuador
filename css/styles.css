@@ -4857,30 +4857,3 @@ body.page-tour-detalle .tour-detail-hero-section{
     body.page-tour-detalle .tour-detail-hero-section{
         margin-top: 70px;
     }
-}
-
-
-/* Botón turquesa sólido (hero "Conócenos") */
-.btn-brand{
-    background: var(--brand);
-    color: var(--white);
-    border-color: var(--brand);
-}
-.btn-brand:hover{
-    background: var(--brand-dark);
-    border-color: var(--brand-dark);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0,166,181,0.35);
-}
-
-/* Botón outline turquesa (alternativa) */
-.btn-outline-brand-light{
-    background: transparent;
-    color: var(--white);
-    border-color: var(--brand-light);
-}
-.btn-outline-brand-light:hover{
-    background: var(--brand);
-    border-color: var(--brand);
-    color: var(--white);
-}

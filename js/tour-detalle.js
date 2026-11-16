@@ -43,6 +43,13 @@
         return localStorage.getItem('alltour_lang') || 'es';
     }
 
+    function translateKey(key) {
+        if (typeof translations !== 'undefined' && translations[currentLang] && translations[currentLang][key]) {
+            return translations[currentLang][key];
+        }
+        return '';
+    }
+
     // --- Cargar tours.json ---
     async function loadToursJson() {
         const res = await fetch(TOURS_JSON_URL, { cache: 'no-store' });
@@ -53,6 +60,7 @@
     // --- Renderizar contenido ---
     function renderTour(tour) {
         const lang = currentLang;
+
         const data = {
             titulo:      pickLang(tour.titulo, lang),
             eyebrow:     pickLang(tour.eyebrow, lang),
@@ -105,6 +113,15 @@
                 .map(i => `<li>${escapeHtml(pickLang(i, lang))}</li>`)
                 .join('');
         }
+
+        // Precio en el sidebar
+        const priceEl    = document.querySelector('.tour-price-sidebar-value');
+        const priceLabel = document.querySelector('.tour-price-sidebar-label');
+        const priceNote  = document.querySelector('.tour-price-sidebar-note');
+
+        if (priceEl)    priceEl.textContent    = `$${tour.precio || 0}`;
+        if (priceLabel) priceLabel.textContent = translateKey('tour.from') || 'Desde';
+        if (priceNote)  priceNote.textContent  = translateKey('tour.person') || 'por persona';
 
         // Título del documento
         document.title = `${data.titulo || 'Tour'} | All Tour Ecuador`;

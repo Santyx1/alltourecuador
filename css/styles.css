@@ -1301,7 +1301,7 @@ main{ padding-top:var(--header-h); }
     position:absolute;
     top:16px;
     left:16px;
-    background:var(--accent);
+    background:var(--brand);
     color:var(--white);
     font-size:0.7rem;
     font-weight:700;
@@ -1377,7 +1377,7 @@ main{ padding-top:var(--header-h); }
     font-weight:700;
     letter-spacing:0.1em;
     text-transform:uppercase;
-    color:var(--brand-dark);
+    color:var(--accent);
     padding:0 0 4px;
     border-bottom:1px solid transparent;
     align-self:flex-start;

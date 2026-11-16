@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nosotros | All Tour Ecuador</title>
     <meta name="description" content="Conoce la historia, el equipo y la esencia de All Tour Ecuador. Un equipo profesional comprometido con un turismo auténtico y sostenible." />
-    <meta name="author" content="All Tour Ecuador"background-image:url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1920&q=80'); />
+    <meta name="author" content="All Tour Ecuador" />
 
     <!-- Open Graph -->
     <meta property="og:title" content="Nosotros | All Tour Ecuador" />
@@ -32,22 +32,19 @@
 <body>
 
     <!-- PRELOADER -->
-<div class="preloader" id="preloader">
-    <div class="preloader-inner">
-        <div class="preloader-logos">
-            <!-- Deja solo esta imagen -->
-            <img src="img/logo3.png" alt="AllTourEcuador" class="preloader-logo" />
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-logos">
+                <img src="img/logo3.png" alt="AllTourEcuador" class="preloader-logo" />
+            </div>
+            <div class="preloader-bar"><span></span></div>
         </div>
-        <div class="preloader-bar"><span></span></div>
     </div>
-</div>
-
 
     <!-- HEADER -->
     <header class="site-header scrolled" id="siteHeader">
         <div class="container nav-wrapper">
             <a href="index.html" class="brand" aria-label="All Tour Ecuador - Inicio">
-                <!-- REEMPLAZAR IMAGEN: logo oficial (más grande) -->
                 <img src="img/logo3.png" alt="All Tour Ecuador" class="brand-logo" />
             </a>
 
@@ -56,7 +53,6 @@
                 <a href="nosotros.html" class="active" data-i18n="nav.nosotros">Nosotros</a>
                 <a href="tours.html" data-i18n="nav.tours">Tours</a>
                 <a href="destinos.html" data-i18n="nav.destinos">Destinos</a>
-                <!--<a href="servicios.html" data-i18n="nav.servicios">Servicios</a>-->
                 <a href="experiencias.html" data-i18n="nav.experiencias">Experiencias</a>
                 <a href="contacto.html" data-i18n="nav.contacto">Contacto</a>
             </nav>
@@ -95,13 +91,22 @@
             <a href="nosotros.html" data-i18n="nav.nosotros">Nosotros</a>
             <a href="tours.html" data-i18n="nav.tours">Tours</a>
             <a href="destinos.html" data-i18n="nav.destinos">Destinos</a>
-            <!--<a href="servicios.html" data-i18n="nav.servicios">Servicios</a>-->
             <a href="experiencias.html" data-i18n="nav.experiencias">Experiencias</a>
             <a href="contacto.html" data-i18n="nav.contacto">Contacto</a>
         </nav>
         <div class="mobile-menu-contact">
-            <a href="tel:+593997898745"><i class="fa-solid fa-phone"></i> +593 99 789 8745</a>
-            <a href="mailto:alltourecuador@gmail.com"><i class="fa-solid fa-envelope"></i> alltourecuador@gmail.com</a>
+            <a href="tel:+593997898745"
+               data-empresa="telefono"
+               data-empresa-href="tel">
+                <i class="fa-solid fa-phone"></i>
+                <span data-empresa="telefonoTexto">+593 99 789 8745</span>
+            </a>
+            <a href="mailto:alltourecuador@gmail.com"
+               data-empresa="email"
+               data-empresa-href="mailto">
+                <i class="fa-solid fa-envelope"></i>
+                <span data-empresa="emailTexto">alltourecuador@gmail.com</span>
+            </a>
         </div>
     </div>
 
@@ -111,14 +116,13 @@
              PAGE HERO
         =============================== -->
         <section class="page-hero">
-            <!-- REEMPLAZAR IMAGEN: paisaje andino con turista (carpeta Drive usuario) -->
             <div class="page-hero-bg" style="background-image:url('img/max_experience.jpg');"></div>
             <div class="page-hero-overlay"></div>
 
             <div class="container page-hero-content">
-                <span class="section-eyebrow light">Quiénes somos</span>
-                <h1 class="page-hero-title">Más que un viaje,<br>una experiencia de vida</h1>
-                <p class="page-hero-desc">
+                <span class="section-eyebrow light" data-i18n="about.eyebrow">Quiénes somos</span>
+                <h1 class="page-hero-title" data-i18n="about.hero.title">Más que un viaje,<br>una experiencia de vida</h1>
+                <p class="page-hero-desc" data-i18n="about.hero.desc">
                     Conoce la historia, el equipo y la esencia que hacen posible vivir un Ecuador auténtico.
                 </p>
             </div>
@@ -131,30 +135,29 @@
             <div class="container">
                 <div class="story-grid">
                     <div class="story-image">
-                        <!-- REEMPLAZAR IMAGEN: equipo/familia local (carpeta Drive usuario) -->
                         <img src="img/gerente_1.jpg" alt="All Tour Ecuador - historia" loading="lazy" />
                         <div class="story-badge">
                             <strong>15+</strong>
-                            <span>Años de experiencia</span>
+                            <span data-i18n="story.badge">Años de experiencia</span>
                         </div>
                     </div>
 
                     <div class="story-content">
-                        <span class="section-eyebrow">Our Story</span>
-                        <h2 class="section-heading">Nuestra historia</h2>
-                        <p class="story-text">
+                        <span class="section-eyebrow" data-i18n="story.eyebrow">Our Story</span>
+                        <h2 class="section-heading" data-i18n="story.title">Nuestra historia</h2>
+                        <p class="story-text" data-i18n="story.p1">
                             ALL TOUR ECUADOR nace con el propósito de mostrar un Ecuador que va más allá de sus
                             destinos turísticos. Nacemos desde el conocimiento y la experiencia en territorio,
                             convencidos de que viajar también significa conocer personas, compartir culturas,
                             descubrir sabores, caminar por paisajes y acercarse a las historias que hacen único
                             a cada lugar.
                         </p>
-                        <p class="story-text">
+                        <p class="story-text" data-i18n="story.p2">
                             Con el tiempo, hemos construido una propuesta que combina autenticidad, atención
                             personalizada, seguridad y profesionalismo, trabajando de manera cercana con comunidades,
                             familias, emprendimientos y prestadores de servicios locales.
                         </p>
-                        <p class="story-text">
+                        <p class="story-text" data-i18n="story.p3">
                             Hoy, ALL TOUR ECUADOR diseña y opera experiencias que buscan conectar al viajero
                             con la verdadera esencia del país: un Ecuador diverso, cultural y natural,
                             que no solo se visita, sino que se vive.
@@ -170,25 +173,25 @@
         <section class="section-team-intro">
             <div class="container">
                 <div class="section-header-center">
-                    <span class="section-eyebrow">About Our Team</span>
-                    <h2 class="section-heading">Un equipo que conoce y vive cada territorio</h2>
+                    <span class="section-eyebrow" data-i18n="team.eyebrow">About Our Team</span>
+                    <h2 class="section-heading" data-i18n="team.title">Un equipo que conoce y vive cada territorio</h2>
                 </div>
 
                 <div class="team-intro-grid">
                     <div class="team-intro-content">
-                        <p>
+                        <p data-i18n="team.p1">
                             En ALL TOUR ECUADOR contamos con un equipo profesional y comprometido, integrado
                             por guías especializados, personal de logística preparado y prestadores de servicios
                             de calidad que trabajan de manera coordinada para garantizar experiencias seguras,
                             auténticas y bien organizadas.
                         </p>
-                        <p>
+                        <p data-i18n="team.p2">
                             Nuestro equipo también está formado por quienes conocen y viven cada territorio:
                             mujeres y hombres del campo, organizaciones comunitarias, feriantes, agricultores,
                             artesanos, emprendedores y conocedores de la espiritualidad, la cultura y las
                             prácticas de sostenibilidad.
                         </p>
-                        <p>
+                        <p data-i18n="team.p3">
                             Valoramos sus conocimientos y experiencias como parte fundamental de nuestros
                             servicios, creando un vínculo entre el profesional del turismo y los verdaderos
                             protagonistas de cada destino. Así construimos una propuesta donde la calidad
@@ -198,7 +201,6 @@
                     </div>
 
                     <div class="team-intro-image">
-                        <!-- REEMPLAZAR IMAGEN: equipo All Tour Ecuador (carpeta Drive usuario) -->
                         <img src="img/gerente_2.jpg" alt="Equipo All Tour Ecuador" loading="lazy" />
                     </div>
                 </div>
@@ -209,85 +211,55 @@
              WHY US?
         =============================== -->
         <section class="section-why-us">
-            <!-- REEMPLAZAR IMAGEN: paisaje andino (carpeta Drive usuario) -->
             <div class="parallax-bg" style="background-image:url('img/viajar.jpeg');"></div>
             <div class="parallax-overlay"></div>
 
             <div class="container why-us-content">
-                <span class="section-eyebrow light">Why Us?</span>
-                <h2 class="section-heading light">¿Por qué viajar con nosotros?</h2>
-                <p class="why-us-text">
+                <span class="section-eyebrow light" data-i18n="whyus.eyebrow">Why Us?</span>
+                <h2 class="section-heading light" data-i18n="whyus.title">¿Por qué viajar con nosotros?</h2>
+                <p class="why-us-text" data-i18n="whyus.p1">
                     Viajar con ALL TOUR ECUADOR es elegir una manera diferente de conocer Ecuador:
                     no solo visitamos destinos, sino que conectamos al viajero con la esencia de cada
                     territorio, sus culturas, comunidades, familias, gastronomía, naturaleza y saberes
                     ancestrales.
                 </p>
-                <p class="why-us-text">
+                <p class="why-us-text" data-i18n="whyus.p2">
                     Diseñamos experiencias auténticas y personalizadas que combinan convivencia,
                     aventura, cultura y naturaleza con una operación profesional, segura y responsable,
                     generando además oportunidades para quienes hacen del turismo una forma de vida.
                 </p>
-                <p class="why-us-text">
+                <p class="why-us-text" data-i18n="whyus.p3">
                     Queremos que cada viajero no se lleve únicamente fotografías, sino historias,
                     emociones y vínculos que permanezcan en su memoria. Porque Ecuador no solo se
                     conoce: se siente, se comparte y se vive.
                 </p>
 
-                <div class="why-us-features">
-                    <div class="why-us-feature">
-                        <!-- REEMPLAZAR LOTTIE: icono animado propio -->
-                        <div class="lottie-icon" style="width:60px;height:60px;margin-bottom:6px;">
-                            <lottie-player
-                                src="https://assets10.lottiefiles.com/packages/lf20_kyu7xb1v.json"
-                                background="transparent"
-                                speed="1"
-                                loop
-                                autoplay>
-                            </lottie-player>
-                        </div>
-                        <span>Turismo con propósito</span>
-                    </div>
-                    <div class="why-us-feature">
-                        <!-- REEMPLAZAR LOTTIE: icono animado propio -->
-                        <div class="lottie-icon" style="width:60px;height:60px;margin-bottom:6px;">
-                            <lottie-player
-                                src="https://assets10.lottiefiles.com/packages/lf20_kyu7xb1v.json"
-                                background="transparent"
-                                speed="1"
-                                loop
-                                autoplay>
-                            </lottie-player>
-                        </div>
-                        <span>Sostenibilidad real</span>
-                    </div>
-                    <div class="why-us-feature">
-                        <!-- REEMPLAZAR LOTTIE: icono animado propio -->
-                        <div class="lottie-icon" style="width:60px;height:60px;margin-bottom:6px;">
-                            <lottie-player
-                                src="https://assets10.lottiefiles.com/packages/lf20_kyu7xb1v.json"
-                                background="transparent"
-                                speed="1"
-                                loop
-                                autoplay>
-                            </lottie-player>
-                        </div>
-                        <span>Equipo profesional</span>
-                    </div>
-                    <div class="why-us-feature">
-                        <!-- REEMPLAZAR LOTTIE: icono animado propio -->
-                        <div class="lottie-icon" style="width:60px;height:60px;margin-bottom:6px;">
-                            <lottie-player
-                                src="https://assets10.lottiefiles.com/packages/lf20_kyu7xb1v.json"
-                                background="transparent"
-                                speed="1"
-                                loop
-                                autoplay>
-                            </lottie-player>
-                        </div>
-                        <span>Experiencias memorables</span>
-                    </div>
-                </div>
-            </div>
+<div class="why-us-features">
+    <div class="why-us-feature">
+        <div class="why-us-icon">
+            <img src="img/proposito1.png" alt="Turismo con propósito" loading="lazy" />
+        </div>
+        <span data-i18n="whyus.feature1">Turismo con propósito</span>
+    </div>
+    <div class="why-us-feature">
+        <div class="why-us-icon">
+            <img src="img/sostenibilidad.png" alt="Sostenibilidad real" loading="lazy" />
+        </div>
+        <span data-i18n="whyus.feature2">Sostenibilidad real</span>
+    </div>
+    <div class="why-us-feature">
+        <div class="why-us-icon">
+            <img src="img/equipo.png" alt="Equipo profesional" loading="lazy" />
+        </div>
+        <span data-i18n="whyus.feature3">Equipo profesional</span>
+    </div>
+    <div class="why-us-feature">
+        <div class="why-us-icon">
+            <img src="img/experiencias_memorables.png" alt="Experiencias memorables" loading="lazy" />
+        </div>
+        <span data-i18n="whyus.feature4">Experiencias memorables</span>
+    </div>
+</div>            </div>
         </section>
 
         <!-- ==============================
@@ -296,9 +268,9 @@
         <section class="section-meet-team" id="equipo">
             <div class="container">
                 <div class="section-header-center">
-                    <span class="section-eyebrow">Meet Our Team</span>
-                    <h2 class="section-heading">Los protagonistas de cada experiencia</h2>
-                    <p class="section-lead">
+                    <span class="section-eyebrow" data-i18n="meetteam.eyebrow">Meet Our Team</span>
+                    <h2 class="section-heading" data-i18n="meetteam.title">Los protagonistas de cada experiencia</h2>
+                    <p class="section-lead" data-i18n="meetteam.lead">
                         Profesionales del turismo y conocedores locales unidos por un mismo propósito:
                         hacer vivir un Ecuador auténtico.
                     </p>
@@ -306,10 +278,9 @@
 
                 <div class="team-grid">
 
-                    <!-- Rol 1: EMPRENDEDORES  -->
+                    <!-- Rol 1: EMPRENDEDORES -->
                     <article class="team-card">
                         <div class="team-image">
-                            <!-- REEMPLAZAR IMAGEN: jefe de operaciones (carpeta Drive usuario) -->
                             <img src="img/emprendimiento.png" alt="EMPRENDEDORES" loading="lazy" />
                             <div class="team-overlay"></div>
                             <div class="team-icon">
@@ -317,8 +288,8 @@
                             </div>
                         </div>
                         <div class="team-info">
-                            <h3>EMPRENDEDORES</h3>
-                            <p>
+                            <h3 data-i18n="teamcard.1.title">EMPRENDEDORES</h3>
+                            <p data-i18n="teamcard.1.text">
                                 Como emprendedores del sector turístico, trabajamos con un profundo compromiso y constante preparación profesional, entregando en cada servicio la pasión, el detalle y la maestría artesanal de nuestra tierra para ofrecer vivencias auténticas e inolvidables.
                             </p>
                         </div>
@@ -327,7 +298,6 @@
                     <!-- Rol 2: Guías Locales -->
                     <article class="team-card">
                         <div class="team-image">
-                            <!-- REEMPLAZAR IMAGEN: guías locales (carpeta Drive usuario) -->
                             <img src="img/guias_locales.JPG" alt="Guías Locales" loading="lazy" />
                             <div class="team-overlay"></div>
                             <div class="team-icon">
@@ -335,8 +305,8 @@
                             </div>
                         </div>
                         <div class="team-info">
-                            <h3>GUÍAS LOCALES</h3>
-                            <p>
+                            <h3 data-i18n="teamcard.2.title">GUÍAS LOCALES</h3>
+                            <p data-i18n="teamcard.2.text">
                                 Como conocedor de mi territorio, acompaño a nuestros visitantes compartiendo la historia, cultura, naturaleza y tradiciones que hacen único a cada destino.
                             </p>
                         </div>
@@ -345,7 +315,6 @@
                     <!-- Rol 3: Agricultores -->
                     <article class="team-card">
                         <div class="team-image">
-                            <!-- REEMPLAZAR IMAGEN: agricultores (carpeta Drive usuario) -->
                             <img src="img/agricultores.JPG" alt="Agricultores" loading="lazy" />
                             <div class="team-overlay"></div>
                             <div class="team-icon">
@@ -353,8 +322,8 @@
                             </div>
                         </div>
                         <div class="team-info">
-                            <h3>AGRICULTORES</h3>
-                            <p>
+                            <h3 data-i18n="teamcard.3.title">AGRICULTORES</h3>
+                            <p data-i18n="teamcard.3.text">
                                 Desde la chakra y el trabajo de la tierra, compartimos nuestros productos, conocimientos y formas de vida, permitiendo al visitante conocer el origen de nuestros alimentos y nuestra cultura.
                             </p>
                         </div>
@@ -363,7 +332,6 @@
                     <!-- Rol 4: Asociación de Mujeres -->
                     <article class="team-card">
                         <div class="team-image">
-                            <!-- REEMPLAZAR IMAGEN: asociación de mujeres (carpeta Drive usuario) -->
                             <img src="img/asociacion_mujeres.JPG" alt="Asociación de Mujeres" loading="lazy" />
                             <div class="team-overlay"></div>
                             <div class="team-icon">
@@ -371,8 +339,8 @@
                             </div>
                         </div>
                         <div class="team-info">
-                            <h3>ASOCIACIÓN DE MUJERES</h3>
-                            <p>
+                            <h3 data-i18n="teamcard.4.title">ASOCIACIÓN DE MUJERES</h3>
+                            <p data-i18n="teamcard.4.text">
                                 A través de nuestro trabajo asociativo, transformamos productos, conocimientos y tradiciones en experiencias que generan oportunidades para nuestras familias y fortalecen nuestra comunidad.
                             </p>
                         </div>
@@ -381,7 +349,6 @@
                     <!-- Rol 5: SOSTENIBILIDAD -->
                     <article class="team-card">
                         <div class="team-image">
-                            <!-- REEMPLAZAR IMAGEN: SOSTENIBILIDAD (carpeta Drive usuario) -->
                             <img src="img/SOSTENIBILIDAD.jpg" alt="SOSTENIBILIDAD" loading="lazy" />
                             <div class="team-overlay"></div>
                             <div class="team-icon">
@@ -389,8 +356,8 @@
                             </div>
                         </div>
                         <div class="team-info">
-                            <h3>SOSTENIBILIDAD</h3>
-                            <p>
+                            <h3 data-i18n="teamcard.5.title">SOSTENIBILIDAD</h3>
+                            <p data-i18n="teamcard.5.text">
                                 Nuestro compromiso con la sostenibilidad asegura un futuro donde la riqueza de nuestra flora y fauna, y la belleza de este páramo sagrado, permanezcan intactos para las generaciones venideras.
                             </p>
                         </div>
@@ -399,16 +366,15 @@
                     <!-- Rol 6: Chefs -->
                     <article class="team-card">
                         <div class="team-image">
-                            <!-- REEMPLAZAR IMAGEN: chefs (carpeta Drive usuario) -->
                             <img src="img/chefs.jpeg" alt="Chefs" loading="lazy" />
-                            <div class="team-overlay"></div> 
+                            <div class="team-overlay"></div>
                             <div class="team-icon">
                                 <i class="fa-solid fa-utensils"></i>
                             </div>
                         </div>
                         <div class="team-info">
-                            <h3>CHEFS</h3>
-                            <p>
+                            <h3 data-i18n="teamcard.6.title">CHEFS</h3>
+                            <p data-i18n="teamcard.6.text">
                                 Desde nuestra cocina llevamos a la mesa los sabores del territorio, utilizando productos locales para convertir cada plato en una forma de conocer nuestra cultura y nuestras tradiciones.
                             </p>
                         </div>
@@ -417,7 +383,6 @@
                     <!-- Rol 7: Transportistas -->
                     <article class="team-card">
                         <div class="team-image">
-                            <!-- REEMPLAZAR IMAGEN: transportistas (carpeta Drive usuario) -->
                             <img src="img/transportistas.png" alt="Transportistas" loading="lazy" />
                             <div class="team-overlay"></div>
                             <div class="team-icon">
@@ -425,8 +390,8 @@
                             </div>
                         </div>
                         <div class="team-info">
-                            <h3>TRANSPORTISTAS</h3>
-                            <p>
+                            <h3 data-i18n="teamcard.7.title">TRANSPORTISTAS</h3>
+                            <p data-i18n="teamcard.7.text">
                                 Con experiencia en las rutas y caminos del Ecuador, nuestro compromiso es brindar traslados seguros, responsables y puntuales, conectando cada destino con una operación turística de calidad.
                             </p>
                         </div>
@@ -440,20 +405,19 @@
              CTA FINAL
         =============================== -->
         <section class="section-cta-final">
-            <!-- REEMPLAZAR IMAGEN: CTA final (carpeta Drive usuario) -->
             <div class="cta-bg" style="background-image:url('img/siluetas.jpg');"></div>
             <div class="cta-overlay"></div>
 
             <div class="container cta-content">
-                <span class="section-eyebrow light">Encuentra la convivencia cultural perfecta</span>
-                <h2 class="cta-title">Ecuador no solo se conoce:<br>se siente, se comparte y se vive.</h2>
-                <p class="cta-desc">Te ayudamos a construir tu próxima experiencia.</p>
+                <span class="section-eyebrow light" data-i18n="cta.eyebrow">Encuentra la convivencia cultural perfecta</span>
+                <h2 class="cta-title" data-i18n="cta.title">Ecuador no solo se conoce:<br>se siente, se comparte y se vive.</h2>
+                <p class="cta-desc" data-i18n="cta.desc">Te ayudamos a construir tu próxima experiencia.</p>
                 <div class="cta-buttons">
                     <a href="contacto.html" class="btn btn-accent btn-lg">
-                        Comienza tu viaje
+                        <span data-i18n="cta.btn1">Comienza tu viaje</span>
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
-                    <a href="tours.html" class="btn btn-ghost btn-lg">Ver tours</a>
+                    <a href="tours.html" class="btn btn-ghost btn-lg" data-i18n="cta.btn2">Ver tours</a>
                 </div>
             </div>
         </section>
@@ -464,19 +428,34 @@
     <footer class="site-footer">
         <div class="container footer-grid">
             <div class="footer-col footer-brand-col">
-                <!-- REEMPLAZAR IMAGEN: logo oficial (footer) -->
                 <img src="img/logo3.png" alt="All Tour Ecuador" class="footer-logo" />
-                <p class="footer-tagline">Your Gateway to Authenticity</p>
-                <p class="footer-desc" data-i18n="footer.desc">Agencia de Viajes y Operador Turístico. Ecuador, desde el corazón del planeta.</p>
+                <p class="footer-tagline" data-empresa="slogan">Your Gateway to Authenticity</p>
+                <p class="footer-desc" data-empresa="descripcion">Agencia de Viajes y Operador Turístico. Ecuador, desde el corazón del planeta.</p>
             </div>
 
             <div class="footer-col">
                 <h4 data-i18n="footer.contact">Contacto</h4>
                 <ul class="footer-list">
-                    <li><i class="fa-solid fa-location-dot"></i><span data-i18n="footer.address">Calle Bolívar, entre Neptalí Ordoñez y Av. Quito</span></li>
-                    <li><i class="fa-solid fa-phone"></i><a href="tel:+593997898745">+593 99 789 8745</a></li>
-                    <li><i class="fa-brands fa-whatsapp"></i><a href="https://wa.me/593997898745" target="_blank" rel="noopener">WhatsApp</a></li>
-                    <li><i class="fa-solid fa-envelope"></i><a href="mailto:alltourecuador@gmail.com">alltourecuador@gmail.com</a></li>
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span data-empresa="direccion">Calle Bolívar, entre Neptalí Ordoñez y Av. Quito</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:+593997898745" data-empresa="telefono" data-empresa-href="tel">+593 99 789 8745</a>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <a href="https://wa.me/593997898745"
+                           data-empresa="whatsapp"
+                           data-empresa-href="whatsapp"
+                           target="_blank" rel="noopener"
+                           data-i18n="footer.whatsapp">WhatsApp</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:alltourecuador@gmail.com" data-empresa="email" data-empresa-href="mailto">alltourecuador@gmail.com</a>
+                    </li>
                 </ul>
             </div>
 
@@ -485,7 +464,6 @@
                 <ul class="footer-list footer-links">
                     <li><a href="tours.html" data-i18n="nav.tours">Tours</a></li>
                     <li><a href="destinos.html" data-i18n="nav.destinos">Destinos</a></li>
-                    <!--<a href="servicios.html" data-i18n="nav.servicios">Servicios</a>-->
                     <li><a href="experiencias.html" data-i18n="nav.experiencias">Experiencias</a></li>
                     <li><a href="nosotros.html" data-i18n="nav.nosotros">Nosotros</a></li>
                     <li><a href="contacto.html" data-i18n="nav.contacto">Contacto</a></li>
@@ -495,21 +473,21 @@
             <div class="footer-col">
                 <h4 data-i18n="footer.follow">Síguenos</h4>
                 <div class="social-icons">
-                    <a href="https://www.facebook.com/Alltourecuador" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/alltourecuador593/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.tiktok.com/@alltourecuador" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-                    <a href="https://www.youtube.com/@alltourecuador2485" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.facebook.com/Alltourecuador" data-empresa="facebook" data-empresa-href="red" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/alltourecuador593/" data-empresa="instagram" data-empresa-href="red" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@alltourecuador" data-empresa="tiktok" data-empresa-href="red" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://www.youtube.com/@alltourecuador2485" data-empresa="youtube" data-empresa-href="red" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
                 </div>
-                <p class="social-hashtag">#AllTourEcuador</p>
+                <p class="social-hashtag" data-empresa="hashtag">#AllTourEcuador</p>
             </div>
         </div>
 
         <div class="footer-bottom">
             <div class="container footer-bottom-content">
-                <span data-i18n="footer.copy">© 2026 All Tour Ecuador. Todos los derechos reservados.</span>
+                <span data-empresa="copyright">© 2026 All Tour Ecuador. Todos los derechos reservados.</span>
                 <div class="footer-bottom-links">
-                    <a href="#" data-i18n="footer.privacy">Política de privacidad</a>
-                    <a href="#" data-i18n="footer.terms">Términos y condiciones</a>
+                    <a href="#" data-empresa="privacidad">Política de privacidad</a>
+                    <a href="#" data-empresa="terminos">Términos y condiciones</a>
                 </div>
             </div>
         </div>
@@ -517,6 +495,8 @@
 
     <!-- WhatsApp Flotante -->
     <a href="https://wa.me/593997898745?text=Hola%20All%20Tour%20Ecuador,%20quiero%20informaci%C3%B3n%20sobre%20sus%20tours"
+       data-empresa="whatsappFloat"
+       data-empresa-href="whatsappFloat"
        target="_blank"
        rel="noopener"
        class="whatsapp-float"

@@ -2,8 +2,8 @@
 // TOURS PAGE — Render dinámico desde tours.json
 // ==========================================
 
-let toursData = [];          // array de tours cargados
-let toursCurrentLang = 'es'; // idioma actual
+let toursPageData = [];          // array de tours cargados
+let toursCurrentLang = 'es';     // idioma actual
 
 const TOURS_JSON_URL = 'data/tours.json';
 
@@ -32,11 +32,11 @@ async function loadToursData() {
     try {
         const res = await fetch(TOURS_JSON_URL, { cache: 'no-store' });
         if (!res.ok) throw new Error('No se pudo cargar tours.json');
-        toursData = await res.json();
-        return toursData;
+        toursPageData = await res.json();
+        return toursPageData;
     } catch (err) {
         console.error('Error cargando tours.json:', err);
-        toursData = [];
+        toursPageData = [];
         return [];
     }
 }
@@ -48,12 +48,12 @@ function renderToursGrid(lang) {
     const grid = document.getElementById('toursGrid');
     if (!grid) return;
 
-    if (!toursData.length) {
+    if (!toursPageData.length) {
         grid.innerHTML = `<p class="no-results" style="display:block;grid-column:1/-1;text-align:center;color:var(--text-light);padding:40px 0;" data-i18n="toursMain.noResults">No hay tours disponibles.</p>`;
         return;
     }
 
-    grid.innerHTML = toursData.map(tour => {
+    grid.innerHTML = toursPageData.map(tour => {
         const titulo  = escapeHtml(tourPickLang(tour.titulo, lang));
         const resumen = escapeHtml(tourPickLang(tour.resumen, lang));
         const nivelKey = tour.nivel || 'bajo';
@@ -101,7 +101,7 @@ function renderToursModals(lang) {
     const container = document.getElementById('toursModals');
     if (!container) return;
 
-    container.innerHTML = toursData.map(tour => {
+    container.innerHTML = toursPageData.map(tour => {
         const titulo  = escapeHtml(tourPickLang(tour.titulo, lang));
         const eyebrow = escapeHtml(tourPickLang(tour.eyebrow, lang));
         const slogan  = escapeHtml(tourPickLang(tour.slogan, lang));
@@ -192,7 +192,6 @@ function renderToursModals(lang) {
 // 4. Traducciones: usar el dict global si existe
 // ------------------------------------------
 function translateKey(key) {
-    // Usa `translations` de script.js si está disponible
     if (typeof translations !== 'undefined' && translations[toursCurrentLang] && translations[toursCurrentLang][key]) {
         return translations[toursCurrentLang][key];
     }
@@ -238,7 +237,6 @@ function initFilters() {
         });
     }
 
-    // estado inicial
     applyFilters();
 }
 
@@ -262,7 +260,6 @@ function createNoResultsEl() {
 // 6. Modales: apertura / cierre
 // ------------------------------------------
 function initModalListeners() {
-    // Abrir
     document.querySelectorAll('.tour-open-modal').forEach(btn => {
         btn.addEventListener('click', () => {
             const id = btn.dataset.tour;
@@ -274,7 +271,6 @@ function initModalListeners() {
         });
     });
 
-    // Cerrar (overlay, X, Escape)
     document.querySelectorAll('[data-close-modal]').forEach(el => {
         el.addEventListener('click', closeAllModals);
     });
@@ -293,7 +289,7 @@ function closeAllModals() {
 }
 
 // ------------------------------------------
-// 7. Render completo (tarjetas + modales + filtros)
+// 7. Render completo
 // ------------------------------------------
 function renderToursPage(lang) {
     toursCurrentLang = lang || 'es';
@@ -301,7 +297,6 @@ function renderToursPage(lang) {
     renderToursModals(toursCurrentLang);
     initModalListeners();
     initFilters();
-    // Reaplicar i18n a los textos estáticos que ya existían (sidebar, títulos)
     if (typeof applyLanguage === 'function') {
         applyLanguage(toursCurrentLang);
     }
@@ -312,16 +307,13 @@ function renderToursPage(lang) {
 // ------------------------------------------
 document.addEventListener('DOMContentLoaded', async () => {
     const grid = document.getElementById('toursGrid');
-    if (!grid) return; // no estamos en tours.html
+    if (!grid) return;
 
     toursCurrentLang = localStorage.getItem('alltour_lang') || 'es';
 
     await loadToursData();
     renderToursPage(toursCurrentLang);
 
-    // Escuchar cambios de idioma: re-renderizar
-    // applyLanguage guarda en localStorage y actualiza <html lang>
-    // Usamos un MutationObserver sobre <html lang> para detectarlo
     const htmlEl = document.documentElement;
     const observer = new MutationObserver(mutations => {
         mutations.forEach(m => {

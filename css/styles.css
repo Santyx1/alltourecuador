@@ -310,7 +310,7 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; }
     border-color:var(--brand);
 }
 .btn-outline-accent:hover{
-    background:var(--accent);
+    background:var(--brand);
     color:var(--white);
     border-color:var(--accent);
     box-shadow:0 8px 20px rgba(242,124,33,0.35);

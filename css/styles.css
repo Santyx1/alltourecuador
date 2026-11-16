@@ -2121,7 +2121,7 @@ main{ padding-top:var(--header-h); }
     inset:0;
     background-image:url('../img/fondo-footer.jpg');
     background-size:150% auto;
-    background-position: 25% center;   /* mueve la imagen hacia la derecha */
+    background-position: 35% center;   /* mueve la imagen hacia la derecha */
     background-repeat:no-repeat;
     opacity:0.50; /* ajustar según la imagen */
     z-index:-2;

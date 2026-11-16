@@ -2120,7 +2120,7 @@ main{ padding-top:var(--header-h); }
     position:absolute;
     inset:0;
     background-image:url('../img/fondo-footer.jpg');
-    background-size:cover;
+    background-size:150% auto;
     background-position:center;
     background-repeat:no-repeat;
     opacity:0.50; /* ajustar según la imagen */
@@ -2163,7 +2163,7 @@ main{ padding-top:var(--header-h); }
 }
 .footer-brand-col{ display:flex; flex-direction:column; gap:16px; }
 .footer-logo{
-    height:130px;
+    height:96px;
     width:auto;
     object-fit:contain;
     align-self:flex-start;

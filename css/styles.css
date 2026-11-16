@@ -845,14 +845,14 @@ main{ padding-top:var(--header-h); }
 /* ==========================================
    7. CADENA DE VALOR (Rediseñada)
    ========================================== */
+/* DESPUÉS */
 .section-philosophy{
     background:var(--text);
     color:var(--white);
-    padding:80px 0;
+    padding:36px 0;   /* antes 80px → ahora menos de la mitad */
     position:relative;
     overflow:hidden;
 }
-
 .value-chain{
     display:flex;
     flex-direction:column;

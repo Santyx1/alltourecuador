@@ -4840,3 +4840,21 @@ main{ padding-top:var(--header-h); }
         max-width:120px;
     }
 }
+
+/* ==========================================
+   TOUR DETALLE — hero empieza debajo del header
+   (header visible, título limpio)
+   ========================================== */
+body.page-tour-detalle main{
+    padding-top:0;
+}
+
+body.page-tour-detalle .tour-detail-hero-section{
+    margin-top: var(--header-h);
+}
+
+@media (max-width: 900px){
+    body.page-tour-detalle .tour-detail-hero-section{
+        margin-top: 70px;
+    }
+}

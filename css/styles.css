@@ -1228,7 +1228,7 @@ main{ padding-top:var(--header-h); }
     gap:6px;
     box-shadow:0 4px 12px rgba(0,0,0,0.15);
 }
-.region-badge i{ color:var(--accent); }
+.region-badge i{ color:var(--brand); }
 .region-info{
     padding:24px 22px;
     display:flex;

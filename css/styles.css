@@ -2645,7 +2645,7 @@ main{ padding-top:var(--header-h); }
     width:52px;
     height:52px;
     border-radius:50%;
-    background:var(--accent);
+    background:var(--brand);
     color:var(--white);
     display:grid;
     place-items:center;

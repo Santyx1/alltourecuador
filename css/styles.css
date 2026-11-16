@@ -2056,7 +2056,7 @@ main{ padding-top:var(--header-h); }
     background-position:center;
     background-attachment:fixed;
     z-index:0;
-    transform:scale(2.25);
+    transform:scale(1.05);
 }
 .cta-overlay{
     position:absolute;
@@ -2163,7 +2163,7 @@ main{ padding-top:var(--header-h); }
 }
 .footer-brand-col{ display:flex; flex-direction:column; gap:16px; }
 .footer-logo{
-    height:96px;
+    height:130px;
     width:auto;
     object-fit:contain;
     align-self:flex-start;

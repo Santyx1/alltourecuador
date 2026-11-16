@@ -2123,7 +2123,7 @@ main{ padding-top:var(--header-h); }
     background-size:150% auto;
     background-position: 38% 40%;   
     background-repeat:no-repeat;
-    opacity:0.50; /* ajustar según la imagen */
+    opacity:0.10; /* ajustar según la imagen */
     z-index:-2;
 }
 

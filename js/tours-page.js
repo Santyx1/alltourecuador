@@ -2,8 +2,8 @@
 // TOURS PAGE — Render dinámico desde tours.json
 // ==========================================
 
-let toursPageData = [];          // array de tours cargados
-let toursCurrentLang = 'es';     // idioma actual
+let toursPageData = [];
+let toursCurrentLang = 'es';
 
 const TOURS_JSON_URL = 'data/tours.json';
 
@@ -55,10 +55,8 @@ function renderToursGrid(lang) {
 
     grid.innerHTML = toursPageData.map(tour => {
         const titulo  = escapeHtml(tourPickLang(tour.titulo, lang));
-        const resumen = escapeHtml(tourPickLang(tour.resumen, lang));
         const nivelKey = tour.nivel || 'bajo';
         const nivelTxt = translateKey('filter.nivel.' + nivelKey) || nivelKey;
-        const minPax   = tour.minPax || 4;
         const precio   = tour.precio || 0;
         const destino  = (tour.destino || []).join(' ');
         const tipo     = (tour.tipo || []).join(' ');
@@ -84,9 +82,9 @@ function renderToursGrid(lang) {
                             <small>${escapeHtml(translateKey('tour.from') || 'Desde')}</small>
                             <strong>$${precio}</strong>
                         </div>
-                        <button type="button" class="btn btn-accent btn-sm tour-open-modal" data-tour="${tour.id}">
+                        <a href="tour-detalle.html?tour=${tour.id}" class="btn btn-accent btn-sm">
                             ${escapeHtml(translateKey('tour.view') || 'Ver tour')} <i class="fa-solid fa-arrow-right"></i>
-                        </button>
+                        </a>
                     </div>
                 </div>
             </article>
@@ -95,101 +93,7 @@ function renderToursGrid(lang) {
 }
 
 // ------------------------------------------
-// 3. Render de modales
-// ------------------------------------------
-function renderToursModals(lang) {
-    const container = document.getElementById('toursModals');
-    if (!container) return;
-
-    container.innerHTML = toursPageData.map(tour => {
-        const titulo  = escapeHtml(tourPickLang(tour.titulo, lang));
-        const eyebrow = escapeHtml(tourPickLang(tour.eyebrow, lang));
-        const slogan  = escapeHtml(tourPickLang(tour.slogan, lang));
-        const callout = escapeHtml(tourPickLang(tour.callout, lang));
-        const desc    = escapeHtml(tourPickLang(tour.descripcion, lang));
-
-        const itinerario = (tour.itinerario || []).map(it => `
-            <li>
-                <span class="itinerary-time">${escapeHtml(it.hora)}</span>
-                <span class="itinerary-text">${escapeHtml(tourPickLang(it.texto, lang))}</span>
-            </li>
-        `).join('');
-
-        const ficha = (tour.ficha || []).map(f => `
-            <li>
-                <strong>${escapeHtml(tourPickLang(f.label, lang))}</strong>
-                <span>${escapeHtml(tourPickLang(f.valor, lang))}</span>
-            </li>
-        `).join('');
-
-        const incluye = (tour.incluye || []).map(i =>
-            `<li>${escapeHtml(tourPickLang(i, lang))}</li>`
-        ).join('');
-
-        const noIncluye = (tour.noIncluye || []).map(i =>
-            `<li>${escapeHtml(tourPickLang(i, lang))}</li>`
-        ).join('');
-
-        return `
-        <div class="tour-modal" id="modal-tour-${tour.id}" aria-hidden="true">
-            <div class="tour-modal-overlay" data-close-modal></div>
-            <div class="tour-modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title-${tour.id}">
-                <button type="button" class="tour-modal-close" data-close-modal aria-label="Cerrar">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-
-                <div class="tour-modal-hero">
-                    <img src="${escapeHtml(tour.imagen)}" alt="${escapeHtml(tour.imagenAlt || titulo)}">
-                    <div class="tour-modal-hero-overlay"></div>
-                    <div class="tour-modal-hero-text">
-                        <span class="tour-modal-eyebrow">${eyebrow}</span>
-                        <h2 id="modal-title-${tour.id}">${titulo}</h2>
-                        <p>"${slogan}"</p>
-                    </div>
-                </div>
-
-                <div class="tour-modal-body">
-                    <div class="tour-modal-cols">
-                        <div class="tour-modal-main">
-                            <div class="tour-modal-callout">${callout}</div>
-
-                            <h3 class="tour-modal-subtitle">${escapeHtml(translateKey('modal.description') || 'Descripción de la Experiencia')}</h3>
-                            <p>${desc}</p>
-
-                            <h3 class="tour-modal-subtitle">${escapeHtml(translateKey('modal.itinerary') || 'Itinerario')}</h3>
-                            <ul class="tour-modal-itinerary">${itinerario}</ul>
-                        </div>
-
-                        <aside class="tour-modal-side">
-                            <div class="tour-modal-facts">
-                                <h3 class="tour-modal-subtitle">${escapeHtml(translateKey('modal.facts') || 'Ficha Técnica')}</h3>
-                                <ul>${ficha}</ul>
-                            </div>
-
-                            <div class="tour-modal-includes">
-                                <h4><i class="fa-solid fa-circle-check"></i> ${escapeHtml(translateKey('modal.includes') || 'Incluye')}</h4>
-                                <ul>${incluye}</ul>
-                            </div>
-
-                            <div class="tour-modal-not-includes">
-                                <h4><i class="fa-solid fa-circle-xmark"></i> ${escapeHtml(translateKey('modal.notIncludes') || 'No incluye')}</h4>
-                                <ul>${noIncluye}</ul>
-                            </div>
-
-                            <a href="contacto.html" class="btn btn-accent">
-                                ${escapeHtml(translateKey('modal.cta') || 'Cotizar este tour')} <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-                        </aside>
-                    </div>
-                </div>
-            </div>
-        </div>
-        `;
-    }).join('');
-}
-
-// ------------------------------------------
-// 4. Traducciones: usar el dict global si existe
+// 3. Traducciones: usar el dict global si existe
 // ------------------------------------------
 function translateKey(key) {
     if (typeof translations !== 'undefined' && translations[toursCurrentLang] && translations[toursCurrentLang][key]) {
@@ -199,7 +103,7 @@ function translateKey(key) {
 }
 
 // ------------------------------------------
-// 5. Filtros
+// 4. Filtros
 // ------------------------------------------
 function initFilters() {
     const filterInputs = document.querySelectorAll('.filter-list input[type="checkbox"]');
@@ -257,45 +161,11 @@ function createNoResultsEl() {
 }
 
 // ------------------------------------------
-// 6. Modales: apertura / cierre
-// ------------------------------------------
-function initModalListeners() {
-    document.querySelectorAll('.tour-open-modal').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const id = btn.dataset.tour;
-            const modal = document.getElementById('modal-tour-' + id);
-            if (!modal) return;
-            modal.classList.add('open');
-            modal.setAttribute('aria-hidden', 'false');
-            document.body.classList.add('no-scroll');
-        });
-    });
-
-    document.querySelectorAll('[data-close-modal]').forEach(el => {
-        el.addEventListener('click', closeAllModals);
-    });
-
-    document.addEventListener('keydown', e => {
-        if (e.key === 'Escape') closeAllModals();
-    });
-}
-
-function closeAllModals() {
-    document.querySelectorAll('.tour-modal.open').forEach(m => {
-        m.classList.remove('open');
-        m.setAttribute('aria-hidden', 'true');
-    });
-    document.body.classList.remove('no-scroll');
-}
-
-// ------------------------------------------
-// 7. Render completo
+// 5. Render completo
 // ------------------------------------------
 function renderToursPage(lang) {
     toursCurrentLang = lang || 'es';
     renderToursGrid(toursCurrentLang);
-    renderToursModals(toursCurrentLang);
-    initModalListeners();
     initFilters();
     if (typeof applyLanguage === 'function') {
         applyLanguage(toursCurrentLang);
@@ -303,7 +173,7 @@ function renderToursPage(lang) {
 }
 
 // ------------------------------------------
-// 8. Arranque
+// 6. Arranque
 // ------------------------------------------
 document.addEventListener('DOMContentLoaded', async () => {
     const grid = document.getElementById('toursGrid');

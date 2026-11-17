@@ -2129,6 +2129,7 @@ main{ padding-top:var(--header-h); }
 }
 
 /* Overlay oscuro + gradientes decorativos */
+/*
 .site-footer::after{
     content:"";
     position:absolute;
@@ -2137,6 +2138,14 @@ main{ padding-top:var(--header-h); }
         radial-gradient(circle at 15% 20%, rgba(77,184,232,0.50), transparent 55%),
         radial-gradient(circle at 85% 80%, rgba(43,168,160,0.50), transparent 55%),
         linear-gradient(180deg, rgba(26,58,79,0.95) 0%, rgba(26,58,79,0.65) 100%);
+    z-index:-1;
+}
+*/
+.site-footer::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background: rgba(26,58,79,0.80);
     z-index:-1;
 }
 /* Asegurar que TODO el contenido quede encima del fondo */

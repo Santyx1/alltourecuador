@@ -33,7 +33,7 @@ if (!is_array($tours)) {
 }
 
 // --- Ruta destino (raíz, junto a save-tours.php) ---
-$destino = __DIR__ . '/tours.json';
+$destino = __DIR__ . '/data/tours.json';
 
 // --- Backup antes de sobrescribir ---
 if (file_exists($destino)) {

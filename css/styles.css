@@ -3678,7 +3678,7 @@ main{ padding-top:var(--header-h); }
     border-radius:999px;
 }
 .tour-modal-body::-webkit-scrollbar-thumb:hover{ background:var(--brand); }
-
+/*
 /* ==========================================
    31. SEPARADOR CON LOGOS (antes del footer)
    ========================================== */
@@ -3732,6 +3732,70 @@ main{ padding-top:var(--header-h); }
         max-height: 36px;
     }
 }
+*/
+/* ==========================================
+   SEPARADOR DE LOGOS
+   ========================================== */
+
+.section-separator-logos{
+    background: transparent;
+    padding: 40px 0;
+    border: none;
+}
+
+.separator-logos-title{
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 24px;
+}
+
+.separator-logos-grid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+
+    /* Fondo blanco exclusivo para los logos */
+    background: var(--white);
+    padding: 28px 35px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.separator-logos-grid img{
+    max-height: 50px;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.85;
+    transition: var(--transition);
+    filter: grayscale(100%);
+}
+
+.separator-logos-grid img:hover{
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+@media (max-width: 560px){
+    .section-separator-logos{
+        padding: 28px 0;
+    }
+
+    .separator-logos-grid{
+        gap: 24px;
+        padding: 22px 18px;
+    }
+
+    .separator-logos-grid img{
+        max-height: 36px;
+    }
+}
+
 /* ==========================================
    31. RESPONSIVE
    ========================================== */

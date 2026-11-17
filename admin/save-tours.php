@@ -1,19 +1,29 @@
 <?php
 /**
- * Guarda tours.json desde el panel admin.
- * Recibe un array JSON por POST y sobrescribe tours.json (en la raíz).
+ * save-tours.php
+ * Guarda data/tours.json desde el panel admin.
+ *
+ * Ubicación: raíz del proyecto (junto a index.html)
+ * Recibe: POST con JSON (array de tours) y header X-Admin-Token
  */
 
 header('Content-Type: application/json; charset=utf-8');
 
+/* ------------------------------------------
+   1. Solo permitir POST
+------------------------------------------ */
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);
     echo json_encode(['error' => 'Método no permitido']);
     exit;
 }
 
-// --- Token simple (cámbialo y pon el MISMO en admin.js) ---
-$TOKEN_ESPERADO = 'CAMBIA_ESTE_TOKEN';
+/* ------------------------------------------
+   2. Token de seguridad
+   ⚠️ Cambia 'CAMBIA_ESTE_TOKEN' por una cadena larga y aleatoria
+   ⚠️ El MISMO valor debe estar en admin/admin.js (const TOKEN)
+------------------------------------------ */
+$TOKEN_ESPERADO = 'a7K9mP2xQ5vN8bR4tY6wZ1cL3jH0sD9f';
 $tokenRecibido  = $_SERVER['HTTP_X_ADMIN_TOKEN'] ?? '';
 
 if ($tokenRecibido !== $TOKEN_ESPERADO) {
@@ -22,7 +32,9 @@ if ($tokenRecibido !== $TOKEN_ESPERADO) {
     exit;
 }
 
-// --- Leer body ---
+/* ------------------------------------------
+   3. Leer el body (JSON enviado por fetch)
+------------------------------------------ */
 $raw = file_get_contents('php://input');
 $tours = json_decode($raw, true);
 
@@ -32,30 +44,50 @@ if (!is_array($tours)) {
     exit;
 }
 
-// --- Ruta destino (raíz, junto a save-tours.php) ---
+/* ------------------------------------------
+   4. Ruta destino: data/tours.json
+   (__DIR__ = carpeta donde está este PHP = raíz)
+------------------------------------------ */
 $destino = __DIR__ . '/data/tours.json';
 
-// --- Backup antes de sobrescribir ---
-if (file_exists($destino)) {
-    $backupDir = __DIR__ . '/backups/';
-    if (!is_dir($backupDir)) {
-        @mkdir($backupDir, 0755, true);
-    }
-    $backupFile = $backupDir . 'tours-' . date('Ymd-His') . '.json';
-    @copy($destino, $backupFile);
-}
-
-// --- Escribir ---
-$json = json_encode($tours, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
-
-if (file_put_contents($destino, $json, LOCK_EX) === false) {
+if (!file_exists($destino)) {
     http_response_code(500);
-    echo json_encode(['error' => 'No se pudo escribir tours.json. Verifica permisos.']);
+    echo json_encode(['error' => 'No existe data/tours.json. Verifica la ruta.']);
     exit;
 }
 
+/* ------------------------------------------
+   5. Backup antes de sobrescribir
+------------------------------------------ */
+$backupDir = __DIR__ . '/backups/';
+if (!is_dir($backupDir)) {
+    @mkdir($backupDir, 0755, true);
+}
+$backupFile = $backupDir . 'tours-' . date('Ymd-His') . '.json';
+@copy($destino, $backupFile);
+
+/* ------------------------------------------
+   6. Escribir el JSON formateado
+------------------------------------------ */
+$json = json_encode(
+    $tours,
+    JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES
+);
+
+if (file_put_contents($destino, $json, LOCK_EX) === false) {
+    http_response_code(500);
+    echo json_encode([
+        'error' => 'No se pudo escribir data/tours.json. Verifica permisos (755 carpeta, 644 archivo).'
+    ]);
+    exit;
+}
+
+/* ------------------------------------------
+   7. Respuesta OK
+------------------------------------------ */
 echo json_encode([
-    'ok'    => true,
-    'count' => count($tours),
-    'file'  => 'tours.json'
+    'ok'     => true,
+    'count'  => count($tours),
+    'file'   => 'data/tours.json',
+    'backup' => 'backups/' . basename($backupFile)
 ]);

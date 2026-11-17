@@ -4918,7 +4918,7 @@ body.page-tour-detalle .tour-detail-hero-section{
    31. SEPARADOR CON LOGOS (antes del footer)
    ========================================== */
 .section-separator-logos{
-    background: var(--brand);
+    background: var(--off-white);
     padding: 40px 0;
     border-top: 1px solid var(--gray-200);
     border-bottom: 1px solid var(--gray-200);

@@ -1,21 +1,18 @@
 <?php
 /**
  * Guarda tours.json desde el panel admin.
- * Recibe un array JSON por POST y sobrescribe ../data/tours.json
+ * Recibe un array JSON por POST y sobrescribe tours.json (en la raíz).
  */
 
 header('Content-Type: application/json; charset=utf-8');
 
-// --- Seguridad básica: solo POST ---
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);
     echo json_encode(['error' => 'Método no permitido']);
     exit;
 }
 
-// --- (Opcional) Token simple para evitar POSTs externos ---
-// Cambia 'CAMBIA_ESTE_TOKEN' por una cadena larga y aleatoria.
-// El mismo token debe estar en admin.js
+// --- Token simple (cámbialo y pon el MISMO en admin.js) ---
 $TOKEN_ESPERADO = 'CAMBIA_ESTE_TOKEN';
 $tokenRecibido  = $_SERVER['HTTP_X_ADMIN_TOKEN'] ?? '';
 
@@ -35,8 +32,8 @@ if (!is_array($tours)) {
     exit;
 }
 
-// --- Ruta destino ---
-$destino = __DIR__ . '/../data/tours.json';
+// --- Ruta destino (raíz, junto a save-tours.php) ---
+$destino = __DIR__ . '/tours.json';
 
 // --- Backup antes de sobrescribir ---
 if (file_exists($destino)) {
@@ -60,5 +57,5 @@ if (file_put_contents($destino, $json, LOCK_EX) === false) {
 echo json_encode([
     'ok'    => true,
     'count' => count($tours),
-    'file'  => 'data/tours.json'
+    'file'  => 'tours.json'
 ]);

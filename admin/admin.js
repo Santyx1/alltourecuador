@@ -5,8 +5,8 @@
 const API_TOURS   = 'save-tours.php';
 const API_EMPRESA = 'save-empresa.php';
 const TOKEN       = 'CAMBIA_ESTE_TOKEN'; // ⚠️ Pon el MISMO en save-tours.php
-const TOURS_JSON  = 'tours.json';        // en la raíz
-const EMPRESA_JSON= 'empresa.json';      // en la raíz
+const TOURS_JSON  = '../data/tours.json';
+const EMPRESA_JSON= '../data/empresa.json';
 
 const $ = (s) => document.querySelector(s);
 
@@ -137,7 +137,7 @@ function renderTabla() {
     tbody.innerHTML = tours.map(t => `
         <tr>
             <td>${t.id}</td>
-            <td>${t.imagen ? `<img src="${t.imagen}" alt="">` : '—'}</td>
+            <td>${t.imagen ? `<img src="../${t.imagen}" alt="">` : '—'}</td>
             <td><strong>${t.titulo?.es || '—'}</strong></td>
             <td>$${Number(t.precio).toFixed(2)}</td>
             <td>${t.duracion || '—'}</td>

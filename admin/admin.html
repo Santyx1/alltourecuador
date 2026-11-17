@@ -1,1 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin | All Tour Ecuador</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
 
+    <aside class="sidebar">
+        <div class="brand">
+            <img src="img/logo3.png" alt="All Tour Ecuador" />
+            <span>Admin</span>
+        </div>
+        <nav>
+            <a href="#" class="active" data-view="tours"><i class="fa-solid fa-map-location-dot"></i> Tours</a>
+            <a href="#" data-view="empresa"><i class="fa-solid fa-building"></i> Empresa</a>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="index.html" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Ver web</a>
+        </div>
+    </aside>
+
+    <main class="main">
+
+        <!-- VISTA TOURS -->
+        <section class="view active" id="view-tours">
+            <header class="header">
+                <div>
+                    <h1>Gestión de Tours</h1>
+                    <p>Los cambios se guardan directamente en <code>tours.json</code>.</p>
+                </div>
+                <div class="header-actions">
+                    <button class="btn" id="btnReload" title="Recargar desde el servidor">
+                        <i class="fa-solid fa-rotate"></i>
+                    </button>
+                    <button class="btn btn-accent" id="btnNew">
+                        <i class="fa-solid fa-plus"></i> Nuevo tour
+                    </button>
+                </div>
+            </header>
+
+            <div class="stats" id="stats"></div>
+
+            <div class="table-wrapper">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th><th>Imagen</th><th>Título (ES)</th><th>Precio</th>
+                            <th>Duración</th><th>Nivel</th><th>Destacado</th><th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- VISTA EMPRESA -->
+        <section class="view" id="view-empresa">
+            <header class="header">
+                <div>
+                    <h1>Datos de la Empresa</h1>
+                    <p>Se guardan en <code>empresa.json</code>.</p>
+                </div>
+                <button class="btn btn-accent" id="btnSaveEmpresa">
+                    <i class="fa-solid fa-floppy-disk"></i> Guardar
+                </button>
+            </header>
+            <form class="form" id="empresaForm"></form>
+        </section>
+
+    </main>
+
+    <!-- MODAL TOUR -->
+    <div class="modal" id="modal">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose"><i class="fa-solid fa-xmark"></i></button>
+            <header class="modal-header">
+                <h2 id="modalTitle">Nuevo tour</h2>
+                <p>Los textos se guardan en ES, EN y FR.</p>
+            </header>
+            <form class="form" id="tourForm">
+                <input type="hidden" id="tId" />
+
+                <div class="row">
+                    <div class="group"><label>Slug</label><input type="text" id="tSlug" required /></div>
+                    <div class="group"><label>Precio (USD)</label><input type="number" id="tPrecio" min="0" required /></div>
+                </div>
+                <div class="row">
+                    <div class="group"><label>Duración</label>
+                        <select id="tDuracion">
+                            <option value="fullday">Full Day</option>
+                            <option value="2day">2 DAY</option>
+                            <option value="3day">3 DAY</option>
+                            <option value="4day">4 DAY</option>
+                        </select>
+                    </div>
+                    <div class="group"><label>Nivel</label>
+                        <select id="tNivel">
+                            <option value="bajo">Bajo</option>
+                            <option value="moderado">Moderado</option>
+                            <option value="alto">Alto</option>
+                        </select>
+                    </div>
+                    <div class="group"><label>Mín. pax</label><input type="number" id="tMinPax" value="4" required /></div>
+                </div>
+                <div class="group"><label>Destinos (coma)</label><input type="text" id="tDestino" placeholder="otavalo, cotacachi" /></div>
+                <div class="group"><label>Tipos (coma)</label><input type="text" id="tTipo" placeholder="vivencial, cultural" /></div>
+                <div class="row">
+                    <div class="group"><label>Imagen (ruta)</label><input type="text" id="tImagen" placeholder="img/otavalo.jpg" /></div>
+                    <div class="group"><label>Alt imagen</label><input type="text" id="tImagenAlt" /></div>
+                </div>
+                <div class="group check"><label><input type="checkbox" id="tDestacado" /> Destacado (aparece en el index)</label></div>
+
+                <h3 class="subtitle">Título</h3>
+                <div class="group"><label>Español</label><input type="text" id="tTituloEs" required /></div>
+                <div class="group"><label>English</label><input type="text" id="tTituloEn" /></div>
+                <div class="group"><label>Français</label><input type="text" id="tTituloFr" /></div>
+
+                <h3 class="subtitle">Resumen</h3>
+                <div class="group"><label>Español</label><textarea id="tResumenEs" rows="2"></textarea></div>
+                <div class="group"><label>English</label><textarea id="tResumenEn" rows="2"></textarea></div>
+                <div class="group"><label>Français</label><textarea id="tResumenFr" rows="2"></textarea></div>
+
+                <h3 class="subtitle">Descripción</h3>
+                <div class="group"><label>Español</label><textarea id="tDescripcionEs" rows="4"></textarea></div>
+                <div class="group"><label>English</label><textarea id="tDescripcionEn" rows="4"></textarea></div>
+                <div class="group"><label>Français</label><textarea id="tDescripcionFr" rows="4"></textarea></div>
+
+                <h3 class="subtitle">Callout</h3>
+                <div class="group"><label>Español</label><textarea id="tCalloutEs" rows="2"></textarea></div>
+                <div class="group"><label>English</label><textarea id="tCalloutEn" rows="2"></textarea></div>
+                <div class="group"><label>Français</label><textarea id="tCalloutFr" rows="2"></textarea></div>
+
+                <h3 class="subtitle">Incluye / No incluye (una línea por ítem, ES)</h3>
+                <div class="row">
+                    <div class="group"><label>Incluye</label><textarea id="tIncluye" rows="4"></textarea></div>
+                    <div class="group"><label>No incluye</label><textarea id="tNoIncluye" rows="4"></textarea></div>
+                </div>
+
+                <h3 class="subtitle">Itinerario (una línea: HORA | Texto)</h3>
+                <textarea id="tItinerario" rows="6" placeholder="08:00 – 08:30 | Bienvenida en Otavalo..."></textarea>
+
+                <div class="actions">
+                    <button type="button" class="btn" id="btnCancel">Cancelar</button>
+                    <button type="submit" class="btn btn-accent"><i class="fa-solid fa-floppy-disk"></i> Guardar tour</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

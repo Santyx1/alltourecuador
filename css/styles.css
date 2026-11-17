@@ -4992,7 +4992,7 @@ body.page-tour-detalle .tour-detail-hero-section{
     font-weight: 700;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: var(--white);
+    color: var(--accent);
     margin-bottom: 24px;
 
     /* Sin fondo */
@@ -5006,8 +5006,8 @@ body.page-tour-detalle .tour-detail-hero-section{
     gap: 40px;
     flex-wrap: wrap;
 
-    /* Blanco solamente detrás de las imágenes */
-    background: #ffffff;
+    /* Fondo blanco ligeramente transparente */
+    background: rgba(255, 255, 255, 0.85);
     padding: 28px 35px;
     border-radius: 12px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.12);

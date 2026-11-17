@@ -2,8 +2,8 @@
    Admin — All Tour Ecuador (PHP backend)
    ========================================== */
 
-const API_TOURS   = 'save-tours.php';
-const API_EMPRESA = 'save-empresa.php';
+const API_TOURS   = '../save-tours.php';
+const API_EMPRESA = '../save-empresa.php';
 const TOKEN       = 'CAMBIA_ESTE_TOKEN'; // ⚠️ Pon el MISMO en save-tours.php
 const TOURS_JSON  = '../data/tours.json';
 const EMPRESA_JSON= '../data/empresa.json';
